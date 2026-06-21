@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sogepps – Mobile Apps &amp; Software</title>
+  <meta name="description" content="Sogepps mobil uygulamalar geliştirir: League & Tournament Maker, Hızlı Çekiliş, HomeParty ve Spinify. Parti oyunları, çekiliş ve özel şans çarkı uygulamalarımızı keşfedin." />
+  <meta name="keywords" content="Spinify, şans çarkı, HomeParty, evde arkadaşlarla oynamalık oyunlar, party game app, Sogepps uygulamaları" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #050608;
+      --surface: #0f1218;
+      --surface-2: #171c26;
+      --border: #1f2937;
+      --text: #f0f4f8;
+      --text-muted: #9ca3af;
+      --accent: #6366f1;
+      --accent-light: #818cf8;
+      --accent-glow: rgba(99, 102, 241, 0.12);
+      --font: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--bg); color: var(--text); overflow-x: hidden; }
+    a { color: var(--accent-light); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Nav */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(5,6,8,0.82); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); font-weight: 800; font-size: 1.15rem; letter-spacing: -0.02em; }
+    .nav-logo { width: 34px; height: 34px; border-radius: 10px; background: linear-gradient(135deg, var(--accent), #a855f7); display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 800; color: #fff; }
+    .nav-links { display: flex; gap: 6px; list-style: none; align-items: center; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.875rem; font-weight: 500; padding: 8px 14px; border-radius: 8px; transition: all 0.2s; }
+    .nav-links a:hover { color: var(--text); background: var(--accent-glow); }
+
+    /* Hero */
+    .hero { padding: 160px 24px 120px; text-align: center; position: relative; }
+    .hero::before { content: ''; position: absolute; top: -100px; left: 50%; transform: translateX(-50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(99,102,241,0.07) 0%, transparent 65%); pointer-events: none; }
+    .hero-label { display: inline-flex; align-items: center; gap: 6px; background: var(--accent-glow); border: 1px solid rgba(99,102,241,0.2); border-radius: 999px; padding: 5px 16px; font-size: 0.78rem; font-weight: 600; color: var(--accent-light); margin-bottom: 28px; }
+    .hero h1 { font-size: clamp(2.5rem, 5.5vw, 4rem); font-weight: 800; line-height: 1.1; letter-spacing: -0.04em; margin-bottom: 20px; }
+    .hero h1 span { background: linear-gradient(135deg, var(--accent-light), #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero p { font-size: 1.15rem; color: var(--text-muted); max-width: 520px; margin: 0 auto 44px; line-height: 1.7; }
+    .hero-cta { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; background: linear-gradient(135deg, var(--accent), #7c3aed); color: #fff; font-weight: 600; font-size: 1rem; border-radius: 12px; text-decoration: none; transition: transform 0.15s, box-shadow 0.2s; box-shadow: 0 4px 24px rgba(99,102,241,0.3); }
+    .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(99,102,241,0.4); text-decoration: none; }
+
+    /* About */
+    .about { max-width: 1100px; margin: 0 auto; padding: 80px 24px; }
+    .section-label { display: inline-flex; align-items: center; gap: 6px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-light); margin-bottom: 16px; }
+    .about h2 { font-size: 2rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 16px; }
+    .about p { color: var(--text-muted); font-size: 1.05rem; line-height: 1.8; max-width: 680px; }
+    .about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 40px; }
+    .about-stat { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 24px; text-align: center; }
+    .about-stat .num { font-size: 2rem; font-weight: 800; background: linear-gradient(135deg, var(--accent-light), #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .about-stat .label { font-size: 0.85rem; color: var(--text-muted); margin-top: 6px; }
+
+    /* Apps */
+    .apps { max-width: 1100px; margin: 0 auto; padding: 80px 24px; }
+    .apps h2 { font-size: 2rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 12px; }
+    .apps > p { color: var(--text-muted); font-size: 1rem; margin-bottom: 40px; }
+    .app-card { display: flex; gap: 28px; background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 32px; transition: border-color 0.25s, transform 0.2s; text-decoration: none; color: inherit; margin-bottom: 16px; }
+    .app-card:hover { border-color: var(--accent); transform: translateY(-4px); text-decoration: none; }
+    .app-icon { width: 80px; height: 80px; border-radius: 20px; background: linear-gradient(135deg, #3b82f6, #8b5cf6); display: flex; align-items: center; justify-content: center; font-size: 36px; flex-shrink: 0; position: relative; overflow: hidden; }
+    .app-icon img { width: 100%; height: 100%; object-fit: cover; border-radius: inherit; display: block; }
+    .app-icon .app-icon-fallback { display: none; position: absolute; inset: 0; align-items: center; justify-content: center; font-size: 36px; }
+    .app-icon img[src=""] + .app-icon-fallback,
+    .app-icon .app-icon-fallback.show { display: flex; }
+    .app-info h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 8px; }
+    .app-info p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.65; margin-bottom: 16px; }
+    .app-badges { display: flex; gap: 8px; flex-wrap: wrap; }
+    .app-badge { display: inline-flex; align-items: center; gap: 4px; font-size: 0.75rem; font-weight: 600; padding: 4px 10px; border-radius: 6px; background: var(--accent-glow); color: var(--accent-light); border: 1px solid rgba(99,102,241,0.15); }
+    .app-arrow { display: flex; align-items: center; gap: 6px; font-size: 0.9rem; font-weight: 600; color: var(--accent-light); margin-top: 12px; }
+
+    /* Footer */
+    footer { border-top: 1px solid var(--border); padding: 48px 24px; margin-top: 40px; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 32px; }
+    .footer-brand { font-weight: 700; font-size: 1.1rem; margin-bottom: 8px; }
+    .footer-text { color: var(--text-muted); font-size: 0.85rem; line-height: 1.6; max-width: 300px; }
+    .footer-col h4 { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 12px; }
+    .footer-col a { display: block; color: var(--text-muted); font-size: 0.875rem; padding: 4px 0; transition: color 0.2s; text-decoration: none; }
+    .footer-col a:hover { color: var(--text); }
+    .footer-bottom { max-width: 1100px; margin: 32px auto 0; padding-top: 24px; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted); font-size: 0.8rem; }
+
+    @media (max-width: 640px) {
+      .nav-links a { padding: 8px 10px; font-size: 0.8rem; }
+      .hero { padding: 130px 20px 80px; }
+      .app-card { flex-direction: column; gap: 20px; }
+      .footer-inner { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="nav-brand">
+        <div class="nav-logo">S</div>
+        Sogepps
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about" data-i18n="nav_about">About</a></li>
+        <li><a href="#apps" data-i18n="nav_apps">Apps</a></li>
+        <li><a href="mailto:sogepps@gmail.com" data-i18n="nav_contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-label" data-i18n="hero_badge">&#9889; Building useful mobile apps</div>
+    <h1 data-i18n-html="hero_title">We build apps that<br /><span>simplify your life</span></h1>
+    <p data-i18n="hero_desc">Sogepps creates intuitive mobile applications designed to solve real-world problems. Simple, reliable, and built with care.</p>
+    <a href="#apps" class="hero-cta" data-i18n="hero_cta">Explore Our Apps &#8595;</a>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="section-label" data-i18n="about_label">&#9670; About Us</div>
+    <h2 data-i18n="about_title">Who We Are</h2>
+    <p data-i18n="about_desc">Sogepps is a software studio focused on mobile application development. We believe great software should be simple to use, reliable, and accessible to everyone. Our apps are designed with user experience as the top priority.</p>
+    <div class="about-grid">
+      <div class="about-stat">
+        <div class="num">4+</div>
+        <div class="label" data-i18n="stat_apps">Published Apps</div>
+      </div>
+      <div class="about-stat">
+        <div class="num">&#9889;</div>
+        <div class="label" data-i18n="stat_fast">Fast &amp; Reliable</div>
+      </div>
+      <div class="about-stat">
+        <div class="num">&#128274;</div>
+        <div class="label" data-i18n="stat_privacy">Privacy First</div>
+      </div>
+      <div class="about-stat">
+        <div class="num">&#127760;</div>
+        <div class="label" data-i18n="stat_languages">16+ Languages</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Apps -->
+  <section class="apps" id="apps">
+    <div class="section-label" data-i18n="apps_label">&#9670; Our Apps</div>
+    <h2 data-i18n="apps_title">Applications</h2>
+    <p data-i18n="apps_desc">Explore our published mobile applications.</p>
+
+    <a href="/tournament-portal/" class="app-card">
+      <div class="app-icon">
+        <img src="img/tournament-icon.png" alt="" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" />
+        <span class="app-icon-fallback" aria-hidden="true">&#9879;</span>
+      </div>
+      <div class="app-info">
+        <h3 data-i18n="app_name">League &amp; Tournament Maker</h3>
+        <p data-i18n="app_desc">Create leagues, knockout brackets, and round-robin tournaments in seconds. Track scores, view live standings, export results as PDF — all from your phone. Available on Android.</p>
+        <div class="app-badges">
+          <span class="app-badge" data-i18n="badge_sports">&#9917; Sports</span>
+          <span class="app-badge" data-i18n="badge_tournaments">&#127942; Tournaments</span>
+          <span class="app-badge" data-i18n="badge_standings">&#128200; Standings</span>
+          <span class="app-badge" data-i18n="badge_brackets">&#9878; Brackets</span>
+        </div>
+        <div class="app-arrow" data-i18n="app_view">View Details &#8594;</div>
+      </div>
+    </a>
+
+    <a href="/quickraffle-portal/" class="app-card">
+      <div class="app-icon">
+        <img src="img/quickraffle-icon.png" alt="" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" />
+        <span class="app-icon-fallback" aria-hidden="true">&#127808;</span>
+      </div>
+      <div class="app-info">
+        <h3 data-i18n="app_name_quickraffle">Hızlı Çekiliş</h3>
+        <p data-i18n="app_desc_quickraffle">All-in-one raffle and random pick app: name picker, number draw, wheel, lottery, team picker, dice, coin flip, card draw, list shuffler, bingo, yes/no, Secret Santa, bracket, Magic 8 Ball, password generator and more. Fast, fair, and fun.</p>
+        <div class="app-badges">
+          <span class="app-badge" data-i18n="badge_raffle">&#127808; Raffles</span>
+          <span class="app-badge" data-i18n="badge_wheel">&#128176; Wheel</span>
+          <span class="app-badge" data-i18n="badge_teams">&#128101; Teams</span>
+          <span class="app-badge" data-i18n="badge_random">&#9855; Random</span>
+        </div>
+        <div class="app-arrow" data-i18n="app_view">View Details &#8594;</div>
+      </div>
+    </a>
+
+    <a href="/homeparty/" class="app-card">
+      <div class="app-icon">
+        <img src="img/homeparty-icon.png" alt="HomeParty uygulama simgesi" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" />
+        <span class="app-icon-fallback" aria-hidden="true">&#127881;</span>
+      </div>
+      <div class="app-info">
+        <h3>HomeParty</h3>
+        <p>HomeParty, evde arkadaşlarla oynamalık oyunlar ve arkadaşlarla oynamalık oyunlar arayanlar için tasarlanmış eğlence uygulamasıdır. Parti geceleri, aile buluşmaları ve arkadaş ortamlarında hızlıca oyun seçip oynamanıza yardımcı olur.</p>
+        <div class="app-badges">
+          <span class="app-badge">&#127881; Party Games</span>
+          <span class="app-badge">&#128101; Friends</span>
+          <span class="app-badge">&#127968; Home Fun</span>
+          <span class="app-badge">&#127922; Group Play</span>
+        </div>
+        <div class="app-arrow" data-i18n="app_view">View Details &#8594;</div>
+      </div>
+    </a>
+
+    <a href="/spinify/" class="app-card">
+      <div class="app-icon" style="background: linear-gradient(135deg, #7c5cff, #ff5ca8);">
+        <img src="img/spinify-icon.png" alt="Spinify uygulama simgesi" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" />
+        <span class="app-icon-fallback" aria-hidden="true">&#127920;</span>
+      </div>
+      <div class="app-info">
+        <h3 data-i18n="app_name_spinify">Spinify</h3>
+        <p data-i18n="app_desc_spinify">Advanced wheel spinner app: create custom wheels, set real probability weights, use 14 ready-made presets, nested wheels, elimination mode, and full spin customization. Food picks, party games, chores, workouts, and everyday decisions.</p>
+        <div class="app-badges">
+          <span class="app-badge" data-i18n="badge_spinify_wheel">&#127920; Wheel</span>
+          <span class="app-badge" data-i18n="badge_spinify_odds">&#9881; Weighted Odds</span>
+          <span class="app-badge" data-i18n="badge_spinify_presets">&#9733; 14 Presets</span>
+          <span class="app-badge" data-i18n="badge_spinify_nested">&#128256; Nested</span>
+        </div>
+        <div class="app-arrow" data-i18n="app_view">View Details &#8594;</div>
+      </div>
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand" data-i18n="footer_brand">Sogepps</div>
+        <div class="footer-text" data-i18n="footer_desc">Building useful mobile applications. Simple, reliable, and privacy-focused.</div>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_apps">Apps</h4>
+        <a href="/tournament-portal/" data-i18n="app_name">League &amp; Tournament Maker</a>
+        <a href="/quickraffle-portal/" data-i18n="app_name_quickraffle">Hızlı Çekiliş</a>
+        <a href="/homeparty/">HomeParty</a>
+        <a href="/spinify/" data-i18n="app_name_spinify">Spinify</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_legal">Legal</h4>
+        <a href="/tournament-portal/privacy-policy.html" data-i18n="footer_privacy">Privacy Policy</a>
+        <a href="/quickraffle-portal/privacy-policy.html" data-i18n="footer_privacy_quickraffle">Hızlı Çekiliş Privacy</a>
+        <a href="/spinify/privacy-policy.html" data-i18n="footer_privacy_spinify">Spinify Privacy</a>
+        <a href="/tournament-portal/delete-account.html" data-i18n="footer_delete">Delete Account</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_contact">Contact</h4>
+        <a href="mailto:sogepps@gmail.com">sogepps@gmail.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom" data-i18n="footer_rights">
+      &copy; 2026 Sogepps. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="/js/i18n.js"></script>
+  <script src="/js/lang-landing.js"></script>
+  <script>I18N.init('landing', LANDING_TRANSLATIONS);</script>
+
+</body>
+</html>
