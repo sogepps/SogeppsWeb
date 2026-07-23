@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YerseYap - Zarlı Tahta Parti Oyunu</title>
+  <meta name="description" content="YerseYap ile 2-10 kişilik tahta parti oyunu oyna. Zar at, ilerle, görevleri tamamla ve puan topla. En çok puanı toplayan kazanır!" />
+  <meta name="keywords" content="YerseYap, tahta oyunu, parti oyunu, zar oyunu, cesaret görevleri, grup oyunu, Sogepps" />
+  <link rel="canonical" href="https://sogepps.tr/yerseyap/" />
+  <meta property="og:title" content="YerseYap - Zarlı Tahta Parti Oyunu" />
+  <meta property="og:description" content="Zar at, ilerle, görev yap, puan topla. 2-10 kişilik eğlenceli 3D tahta oyunu." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sogepps.tr/yerseyap/" />
+  <meta property="og:image" content="https://sogepps.tr/yerseyap/img/icon.webp" />
+  <style>
+    :root { --bg:#070913; --surface:#11172a; --surface-2:#18213a; --border:#2a3559; --text:#edf2ff; --muted:#b3bfdc; --primary:#66bb6a; --secondary:#ffc107; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: radial-gradient(circle at 10% -10%, rgba(102, 187, 106, 0.28), transparent 35%), radial-gradient(circle at 90% -20%, rgba(255, 193, 7, 0.14), transparent 35%), var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    a { color: #a5d6a7; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1160px; margin: 0 auto; padding: 0 20px; }
+    .topnav { position: sticky; top: 0; z-index: 99; border-bottom: 1px solid var(--border); background: rgba(7, 9, 19, 0.86); backdrop-filter: blur(10px); }
+    .topnav-inner, .nav-inner { min-height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 0.92rem; flex-wrap: wrap; padding: 8px 0; }
+    .topnav-links, .nav-links { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+    .hero { padding: 82px 0 40px; display: grid; grid-template-columns: 132px 1fr; gap: 22px; align-items: center; }
+    .hero-icon { width: 132px; height: 132px; border-radius: 30px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 20px 58px rgba(102, 187, 106, 0.35); background: linear-gradient(135deg, var(--primary), var(--secondary)); }
+    .hero-icon img { width: 100%; height: 100%; object-fit: cover; }
+    h1 { font-size: clamp(2rem, 5.2vw, 3.3rem); line-height: 1.08; margin-bottom: 12px; letter-spacing: -0.02em; }
+    .lead { color: var(--muted); max-width: 840px; font-size: 1.05rem; }
+    .hero-tags { margin-top: 16px; display: flex; gap: 8px; flex-wrap: wrap; }
+    .hero-tag { border: 1px solid #3d6b45; background: rgba(102, 187, 106, 0.16); color: #b9f6ca; border-radius: 999px; padding: 6px 12px; font-size: 0.8rem; font-weight: 600; }
+    .section { margin: 20px 0; border: 1px solid var(--border); border-radius: 20px; padding: 28px; background: linear-gradient(160deg, var(--surface), var(--surface-2)); }
+    .section h2 { font-size: 1.5rem; margin-bottom: 12px; }
+    .section > p { color: var(--muted); margin-bottom: 10px; }
+    .screen-cards { margin-top: 24px; display: flex; flex-direction: column; align-items: center; gap: 32px; }
+    .screen-card { width: 100%; max-width: 560px; border: 1px solid var(--border); border-radius: 18px; overflow: hidden; background: #0d1324; display: flex; flex-direction: column; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35); }
+    .screen-card img { width: 100%; height: auto; display: block; background: #0d1324; }
+    .screen-card figcaption { padding: 16px 20px; }
+    .screen-card h3 { font-size: 1.15rem; margin-bottom: 8px; }
+    .screen-card p { color: var(--muted); font-size: 0.95rem; margin: 0; line-height: 1.6; }
+    .feat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 16px; }
+    .feature { border: 1px solid #32406c; border-radius: 14px; padding: 14px; background: rgba(16, 23, 42, 0.6); }
+    .feature h3 { font-size: 1rem; margin-bottom: 6px; }
+    .feature p { font-size: 0.93rem; margin: 0; color: var(--muted); }
+    .cta { margin: 24px 0 68px; text-align: center; border: 1px solid #4b6b4f; border-radius: 20px; padding: 30px 22px; background: linear-gradient(135deg, rgba(102, 187, 106, 0.2), rgba(255, 193, 7, 0.1)); }
+    .cta h2 { margin-bottom: 8px; }
+    .cta p { color: var(--muted); }
+    .cta-links { margin-top: 14px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+    .btn { display: inline-block; padding: 10px 15px; border-radius: 11px; font-weight: 700; border: 1px solid #4a8f52; background: linear-gradient(135deg, var(--primary), #43a047); color: #fff; text-decoration: none; }
+    .btn.secondary { background: rgba(17, 23, 42, 0.65); color: #d7e2ff; border-color: #3a4a7b; }
+    @media (max-width: 760px) { .hero { grid-template-columns: 1fr; text-align: center; } .hero-icon { margin: 0 auto; } .topnav-links, .nav-links { justify-content: center; } }
+  </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"YerseYap","applicationCategory":"GameApplication","operatingSystem":"Android","description":"2-10 kişilik zarlı tahta parti oyunu. Zar at, ilerle, görevleri tamamla ve puan topla."}
+  </script>
+</head>
+<body>
+  <nav class="topnav">
+    <div class="wrap topnav-inner nav-inner">
+      <a href="/" data-i18n="nav_home">&larr; Sogepps ana sayfa</a>
+      <div class="topnav-links nav-links">
+        <a href="#ekranlar" data-i18n="nav_screens">Görseller</a>
+        <a href="#nasil" data-i18n="nav_how">Nasıl Oynanır</a>
+        <a href="#ozellikler" data-i18n="feat_title">Özellikler</a>
+        <a href="privacy-policy.html" data-i18n="nav_privacy">Gizlilik Politikası</a>
+        <a href="mailto:sogepps@gmail.com">sogepps@gmail.com</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero-icon"><img src="img/icon.webp" alt="YerseYap uygulama simgesi" width="132" height="132" decoding="async" /></div>
+      <div>
+        <h1 data-i18n-html="hero_title">YerseYap<br />Zar At, İlerle, Görev Yap, Puan Topla</h1>
+        <p class="lead" data-i18n="hero_lead">YerseYap; arkadaş ve aile buluşmaları için renkli 3D tahta parti oyunudur. 2–10 oyuncu seçin, zar atın, renkli karelere gelin, eğlenceli görevleri tamamlayın ve puan toplayın.</p>
+        <div class="hero-tags">
+          <span class="hero-tag" data-i18n="tag_1">2–10 oyuncu</span>
+          <span class="hero-tag" data-i18n="tag_2">Zar ve tahta</span>
+          <span class="hero-tag" data-i18n="tag_3">Görev kartları</span>
+          <span class="hero-tag" data-i18n="tag_4">Canlı skor tablosu</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ekranlar">
+      <h2 data-i18n="screens_title">YerseYap Oyun İçi Görseller</h2>
+      <p data-i18n="screens_desc">Menü, oyun akışı, görevler ve skor tablosundan ekran görüntüleri.</p>
+      <div class="screen-cards">
+        <figure class="screen-card"><img src="img/main-menu.jpg" alt="YerseYap ana menü ekranı" width="720" height="1280" loading="lazy" decoding="async" /><figcaption><h3 data-i18n="s_1_t">Ana Menü</h3><p data-i18n="s_1_d">Oyuna başla, kuralları oku veya çık.</p></figcaption></figure>
+        <figure class="screen-card"><img src="img/player-count.jpg" alt="YerseYap oyuncu sayısı seçimi" width="720" height="1280" loading="lazy" decoding="async" /><figcaption><h3 data-i18n="s_2_t">Oyuncu Sayısı</h3><p data-i18n="s_2_d">Oyun kaç kişi ile oynanacak? (2–10 arası seçim)</p></figcaption></figure>
+        <figure class="screen-card"><img src="img/game-start.jpg" alt="YerseYap oyun başlangıç ekranı" width="720" height="1280" loading="lazy" decoding="async" /><figcaption><h3 data-i18n="s_3_t">Oyun Başlıyor</h3><p data-i18n="s_3_d">Numaralı renkli kareler ve sevimli karakterlerle 3D tahta.</p></figcaption></figure>
+        <figure class="screen-card"><img src="img/dice-roll.jpg" alt="YerseYap zar atma ekranı" width="720" height="1280" loading="lazy" decoding="async" /><figcaption><h3 data-i18n="s_4_t">Zar At</h3><p data-i18n="s_4_d">Sıra sendeyken Zar At butonuna bas ve ilerle.</p></figcaption></figure>
+        <figure class="screen-card"><img src="img/task-20.jpg" alt="YerseYap 20 puanlık görev ekranı" width="720" height="1280" loading="lazy" decoding="async" /><figcaption><h3 data-i18n="s_5_t">Görev Ekranı</h3><p data-i18n="s_5_d">Geldiğin karedeki görevi oku. Yaptıysan Yaptım, yapamadıysan Yapamadım'a bas.</p></figcaption></figure>
+        <figure class="screen-card"><img src="img/scoreboard.jpg" alt="YerseYap skor tablosu" width="720" height="1280" loading="lazy" decoding="async" /><figcaption><h3 data-i18n="s_6_t">Skor Tablosu</h3><p data-i18n="s_6_d">Tüm oyuncuların puanlarını anlık takip et.</p></figcaption></figure>
+        <figure class="screen-card"><img src="img/task-30.jpg" alt="YerseYap 30 puanlık görev ekranı" width="720" height="1280" loading="lazy" decoding="async" /><figcaption><h3 data-i18n="s_7_t">Yüksek Puanlı Görevler</h3><p data-i18n="s_7_d">Daha zor kareler daha fazla puan verir — kazanmak için risk al!</p></figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section" id="nasil">
+      <h2 data-i18n="how_title">YerseYap Nasıl Oynanır?</h2>
+      <p data-i18n="how_desc">Grup oyun geceleri için basit kurallar.</p>
+      <div class="feat-grid">
+        <div class="feature"><h3 data-i18n="how_1_t">1) Oyuncu sayısını seç</h3><p data-i18n="how_1_d">2 ile 10 arkadaşını topla ve yeni oyun başlat.</p></div>
+        <div class="feature"><h3 data-i18n="how_2_t">2) Zar at ve ilerle</h3><p data-i18n="how_2_d">Sırası gelen kişi zar atar ve attığı zar kadar ilerler.</p></div>
+        <div class="feature"><h3 data-i18n="how_3_t">3) Görevi tamamla</h3><p data-i18n="how_3_d">Geldiği noktadaki puana göre bir görev verilir. Gerçekleştirirsen Yaptım'a bas ve puan kazan.</p></div>
+        <div class="feature"><h3 data-i18n="how_4_t">4) En çok puanı topla</h3><p data-i18n="how_4_d">Oyun bitene kadar devam et. En çok puanı toplayan oyunu kazanır!</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="ozellikler">
+      <h2 data-i18n="feat_title">Neden YerseYap?</h2>
+      <p data-i18n="feat_desc">Partiler, pijama partileri ve aile oyun geceleri için ideal.</p>
+      <div class="feat-grid">
+        <div class="feature"><h3 data-i18n="f_1_t">Sevimli 3D Dünya</h3><p data-i18n="f_1_d">Renkli sokaklar, sevimli hayvan karakterleri ve canlı tahta.</p></div>
+        <div class="feature"><h3 data-i18n="f_2_t">Grup Eğlencesi</h3><p data-i18n="f_2_d">Tek telefon veya tablet etrafında 2–10 kişi için tasarlandı.</p></div>
+        <div class="feature"><h3 data-i18n="f_3_t">Puana Dayalı Görevler</h3><p data-i18n="f_3_d">10, 20, 30 veya 40 puanlı kareler — yüksek risk, yüksek ödül.</p></div>
+        <div class="feature"><h3 data-i18n="f_4_t">Hesap Gerekmez</h3><p data-i18n="f_4_d">Kayıt olmadan doğrudan oyuna başla.</p></div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2 data-i18n="cta_title">YerseYap ile Eğlenceyi Başlat</h2>
+      <p data-i18n="cta_desc">YerseYap, Sogepps uygulama ailesinin yeni parti oyunudur.</p>
+      <div class="cta-links">
+        <a class="btn" href="/" data-i18n="btn_home">Sogepps ana sayfaya dön</a>
+        <a class="btn secondary" href="privacy-policy.html" data-i18n="footer_privacy">Gizlilik Politikası</a>
+        <a class="btn secondary" href="mailto:sogepps@gmail.com" data-i18n="btn_contact">İletişim</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/lang-yerseyap.js"></script>
+  <script>I18N.init('yerseyap', YERSEYAP_TRANSLATIONS);</script>
+</body>
+</html>
