@@ -65,7 +65,7 @@
   "t63": "Tant que la liste est correctement saisie et que la pondération n'est pas utilisée, chaque participant a une probabilité égale. Montrer le processus par partage d'écran est le moyen le plus pratique d'augmenter la confiance.",
   "t64": "Comment puis-je empêcher la même personne de sortir deux fois ?",
   "t65": "Utilisez le mode élimination. Le nom qui sort est supprimé du bassin, donc personne ne sort deux fois jusqu'à ce que tout le monde soit sélectionné une fois.",
-  "t66": "Comment diviser les équipes équitablement ?",
+  "t66": "Comment répartir les équipes équitablement ?",
   "t67": "Il suffit d'entrer les noms dans le sélecteur d'équipes et de spécifier le nombre d'équipes. Si le nombre ne se divise pas parfaitement, les personnes supplémentaires sont réparties équitablement entre les équipes.",
   "t68": "Quick Raffle",
   "t69": "Nom, nombre, roue, équipe, dés, pile ou face — tirage au sort équitable dans une seule application.",
@@ -96,6 +96,6 @@
   "t94": "Tant que la liste est correctement saisie et que la pondération n'est pas utilisée, chaque participant a une probabilité égale. Montrer le processus par partage d'écran est le moyen le plus pratique d'augmenter la confiance.",
   "t95": "Comment puis-je empêcher la même personne de sortir deux fois ?",
   "t96": "Utilisez le mode élimination. Le nom qui sort est supprimé du bassin, donc personne ne sort deux fois jusqu'à ce que tout le monde soit sélectionné une fois.",
-  "t97": "Comment diviser les équipes équitablement ?",
+  "t97": "Comment répartir les équipes équitablement ?",
   "t98": "Il suffit d'entrer les noms dans le sélecteur d'équipes et de spécifier le nombre d'équipes. Si le nombre ne se divise pas parfaitement, les personnes supplémentaires sont réparties équitablement entre les équipes."
 }
