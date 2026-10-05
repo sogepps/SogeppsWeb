@@ -5,6 +5,12 @@ Dosya adları:
   - quickraffle-icon.png → Hızlı Çekiliş simgesi
   - homeparty-icon.png   → HomeParty simgesi
   - spinify-icon.png     → Spinify simgesi
+  - yerseyap-icon.webp   → YerseYap simgesi
+  - shot-icon.webp       → Shot Çarkı simgesi
+  - tahminmelegi-icon.webp → Tahmin Meleği - İddaa simgesi
+  - metin2okey-icon.png   → Metin2 Okey simgesi
+  - sessizkelime-icon.png → Sessiz Kelime simgesi
+  - sogegammon-icon.png  → SogeGammon (çipsiz online tavla) simgesi
 
 Önerilen boyut: 192x192 px veya 512x512 px (PNG, şeffaf arka plan kullanılabilir)
 

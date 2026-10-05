@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aplicação League &amp; Tournament Maker: Criar Calendários, Tabelas e Pré-Eliminação no Telemóvel | Sogepps</title>
+<meta content="Para quem procura software de criação de ligas: como criar calendário a partir do telemóvel, acompanhar a tabela, criar bracket de eliminação e configurar torneio em grupo." name="description"/>
+<meta content="aplicação de criação de ligas, programa de criação de ligas, criador de torneios, criação de calendários, árvore de torneio, programa de tabela de classificação" name="keywords"/>
+<link href="https://sogepps.tr/makale/pt/lig-turnuva-olusturma-uygulamasi.html" rel="canonical"/><link href="https://sogepps.tr/makale/lig-turnuva-olusturma-uygulamasi.html" hreflang="tr" rel="alternate"/><link href="https://sogepps.tr/makale/en/lig-turnuva-olusturma-uygulamasi.html" hreflang="en" rel="alternate"/><link href="https://sogepps.tr/makale/de/lig-turnuva-olusturma-uygulamasi.html" hreflang="de" rel="alternate"/><link href="https://sogepps.tr/makale/fr/lig-turnuva-olusturma-uygulamasi.html" hreflang="fr" rel="alternate"/><link href="https://sogepps.tr/makale/es/lig-turnuva-olusturma-uygulamasi.html" hreflang="es" rel="alternate"/><link href="https://sogepps.tr/makale/it/lig-turnuva-olusturma-uygulamasi.html" hreflang="it" rel="alternate"/><link href="https://sogepps.tr/makale/pt/lig-turnuva-olusturma-uygulamasi.html" hreflang="pt" rel="alternate"/><link href="https://sogepps.tr/makale/nl/lig-turnuva-olusturma-uygulamasi.html" hreflang="nl" rel="alternate"/><link href="https://sogepps.tr/makale/ru/lig-turnuva-olusturma-uygulamasi.html" hreflang="ru" rel="alternate"/><link href="https://sogepps.tr/makale/ja/lig-turnuva-olusturma-uygulamasi.html" hreflang="ja" rel="alternate"/><link href="https://sogepps.tr/makale/ko/lig-turnuva-olusturma-uygulamasi.html" hreflang="ko" rel="alternate"/><link href="https://sogepps.tr/makale/ar/lig-turnuva-olusturma-uygulamasi.html" hreflang="ar" rel="alternate"/><link href="https://sogepps.tr/makale/hi/lig-turnuva-olusturma-uygulamasi.html" hreflang="hi" rel="alternate"/><link href="https://sogepps.tr/makale/id/lig-turnuva-olusturma-uygulamasi.html" hreflang="id" rel="alternate"/><link href="https://sogepps.tr/makale/pl/lig-turnuva-olusturma-uygulamasi.html" hreflang="pl" rel="alternate"/><link href="https://sogepps.tr/makale/lig-turnuva-olusturma-uygulamasi.html" hreflang="x-default" rel="alternate"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<meta content="article" property="og:type"/>
+<meta content="Sogepps" property="og:site_name"/>
+<meta content="pt_PT" property="og:locale"/>
+<meta content="Aplicação de Criação de Ligas: Calendário, Tabela e Bracket do Telemóvel" property="og:title"/>
+<meta content="Para quem procura software de criação de ligas: como criar calendário a partir do telemóvel, acompanhar a tabela, criar bracket de eliminação e configurar torneio em grupo." property="og:description"/>
+<meta content="https://sogepps.tr/makale/pt/lig-turnuva-olusturma-uygulamasi.html" property="og:url"/>
+<meta content="https://sogepps.tr/img/tournament-icon.png" property="og:image"/>
+<meta content="2026-09-03" property="article:published_time"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Aplicação de Criação de Ligas: Calendário, Tabela e Bracket do Telemóvel" name="twitter:title"/>
+<meta content="Para quem procura software de criação de ligas: como criar calendário a partir do telemóvel, acompanhar a tabela, criar bracket de eliminação e configurar torneio em grupo." name="twitter:description"/>
+<meta content="https://sogepps.tr/img/tournament-icon.png" name="twitter:image"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root { --bg:#050608; --surface:#0f1218; --surface-2:#171c26; --border:#1f2937; --text:#f0f4f8; --muted:#9ca3af; --accent:#6366f1; --accent-light:#818cf8; --glow:rgba(99,102,241,0.12); --font:'Inter', system-ui, -apple-system, sans-serif; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.7; }
+    a { color: var(--accent-light); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(5,6,8,0.86); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: 1000px; margin: 0 auto; padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .nav-brand { display: flex; align-items: center; gap: 10px; color: var(--text); font-weight: 800; font-size: 1.1rem; letter-spacing: -0.02em; text-decoration: none; }
+    .nav-logo { width: 32px; height: 32px; border-radius: 10px; background: linear-gradient(135deg, var(--accent), #a855f7); display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 800; color: #fff; }
+    .nav-links { display: flex; gap: 4px; list-style: none; align-items: center; }
+    .nav-links a { color: var(--muted); font-size: 0.85rem; font-weight: 500; padding: 8px 12px; border-radius: 8px; text-decoration: none; }
+    .nav-links a:hover, .nav-links a.active { color: var(--text); background: var(--glow); }
+    .wrap { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+    .crumb { font-size: 0.8rem; color: var(--muted); padding: 26px 0 0; }
+    .crumb a { color: var(--muted); }
+    .crumb span { margin: 0 6px; opacity: .5; }
+    footer { border-top: 1px solid var(--border); margin-top: 56px; padding: 40px 24px; text-align: center; color: var(--muted); font-size: 0.85rem; }
+    footer a { color: var(--accent-light); }
+    article { max-width: 760px; margin: 0 auto; padding: 8px 0 0; }
+    .post-head h1 { font-size: clamp(1.85rem, 4.2vw, 2.6rem); font-weight: 800; line-height: 1.18; letter-spacing: -0.02em; margin: 14px 0 12px; }
+    .post-meta { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; font-size: 0.82rem; color: var(--muted); margin-bottom: 22px; }
+    .post-meta .pill { background: var(--glow); color: var(--accent-light); border: 1px solid rgba(99,102,241,0.2); border-radius: 999px; padding: 4px 12px; font-weight: 600; }
+    .banner { width: 100%; height: auto; aspect-ratio: 1200 / 630; border-radius: 18px; border: 1px solid var(--border); display: block; margin-bottom: 26px; }
+    .lead { font-size: 1.1rem; color: #d6dde6; margin-bottom: 8px; }
+    article h2 { font-size: 1.35rem; font-weight: 700; letter-spacing: -0.01em; margin: 34px 0 12px; }
+    article p { color: #c7ced8; margin-bottom: 14px; }
+    article ul { color: #c7ced8; margin: 0 0 16px 0; padding-left: 1.3rem; }
+    article li { margin-bottom: 8px; }
+    article strong { color: var(--text); }
+    figure { margin: 22px 0; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; background: var(--surface); }
+    figure img { width: 100%; height: auto; display: block; }
+    figcaption { padding: 12px 16px; font-size: 0.83rem; color: var(--muted); }
+    .notice { border: 1px solid #4b3a1a; background: rgba(234,179,8,0.08); color: #e8d9a8; border-radius: 14px; padding: 12px 16px; font-size: 0.86rem; margin-bottom: 22px; }
+    .faq { margin-top: 38px; border-top: 1px solid var(--border); padding-top: 26px; }
+    .faq h2 { margin-top: 0; }
+    details { border: 1px solid var(--border); border-radius: 12px; padding: 12px 16px; margin-bottom: 10px; background: var(--surface); }
+    summary { cursor: pointer; font-weight: 600; }
+    details p { margin: 10px 0 0; }
+    .appcard { margin: 38px 0 10px; display: flex; gap: 18px; align-items: center; flex-wrap: wrap; border: 1px solid var(--border); border-radius: 18px; padding: 22px; background: linear-gradient(150deg, var(--surface), var(--surface-2)); }
+    .appcard img.ico { width: 68px; height: 68px; border-radius: 18px; object-fit: cover; }
+    .appcard .txt { flex: 1 1 260px; }
+    .appcard h3 { font-size: 1.15rem; margin-bottom: 4px; }
+    .appcard p { color: var(--muted); font-size: 0.9rem; margin: 0 0 12px; }
+    .appcard .links { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+    .appcard .more { font-size: 0.88rem; font-weight: 600; }
+    .related { margin-top: 44px; }
+    .related h2 { font-size: 1.2rem; margin-bottom: 14px; }
+    .rel-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+    .rel-card { display: block; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; background: var(--surface); color: inherit; text-decoration: none; }
+    .rel-card:hover { border-color: var(--accent); text-decoration: none; }
+    .rel-card img { width: 100%; height: auto; display: block; }
+    .rel-card div { padding: 12px 14px; }
+    .rel-app { display: block; font-size: 0.72rem; text-transform: uppercase; letter-spacing: .06em; color: var(--accent-light); margin-bottom: 4px; }
+    .rel-card strong { font-size: 0.93rem; font-weight: 600; line-height: 1.4; }
+    .gp-btn { display: inline-flex; align-items: center; gap: 10px; padding: 9px 18px; border-radius: 12px; background: #0d1016; border: 1px solid #414755; color: #fff; font-weight: 700; font-size: 0.95rem; line-height: 1.15; text-decoration: none; transition: border-color .2s, transform .15s; }
+    .gp-btn:hover { text-decoration: none; border-color: #9aa3b5; transform: translateY(-1px); color: #fff; }
+    .gp-btn svg { width: 22px; height: 22px; flex: 0 0 auto; fill: currentColor; }
+    .gp-btn > span { display: block; text-align: left; }
+    .gp-btn small { display: block; font-size: 0.62rem; font-weight: 600; letter-spacing: .09em; opacity: .7; }
+    .gp-btn-soon { opacity: .5; cursor: default; }
+    .gp-btn-soon:hover { transform: none; border-color: #414755; }
+  </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Aplicação de Criação de Ligas: Calendário, Tabela e Bracket do Telemóvel","description":"Para quem procura software de criação de ligas: como criar calendário a partir do telemóvel, acompanhar a tabela, criar bracket de eliminação e configurar torneio em grupo.","image":["https://sogepps.tr/img/tournament-icon.png","https://sogepps.tr/makale/img/pt/lig-turnuva-olusturma-uygulamasi.svg"],"datePublished":"2026-09-03","dateModified":"2026-09-03","inLanguage":"pt","mainEntityOfPage":{"@type":"WebPage","@id":"https://sogepps.tr/makale/pt/lig-turnuva-olusturma-uygulamasi.html","inLanguage":"pt"},"author":{"@type":"Organization","name":"Sogepps","url":"https://sogepps.tr/pt/"},"publisher":{"@type":"Organization","name":"Sogepps","url":"https://sogepps.tr/pt/","logo":{"@type":"ImageObject","url":"https://sogepps.tr/img/tournament-icon.png"}}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Página inicial","item":"https://sogepps.tr/pt/"},{"@type":"ListItem","position":2,"name":"Artigos","item":"https://sogepps.tr/makale/pt/"},{"@type":"ListItem","position":3,"name":"Aplicação de Criação de Ligas: Calendário, Tabela e Bracket do Telemóvel","item":"https://sogepps.tr/makale/pt/lig-turnuva-olusturma-uygulamasi.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Quantos jogos se jogam numa liga de 8 equipas?","acceptedAnswer":{"@type":"Answer","text":"28 jogos numa volta, 56 em duas voltas. Fórmula: número de equipas × (número de equipas − 1) ÷ 2."}},{"@type":"Question","name":"E se os pontos forem iguais?","acceptedAnswer":{"@type":"Answer","text":"A ordem comum é primeiro diferença de golos, depois golos marcados, depois resultado do jogo direto. É importante anunciar esta regra no início da época."}},{"@type":"Question","name":"Qual é o melhor formato para um grupo de amigos?","acceptedAnswer":{"@type":"Answer","text":"Liga de uma volta + play-offs tem a taxa de conclusão mais alta. Ligas de duas voltas prolongam-se demasiado e a participação tende a cair a meio da época."}}]}]}</script>
+</head>
+<body>
+<nav>
+<div class="nav-inner">
+<a class="nav-brand" href="/pt/"><span class="nav-logo">S</span> Sogepps</a>
+<ul class="nav-links">
+<li><a href="/pt/#apps">Aplicações</a></li>
+<li><a class="active" href="/makale/pt/">Artigos</a></li>
+<li><a href="mailto:sogepps@gmail.com">Contacto</a></li>
+</ul>
+</div>
+</nav>
+<div class="wrap">
+<div class="crumb"><a href="/pt/">Página inicial</a><span>›</span><a href="/makale/pt/">Artigos</a><span>›</span>League &amp; Tournament Maker</div>
+<article>
+<div class="post-head">
+<h1>Aplicação de Criação de Ligas: Calendário, Tabela e Bracket do Telemóvel</h1>
+<div class="post-meta">
+<a class="pill" href="/tournament-portal/pt/">League &amp; Tournament Maker</a>
+<span>3 de setembro de 2026</span><span>·</span><span>2 min de leitura</span>
+</div>
+</div>
+<img alt="Aplicação de Criação de Ligas: Calendário, Tabela e Bracket do Telemóvel" class="banner" height="630" src="/makale/img/pt/lig-turnuva-olusturma-uygulamasi.svg" width="1200"/>
+<p class="lead">Liga de futsal, torneio de trabalho ou organização de bairro — em todos há as mesmas três tarefas: criar o calendário, recolher os resultados, manter a tabela atualizada. Pode fazer-se com Excel, mas a meio da época ninguém abre esse ficheiro.</p>
+<h2>O que acontece quando se faz manualmente?</h2>
+<p>Método clássico: um grupo WhatsApp, um ficheiro Excel e uma pessoa que cria o calendário. Funciona bem nas primeiras três semanas. Na quarta semana um jogo é adiado, na quinta um resultado não é inserido, na sexta discute-se quantos jogos cada um jogou, e a liga acaba efetivamente.</p>
+<p>O problema não é falta de disciplina; é ter um sistema que depende de uma pessoa e é trabalhoso de atualizar.</p>
+<h2>Como é que o calendário é criado automaticamente?</h2>
+<p>Quando introduz os equipas, os emparelhamentos são gerados seguindo regras. Numa liga de uma volta, cada equipa joga com todas as outras uma vez; o número total de jogos encontra-se com a fórmula n×(n−1)/2.</p>
+<ul>
+<li>4 equipas → 6 jogos (duas voltas 12)</li>
+<li>6 equipas → 15 jogos (duas voltas 30)</li>
+<li>8 equipas → 28 jogos (duas voltas 56)</li>
+<li>10 equipas → 45 jogos (duas voltas 90)</li>
+</ul>
+<h2>Qual é o formato certo para si?</h2>
+<ul>
+<li><strong>Liga:</strong> Todos jogam com todos. Dá o resultado mais justo, mas leva mais tempo. Se tem um grupo fixo e um campo regular, é a escolha certa.</li>
+<li><strong>Pré-Eliminação:</strong> Quem perde é eliminado. Termina num único dia, um jogo mau pode terminar o torneio. Ideal para um dia de torneio.</li>
+<li><strong>Com Grupos:</strong> Primeiro grupos, depois pré-eliminação. Com muita participação, equilibra o número de jogos e mantém a justiça.</li>
+<li><strong>Liga + play-offs:</strong> O formato com a taxa de conclusão mais alta em grupos de amigos.</li>
+</ul>
+<h2>Tabela de classificação e diferença de golos</h2>
+<p>Conforme os resultados são inseridos, a tabela deve atualizar-se automaticamente; ninguém deve fazer contas. A pontuação padrão é vitória 3, empate 1, derrota 0.</p>
+<ul>
+<li>Em caso de empate na classificação: diferença de golos → golos marcados → resultado do jogo direto.</li>
+<li>Diferença de golos = golos marcados − golos sofridos. Uma equipa que marca 20 e sofre 12 tem diferença de +8.</li>
+<li>Escreva o resultado por defesa no início da época (por ex. 3-0).</li>
+<li>Anunciar estas regras desde o início evita completamente discussões no final da época.</li>
+</ul>
+<h2>Ao configurar a pré-eliminação</h2>
+<ul>
+<li>Se o número de participantes é 4, 8, 16 ou 32, ninguém fica de fora.</li>
+<li>Caso contrário, escolha a potência de 2 superior: com 12 participantes, 16 − 12 = 4 equipas ficam de fora.</li>
+<li>Os direitos de fora são dados aos mais bem classificados, não aleatoriamente.</li>
+<li>A cabeça de série número 1 coloca-se no topo da árvore, a número 2 na base; mas apenas se encontram na final.</li>
+</ul>
+<h2>Partilhar os resultados</h2>
+<p>A liga mantém-se viva quando a tabela é visível. Exportar a tabela e o calendário em PDF e partilhá-los no grupo garante que todos veem a mesma informação — assim não começam discussões do tipo "eu joguei 4 jogos".</p>
+<h2>Fazer a partir do telemóvel</h2>
+<p>League &amp; Tournament Maker suporta formatos de liga, pré-eliminação e grupo. Quando introduz as equipas, gera o calendário automaticamente, atualiza a tabela e a diferença de golos conforme os resultados chegam, cria automaticamente a próxima volta na pré-eliminação. Os resultados podem ser partilhados em PDF.</p>
+<section class="faq">
+<h2>Perguntas Frequentes</h2>
+<details>
+<summary>Quantos jogos se jogam numa liga de 8 equipas?</summary>
+<p>28 jogos numa volta, 56 em duas voltas. Fórmula: número de equipas × (número de equipas − 1) ÷ 2.</p>
+</details>
+<details>
+<summary>E se os pontos forem iguais?</summary>
+<p>A ordem comum é primeiro diferença de golos, depois golos marcados, depois resultado do jogo direto. É importante anunciar esta regra no início da época.</p>
+</details>
+<details>
+<summary>Qual é o melhor formato para um grupo de amigos?</summary>
+<p>Liga de uma volta + play-offs tem a taxa de conclusão mais alta. Ligas de duas voltas prolongam-se demasiado e a participação tende a cair a meio da época.</p>
+</details>
+</section>
+<div class="appcard">
+<img alt="Ícone da aplicação League &amp; Tournament Maker" class="ico" height="68" loading="lazy" src="/img/tournament-icon.png" width="68"/>
+<div class="txt">
+<h3>League &amp; Tournament Maker</h3>
+<p>Liga, eliminação e torneios em grupo; calendário, tabela de pontos e exportação PDF.</p>
+<div class="links">
+<a class="gp-btn" href="https://play.google.com/store/apps/details?id=com.Soge.LigTurnuvaOlutur" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"></path></svg><span><small>ANDROID</small><b>Disponível no Google Play</b></span></a>
+<a class="more" href="/tournament-portal/pt/">Página da aplicação →</a>
+</div>
+</div>
+</div>
+<section class="related">
+<h2>Artigos Relacionados</h2>
+<div class="rel-grid">
+<a class="rel-card" href="/makale/pt/hali-saha-ligi-nasil-kurulur.html">
+<img alt="" loading="lazy" src="/makale/img/pt/hali-saha-ligi-nasil-kurulur.svg"/>
+<div><span class="rel-app">League &amp; Tournament Maker</span><strong>Como Criar uma Liga de Futsal? Calendário, Tabela e Regras</strong></div>
+</a>
+<a class="rel-card" href="/makale/pt/eleme-usulu-turnuva-cetveli.html">
+<img alt="" loading="lazy" src="/makale/img/pt/eleme-usulu-turnuva-cetveli.svg"/>
+<div><span class="rel-app">League &amp; Tournament Maker</span><strong>Como Preparar um Bracket de Torneio por Eliminação?</strong></div>
+</a>
+<a class="rel-card" href="/makale/pt/evde-arkadaslarla-oynanacak-oyunlar.html">
+<img alt="" loading="lazy" src="/makale/img/pt/evde-arkadaslarla-oynanacak-oyunlar.svg"/>
+<div><span class="rel-app">HomeParty</span><strong>30+ jogos divertidos para jogar em casa com amigos</strong></div>
+</a>
+</div>
+</section>
+</article>
+</div>
+<footer>
+<div>© 2026 Sogepps · <a href="/pt/">Página inicial</a> · <a href="/makale/pt/">Artigos</a> · <a href="mailto:sogepps@gmail.com">sogepps@gmail.com</a></div>
+</footer>
+
+<script defer="" src="/js/i18n.js?v=ac9834aa"></script>
+</body>
+</html>

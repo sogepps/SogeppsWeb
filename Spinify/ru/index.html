@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Spinify - Кастомное колесо и рулетка решений</title>
+<meta content="Spinify — продвинутая рулетка-колесо: создавайте свои колёса, настраивайте вероятности, используйте 14 готовых шаблонов, вложенные колёса и полную настройку вращения." name="description"/>
+
+<link href="https://sogepps.tr/spinify/ru/" rel="canonical"/><link href="https://sogepps.tr/spinify/" hreflang="tr" rel="alternate"/><link href="https://sogepps.tr/spinify/en/" hreflang="en" rel="alternate"/><link href="https://sogepps.tr/spinify/de/" hreflang="de" rel="alternate"/><link href="https://sogepps.tr/spinify/fr/" hreflang="fr" rel="alternate"/><link href="https://sogepps.tr/spinify/es/" hreflang="es" rel="alternate"/><link href="https://sogepps.tr/spinify/it/" hreflang="it" rel="alternate"/><link href="https://sogepps.tr/spinify/pt/" hreflang="pt" rel="alternate"/><link href="https://sogepps.tr/spinify/nl/" hreflang="nl" rel="alternate"/><link href="https://sogepps.tr/spinify/ru/" hreflang="ru" rel="alternate"/><link href="https://sogepps.tr/spinify/ja/" hreflang="ja" rel="alternate"/><link href="https://sogepps.tr/spinify/ko/" hreflang="ko" rel="alternate"/><link href="https://sogepps.tr/spinify/ar/" hreflang="ar" rel="alternate"/><link href="https://sogepps.tr/spinify/hi/" hreflang="hi" rel="alternate"/><link href="https://sogepps.tr/spinify/id/" hreflang="id" rel="alternate"/><link href="https://sogepps.tr/spinify/pl/" hreflang="pl" rel="alternate"/><link href="https://sogepps.tr/spinify/" hreflang="x-default" rel="alternate"/>
+<meta content="Spinify - Кастомное колесо и рулетка решений" property="og:title"/>
+<meta content="Spinify — продвинутая рулетка-колесо: создавайте свои колёса, настраивайте вероятности, используйте 14 готовых шаблонов, вложенные колёса и полную настройку вращения." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://sogepps.tr/spinify/ru/" property="og:url"/>
+<meta content="https://sogepps.tr/spinify/img/icon.webp" property="og:image"/>
+<style>
+    :root { --bg:#0b0b1a; --surface:#15152b; --surface-2:#1b1b36; --border:#2e2e55; --text:#f4f4ff; --muted:#a0a0c8; --primary:#7c5cff; --secondary:#ff5ca8; --accent:#16d6c9; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: radial-gradient(circle at 8% -8%, rgba(124, 92, 255, 0.32), transparent 38%), radial-gradient(circle at 92% -12%, rgba(255, 92, 168, 0.2), transparent 35%), var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    a { color: #cfc0ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1160px; margin: 0 auto; padding: 0 20px; }
+    .topnav { position: sticky; top: 0; z-index: 99; border-bottom: 1px solid var(--border); background: rgba(11, 11, 26, 0.88); backdrop-filter: blur(10px); }
+    .topnav-inner, .nav-inner { min-height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 0.92rem; flex-wrap: wrap; padding: 8px 0; }
+    .topnav-links, .nav-links { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+    .hero { padding: 82px 0 40px; display: grid; grid-template-columns: 132px 1fr; gap: 22px; align-items: center; }
+    .hero-icon { width: 132px; height: 132px; border-radius: 30px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 20px 58px rgba(124, 92, 255, 0.35); background: linear-gradient(135deg, var(--primary), var(--secondary)); }
+    .hero-icon img { width: 100%; height: 100%; object-fit: cover; }
+    h1 { font-size: clamp(2rem, 5.2vw, 3.3rem); line-height: 1.08; margin-bottom: 12px; letter-spacing: -0.02em; }
+    .lead { color: var(--muted); max-width: 840px; font-size: 1.05rem; }
+    .hero-tags { margin-top: 16px; display: flex; gap: 8px; flex-wrap: wrap; }
+    .hero-tag { border: 1px solid #4a3d8a; background: rgba(124, 92, 255, 0.16); color: #ddd0ff; border-radius: 999px; padding: 6px 12px; font-size: 0.8rem; font-weight: 600; }
+    .section { margin: 20px 0; border: 1px solid var(--border); border-radius: 20px; padding: 28px; background: linear-gradient(160deg, var(--surface), var(--surface-2)); }
+    .section h2 { font-size: 1.5rem; margin-bottom: 12px; }
+    .section > p { color: var(--muted); margin-bottom: 10px; }
+    .screen-cards { margin-top: 16px; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; }
+    .screen-card { border: 1px solid var(--border); border-radius: 14px; overflow: hidden; background: #101024; display: flex; flex-direction: column; }
+    .screen-card img { width: 100%; height: auto; display: block; background: #101024; }
+    .screen-card figcaption { padding: 10px 12px; }
+    .screen-card h3 { font-size: 0.98rem; margin-bottom: 6px; }
+    .screen-card p { color: var(--muted); font-size: 0.87rem; margin: 0; }
+    .wheel-grid { margin-top: 16px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+    .wheel-item { border: 1px solid #3a3a6a; border-radius: 12px; padding: 12px 14px; background: rgba(16, 16, 36, 0.7); }
+    .wheel-item h3 { font-size: 0.95rem; margin-bottom: 4px; }
+    .wheel-item p { color: var(--muted); font-size: 0.84rem; margin: 0; }
+    .feat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 16px; }
+    .feature { border: 1px solid #3a3a6a; border-radius: 14px; padding: 14px; background: rgba(16, 16, 36, 0.6); }
+    .feature h3 { font-size: 1rem; margin-bottom: 6px; }
+    .feature p { font-size: 0.93rem; margin: 0; color: var(--muted); }
+    .cta { margin: 24px 0 68px; text-align: center; border: 1px solid #5a4a9a; border-radius: 20px; padding: 30px 22px; background: linear-gradient(135deg, rgba(124, 92, 255, 0.2), rgba(255, 92, 168, 0.14)); }
+    .cta h2 { margin-bottom: 8px; }
+    .cta p { color: var(--muted); }
+    .cta-links { margin-top: 14px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+    .btn { display: inline-block; padding: 10px 15px; border-radius: 11px; font-weight: 700; border: 1px solid #6a52c8; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #fff; text-decoration: none; }
+    .btn.secondary { background: rgba(21, 21, 43, 0.65); color: #e8e6ff; border-color: #4a4a7a; }
+    @media (max-width: 760px) { .hero { grid-template-columns: 1fr; text-align: center; } .hero-icon { margin: 0 auto; } .topnav-links, .nav-links { justify-content: center; } }
+    /* Google Play indirme butonu */
+    .gp-actions { margin-top: 18px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .gp-btn { display: inline-flex; align-items: center; gap: 10px; padding: 9px 18px; border-radius: 12px; background: #0d1016; border: 1px solid #414755; color: #ffffff; font-weight: 700; font-size: 0.98rem; line-height: 1.15; text-decoration: none; transition: border-color .2s, transform .15s; }
+    .gp-btn:hover { text-decoration: none; border-color: #9aa3b5; transform: translateY(-1px); color: #fff; }
+    .gp-btn svg { width: 24px; height: 24px; flex: 0 0 auto; fill: currentColor; }
+    .gp-btn > span { display: block; text-align: left; }
+    .gp-btn small { display: block; font-size: 0.63rem; font-weight: 600; letter-spacing: .09em; opacity: .7; }
+    .gp-btn-soon { opacity: .5; cursor: default; }
+    .gp-btn-soon:hover { transform: none; border-color: #414755; }
+    /* Makale bolumu */
+    .sg-arts { margin: 20px 0; border: 1px solid rgba(255,255,255,0.12); border-radius: 20px; padding: 26px; background: rgba(255,255,255,0.03); }
+    .sg-arts h2 { font-size: 1.4rem; margin-bottom: 6px; }
+    .sg-arts > p { opacity: .78; margin-bottom: 16px; font-size: 0.95rem; }
+    .sg-arts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+    .sg-art { display: block; border: 1px solid rgba(255,255,255,0.13); border-radius: 14px; overflow: hidden; background: rgba(0,0,0,0.28); color: inherit; text-decoration: none; transition: border-color .2s, transform .2s; }
+    .sg-art:hover { text-decoration: none; transform: translateY(-3px); border-color: rgba(255,255,255,0.38); }
+    .sg-art img { width: 100%; height: auto; aspect-ratio: 1200 / 630; display: block; }
+    .sg-art-body { padding: 14px 16px 16px; }
+    .sg-art-body h3 { font-size: 1rem; line-height: 1.4; margin-bottom: 6px; }
+    .sg-art-body p { font-size: 0.86rem; opacity: .72; margin: 0; }
+    .sg-arts-all { display: inline-block; margin-top: 14px; font-weight: 700; font-size: 0.9rem; }
+  </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Spinify","applicationCategory":"UtilitiesApplication","operatingSystem":"Android","description":"Spinify — продвинутая рулетка-колесо: создавайте свои колёса, настраивайте вероятности, используйте 14 готовых шаблонов, вложенные колёса и полную настройку вращения.","inLanguage":"ru"}</script>
+<meta content="ru_RU" property="og:locale"/></head>
+<body>
+<nav class="topnav">
+<div class="wrap topnav-inner nav-inner">
+<a data-i18n="nav_home" href="/ru/">← Главная Sogepps</a>
+<div class="topnav-links nav-links">
+<a data-i18n="nav_screens" href="#ekranlar">Скриншоты</a>
+<a data-i18n="nav_wheels" href="#carklar">Готовые колёса</a>
+<a data-i18n="nav_features" href="#ozellikler">Возможности</a>
+<a data-i18n="nav_how" href="#nasil">Как это работает</a>
+<a data-i18n="nav_privacy" href="privacy-policy.html">Политика конфиденциальности</a>
+<a href="mailto:sogepps@gmail.com">sogepps@gmail.com</a>
+</div>
+</div>
+</nav>
+<main class="wrap">
+<section class="hero">
+<div class="hero-icon"><img alt="Spinify uygulama simgesi" decoding="async" height="132" src="/spinify/img/icon.webp" width="132"/></div>
+<div>
+<h1 data-i18n-html="hero_title">Spinify<br/>Удача в ваших руках</h1>
+<p class="lead" data-i18n="hero_lead">Spinify — мощная рулетка и колесо решений для выбора еды, вечеринок, домашних дел, тренировок, идей для путешествий и повседневных решений. Создавайте свои колёса или начните с готовых шаблонов.</p>
+<div class="hero-tags">
+<span class="hero-tag" data-i18n="tag_1">14 готовых колёс</span>
+<span class="hero-tag" data-i18n="tag_2">Взвешенные шансы</span>
+<span class="hero-tag" data-i18n="tag_3">Вложенные колёса</span>
+<span class="hero-tag" data-i18n="tag_4">24 языка</span>
+</div>
+<div class="gp-actions">
+<a class="gp-btn" href="https://play.google.com/store/apps/details?id=com.Soge.Spinify" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"></path></svg>
+<span><small>ANDROID</small><b data-i18n="btn_google_play">Доступно в Google Play</b></span>
+</a>
+</div>
+</div>
+</section>
+<section class="section" id="ekranlar">
+<h2 data-i18n="screens_title">Spinify в действии</h2>
+<p data-i18n="screens_desc">Скриншоты приложения: библиотека, анимация вращения, редактор, веса, шаблоны, вложенные колёса, результаты и настройки.</p>
+<div class="screen-cards">
+<figure class="screen-card"><img alt="Spinify çark kütüphanesi" decoding="async" height="1280" loading="lazy" src="/spinify/img/1.webp" width="720"/><figcaption><h3 data-i18n="s_1_t">Библиотека колёс</h3><p data-i18n="s_1_d">Просматривайте свои колёса и готовые шаблоны с помощью поиска и фильтров по категориям.</p></figcaption></figure>
+<figure class="screen-card"><img alt="Spinify çevirme animasyonu" decoding="async" height="1280" loading="lazy" src="/spinify/img/2.webp" width="720"/><figcaption><h3 data-i18n="s_2_t">Плавная анимация вращения</h3><p data-i18n="s_2_d">Реалистичная физика вращения с вибрацией, конфетти и чётким выделением выигрышного сектора.</p></figcaption></figure>
+<figure class="screen-card"><img alt="Spinify çark düzenleyici" decoding="async" height="1280" loading="lazy" src="/spinify/img/3.webp" width="720"/><figcaption><h3 data-i18n="s_3_t">Редактор колеса в реальном времени</h3><p data-i18n="s_3_d">Редактируйте секторы, эмодзи, цвета и описания с мгновенным предпросмотром.</p></figcaption></figure>
+<figure class="screen-card"><img alt="Spinify olasılık ağırlıkları" decoding="async" height="1280" loading="lazy" src="/spinify/img/4.webp" width="720"/><figcaption><h3 data-i18n="s_4_t">Вероятностные веса</h3><p data-i18n="s_4_d">Размер сектора отражает реальный шанс выпадения — редкие исходы остаются редкими.</p></figcaption></figure>
+<figure class="screen-card"><img alt="Spinify hazır çarklar" decoding="async" height="1280" loading="lazy" src="/spinify/img/5.webp" width="720"/><figcaption><h3 data-i18n="s_5_t">Готовые колёса</h3><p data-i18n="s_5_d">14 шаблонов для еды, напитков, решений, вечеринок, домашних дел, тренировок и многого другого.</p></figcaption></figure>
+<figure class="screen-card"><img alt="Spinify iç içe çarklar" decoding="async" height="1280" loading="lazy" src="/spinify/img/6.webp" width="720"/><figcaption><h3 data-i18n="s_6_t">Вложенные колёса</h3><p data-i18n="s_6_d">Свяжите сектор со вторым колесом — отлично подходит для вечерних планов и комбинаций.</p></figcaption></figure>
+<figure class="screen-card"><img alt="Spinify sonuç ekranı" decoding="async" height="1280" loading="lazy" src="/spinify/img/7.webp" width="720"/><figcaption><h3 data-i18n="s_7_t">Праздничный результат</h3><p data-i18n="s_7_d">Конфетти и яркий экран результата, когда колесо останавливается.</p></figcaption></figure>
+<figure class="screen-card"><img alt="Spinify dönüş ayarları" decoding="async" height="1280" loading="lazy" src="/spinify/img/8.webp" width="720"/><figcaption><h3 data-i18n="s_8_t">Настройка вращения</h3><p data-i18n="s_8_d">Настраивайте длительность, количество оборотов, плавность, направление, подписи и режим выбывания.</p></figcaption></figure>
+</div>
+</section>
+<section class="section" id="carklar">
+<h2 data-i18n="wheels_title">Готовые колёса</h2>
+<p data-i18n="wheels_desc">Начните сразу же с 14 встроенных колёс — настраивайте или дублируйте любое из них.</p>
+<div class="wheel-grid">
+<div class="wheel-item"><h3 data-i18n="w_food_t">Что съесть сегодня?</h3><p data-i18n="w_food_d">Покончите с сомнениями по поводу ужина.</p></div>
+<div class="wheel-item"><h3 data-i18n="w_drink_t">Что выпить?</h3><p data-i18n="w_drink_d">Кофе, чай, лимонад и многое другое.</p></div>
+<div class="wheel-item"><h3 data-i18n="w_movie_t">Жанр фильма</h3><p data-i18n="w_movie_d">Боевик, комедия, ужасы, фантастика и многое другое.</p></div>
+<div class="wheel-item"><h3 data-i18n="w_yesno_t">Да / Нет</h3><p data-i18n="w_yesno_d">Классическое колесо для быстрых решений.</p></div>
+<div class="wheel-item"><h3 data-i18n="w_decision_t">Колесо решений</h3><p data-i18n="w_decision_d">Точно да, может быть, позже, нет, как хочешь.</p></div>
+<div class="wheel-item"><h3 data-i18n="w_truth_t">Правда или действие?</h3><p data-i18n="w_truth_d">Идеально для игрового вечера.</p></div>
+<div class="wheel-item"><h3 data-i18n="w_chores_t">Кто выполняет домашнее дело?</h3><p data-i18n="w_chores_d">Посуда, уборка, мусор, стирка или выходной.</p></div>
+<div class="wheel-item"><h3 data-i18n="w_workout_t">Колесо тренировок</h3><p data-i18n="w_workout_d">Отжимания, приседания, планка, бёрпи, бег или отдых.</p></div>
+<div class="wheel-item"><h3 data-i18n="w_pays_t">Кто платит по счёту?</h3><p data-i18n="w_pays_d">Ты, я, они или пополам.</p></div>
+<div class="wheel-item"><h3 data-i18n="w_numbers_t">Счастливое число (1-8)</h3><p data-i18n="w_numbers_d">Выберите случайное число от 1 до 8.</p></div>
+<div class="wheel-item"><h3 data-i18n="w_party_t">Колесо штрафных заданий</h3><p data-i18n="w_party_d">Спой, станцуй, пошути, изобрази кого-то, помилован или секрет.</p></div>
+<div class="wheel-item"><h3 data-i18n="w_travel_t">Куда поехать?</h3><p data-i18n="w_travel_d">Пляж, горы, город, кемпинг, за границу или остаться дома.</p></div>
+<div class="wheel-item"><h3 data-i18n="w_prize_t">Колесо призов</h3><p data-i18n="w_prize_d">Взвешенные шансы — главный приз выпадает редко.</p></div>
+<div class="wheel-item"><h3 data-i18n="w_evening_t">Вечерний план? (Вложенное)</h3><p data-i18n="w_evening_d">Открывает колесо еды или фильмов, когда выпадает соответствующий сектор.</p></div>
+</div>
+</section>
+<section class="section" id="ozellikler">
+<h2 data-i18n="feat_title">Почему Spinify?</h2>
+<p data-i18n="feat_desc">Больше, чем обычная рулетка — полный контроль над шансами, дизайном и процессом.</p>
+<div class="feat-grid">
+<div class="feature"><h3 data-i18n="f_1_t">Настоящая вероятность</h3><p data-i18n="f_1_d">Настраивайте веса секторов так, чтобы шансы выпадения точно совпадали с заданными.</p></div>
+<div class="feature"><h3 data-i18n="f_2_t">Вложенные колёса</h3><p data-i18n="f_2_d">Связывайте колёса между собой для многоэтапных решений.</p></div>
+<div class="feature"><h3 data-i18n="f_3_t">Режим выбывания</h3><p data-i18n="f_3_d">Убирайте победителей после каждого раунда, пока не останется один сектор.</p></div>
+<div class="feature"><h3 data-i18n="f_4_t">Локальное сохранение</h3><p data-i18n="f_4_d">Создавайте, дублируйте и храните свои колёса прямо на устройстве.</p></div>
+<div class="feature"><h3 data-i18n="f_5_t">24 языка</h3><p data-i18n="f_5_d">Интерфейс и шаблоны адаптируются под ваш язык.</p></div>
+<div class="feature"><h3 data-i18n="f_6_t">Тёмный современный интерфейс</h3><p data-i18n="f_6_d">Отточенный дизайн с SVG-колёсами и плавной анимацией.</p></div>
+</div>
+</section>
+<section class="section" id="nasil">
+<h2 data-i18n="how_title">Как работает Spinify</h2>
+<p data-i18n="how_desc">От идеи до результата за секунды.</p>
+<div class="feat-grid">
+<div class="feature"><h3 data-i18n="how_1_t">1) Выберите или создайте колесо</h3><p data-i18n="how_1_d">Выберите шаблон или создайте секторы с эмодзи и цветами.</p></div>
+<div class="feature"><h3 data-i18n="how_2_t">2) Задайте веса и параметры</h3><p data-i18n="how_2_d">Точно настройте шансы, скорость вращения, вибрацию и вложенные связи.</p></div>
+<div class="feature"><h3 data-i18n="how_3_t">3) Нажмите SPIN</h3><p data-i18n="how_3_d">Смотрите, как колесо вращается и реалистично замедляется.</p></div>
+<div class="feature"><h3 data-i18n="how_4_t">4) Получите результат</h3><p data-i18n="how_4_d">Узнайте победителя под конфетти — крутите снова или откройте вложенное колесо.</p></div>
+</div>
+</section>
+<section class="section sg-arts" id="makaleler">
+<h2 data-i18n="arts_title">Статьи</h2>
+<p data-i18n="arts_desc">Руководства и игровые идеи для Spinify.</p>
+<div class="sg-arts-grid">
+<a class="sg-art" href="/makale/ru/karar-veremiyorum-ne-yapmaliyim.html">
+<img alt="Не могу выбрать: решение повседневных вопросов с помощью рулетки" height="630" loading="lazy" src="/makale/img/ru/karar-veremiyorum-ne-yapmaliyim.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>Не могу выбрать: решение повседневных вопросов с помощью рулетки</h3>
+<p>Что поесть, кто должен это сделать, куда пойти? Причина зависания при принятии мелких решений и способы правильного…</p>
+</div>
+</a>
+<a class="sg-art" href="/makale/ru/agirlikli-sans-carki-nedir.html">
+<img alt="Что такое взвешенная рулетка? Настраивай вероятность сам" height="630" loading="lazy" src="/makale/img/ru/agirlikli-sans-carki-nedir.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>Что такое взвешенная рулетка? Настраивай вероятность сам</h3>
+<p>Как работает взвешенное колесо, как ширина доли определяет вероятность, когда нужно использовать вес вместо…</p>
+</div>
+</a>
+<a class="sg-art" href="/makale/ru/rastgele-secim-carki-nasil-yapilir.html">
+<img alt="Как сделать случайную рулетку? Создай свою рулетку" height="630" loading="lazy" src="/makale/img/ru/rastgele-secim-carki-nasil-yapilir.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>Как сделать случайную рулетку? Создай свою рулетку</h3>
+<p>Как подготовить колесо случайного выбора: ввод вариантов, выравнивание долей, вложенные колёса и режим исключения…</p>
+</div>
+</a>
+</div>
+<a class="sg-arts-all" data-i18n="arts_all" href="/makale/ru/">Все статьи →</a>
+</section>
+<section class="cta">
+<h2 data-i18n="cta_title">Пусть решает колесо</h2>
+<p data-i18n="cta_desc">Spinify — четвёртое приложение семейства Sogepps: быстрые, честные и весёлые решения прямо на вашем телефоне.</p>
+<div class="cta-links">
+<a class="gp-btn" href="https://play.google.com/store/apps/details?id=com.Soge.Spinify" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"></path></svg>
+<span><small>ANDROID</small><b data-i18n="btn_google_play">Доступно в Google Play</b></span>
+</a>
+<a class="btn" data-i18n="btn_home" href="/ru/">Назад на главную Sogepps</a>
+<a class="btn secondary" data-i18n="footer_privacy" href="privacy-policy.html">Политика конфиденциальности</a>
+<a class="btn secondary" data-i18n="btn_contact" href="mailto:sogepps@gmail.com">Контакты</a>
+</div>
+</section>
+</main>
+
+
+
+<script defer="" src="/js/i18n.js?v=ac9834aa"></script>
+</body>
+</html>

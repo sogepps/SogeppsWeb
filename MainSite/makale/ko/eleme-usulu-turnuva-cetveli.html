@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>탈락전 토너먼트 표를 어떻게 만들어요? | Sogepps</title>
+<meta content="탈락전 토너먼트 만드는 가이드: 참가자 수에 따른 라운드 계산, 불참자 처리, 시드 배치, 싱글 매치인지 더블 매치인지, 3위 경기 결정." name="description"/>
+<meta content="탈락전, 토너먼트 표, 브래킷 만들기, 시드, 불참자 처리" name="keywords"/>
+<link href="https://sogepps.tr/makale/ko/eleme-usulu-turnuva-cetveli.html" rel="canonical"/><link href="https://sogepps.tr/makale/eleme-usulu-turnuva-cetveli.html" hreflang="tr" rel="alternate"/><link href="https://sogepps.tr/makale/en/eleme-usulu-turnuva-cetveli.html" hreflang="en" rel="alternate"/><link href="https://sogepps.tr/makale/de/eleme-usulu-turnuva-cetveli.html" hreflang="de" rel="alternate"/><link href="https://sogepps.tr/makale/fr/eleme-usulu-turnuva-cetveli.html" hreflang="fr" rel="alternate"/><link href="https://sogepps.tr/makale/es/eleme-usulu-turnuva-cetveli.html" hreflang="es" rel="alternate"/><link href="https://sogepps.tr/makale/it/eleme-usulu-turnuva-cetveli.html" hreflang="it" rel="alternate"/><link href="https://sogepps.tr/makale/pt/eleme-usulu-turnuva-cetveli.html" hreflang="pt" rel="alternate"/><link href="https://sogepps.tr/makale/nl/eleme-usulu-turnuva-cetveli.html" hreflang="nl" rel="alternate"/><link href="https://sogepps.tr/makale/ru/eleme-usulu-turnuva-cetveli.html" hreflang="ru" rel="alternate"/><link href="https://sogepps.tr/makale/ja/eleme-usulu-turnuva-cetveli.html" hreflang="ja" rel="alternate"/><link href="https://sogepps.tr/makale/ko/eleme-usulu-turnuva-cetveli.html" hreflang="ko" rel="alternate"/><link href="https://sogepps.tr/makale/ar/eleme-usulu-turnuva-cetveli.html" hreflang="ar" rel="alternate"/><link href="https://sogepps.tr/makale/hi/eleme-usulu-turnuva-cetveli.html" hreflang="hi" rel="alternate"/><link href="https://sogepps.tr/makale/id/eleme-usulu-turnuva-cetveli.html" hreflang="id" rel="alternate"/><link href="https://sogepps.tr/makale/pl/eleme-usulu-turnuva-cetveli.html" hreflang="pl" rel="alternate"/><link href="https://sogepps.tr/makale/eleme-usulu-turnuva-cetveli.html" hreflang="x-default" rel="alternate"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<meta content="article" property="og:type"/>
+<meta content="Sogepps" property="og:site_name"/>
+<meta content="ko_KR" property="og:locale"/>
+<meta content="탈락전 토너먼트 표를 어떻게 만들어요?" property="og:title"/>
+<meta content="탈락전 토너먼트 만드는 가이드: 참가자 수에 따른 라운드 계산, 불참자 처리, 시드 배치, 싱글 매치인지 더블 매치인지, 3위 경기 결정." property="og:description"/>
+<meta content="https://sogepps.tr/makale/ko/eleme-usulu-turnuva-cetveli.html" property="og:url"/>
+<meta content="https://sogepps.tr/img/tournament-icon.png" property="og:image"/>
+<meta content="2026-08-27" property="article:published_time"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="탈락전 토너먼트 표를 어떻게 만들어요?" name="twitter:title"/>
+<meta content="탈락전 토너먼트 만드는 가이드: 참가자 수에 따른 라운드 계산, 불참자 처리, 시드 배치, 싱글 매치인지 더블 매치인지, 3위 경기 결정." name="twitter:description"/>
+<meta content="https://sogepps.tr/img/tournament-icon.png" name="twitter:image"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root { --bg:#050608; --surface:#0f1218; --surface-2:#171c26; --border:#1f2937; --text:#f0f4f8; --muted:#9ca3af; --accent:#6366f1; --accent-light:#818cf8; --glow:rgba(99,102,241,0.12); --font:'Inter', system-ui, -apple-system, sans-serif; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.7; }
+    a { color: var(--accent-light); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(5,6,8,0.86); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: 1000px; margin: 0 auto; padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .nav-brand { display: flex; align-items: center; gap: 10px; color: var(--text); font-weight: 800; font-size: 1.1rem; letter-spacing: -0.02em; text-decoration: none; }
+    .nav-logo { width: 32px; height: 32px; border-radius: 10px; background: linear-gradient(135deg, var(--accent), #a855f7); display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 800; color: #fff; }
+    .nav-links { display: flex; gap: 4px; list-style: none; align-items: center; }
+    .nav-links a { color: var(--muted); font-size: 0.85rem; font-weight: 500; padding: 8px 12px; border-radius: 8px; text-decoration: none; }
+    .nav-links a:hover, .nav-links a.active { color: var(--text); background: var(--glow); }
+    .wrap { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+    .crumb { font-size: 0.8rem; color: var(--muted); padding: 26px 0 0; }
+    .crumb a { color: var(--muted); }
+    .crumb span { margin: 0 6px; opacity: .5; }
+    footer { border-top: 1px solid var(--border); margin-top: 56px; padding: 40px 24px; text-align: center; color: var(--muted); font-size: 0.85rem; }
+    footer a { color: var(--accent-light); }
+    article { max-width: 760px; margin: 0 auto; padding: 8px 0 0; }
+    .post-head h1 { font-size: clamp(1.85rem, 4.2vw, 2.6rem); font-weight: 800; line-height: 1.18; letter-spacing: -0.02em; margin: 14px 0 12px; }
+    .post-meta { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; font-size: 0.82rem; color: var(--muted); margin-bottom: 22px; }
+    .post-meta .pill { background: var(--glow); color: var(--accent-light); border: 1px solid rgba(99,102,241,0.2); border-radius: 999px; padding: 4px 12px; font-weight: 600; }
+    .banner { width: 100%; height: auto; aspect-ratio: 1200 / 630; border-radius: 18px; border: 1px solid var(--border); display: block; margin-bottom: 26px; }
+    .lead { font-size: 1.1rem; color: #d6dde6; margin-bottom: 8px; }
+    article h2 { font-size: 1.35rem; font-weight: 700; letter-spacing: -0.01em; margin: 34px 0 12px; }
+    article p { color: #c7ced8; margin-bottom: 14px; }
+    article ul { color: #c7ced8; margin: 0 0 16px 0; padding-left: 1.3rem; }
+    article li { margin-bottom: 8px; }
+    article strong { color: var(--text); }
+    figure { margin: 22px 0; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; background: var(--surface); }
+    figure img { width: 100%; height: auto; display: block; }
+    figcaption { padding: 12px 16px; font-size: 0.83rem; color: var(--muted); }
+    .notice { border: 1px solid #4b3a1a; background: rgba(234,179,8,0.08); color: #e8d9a8; border-radius: 14px; padding: 12px 16px; font-size: 0.86rem; margin-bottom: 22px; }
+    .faq { margin-top: 38px; border-top: 1px solid var(--border); padding-top: 26px; }
+    .faq h2 { margin-top: 0; }
+    details { border: 1px solid var(--border); border-radius: 12px; padding: 12px 16px; margin-bottom: 10px; background: var(--surface); }
+    summary { cursor: pointer; font-weight: 600; }
+    details p { margin: 10px 0 0; }
+    .appcard { margin: 38px 0 10px; display: flex; gap: 18px; align-items: center; flex-wrap: wrap; border: 1px solid var(--border); border-radius: 18px; padding: 22px; background: linear-gradient(150deg, var(--surface), var(--surface-2)); }
+    .appcard img.ico { width: 68px; height: 68px; border-radius: 18px; object-fit: cover; }
+    .appcard .txt { flex: 1 1 260px; }
+    .appcard h3 { font-size: 1.15rem; margin-bottom: 4px; }
+    .appcard p { color: var(--muted); font-size: 0.9rem; margin: 0 0 12px; }
+    .appcard .links { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+    .appcard .more { font-size: 0.88rem; font-weight: 600; }
+    .related { margin-top: 44px; }
+    .related h2 { font-size: 1.2rem; margin-bottom: 14px; }
+    .rel-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+    .rel-card { display: block; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; background: var(--surface); color: inherit; text-decoration: none; }
+    .rel-card:hover { border-color: var(--accent); text-decoration: none; }
+    .rel-card img { width: 100%; height: auto; display: block; }
+    .rel-card div { padding: 12px 14px; }
+    .rel-app { display: block; font-size: 0.72rem; text-transform: uppercase; letter-spacing: .06em; color: var(--accent-light); margin-bottom: 4px; }
+    .rel-card strong { font-size: 0.93rem; font-weight: 600; line-height: 1.4; }
+    .gp-btn { display: inline-flex; align-items: center; gap: 10px; padding: 9px 18px; border-radius: 12px; background: #0d1016; border: 1px solid #414755; color: #fff; font-weight: 700; font-size: 0.95rem; line-height: 1.15; text-decoration: none; transition: border-color .2s, transform .15s; }
+    .gp-btn:hover { text-decoration: none; border-color: #9aa3b5; transform: translateY(-1px); color: #fff; }
+    .gp-btn svg { width: 22px; height: 22px; flex: 0 0 auto; fill: currentColor; }
+    .gp-btn > span { display: block; text-align: left; }
+    .gp-btn small { display: block; font-size: 0.62rem; font-weight: 600; letter-spacing: .09em; opacity: .7; }
+    .gp-btn-soon { opacity: .5; cursor: default; }
+    .gp-btn-soon:hover { transform: none; border-color: #414755; }
+  </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"탈락전 토너먼트 표를 어떻게 만들어요?","description":"탈락전 토너먼트 만드는 가이드: 참가자 수에 따른 라운드 계산, 불참자 처리, 시드 배치, 싱글 매치인지 더블 매치인지, 3위 경기 결정.","image":["https://sogepps.tr/img/tournament-icon.png","https://sogepps.tr/makale/img/ko/eleme-usulu-turnuva-cetveli.svg"],"datePublished":"2026-08-27","dateModified":"2026-08-27","inLanguage":"ko","mainEntityOfPage":{"@type":"WebPage","@id":"https://sogepps.tr/makale/ko/eleme-usulu-turnuva-cetveli.html","inLanguage":"ko"},"author":{"@type":"Organization","name":"Sogepps","url":"https://sogepps.tr/ko/"},"publisher":{"@type":"Organization","name":"Sogepps","url":"https://sogepps.tr/ko/","logo":{"@type":"ImageObject","url":"https://sogepps.tr/img/tournament-icon.png"}}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://sogepps.tr/ko/"},{"@type":"ListItem","position":2,"name":"글","item":"https://sogepps.tr/makale/ko/"},{"@type":"ListItem","position":3,"name":"탈락전 토너먼트 표를 어떻게 만들어요?","item":"https://sogepps.tr/makale/ko/eleme-usulu-turnuva-cetveli.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"12명 토너먼트에서 불참자가 몇 명이에요?","acceptedAnswer":{"@type":"Answer","text":"더 높은 2의 배수가 16이니까 16 − 12 = 4명의 참가자가 첫 라운드를 불참으로 지나가요. 불참 기회는 순위가 높은 사람들에게 주어져요."}},{"@type":"Question","name":"시드를 표에 어떻게 배치해요?","acceptedAnswer":{"@type":"Answer","text":"1번이 맨 위에, 2번이 맨 아래에 놓여요. 3번과 4번은 1번, 2번과 준결승에서만 만나도록 배치돼요. 이래야 강한 팀들이 일찍 탈락하지 않아요."}},{"@type":"Question","name":"더블 탈락은 언제 선택해요?","acceptedAnswer":{"@type":"Answer","text":"한 번의 나쁜 경기가 토너먼트를 끝내는 걸 원하지 않을 때예요. 더 공정한 결과를 주지만 경기 수와 시간이 명확하게 늘어나요."}}]}]}</script>
+</head>
+<body>
+<nav>
+<div class="nav-inner">
+<a class="nav-brand" href="/ko/"><span class="nav-logo">S</span> Sogepps</a>
+<ul class="nav-links">
+<li><a href="/ko/#apps">앱</a></li>
+<li><a class="active" href="/makale/ko/">글</a></li>
+<li><a href="mailto:sogepps@gmail.com">문의</a></li>
+</ul>
+</div>
+</nav>
+<div class="wrap">
+<div class="crumb"><a href="/ko/">홈</a><span>›</span><a href="/makale/ko/">글</a><span>›</span>League &amp; Tournament Maker</div>
+<article>
+<div class="post-head">
+<h1>탈락전 토너먼트 표를 어떻게 만들어요?</h1>
+<div class="post-meta">
+<a class="pill" href="/tournament-portal/ko/">League &amp; Tournament Maker</a>
+<span>2026년 8월 27일</span><span>·</span><span>2분 읽기</span>
+</div>
+</div>
+<img alt="탈락전 토너먼트 표를 어떻게 만들어요?" class="banner" height="630" src="/makale/img/ko/eleme-usulu-turnuva-cetveli.svg" width="1200"/>
+<p class="lead">탈락전 형식은 가장 빨리 끝나는 토너먼트 방식이에요: 매 경기마다 절반의 참가자가 탈락하고, 아무도 여분의 경기를 하지 않아요. 하지만 표를 잘못 만들면 토너먼트가 첫 라운드에서 불균형해져요.</p>
+<h2>참가자 수는 2의 배수여야 해요</h2>
+<p>탈락전 표는 4, 8, 16, 32명에서 가장 깔끔해요. 이런 숫자에서는 각 라운드가 정확히 반으로 나뉘고 아무도 불참이 없어요.</p>
+<ul>
+<li>4명 → 2라운드 (준결승, 결승)</li>
+<li>8명 → 3라운드</li>
+<li>16명 → 4라운드</li>
+<li>32명 → 5라운드</li>
+</ul>
+<h2>숫자가 안 맞으면: 불참자 처리</h2>
+<p>참가자 수가 2의 배수가 아니면 일부 팀은 첫 라운드를 경기 없이 지나가요. 이를 불참이라고 부르죠. 불참자 수는 더 높은 2의 배수에서 참가자 수를 빼서 구합니다.</p>
+<p>예를 들어 12명이 있으면 더 높은 배수는 16이에요. 16 − 12 = 4 팀이 불참이 되어요. 불참 기회는 무작위가 아니라 순위 상위 팀에 주어져요. 그렇지 않으면 형식이 불공정해져요.</p>
+<h2>시드 배치가 왜 중요해요?</h2>
+<p>시드를 무작위로 표에 배치하면 최강 두 팀이 첫 라운드에서 만날 수 있고, 토너먼트의 결승이 너무 일찍 치러져요. 올바른 배치에서는 1번 시드가 표의 맨 위에, 2번 시드가 맨 아래에 놓이니까 결승에서만 만나요.</p>
+<p>같은 방식으로 3번과 4번 시드는 1번, 2번과 준결승에서 만나도록 배치돼요.</p>
+<h2>싱글 매치인지 더블 매치인지?</h2>
+<ul>
+<li><strong>싱글 탈락전:</strong> 가장 빨라요. 한 번의 나쁜 날씨로 탈락하기에 충분해요 — 짧은 토너먼트에 좋아요.</li>
+<li><strong>더블 매치 (홈-어웨이):</strong> 행운의 영향을 줄여주지만 경기 수를 두 배로 늘려요.</li>
+<li><strong>더블 탈락 (double elimination):</strong> 한 번 지면 하위 표로 떨어지고, 두 번째 패배에 탈락해요. 가장 공정하지만 가장 긴 형식이에요.</li>
+</ul>
+<h2>3위 경기를 할까요?</h2>
+<p>준결승에서 탈락한 두 팀 사이의 3위 경기는 토너먼트에 경기 하나를 더 추가하지만 참가자들이 토너먼트를 승리로 끝낼 확률을 늘려요. 작은 그룹에서는 보통 하지 않아요. 하지만 상금 있는 토너먼트에서는 순위가 필요해서 하게 돼요.</p>
+<h2>표를 자동으로 만들기</h2>
+<p>League &amp; Tournament Maker에서는 참가자를 입력하면 불참자 분배와 시드 배치를 계산해서 탈락전 표를 만들어요. 점수를 입력하면 다음 라운드가 자동으로 생성되고, 표를 PDF로 공유할 수 있어요. 같은 앱에서 리그와 그룹 형식도 사용 가능해요.</p>
+<section class="faq">
+<h2>자주 묻는 질문</h2>
+<details>
+<summary>12명 토너먼트에서 불참자가 몇 명이에요?</summary>
+<p>더 높은 2의 배수가 16이니까 16 − 12 = 4명의 참가자가 첫 라운드를 불참으로 지나가요. 불참 기회는 순위가 높은 사람들에게 주어져요.</p>
+</details>
+<details>
+<summary>시드를 표에 어떻게 배치해요?</summary>
+<p>1번이 맨 위에, 2번이 맨 아래에 놓여요. 3번과 4번은 1번, 2번과 준결승에서만 만나도록 배치돼요. 이래야 강한 팀들이 일찍 탈락하지 않아요.</p>
+</details>
+<details>
+<summary>더블 탈락은 언제 선택해요?</summary>
+<p>한 번의 나쁜 경기가 토너먼트를 끝내는 걸 원하지 않을 때예요. 더 공정한 결과를 주지만 경기 수와 시간이 명확하게 늘어나요.</p>
+</details>
+</section>
+<div class="appcard">
+<img alt="League &amp; Tournament Maker 앱 아이콘" class="ico" height="68" loading="lazy" src="/img/tournament-icon.png" width="68"/>
+<div class="txt">
+<h3>League &amp; Tournament Maker</h3>
+<p>리그, 탈락전, 그룹 토너먼트. 전적, 순위표, PDF 출력.</p>
+<div class="links">
+<a class="gp-btn" href="https://play.google.com/store/apps/details?id=com.Soge.LigTurnuvaOlutur" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"></path></svg><span><small>ANDROID</small><b>Google Play 다운로드</b></span></a>
+<a class="more" href="/tournament-portal/ko/">앱 페이지 →</a>
+</div>
+</div>
+</div>
+<section class="related">
+<h2>관련 글</h2>
+<div class="rel-grid">
+<a class="rel-card" href="/makale/ko/hali-saha-ligi-nasil-kurulur.html">
+<img alt="" loading="lazy" src="/makale/img/ko/hali-saha-ligi-nasil-kurulur.svg"/>
+<div><span class="rel-app">League &amp; Tournament Maker</span><strong>풋살 리그를 어떻게 만들어요? 전적, 순위표, 규칙</strong></div>
+</a>
+<a class="rel-card" href="/makale/ko/lig-turnuva-olusturma-uygulamasi.html">
+<img alt="" loading="lazy" src="/makale/img/ko/lig-turnuva-olusturma-uygulamasi.svg"/>
+<div><span class="rel-app">League &amp; Tournament Maker</span><strong>리그 만드는 앱: 휴대폰에서 전적, 순위표, 표</strong></div>
+</a>
+<a class="rel-card" href="/makale/ko/evde-arkadaslarla-oynanacak-oyunlar.html">
+<img alt="" loading="lazy" src="/makale/img/ko/evde-arkadaslarla-oynanacak-oyunlar.svg"/>
+<div><span class="rel-app">HomeParty</span><strong>집에서 친구와 함께 할 수 있는 30가지 이상의 재미있는 게임</strong></div>
+</a>
+</div>
+</section>
+</article>
+</div>
+<footer>
+<div>© 2026 Sogepps · <a href="/ko/">홈</a> · <a href="/makale/ko/">글</a> · <a href="mailto:sogepps@gmail.com">sogepps@gmail.com</a></div>
+</footer>
+
+<script defer="" src="/js/i18n.js?v=ac9834aa"></script>
+</body>
+</html>

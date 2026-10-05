@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>매치 예측 게임: 친구들과 점수 예측 리그 만들기 | Sogepps</title>
+<meta content="돈 없이, 재미만 위해 친구들과 경기 예측 게임을 어떻게 만드는지: 포인트 시스템, 주간 일정, 예측 카테고리, 공정한 규칙." name="description"/>
+<meta content="매치 예측 게임, 점수 예측 리그, 친구들과 예측 경쟁, 매치 예측 시뮬레이션, 축구 예측 게임" name="keywords"/>
+<link href="https://sogepps.tr/makale/ko/mac-tahmin-oyunu-nasil-oynanir.html" rel="canonical"/><link href="https://sogepps.tr/makale/mac-tahmin-oyunu-nasil-oynanir.html" hreflang="tr" rel="alternate"/><link href="https://sogepps.tr/makale/en/mac-tahmin-oyunu-nasil-oynanir.html" hreflang="en" rel="alternate"/><link href="https://sogepps.tr/makale/de/mac-tahmin-oyunu-nasil-oynanir.html" hreflang="de" rel="alternate"/><link href="https://sogepps.tr/makale/fr/mac-tahmin-oyunu-nasil-oynanir.html" hreflang="fr" rel="alternate"/><link href="https://sogepps.tr/makale/es/mac-tahmin-oyunu-nasil-oynanir.html" hreflang="es" rel="alternate"/><link href="https://sogepps.tr/makale/it/mac-tahmin-oyunu-nasil-oynanir.html" hreflang="it" rel="alternate"/><link href="https://sogepps.tr/makale/pt/mac-tahmin-oyunu-nasil-oynanir.html" hreflang="pt" rel="alternate"/><link href="https://sogepps.tr/makale/nl/mac-tahmin-oyunu-nasil-oynanir.html" hreflang="nl" rel="alternate"/><link href="https://sogepps.tr/makale/ru/mac-tahmin-oyunu-nasil-oynanir.html" hreflang="ru" rel="alternate"/><link href="https://sogepps.tr/makale/ja/mac-tahmin-oyunu-nasil-oynanir.html" hreflang="ja" rel="alternate"/><link href="https://sogepps.tr/makale/ko/mac-tahmin-oyunu-nasil-oynanir.html" hreflang="ko" rel="alternate"/><link href="https://sogepps.tr/makale/ar/mac-tahmin-oyunu-nasil-oynanir.html" hreflang="ar" rel="alternate"/><link href="https://sogepps.tr/makale/hi/mac-tahmin-oyunu-nasil-oynanir.html" hreflang="hi" rel="alternate"/><link href="https://sogepps.tr/makale/id/mac-tahmin-oyunu-nasil-oynanir.html" hreflang="id" rel="alternate"/><link href="https://sogepps.tr/makale/pl/mac-tahmin-oyunu-nasil-oynanir.html" hreflang="pl" rel="alternate"/><link href="https://sogepps.tr/makale/mac-tahmin-oyunu-nasil-oynanir.html" hreflang="x-default" rel="alternate"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<meta content="article" property="og:type"/>
+<meta content="Sogepps" property="og:site_name"/>
+<meta content="ko_KR" property="og:locale"/>
+<meta content="경기 예측 게임: 친구들과 점수 예측 리그 만들기" property="og:title"/>
+<meta content="돈 없이, 재미만 위해 친구들과 경기 예측 게임을 어떻게 만드는지: 포인트 시스템, 주간 일정, 예측 카테고리, 공정한 규칙." property="og:description"/>
+<meta content="https://sogepps.tr/makale/ko/mac-tahmin-oyunu-nasil-oynanir.html" property="og:url"/>
+<meta content="https://sogepps.tr/tahminmelegi/img/kazan-ovala.jpg" property="og:image"/>
+<meta content="2026-09-03" property="article:published_time"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="경기 예측 게임: 친구들과 점수 예측 리그 만들기" name="twitter:title"/>
+<meta content="돈 없이, 재미만 위해 친구들과 경기 예측 게임을 어떻게 만드는지: 포인트 시스템, 주간 일정, 예측 카테고리, 공정한 규칙." name="twitter:description"/>
+<meta content="https://sogepps.tr/tahminmelegi/img/kazan-ovala.jpg" name="twitter:image"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root { --bg:#050608; --surface:#0f1218; --surface-2:#171c26; --border:#1f2937; --text:#f0f4f8; --muted:#9ca3af; --accent:#6366f1; --accent-light:#818cf8; --glow:rgba(99,102,241,0.12); --font:'Inter', system-ui, -apple-system, sans-serif; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.7; }
+    a { color: var(--accent-light); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(5,6,8,0.86); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: 1000px; margin: 0 auto; padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .nav-brand { display: flex; align-items: center; gap: 10px; color: var(--text); font-weight: 800; font-size: 1.1rem; letter-spacing: -0.02em; text-decoration: none; }
+    .nav-logo { width: 32px; height: 32px; border-radius: 10px; background: linear-gradient(135deg, var(--accent), #a855f7); display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 800; color: #fff; }
+    .nav-links { display: flex; gap: 4px; list-style: none; align-items: center; }
+    .nav-links a { color: var(--muted); font-size: 0.85rem; font-weight: 500; padding: 8px 12px; border-radius: 8px; text-decoration: none; }
+    .nav-links a:hover, .nav-links a.active { color: var(--text); background: var(--glow); }
+    .wrap { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+    .crumb { font-size: 0.8rem; color: var(--muted); padding: 26px 0 0; }
+    .crumb a { color: var(--muted); }
+    .crumb span { margin: 0 6px; opacity: .5; }
+    footer { border-top: 1px solid var(--border); margin-top: 56px; padding: 40px 24px; text-align: center; color: var(--muted); font-size: 0.85rem; }
+    footer a { color: var(--accent-light); }
+    article { max-width: 760px; margin: 0 auto; padding: 8px 0 0; }
+    .post-head h1 { font-size: clamp(1.85rem, 4.2vw, 2.6rem); font-weight: 800; line-height: 1.18; letter-spacing: -0.02em; margin: 14px 0 12px; }
+    .post-meta { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; font-size: 0.82rem; color: var(--muted); margin-bottom: 22px; }
+    .post-meta .pill { background: var(--glow); color: var(--accent-light); border: 1px solid rgba(99,102,241,0.2); border-radius: 999px; padding: 4px 12px; font-weight: 600; }
+    .banner { width: 100%; height: auto; aspect-ratio: 1200 / 630; border-radius: 18px; border: 1px solid var(--border); display: block; margin-bottom: 26px; }
+    .lead { font-size: 1.1rem; color: #d6dde6; margin-bottom: 8px; }
+    article h2 { font-size: 1.35rem; font-weight: 700; letter-spacing: -0.01em; margin: 34px 0 12px; }
+    article p { color: #c7ced8; margin-bottom: 14px; }
+    article ul { color: #c7ced8; margin: 0 0 16px 0; padding-left: 1.3rem; }
+    article li { margin-bottom: 8px; }
+    article strong { color: var(--text); }
+    figure { margin: 22px 0; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; background: var(--surface); }
+    figure img { width: 100%; height: auto; display: block; }
+    figcaption { padding: 12px 16px; font-size: 0.83rem; color: var(--muted); }
+    .notice { border: 1px solid #4b3a1a; background: rgba(234,179,8,0.08); color: #e8d9a8; border-radius: 14px; padding: 12px 16px; font-size: 0.86rem; margin-bottom: 22px; }
+    .faq { margin-top: 38px; border-top: 1px solid var(--border); padding-top: 26px; }
+    .faq h2 { margin-top: 0; }
+    details { border: 1px solid var(--border); border-radius: 12px; padding: 12px 16px; margin-bottom: 10px; background: var(--surface); }
+    summary { cursor: pointer; font-weight: 600; }
+    details p { margin: 10px 0 0; }
+    .appcard { margin: 38px 0 10px; display: flex; gap: 18px; align-items: center; flex-wrap: wrap; border: 1px solid var(--border); border-radius: 18px; padding: 22px; background: linear-gradient(150deg, var(--surface), var(--surface-2)); }
+    .appcard img.ico { width: 68px; height: 68px; border-radius: 18px; object-fit: cover; }
+    .appcard .txt { flex: 1 1 260px; }
+    .appcard h3 { font-size: 1.15rem; margin-bottom: 4px; }
+    .appcard p { color: var(--muted); font-size: 0.9rem; margin: 0 0 12px; }
+    .appcard .links { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+    .appcard .more { font-size: 0.88rem; font-weight: 600; }
+    .related { margin-top: 44px; }
+    .related h2 { font-size: 1.2rem; margin-bottom: 14px; }
+    .rel-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+    .rel-card { display: block; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; background: var(--surface); color: inherit; text-decoration: none; }
+    .rel-card:hover { border-color: var(--accent); text-decoration: none; }
+    .rel-card img { width: 100%; height: auto; display: block; }
+    .rel-card div { padding: 12px 14px; }
+    .rel-app { display: block; font-size: 0.72rem; text-transform: uppercase; letter-spacing: .06em; color: var(--accent-light); margin-bottom: 4px; }
+    .rel-card strong { font-size: 0.93rem; font-weight: 600; line-height: 1.4; }
+    .gp-btn { display: inline-flex; align-items: center; gap: 10px; padding: 9px 18px; border-radius: 12px; background: #0d1016; border: 1px solid #414755; color: #fff; font-weight: 700; font-size: 0.95rem; line-height: 1.15; text-decoration: none; transition: border-color .2s, transform .15s; }
+    .gp-btn:hover { text-decoration: none; border-color: #9aa3b5; transform: translateY(-1px); color: #fff; }
+    .gp-btn svg { width: 22px; height: 22px; flex: 0 0 auto; fill: currentColor; }
+    .gp-btn > span { display: block; text-align: left; }
+    .gp-btn small { display: block; font-size: 0.62rem; font-weight: 600; letter-spacing: .09em; opacity: .7; }
+    .gp-btn-soon { opacity: .5; cursor: default; }
+    .gp-btn-soon:hover { transform: none; border-color: #414755; }
+  </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"경기 예측 게임: 친구들과 점수 예측 리그 만들기","description":"돈 없이, 재미만 위해 친구들과 경기 예측 게임을 어떻게 만드는지: 포인트 시스템, 주간 일정, 예측 카테고리, 공정한 규칙.","image":["https://sogepps.tr/tahminmelegi/img/kazan-ovala.jpg","https://sogepps.tr/makale/img/ko/mac-tahmin-oyunu-nasil-oynanir.svg"],"datePublished":"2026-09-03","dateModified":"2026-09-03","inLanguage":"ko","mainEntityOfPage":{"@type":"WebPage","@id":"https://sogepps.tr/makale/ko/mac-tahmin-oyunu-nasil-oynanir.html","inLanguage":"ko"},"author":{"@type":"Organization","name":"Sogepps","url":"https://sogepps.tr/ko/"},"publisher":{"@type":"Organization","name":"Sogepps","url":"https://sogepps.tr/ko/","logo":{"@type":"ImageObject","url":"https://sogepps.tr/img/tahminmelegi-icon.webp"}}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://sogepps.tr/ko/"},{"@type":"ListItem","position":2,"name":"글","item":"https://sogepps.tr/makale/ko/"},{"@type":"ListItem","position":3,"name":"경기 예측 게임: 친구들과 점수 예측 리그 만들기","item":"https://sogepps.tr/makale/ko/mac-tahmin-oyunu-nasil-oynanir.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"매치 예측 게임을 어떻게 점수를 줘요?","acceptedAnswer":{"@type":"Answer","text":"일반적인 배분은 정확한 점수 5, 경기 결과 3, 언더/오버 2, 양 팀 동점 1점. 마이너스 점수를 주지 않는 것이 한 시즌 내내 참여를 계속하게 해요."}},{"@type":"Question","name":"몇 명이서 해요?","acceptedAnswer":{"@type":"Answer","text":"4~10명이 이상적이예요. 더 큰 그룹에서 주간 점수 추적이 어려워지고 순위표가 업데이트되지 않아서 관심이 떨어져요."}},{"@type":"Question","name":"돈을 내야 해요?","acceptedAnswer":{"@type":"Answer","text":"권장하지 않아요. 돈이 들어가면 게임의 성격이 바뀌어요. 비금전적인 상징적인 상이 같은 동기를 훨씬 더 건강한 방식으로 제공해요."}}]}]}</script>
+</head>
+<body>
+<nav>
+<div class="nav-inner">
+<a class="nav-brand" href="/ko/"><span class="nav-logo">S</span> Sogepps</a>
+<ul class="nav-links">
+<li><a href="/ko/#apps">앱</a></li>
+<li><a class="active" href="/makale/ko/">글</a></li>
+<li><a href="mailto:sogepps@gmail.com">문의</a></li>
+</ul>
+</div>
+</nav>
+<div class="wrap">
+<div class="crumb"><a href="/ko/">홈</a><span>›</span><a href="/makale/ko/">글</a><span>›</span>Tahmin Meleği - İddaa</div>
+<article>
+<div class="post-head">
+<h1>경기 예측 게임: 친구들과 점수 예측 리그 만들기</h1>
+<div class="post-meta">
+<a class="pill" href="/tahminmelegi/ko/">Tahmin Meleği - İddaa</a>
+<span>2026년 9월 3일</span><span>·</span><span>2분 읽기</span>
+</div>
+</div>
+<img alt="경기 예측 게임: 친구들과 점수 예측 리그 만들기" class="banner" height="630" src="/makale/img/ko/mac-tahmin-oyunu-nasil-oynanir.svg" width="1200"/>
+<p class="notice">이 콘텐츠는 18세 이상 독자를 위한 것이에요. 정보와 엔터테인먼트 목적이고, 내기, 음주, 또는 유사한 주제에 대한 조언이 아니에요.</p>
+<p class="lead">매치 예측은 돈 없이도 하고, 솔직히 그렇게 할 때가 더 재미있어요. 친구 그룹에서 만든 예측 리그는 한 주 내내 대화할 주제를 만들어주고, 진 사람은 자랑할 권리를 잃을 뿐이예요.</p>
+<h2>어떻게 시작해요?</h2>
+<ul>
+<li><strong>참가자를 정해요.</strong> 4~10명이 이상적이예요; 더 많으면 주간 점수 추적이 힘들어져요.</li>
+<li><strong>주를 선택해요.</strong> 매주 5~10경기면 충분해요. 전체 리그를 다 하려고 하지 마세요.</li>
+<li><strong>마지막 예측 시간을 정해요.</strong> 첫 경기가 시작하는 시간이 한계예요; 그 다음엔 예측이 안 받아요.</li>
+<li><strong>예측을 보이지 않게 해요.</strong> 모두가 보낸 후에 공개해야 해요, 아니면 다음 사람들이 따라 해요.</li>
+<li><strong>점수를 한 곳에 유지해요.</strong> 표가 보여야 해요; 보이지 않는 점수는 관심을 끝내버려요.</li>
+</ul>
+<h2>점수 시스템</h2>
+<p>간단하지만 균형 잡힌 시스템이 모두가 계속 하게 해요. 권장 배분:</p>
+<ul>
+<li><strong>정확한 점수:</strong> 5점</li>
+<li><strong>경기 결과가 맞음 (1/X/2):</strong> 3점</li>
+<li><strong>총 골이 언더/오버 맞음:</strong> 2점</li>
+<li><strong>양 팀 동점 맞음:</strong> 1점</li>
+<li><strong>아무것도 아님:</strong> 0점 — 마이너스 점수를 주지 마세요, 사람들을 게임에서 떨어지게 해요</li>
+</ul>
+<h2>예측 범주</h2>
+<p>점수 예측만 하다 보면 어느 시점에 지루해져요. 주에 색을 더해주는 추가 범주:</p>
+<ul>
+<li>첫 골을 넣은 팀</li>
+<li>총 카드 수 언더/오버</li>
+<li>주의 깜짝 결과 — 알면 이중 점수</li>
+<li>조커 경기: 주에 한 경기를 선택해서 점수를 두 배로 할 권리</li>
+</ul>
+<figure>
+<img alt="Tahmin Meleği 앱의 마녀 냄비 화면" loading="lazy" src="/tahminmelegi/img/kazan-ovala.jpg"/>
+<figcaption>앱 쪽에서 예측이 의식이 돼요: 마녀 냄비를 문질러서 양피지의 단 하나의 예언을 읽으세요.</figcaption>
+</figure>
+<h2>리그를 살아있게 유지하는 3가지 규칙</h2>
+<ul>
+<li><strong>시즌을 짧게 유지해요.</strong> 8~10주 시즌이 34주 시즌보다 훨씬 높은 완료율을 가져요.</li>
+<li><strong>늦는 사람을 벌하지 마세요, 그냥 그 주를 빠지게 해요.</strong> 벌점이 사람들을 게임에서 떨어지게 해요.</li>
+<li><strong>주간 우승자를 공지해요.</strong> 일반 순위만 있으면 뒤에 있는 사람들이 일찍 포기해요.</li>
+</ul>
+<h2>돈을 섞지 마세요</h2>
+<p>이 게임의 전체 매력은 베팅이 없다는 거예요. 돈이 들어가는 순간 게임이 바뀌어요: 사람들이 예측이 아니라 손실에 대해 얘기하기 시작해요 그리고 그룹 관계가 손상돼요.</p>
+<p>상 이 필요하면 비금전적인 거 선택해요: 시즌 끝에 진 사람들이 사주는 커피, 순위 마지막 사람이 한 주 동안 그룹 프로필 사진을 정하는 권리처럼요.</p>
+<p>이 콘텐츠는 18세 이상의 독자용이고 베팅 조언을 담고 있지 않아요. 베팅이 조절을 벗어나면 심각한 문제가 돼요; 지원은 무료 Yeşilay 상담 전화 (115)가 있어요.</p>
+<h2>재미 쪽에 머물기</h2>
+<p>Tahmin Meleği는 정확히 이 선 위에 서 있어요: 확률을 계산하지 않고, 쿠폰을 만들지 않고, 분석하지 않아요. 한 경기를 생각해요, 마녀 냄비를 문질러요, 양피지에서 단 하나의 예언 문장이 나와요. 예측 리그를 만드는 그룹들을 위해 주간 "예언" 라운드가 순위표에 재미있는 한 층을 더해줘요.</p>
+<section class="faq">
+<h2>자주 묻는 질문</h2>
+<details>
+<summary>매치 예측 게임을 어떻게 점수를 줘요?</summary>
+<p>일반적인 배분은 정확한 점수 5, 경기 결과 3, 언더/오버 2, 양 팀 동점 1점. 마이너스 점수를 주지 않는 것이 한 시즌 내내 참여를 계속하게 해요.</p>
+</details>
+<details>
+<summary>몇 명이서 해요?</summary>
+<p>4~10명이 이상적이예요. 더 큰 그룹에서 주간 점수 추적이 어려워지고 순위표가 업데이트되지 않아서 관심이 떨어져요.</p>
+</details>
+<details>
+<summary>돈을 내야 해요?</summary>
+<p>권장하지 않아요. 돈이 들어가면 게임의 성격이 바뀌어요. 비금전적인 상징적인 상이 같은 동기를 훨씬 더 건강한 방식으로 제공해요.</p>
+</details>
+</section>
+<div class="appcard">
+<img alt="Tahmin Meleği - İddaa 앱 아이콘" class="ico" height="68" loading="lazy" src="/img/tahminmelegi-icon.webp" width="68"/>
+<div class="txt">
+<h3>Tahmin Meleği - İddaa</h3>
+<p>마녀 냄비를 문지르고, 양피지에 있는 한 개의 예언을 읽으세요. 재미 목적이에요.</p>
+<div class="links">
+<a class="gp-btn" href="https://play.google.com/store/apps/details?id=com.Soge.TahminMeleiddaa" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"></path></svg><span><small>ANDROID</small><b>Google Play 다운로드</b></span></a>
+<a class="more" href="/tahminmelegi/ko/">앱 페이지 →</a>
+</div>
+</div>
+</div>
+<section class="related">
+<h2>관련 글</h2>
+<div class="rel-grid">
+<a class="rel-card" href="/makale/ko/iddaa-terimleri-sozlugu.html">
+<img alt="" loading="lazy" src="/makale/img/ko/iddaa-terimleri-sozlugu.svg"/>
+<div><span class="rel-app">Tahmin Meleği - İddaa</span><strong>내기 용어 사전: MS, 오버/언더, HG 있음/없음 뭐 의미해요?</strong></div>
+</a>
+<a class="rel-card" href="/makale/ko/futbol-tahmini-nasil-yorumlanir.html">
+<img alt="" loading="lazy" src="/makale/img/ko/futbol-tahmini-nasil-yorumlanir.svg"/>
+<div><span class="rel-app">Tahmin Meleği - İddaa</span><strong>축구 경기 예측을 어떻게 해석할까? 재미를 위한 가이드</strong></div>
+</a>
+<a class="rel-card" href="/makale/ko/evde-arkadaslarla-oynanacak-oyunlar.html">
+<img alt="" loading="lazy" src="/makale/img/ko/evde-arkadaslarla-oynanacak-oyunlar.svg"/>
+<div><span class="rel-app">HomeParty</span><strong>집에서 친구와 함께 할 수 있는 30가지 이상의 재미있는 게임</strong></div>
+</a>
+</div>
+</section>
+</article>
+</div>
+<footer>
+<div>© 2026 Sogepps · <a href="/ko/">홈</a> · <a href="/makale/ko/">글</a> · <a href="mailto:sogepps@gmail.com">sogepps@gmail.com</a></div>
+</footer>
+
+<script defer="" src="/js/i18n.js?v=ac9834aa"></script>
+</body>
+</html>

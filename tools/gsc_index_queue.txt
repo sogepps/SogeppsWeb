@@ -1,0 +1,67 @@
+# Search Console "Dizine eklenmesini iste" kuyruğu — günde ~10 istek hakkı var.
+# Yapılanlar (2026-09-23):
+#   https://sogepps.tr/en/
+#   https://sogepps.tr/yerseyap/
+#   https://sogepps.tr/yerseyap/en/
+#   https://sogepps.tr/makale/en/
+#   https://sogepps.tr/metin2okey/
+#   https://sogepps.tr/tournament-portal/en/
+#   https://sogepps.tr/homeparty/
+#   https://sogepps.tr/makale/zarli-tahta-oyunu-nasil-oynanir.html
+#   https://sogepps.tr/sogegammon/en/
+#
+# Sıradakiler (öncelik sırasıyla, her gün ilk 10 tanesi):
+https://sogepps.tr/fishingdiary/
+https://sogepps.tr/fishingdiary/en/
+https://sogepps.tr/fishingdiary/de/
+https://sogepps.tr/fishingdiary/es/
+https://sogepps.tr/fishingdiary/pt/
+https://sogepps.tr/fishingdiary/ru/
+https://sogepps.tr/fishingdiary/fr/
+https://sogepps.tr/fishingdiary/ja/
+https://sogepps.tr/fishingdiary/ko/
+https://sogepps.tr/fishingdiary/ar/
+https://sogepps.tr/fishingdiary/hi/
+https://sogepps.tr/fishingdiary/id/
+https://sogepps.tr/fishingdiary/it/
+https://sogepps.tr/fishingdiary/nl/
+https://sogepps.tr/fishingdiary/pl/
+https://sogepps.tr/de/
+https://sogepps.tr/fr/
+https://sogepps.tr/es/
+https://sogepps.tr/homeparty/en/
+https://sogepps.tr/spinify/en/
+https://sogepps.tr/shot/en/
+https://sogepps.tr/quickraffle-portal/en/
+https://sogepps.tr/metin2okey/en/
+https://sogepps.tr/sessizkelime/en/
+https://sogepps.tr/tahminmelegi/en/
+https://sogepps.tr/makale/en/hali-saha-ligi-nasil-kurulur.html
+https://sogepps.tr/makale/en/okeyde-tas-takibi.html
+https://sogepps.tr/makale/en/tavlada-kazanma-taktikleri.html
+https://sogepps.tr/makale/en/evde-arkadaslarla-oynanacak-oyunlar.html
+https://sogepps.tr/makale/en/instagram-cekilisi-nasil-yapilir.html
+https://sogepps.tr/makale/okeyde-tas-takibi.html
+https://sogepps.tr/makale/hali-saha-ligi-nasil-kurulur.html
+https://sogepps.tr/makale/rastgele-secim-carki-nasil-yapilir.html
+https://sogepps.tr/makale/lig-turnuva-olusturma-uygulamasi.html
+https://sogepps.tr/makale/tavla-dizilisi-nasil-dizilir.html
+https://sogepps.tr/yerseyap/de/
+https://sogepps.tr/yerseyap/fr/
+https://sogepps.tr/yerseyap/es/
+https://sogepps.tr/yerseyap/pt/
+https://sogepps.tr/yerseyap/ru/
+https://sogepps.tr/sogegammon/de/
+https://sogepps.tr/sogegammon/ru/
+https://sogepps.tr/tournament-portal/de/
+https://sogepps.tr/tournament-portal/es/
+https://sogepps.tr/it/
+https://sogepps.tr/pt/
+https://sogepps.tr/ru/
+https://sogepps.tr/ja/
+https://sogepps.tr/ko/
+https://sogepps.tr/ar/
+https://sogepps.tr/hi/
+https://sogepps.tr/id/
+https://sogepps.tr/pl/
+https://sogepps.tr/nl/

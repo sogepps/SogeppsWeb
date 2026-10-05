@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shot Çarkı - 미션이 있는 파티 휠 게임</title>
+<meta content="Shot Çarkı는 2–12명이 즐기는 재미있는 파티 휠 게임이에요. 휠을 돌려 난이도별 미션을 받고, 성공하면 점수를 얻거나 한 잔을 마셔요. 최고 점수가 승리해요!" name="description"/>
+
+<link href="https://sogepps.tr/shot/ko/" rel="canonical"/><link href="https://sogepps.tr/shot/" hreflang="tr" rel="alternate"/><link href="https://sogepps.tr/shot/en/" hreflang="en" rel="alternate"/><link href="https://sogepps.tr/shot/de/" hreflang="de" rel="alternate"/><link href="https://sogepps.tr/shot/fr/" hreflang="fr" rel="alternate"/><link href="https://sogepps.tr/shot/es/" hreflang="es" rel="alternate"/><link href="https://sogepps.tr/shot/it/" hreflang="it" rel="alternate"/><link href="https://sogepps.tr/shot/pt/" hreflang="pt" rel="alternate"/><link href="https://sogepps.tr/shot/nl/" hreflang="nl" rel="alternate"/><link href="https://sogepps.tr/shot/ru/" hreflang="ru" rel="alternate"/><link href="https://sogepps.tr/shot/ja/" hreflang="ja" rel="alternate"/><link href="https://sogepps.tr/shot/ko/" hreflang="ko" rel="alternate"/><link href="https://sogepps.tr/shot/ar/" hreflang="ar" rel="alternate"/><link href="https://sogepps.tr/shot/hi/" hreflang="hi" rel="alternate"/><link href="https://sogepps.tr/shot/id/" hreflang="id" rel="alternate"/><link href="https://sogepps.tr/shot/pl/" hreflang="pl" rel="alternate"/><link href="https://sogepps.tr/shot/" hreflang="x-default" rel="alternate"/>
+<meta content="Shot Çarkı - 미션이 있는 파티 휠 게임" property="og:title"/>
+<meta content="Shot Çarkı는 2–12명이 즐기는 재미있는 파티 휠 게임이에요. 휠을 돌려 난이도별 미션을 받고, 성공하면 점수를 얻거나 한 잔을 마셔요. 최고 점수가 승리해요!" property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://sogepps.tr/shot/ko/" property="og:url"/>
+<meta content="https://sogepps.tr/shot/img/icon.webp" property="og:image"/>
+<style>
+    :root { --bg:#070913; --surface:#11172a; --surface-2:#18213a; --border:#2a3559; --text:#edf2ff; --muted:#b3bfdc; --primary:#a855f7; --secondary:#ec4899; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: radial-gradient(circle at 10% -10%, rgba(168, 85, 247, 0.32), transparent 35%), radial-gradient(circle at 90% -20%, rgba(236, 72, 153, 0.18), transparent 35%), var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    a { color: #d8b4fe; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1160px; margin: 0 auto; padding: 0 20px; }
+    .topnav { position: sticky; top: 0; z-index: 99; border-bottom: 1px solid var(--border); background: rgba(7, 9, 19, 0.86); backdrop-filter: blur(10px); }
+    .topnav-inner, .nav-inner { min-height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 0.92rem; flex-wrap: wrap; padding: 8px 0; }
+    .topnav-links, .nav-links { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+    .hero { padding: 82px 0 40px; display: grid; grid-template-columns: 132px 1fr; gap: 22px; align-items: center; }
+    .hero-icon { width: 132px; height: 132px; border-radius: 30px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 20px 58px rgba(168, 85, 247, 0.35); background: linear-gradient(135deg, var(--primary), var(--secondary)); }
+    .hero-icon img { width: 100%; height: 100%; object-fit: cover; }
+    h1 { font-size: clamp(2rem, 5.2vw, 3.3rem); line-height: 1.08; margin-bottom: 12px; letter-spacing: -0.02em; }
+    .lead { color: var(--muted); max-width: 840px; font-size: 1.05rem; }
+    .hero-tags { margin-top: 16px; display: flex; gap: 8px; flex-wrap: wrap; }
+    .hero-tag { border: 1px solid #5b3d8a; background: rgba(168, 85, 247, 0.16); color: #e9d5ff; border-radius: 999px; padding: 6px 12px; font-size: 0.8rem; font-weight: 600; }
+    .section { margin: 20px 0; border: 1px solid var(--border); border-radius: 20px; padding: 28px; background: linear-gradient(160deg, var(--surface), var(--surface-2)); }
+    .section h2 { font-size: 1.5rem; margin-bottom: 12px; }
+    .section > p { color: var(--muted); margin-bottom: 10px; }
+    .level-grid { margin-top: 16px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+    .level-item { border: 1px solid #3a4a7b; border-radius: 14px; padding: 14px; background: rgba(16, 23, 42, 0.6); display: flex; gap: 12px; align-items: flex-start; }
+    .level-dot { width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0; margin-top: 4px; }
+    .level-item h3 { font-size: 1rem; margin-bottom: 4px; }
+    .level-item p { font-size: 0.88rem; margin: 0; color: var(--muted); }
+    .feat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 16px; }
+    .feature { border: 1px solid #32406c; border-radius: 14px; padding: 14px; background: rgba(16, 23, 42, 0.6); }
+    .feature h3 { font-size: 1rem; margin-bottom: 6px; }
+    .feature p { font-size: 0.93rem; margin: 0; color: var(--muted); }
+    .warn { margin: 20px 0; border: 1px solid #7f1d1d; border-radius: 16px; padding: 18px 22px; background: rgba(127, 29, 29, 0.25); }
+    .warn h2 { font-size: 1.15rem; margin-bottom: 8px; color: #fca5a5; }
+    .warn p { color: #fbcfe8; margin: 0; font-size: 0.95rem; }
+    .cta { margin: 24px 0 68px; text-align: center; border: 1px solid #5a4a9a; border-radius: 20px; padding: 30px 22px; background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(236, 72, 153, 0.12)); }
+    .cta h2 { margin-bottom: 8px; }
+    .cta p { color: var(--muted); }
+    .cta-links { margin-top: 14px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+    .btn { display: inline-block; padding: 10px 15px; border-radius: 11px; font-weight: 700; border: 1px solid #7c3aed; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #fff; text-decoration: none; }
+    .btn.secondary { background: rgba(17, 23, 42, 0.65); color: #d7e2ff; border-color: #3a4a7b; }
+    @media (max-width: 760px) { .hero { grid-template-columns: 1fr; text-align: center; } .hero-icon { margin: 0 auto; } .topnav-links, .nav-links { justify-content: center; } }
+    /* Google Play indirme butonu */
+    .gp-actions { margin-top: 18px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .gp-btn { display: inline-flex; align-items: center; gap: 10px; padding: 9px 18px; border-radius: 12px; background: #0d1016; border: 1px solid #414755; color: #ffffff; font-weight: 700; font-size: 0.98rem; line-height: 1.15; text-decoration: none; transition: border-color .2s, transform .15s; }
+    .gp-btn:hover { text-decoration: none; border-color: #9aa3b5; transform: translateY(-1px); color: #fff; }
+    .gp-btn svg { width: 24px; height: 24px; flex: 0 0 auto; fill: currentColor; }
+    .gp-btn > span { display: block; text-align: left; }
+    .gp-btn small { display: block; font-size: 0.63rem; font-weight: 600; letter-spacing: .09em; opacity: .7; }
+    .gp-btn-soon { opacity: .5; cursor: default; }
+    .gp-btn-soon:hover { transform: none; border-color: #414755; }
+    /* Makale bolumu */
+    .sg-arts { margin: 20px 0; border: 1px solid rgba(255,255,255,0.12); border-radius: 20px; padding: 26px; background: rgba(255,255,255,0.03); }
+    .sg-arts h2 { font-size: 1.4rem; margin-bottom: 6px; }
+    .sg-arts > p { opacity: .78; margin-bottom: 16px; font-size: 0.95rem; }
+    .sg-arts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+    .sg-art { display: block; border: 1px solid rgba(255,255,255,0.13); border-radius: 14px; overflow: hidden; background: rgba(0,0,0,0.28); color: inherit; text-decoration: none; transition: border-color .2s, transform .2s; }
+    .sg-art:hover { text-decoration: none; transform: translateY(-3px); border-color: rgba(255,255,255,0.38); }
+    .sg-art img { width: 100%; height: auto; aspect-ratio: 1200 / 630; display: block; }
+    .sg-art-body { padding: 14px 16px 16px; }
+    .sg-art-body h3 { font-size: 1rem; line-height: 1.4; margin-bottom: 6px; }
+    .sg-art-body p { font-size: 0.86rem; opacity: .72; margin: 0; }
+    .sg-arts-all { display: inline-block; margin-top: 14px; font-weight: 700; font-size: 0.9rem; }
+  </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Shot Çarkı","applicationCategory":"GameApplication","operatingSystem":"Android","description":"Shot Çarkı는 2–12명이 즐기는 재미있는 파티 휠 게임이에요. 휠을 돌려 난이도별 미션을 받고, 성공하면 점수를 얻거나 한 잔을 마셔요. 최고 점수가 승리해요!","inLanguage":"ko"}</script>
+<meta content="ko_KR" property="og:locale"/></head>
+<body>
+<nav class="topnav">
+<div class="wrap topnav-inner nav-inner">
+<a data-i18n="nav_home" href="/ko/">← Sogepps 홈</a>
+<div class="topnav-links nav-links">
+<a data-i18n="nav_levels" href="#zorluklar">난이도</a>
+<a data-i18n="nav_how" href="#nasil">플레이 방법</a>
+<a data-i18n="feat_title" href="#ozellikler">왜 Shot Çarkı일까요?</a>
+<a data-i18n="nav_privacy" href="privacy-policy.html">개인정보 처리방침</a>
+<a href="mailto:sogepps@gmail.com">sogepps@gmail.com</a>
+</div>
+</div>
+</nav>
+<main class="wrap">
+<section class="hero">
+<div class="hero-icon"><img alt="Shot Çarkı uygulama simgesi" decoding="async" height="132" src="/shot/img/icon.webp" width="132"/></div>
+<div>
+<h1 data-i18n-html="hero_title">Shot Çarkı<br/>돌리고, 도전하고, 득점하세요</h1>
+<p class="lead" data-i18n="hero_lead">Shot Çarkı는 친구들과 즐기는 파티 휠 게임이에요. 2–12명을 추가하고 애니메이션 휠을 돌려 난이도별 미션을 받으세요 — 완료하면 점수를 얻고, 한 잔을 마시면 넘어갈 수 있어요. 최고 점수가 승리해요!</p>
+<div class="hero-tags">
+<span class="hero-tag" data-i18n="tag_1">2–12명</span>
+<span class="hero-tag" data-i18n="tag_2">가중치 휠</span>
+<span class="hero-tag" data-i18n="tag_3">5단계 난이도</span>
+<span class="hero-tag" data-i18n="tag_4">실시간 스코어보드</span>
+</div>
+<div class="gp-actions">
+<a class="gp-btn" href="https://play.google.com/store/apps/details?id=com.DefaultCompany.meOyunuShotOyunu" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"></path></svg>
+<span><small>ANDROID</small><b data-i18n="btn_google_play">Google Play 다운로드</b></span>
+</a>
+</div>
+</div>
+</section>
+<section class="section" id="zorluklar">
+<h2 data-i18n="levels_title">난이도 단계</h2>
+<p data-i18n="levels_desc">어려운 미션일수록 확률은 낮지만 점수는 높아요.</p>
+<div class="level-grid">
+<div class="level-item"><span class="level-dot" style="background:#22c55e"></span><div><h3 data-i18n="lv_1_t">매우 쉬움</h3><p data-i18n="lv_1_d">확률 30% · 10점 — 말로 하는 간단한 미션</p></div></div>
+<div class="level-item"><span class="level-dot" style="background:#84cc16"></span><div><h3 data-i18n="lv_2_t">쉬움</h3><p data-i18n="lv_2_d">확률 25% · 20점 — 가벼운 도전</p></div></div>
+<div class="level-item"><span class="level-dot" style="background:#eab308"></span><div><h3 data-i18n="lv_3_t">보통</h3><p data-i18n="lv_3_d">확률 20% · 30점 — 중간 난이도 미션</p></div></div>
+<div class="level-item"><span class="level-dot" style="background:#f97316"></span><div><h3 data-i18n="lv_4_t">어려움</h3><p data-i18n="lv_4_d">확률 15% · 40점 — 용기와 액션이 필요한 미션</p></div></div>
+<div class="level-item"><span class="level-dot" style="background:#ef4444"></span><div><h3 data-i18n="lv_5_t">매우 어려움</h3><p data-i18n="lv_5_d">확률 10% · 50점 — 힘든 미션</p></div></div>
+</div>
+</section>
+<section class="section" id="nasil">
+<h2 data-i18n="how_title">Shot Çarkı 플레이 방법</h2>
+<p data-i18n="how_desc">시끌벅적한 게임 나이트를 위한 간단한 규칙이에요.</p>
+<div class="feat-grid">
+<div class="feature"><h3 data-i18n="how_1_t">1) 플레이어 추가</h3><p data-i18n="how_1_d">2–12명을 선택하고 모두의 이름을 입력하세요.</p></div>
+<div class="feature"><h3 data-i18n="how_2_t">2) 휠 돌리기</h3><p data-i18n="how_2_d">차례가 되면 돌리기를 탭하세요. 휠이 난이도 위에 멈춰요.</p></div>
+<div class="feature"><h3 data-i18n="how_3_t">3) 수행하거나 한 잔 마시기</h3><p data-i18n="how_3_d">미션을 완료하고 완료를 탭해 점수를 받거나, 한 잔을 마시고 점수를 건너뛰세요.</p></div>
+<div class="feature"><h3 data-i18n="how_4_t">4) 스코어보드에서 순위 올리기</h3><p data-i18n="how_4_d">언제든 점수와 마신 횟수를 확인하세요. 최고 점수가 승리해요!</p></div>
+</div>
+</section>
+<section class="section" id="ozellikler">
+<h2 data-i18n="feat_title">왜 Shot Çarkı일까요?</h2>
+<p data-i18n="feat_desc">파티, 기숙사 모임, 친구들과의 만남을 위해 만들어졌어요.</p>
+<div class="feat-grid">
+<div class="feature"><h3 data-i18n="f_1_t">애니메이션 SVG 휠</h3><p data-i18n="f_1_d">실제 가중 확률이 적용된 부드러운 5초 스핀이에요.</p></div>
+<div class="feature"><h3 data-i18n="f_2_t">방대한 미션 뱅크</h3><p data-i18n="f_2_d">단계마다 약 30개의 미션 — 말로 하는 재미부터 몸으로 하는 미션까지.</p></div>
+<div class="feature"><h3 data-i18n="f_3_t">점수 &amp; 한 잔 카운트</h3><p data-i18n="f_3_d">점수와 마신 횟수를 보여주는 실시간 스코어보드예요.</p></div>
+<div class="feature"><h3 data-i18n="f_4_t">계정 불필요</h3><p data-i18n="f_4_d">가입 없이 바로 게임을 시작하세요.</p></div>
+</div>
+</section>
+<section class="warn">
+<h2 data-i18n="warn_title">책임감 있게 즐기세요</h2>
+<p data-i18n="warn_desc">이 앱은 오락용입니다. 누구에게도 강요하지 마세요. 음주는 과하지 않게, 18세 미만은 음주하지 마세요.</p>
+</section>
+<section class="section sg-arts" id="makaleler">
+<h2 data-i18n="arts_title">아티클</h2>
+<p data-i18n="arts_desc">Shot Çarkı 관련 가이드와 게임 아이디어예요.</p>
+<div class="sg-arts-grid">
+<a class="sg-art" href="/makale/ko/ev-partisi-icin-shot-oyunlari.html">
+<img alt="집 파티를 위한 룰렛 게임: 규칙과 점수 계산 (18+)" height="630" loading="lazy" src="/makale/img/ko/ev-partisi-icin-shot-oyunlari.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>집 파티를 위한 룰렛 게임: 규칙과 점수 계산 (18+)</h3>
+<p>집 파티를 위한 룰렛 기반 과제 게임을 어떻게 설정해요: 난이도 레벨, 점수 계산, 패스 기회, 알코올 없는 대안. 2-12 선수를 위한 실용적인 규칙이에요.</p>
+</div>
+</a>
+<a class="sg-art" href="/makale/ko/dogruluk-mu-cesaret-mi-gorev-fikirleri.html">
+<img alt="진실 아니면 선택? 파티를 데우는 과제 아이디어들" height="630" loading="lazy" src="/makale/img/ko/dogruluk-mu-cesaret-mi-gorev-fikirleri.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>진실 아니면 선택? 파티를 데우는 과제 아이디어들</h3>
+<p>진실 아니면 선택 게임을 할 때 쓸 수 있는 질문과 과제 목록, 난이도 레벨과 그룹을 지루하게 하지 않으면서 게임을 관리하는 방법들이에요.</p>
+</div>
+</a>
+<a class="sg-art" href="/makale/ko/ev-partisinde-neler-yapilir.html">
+<img alt="집 파티에서 뭐 해요? 흐름, 게임 순서, 아이디어" height="630" loading="lazy" src="/makale/img/ko/ev-partisinde-neler-yapilir.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>집 파티에서 뭐 해요? 흐름, 게임 순서, 아이디어</h3>
+<p>집 파티를 어떻게 하는지: 밤의 시간별 흐름, 언제 어떤 게임을 하는지, 음악과 스낵 계획, 많은 사람들을 지루하게 하지 않으면서 관리하는 방법이에요.</p>
+</div>
+</a>
+</div>
+<a class="sg-arts-all" data-i18n="arts_all" href="/makale/ko/">모든 아티클 보기 →</a>
+</section>
+<section class="cta">
+<h2 data-i18n="cta_title">Shot Çarkı와 함께 파티를 시작하세요</h2>
+<p data-i18n="cta_desc">Shot Çarkı는 Sogepps 패밀리의 최신 파티 게임이에요.</p>
+<div class="cta-links">
+<a class="gp-btn" href="https://play.google.com/store/apps/details?id=com.DefaultCompany.meOyunuShotOyunu" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"></path></svg>
+<span><small>ANDROID</small><b data-i18n="btn_google_play">Google Play 다운로드</b></span>
+</a>
+<a class="btn" data-i18n="btn_home" href="/ko/">Sogepps 홈으로 돌아가기</a>
+<a class="btn secondary" data-i18n="footer_privacy" href="privacy-policy.html">개인정보 처리방침</a>
+<a class="btn secondary" data-i18n="btn_contact" href="mailto:sogepps@gmail.com">문의하기</a>
+</div>
+</section>
+</main>
+
+
+
+<script defer="" src="/js/i18n.js?v=ac9834aa"></script>
+</body>
+</html>

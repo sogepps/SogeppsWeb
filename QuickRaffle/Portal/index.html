@@ -1,14 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hızlı Çekiliş – Quick Raffle &amp; Random Pick App</title>
-  <meta name="description" content="All-in-one raffle and random pick app: name picker, number draw, wheel, lottery, team picker, dice, coin flip, card draw, list shuffler, bingo and more. Fast, fair, and fun." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hızlı Çekiliş – Çekiliş ve Rastgele Seçim Uygulaması</title>
+<meta content="Hızlı Çekiliş: çekiliş, kura, hediye, sosyal medya yarışmaları ve karar vermek için hepsi bir arada uygulama. İsim seçici, şans çarkı, sayı çekilişi, takım oluşturucu ve daha fazlası." name="description"/>
+<link href="https://sogepps.tr/quickraffle-portal/" rel="canonical"/><link href="https://sogepps.tr/quickraffle-portal/" hreflang="tr" rel="alternate"/><link href="https://sogepps.tr/quickraffle-portal/en/" hreflang="en" rel="alternate"/><link href="https://sogepps.tr/quickraffle-portal/de/" hreflang="de" rel="alternate"/><link href="https://sogepps.tr/quickraffle-portal/fr/" hreflang="fr" rel="alternate"/><link href="https://sogepps.tr/quickraffle-portal/es/" hreflang="es" rel="alternate"/><link href="https://sogepps.tr/quickraffle-portal/it/" hreflang="it" rel="alternate"/><link href="https://sogepps.tr/quickraffle-portal/pt/" hreflang="pt" rel="alternate"/><link href="https://sogepps.tr/quickraffle-portal/nl/" hreflang="nl" rel="alternate"/><link href="https://sogepps.tr/quickraffle-portal/ru/" hreflang="ru" rel="alternate"/><link href="https://sogepps.tr/quickraffle-portal/ja/" hreflang="ja" rel="alternate"/><link href="https://sogepps.tr/quickraffle-portal/ko/" hreflang="ko" rel="alternate"/><link href="https://sogepps.tr/quickraffle-portal/ar/" hreflang="ar" rel="alternate"/><link href="https://sogepps.tr/quickraffle-portal/hi/" hreflang="hi" rel="alternate"/><link href="https://sogepps.tr/quickraffle-portal/id/" hreflang="id" rel="alternate"/><link href="https://sogepps.tr/quickraffle-portal/pl/" hreflang="pl" rel="alternate"/><link href="https://sogepps.tr/quickraffle-portal/" hreflang="x-default" rel="alternate"/>
+<meta content="çekiliş uygulaması, isim seçici, kura çekme, rastgele seçim, takım seçici, hızlı çekiliş" name="keywords"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<meta content="website" property="og:type"/>
+<meta content="Sogepps" property="og:site_name"/>
+<meta content="Hızlı Çekiliş – Çekiliş ve Rastgele Seçim Uygulaması" property="og:title"/>
+<meta content="Hızlı Çekiliş: çekiliş, kura, hediye, sosyal medya yarışmaları ve karar vermek için hepsi bir arada uygulama. İsim seçici, şans çarkı, sayı çekilişi, takım oluşturucu ve daha fazlası." property="og:description"/>
+<meta content="https://sogepps.tr/quickraffle-portal/" property="og:url"/>
+<meta content="https://sogepps.tr/img/quickraffle-icon.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Hızlı Çekiliş","applicationCategory":"GameApplication","operatingSystem":"Android","description":"İsim seçici, sayı çekilişi, çark, torba, takım seçici, zar, yazı-tura ve daha fazlası tek uygulamada. Hızlı, adil ve çevrimdışı çalışan çekiliş uygulaması.","url":"https://sogepps.tr/quickraffle-portal/","image":"https://sogepps.tr/img/quickraffle-icon.png","downloadUrl":"https://play.google.com/store/apps/details?id=com.soge.quickraffle","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"publisher":{"@type":"Organization","name":"Sogepps","url":"https://sogepps.tr/"},"inLanguage":"tr"}</script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
     :root {
       --bg: #050608;
       --surface: #0f1218;
@@ -97,142 +109,176 @@
       .features, .how { padding: 60px 20px; }
       .footer-inner { flex-direction: column; }
     }
+    /* Makale bolumu */
+    .sg-arts { margin: 20px 0; border: 1px solid rgba(255,255,255,0.12); border-radius: 20px; padding: 26px; background: rgba(255,255,255,0.03); }
+    .sg-arts h2 { font-size: 1.4rem; margin-bottom: 6px; }
+    .sg-arts > p { opacity: .78; margin-bottom: 16px; font-size: 0.95rem; }
+    .sg-arts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+    .sg-art { display: block; border: 1px solid rgba(255,255,255,0.13); border-radius: 14px; overflow: hidden; background: rgba(0,0,0,0.28); color: inherit; text-decoration: none; transition: border-color .2s, transform .2s; }
+    .sg-art:hover { text-decoration: none; transform: translateY(-3px); border-color: rgba(255,255,255,0.38); }
+    .sg-art img { width: 100%; height: auto; aspect-ratio: 1200 / 630; display: block; }
+    .sg-art-body { padding: 14px 16px 16px; }
+    .sg-art-body h3 { font-size: 1rem; line-height: 1.4; margin-bottom: 6px; }
+    .sg-art-body p { font-size: 0.86rem; opacity: .72; margin: 0; }
+    .sg-arts-all { display: inline-block; margin-top: 14px; font-weight: 700; font-size: 0.9rem; }
+    .sg-arts { max-width: 1100px; margin: 0 auto 40px; }
   </style>
-</head>
+<meta content="tr_TR" property="og:locale"/></head>
 <body>
-
-  <nav>
-    <div class="nav-inner">
-      <div style="display:flex;align-items:center;">
-        <a href="/" class="nav-back" data-i18n="nav_back">&#8592; Sogepps</a>
-        <div class="nav-sep"></div>
-        <a href="/quickraffle-portal/" class="nav-brand">
-          <div class="nav-icon">
-            <img src="img/icon.png" alt="" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" />
-            <span class="nav-icon-fallback" aria-hidden="true">&#127808;</span>
-          </div>
+<nav>
+<div class="nav-inner">
+<div style="display:flex;align-items:center;">
+<a class="nav-back" data-i18n="nav_back" href="/">← Sogepps</a>
+<div class="nav-sep"></div>
+<a class="nav-brand" href="/quickraffle-portal/">
+<div class="nav-icon">
+<img alt="" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" src="img/icon.png"/>
+<span aria-hidden="true" class="nav-icon-fallback">🍀</span>
+</div>
           Hızlı Çekiliş
         </a>
-      </div>
-      <ul class="nav-links">
-        <li><a href="#features" data-i18n="nav_features">Features</a></li>
-        <li><a href="/quickraffle-portal/privacy-policy.html" data-i18n="nav_privacy">Privacy Policy</a></li>
-      </ul>
-    </div>
-  </nav>
+</div>
+<ul class="nav-links">
+<li><a data-i18n="nav_features" href="#features">Özellikler</a></li>
+<li><a data-i18n="nav_privacy" href="/quickraffle-portal/privacy-policy.html">Gizlilik Politikası</a></li>
+</ul>
+</div>
+</nav>
+<section class="hero">
+<div class="hero-badge" data-i18n="hero_badge">🎰 Hepsi Bir Arada Çekiliş Uygulaması</div>
+<h1 data-i18n-html="hero_title">Çekilişler, Kuralar &amp;<br/><span class="grad">Rastgele Seçimler</span></h1>
+<p data-i18n="hero_desc">Hızlı Çekiliş, hızlı, adil ve eğlenceli sonuçlar sunan hepsi bir arada bir çekiliş ve rastgele seçim uygulamasıdır. İsim seçici, sayı çekilişi, şans çarkı, loto, takım oluşturucu, zar, yazı tura, kart çekme, liste karıştırıcı, bingo ve daha fazlası.</p>
+<div class="hero-actions">
+<a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.soge.quickraffle" rel="noopener noreferrer" target="_blank">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"></path></svg>
+<span data-i18n="btn_google_play">Google Play'den İndir</span>
+</a>
+<a class="btn-ghost" data-i18n="btn_see_features" href="#features">Özellikleri Gör ↓</a>
+</div>
+</section>
+<section class="features" id="features">
+<div class="section-label" data-i18n="feat_label">◆ Özellikler</div>
+<h2 data-i18n="feat_title">Tek Uygulamada Güçlü Araçlar</h2>
+<p data-i18n="feat_desc">Çekilişler, kuralar, hediyeler, sosyal medya yarışmaları, sınıf etkinlikleri, toplantılar, turnuvalar, partiler ve oyunlar için ideal.</p>
+<div class="feat-grid">
+<div class="feat-card">
+<div class="feat-icon">👤</div>
+<h3 data-i18n="feat1_title">İsim Seçici</h3>
+<p data-i18n="feat1_desc">Listeden rastgele kazanan seçin. Instagram çekilişleri, okul aktiviteleri ve grup oyunları için mükemmel.</p>
+</div>
+<div class="feat-card">
+<div class="feat-icon">💰</div>
+<h3 data-i18n="feat2_title">Şans Çarkı ve Sayı Çekilişi</h3>
+<p data-i18n="feat2_desc">Çarkı çevirin veya rastgele sayılar üretin. Tüm sonuçlar adil ve tarafsız rastgele algoritmalarla oluşturulur.</p>
+</div>
+<div class="feat-card">
+<div class="feat-icon">👥</div>
+<h3 data-i18n="feat3_title">Takım Oluşturucu</h3>
+<p data-i18n="feat3_desc">Katılımcıları saniyeler içinde dengeli takımlara ayırın. Spor, oyunlar ve grup aktiviteleri için harika.</p>
+</div>
+<div class="feat-card">
+<div class="feat-icon">🎲</div>
+<h3 data-i18n="feat4_title">Zar, Yazı Tura, Kartlar ve Daha Fazlası</h3>
+<p data-i18n="feat4_desc">Zar atma, yazı tura, kart çekme, liste karıştırıcı, bingo numara çekici, evet/hayır, Secret Santa, turnuva fikstürü, Sihirli 8 Top, şifre oluşturucu, rastgele renk.</p>
+</div>
+<div class="feat-card">
+<div class="feat-icon">🔒</div>
+<h3 data-i18n="feat5_title">Gizlilik Öncelikli</h3>
+<p data-i18n="feat5_desc">Kişisel veri gerekmez. İsimler, sayılar ve listeler yalnızca cihazınızda kullanılır ve sunucularımıza gönderilmez.</p>
+</div>
+<div class="feat-card">
+<div class="feat-icon">⚡</div>
+<h3 data-i18n="feat6_title">Hızlı ve Kolay</h3>
+<p data-i18n="feat6_desc">Modern ve sade tasarım. Herkes kolayca kullanabilir. Kararlar ve eğlence için anında sonuç alın.</p>
+</div>
+</div>
+</section>
+<section class="how">
+<div class="section-label" data-i18n="how_label" style="text-align:center;display:block;">◆ Nasıl Çalışır</div>
+<h2 data-i18n="how_title">Basit Adımlar</h2>
+<div class="steps">
+<div class="step">
+<div class="step-num">1</div>
+<h3 data-i18n="step1_title">Araç Seçin</h3>
+<p data-i18n="step1_desc">İsim seçici, çark, sayı çekilişi, takım oluşturucu, zar veya ihtiyacınız olan başka bir aracı seçin.</p>
+</div>
+<div class="step">
+<div class="step-num">2</div>
+<h3 data-i18n="step2_title">Verilerinizi Ekleyin</h3>
+<p data-i18n="step2_desc">İsimleri, sayıları veya seçenekleri girin. Her şey cihazınızda kalır.</p>
+</div>
+<div class="step">
+<div class="step-num">3</div>
+<h3 data-i18n="step3_title">Sonucu Alın</h3>
+<p data-i18n="step3_desc">Saniyeler içinde adil rastgele sonuç. Çekilişler, kararlar ve oyunlar için mükemmel.</p>
+</div>
+</div>
+</section>
+<section class="section sg-arts" id="makaleler">
+<h2 data-i18n="arts_title">Makaleler</h2>
+<p data-i18n="arts_desc">Hızlı Çekiliş ile ilgili rehberler ve oyun fikirleri.</p>
+<div class="sg-arts-grid">
+<a class="sg-art" href="/makale/instagram-cekilisi-nasil-yapilir.html">
+<img alt="Instagram Çekilişi Nasıl Yapılır? Adil ve Şeffaf Yöntem" height="630" loading="lazy" src="/makale/img/instagram-cekilisi-nasil-yapilir.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>Instagram Çekilişi Nasıl Yapılır? Adil ve Şeffaf Yöntem</h3>
+<p>Instagram çekilişi yaparken katılımcı listesi nasıl toplanır, kazanan nasıl adil seçilir, yedek talihli neden gerekir…</p>
+</div>
+</a>
+<a class="sg-art" href="/makale/rastgele-isim-secici-kullanim-rehberi.html">
+<img alt="Rastgele İsim Seçici: Sınıf, Ofis ve Ev İçin Kullanım Rehberi" height="630" loading="lazy" src="/makale/img/rastgele-isim-secici-kullanim-rehberi.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>Rastgele İsim Seçici: Sınıf, Ofis ve Ev İçin Kullanım Rehberi</h3>
+<p>Rastgele isim seçici nerelerde işe yarar: sınıfta söz sırası, ofiste görev dağıtımı, evde iş paylaşımı ve takım kurma…</p>
+</div>
+</a>
+<a class="sg-art" href="/makale/online-kura-cekme-nasil-yapilir.html">
+<img alt="Online Kura Çekme: Sınıf, İş Yeri ve Turnuva İçin Kura Nasıl Çekilir?" height="630" loading="lazy" src="/makale/img/online-kura-cekme-nasil-yapilir.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>Online Kura Çekme: Sınıf, İş Yeri ve Turnuva İçin Kura Nasıl Çekilir?</h3>
+<p>Online kura çekme rehberi: isim kurası, sayı kurası, takım kurası ve turnuva kurası nasıl çekilir, sonucun adil ve ta…</p>
+</div>
+</a>
+</div>
+<a class="sg-arts-all" data-i18n="arts_all" href="/makale/">Tüm makaleler →</a>
+</section>
+<section class="cta-section">
+<div class="cta-card">
+<h2 data-i18n="cta_title">Kullanmaya Hazır mısınız?</h2>
+<p data-i18n="cta_desc">Hızlı Çekiliş'i indirin ve çekilişlerinizi, kararlarınızı ve oyunlarınızı daha eğlenceli ve pratik hale getirin. Tüm sonuçlar adil ve tarafsızdır.</p>
+<a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.soge.quickraffle" rel="noopener noreferrer" target="_blank">
+<svg fill="currentColor" style="width:20px;height:20px;" viewbox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"></path></svg>
+<span data-i18n="cta_btn">Google Play'den İndir</span>
+</a>
+</div>
+</section>
+<footer>
+<div class="footer-inner">
+<div>
+<div class="footer-brand-text" data-i18n="footer_brand">Hızlı Çekiliş</div>
+<div class="footer-sub"><span data-i18n="footer_by">yapımcı</span> <a href="/" style="color:var(--accent-light);">Sogepps</a></div>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer_app">Uygulama</h4>
+<a data-i18n="footer_google_play" href="https://play.google.com/store/apps/details?id=com.soge.quickraffle" rel="noopener noreferrer" target="_blank">Google Play</a>
+<a data-i18n="footer_features" href="#features">Özellikler</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer_legal">Yasal</h4>
+<a data-i18n="footer_privacy" href="/quickraffle-portal/privacy-policy.html">Gizlilik Politikası</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer_contact">İletişim</h4>
+<a href="mailto:sogepps@gmail.com">sogepps@gmail.com</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span data-i18n="footer_rights">© 2026</span> <a href="/">Sogepps</a><span data-i18n="footer_rights_tail">. Tüm hakları saklıdır.</span>
+</div>
+</footer>
 
-  <section class="hero">
-    <div class="hero-badge" data-i18n="hero_badge">&#127808; All-in-One Raffle App</div>
-    <h1 data-i18n-html="hero_title">Raffles, Draws &amp;<br /><span class="grad">Random Picks</span></h1>
-    <p data-i18n="hero_desc">Hızlı Çekiliş is a fast, fair, and fun all-in-one raffle and random pick app. Name picker, number draw, wheel, lottery, team picker, dice, coin flip, card draw, list shuffler, bingo, yes/no, Secret Santa, bracket, Magic 8 Ball, password generator and more.</p>
-    <div class="hero-actions">
-      <a href="https://play.google.com/store/apps/details?id=com.Soge.HizliCekilis" class="btn-primary" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"/></svg>
-        <span data-i18n="btn_google_play">Get it on Google Play</span>
-      </a>
-      <a href="#features" class="btn-ghost" data-i18n="btn_see_features">See Features &#8595;</a>
-    </div>
-  </section>
 
-  <section class="features" id="features">
-    <div class="section-label" data-i18n="feat_label">&#9670; Features</div>
-    <h2 data-i18n="feat_title">Powerful Tools in One App</h2>
-    <p data-i18n="feat_desc">Ideal for giveaways, social media contests, class activities, meetings, tournaments, parties and games.</p>
-    <div class="feat-grid">
-      <div class="feat-card">
-        <div class="feat-icon">&#128100;</div>
-        <h3 data-i18n="feat1_title">Name Picker</h3>
-        <p data-i18n="feat1_desc">Pick a random winner from your list. Perfect for Instagram giveaways, school activities, and group games.</p>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon">&#128176;</div>
-        <h3 data-i18n="feat2_title">Wheel &amp; Number Draw</h3>
-        <p data-i18n="feat2_desc">Spin the wheel or generate random numbers. Fair and unbiased random algorithms for every result.</p>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon">&#128101;</div>
-        <h3 data-i18n="feat3_title">Team Picker</h3>
-        <p data-i18n="feat3_desc">Split participants into balanced teams in seconds. Great for sports, games, and group activities.</p>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon">&#127922;</div>
-        <h3 data-i18n="feat4_title">Dice, Coin, Cards &amp; More</h3>
-        <p data-i18n="feat4_desc">Dice roll, coin flip, card draw, list shuffler, bingo number picker, yes/no, Secret Santa, tournament bracket, Magic 8 Ball, password generator, random color.</p>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon">&#128274;</div>
-        <h3 data-i18n="feat5_title">Privacy First</h3>
-        <p data-i18n="feat5_desc">No personal data required. Names, numbers and lists are used only on your device and are not sent to our servers.</p>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon">&#9889;</div>
-        <h3 data-i18n="feat6_title">Fast &amp; Easy</h3>
-        <p data-i18n="feat6_desc">Modern, clean design. Everyone can use it easily. Get instant results for decisions and fun.</p>
-      </div>
-    </div>
-  </section>
 
-  <section class="how">
-    <div class="section-label" style="text-align:center;display:block;" data-i18n="how_label">&#9670; How It Works</div>
-    <h2 data-i18n="how_title">Simple Steps</h2>
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <h3 data-i18n="step1_title">Choose Tool</h3>
-        <p data-i18n="step1_desc">Pick name picker, wheel, number draw, team picker, dice, or any other tool you need.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <h3 data-i18n="step2_title">Add Your Data</h3>
-        <p data-i18n="step2_desc">Enter names, numbers, or options. Everything stays on your device.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <h3 data-i18n="step3_title">Get Result</h3>
-        <p data-i18n="step3_desc">Fair random result in seconds. Perfect for giveaways, decisions, and games.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta-section">
-    <div class="cta-card">
-      <h2 data-i18n="cta_title">Ready to Use?</h2>
-      <p data-i18n="cta_desc">Download Hızlı Çekiliş and make your raffles, decisions, and games more fun and practical. All results are fair and unbiased.</p>
-      <a href="https://play.google.com/store/apps/details?id=com.Soge.HizliCekilis" class="btn-primary" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" fill="currentColor" style="width:20px;height:20px;"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"/></svg>
-        <span data-i18n="cta_btn">Download on Google Play</span>
-      </a>
-    </div>
-  </section>
-
-  <footer>
-    <div class="footer-inner">
-      <div>
-        <div class="footer-brand-text" data-i18n="footer_brand">Hızlı Çekiliş</div>
-        <div class="footer-sub"><span data-i18n="footer_by">by</span> <a href="/" style="color:var(--accent-light);">Sogepps</a></div>
-      </div>
-      <div class="footer-col">
-        <h4 data-i18n="footer_app">App</h4>
-        <a href="https://play.google.com/store/apps/details?id=com.Soge.HizliCekilis" target="_blank" rel="noopener noreferrer" data-i18n="footer_google_play">Google Play</a>
-        <a href="#features" data-i18n="footer_features">Features</a>
-      </div>
-      <div class="footer-col">
-        <h4 data-i18n="footer_legal">Legal</h4>
-        <a href="/quickraffle-portal/privacy-policy.html" data-i18n="footer_privacy">Privacy Policy</a>
-      </div>
-      <div class="footer-col">
-        <h4 data-i18n="footer_contact">Contact</h4>
-        <a href="mailto:sogepps@gmail.com">sogepps@gmail.com</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span data-i18n="footer_rights">&copy; 2026</span> <a href="/">Sogepps</a>. All rights reserved.
-    </div>
-  </footer>
-
-  <script src="js/i18n.js"></script>
-  <script src="js/lang-portal.js"></script>
-  <script>I18N.init('portal', PORTAL_TRANSLATIONS);</script>
-
+<script defer="" src="/js/i18n.js?v=ac9834aa"></script>
 </body>
 </html>

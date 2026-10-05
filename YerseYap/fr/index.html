@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Roll or Dare: Jeu de soirée – Dés, gages et monstres (YerseYap)</title>
+<meta content="Roll or Dare (YerseYap) est un jeu de plateau de soirée pour 2 à 10 joueurs sur un seul téléphone. Lancez le dé, réalisez le gage, explorez l'Île de l'Aventure, évitez les monstres, gagnez des mini-jeux et faites tourner la Roue du Destin. Des centaines de gages en 73 langues." name="description"/>
+
+<link href="https://sogepps.tr/yerseyap/fr/" rel="canonical"/><link href="https://sogepps.tr/yerseyap/" hreflang="tr" rel="alternate"/><link href="https://sogepps.tr/yerseyap/en/" hreflang="en" rel="alternate"/><link href="https://sogepps.tr/yerseyap/de/" hreflang="de" rel="alternate"/><link href="https://sogepps.tr/yerseyap/fr/" hreflang="fr" rel="alternate"/><link href="https://sogepps.tr/yerseyap/es/" hreflang="es" rel="alternate"/><link href="https://sogepps.tr/yerseyap/it/" hreflang="it" rel="alternate"/><link href="https://sogepps.tr/yerseyap/pt/" hreflang="pt" rel="alternate"/><link href="https://sogepps.tr/yerseyap/nl/" hreflang="nl" rel="alternate"/><link href="https://sogepps.tr/yerseyap/ru/" hreflang="ru" rel="alternate"/><link href="https://sogepps.tr/yerseyap/ja/" hreflang="ja" rel="alternate"/><link href="https://sogepps.tr/yerseyap/ko/" hreflang="ko" rel="alternate"/><link href="https://sogepps.tr/yerseyap/ar/" hreflang="ar" rel="alternate"/><link href="https://sogepps.tr/yerseyap/hi/" hreflang="hi" rel="alternate"/><link href="https://sogepps.tr/yerseyap/id/" hreflang="id" rel="alternate"/><link href="https://sogepps.tr/yerseyap/pl/" hreflang="pl" rel="alternate"/><link href="https://sogepps.tr/yerseyap/" hreflang="x-default" rel="alternate"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<meta content="#7c1fd6" name="theme-color"/>
+<meta content="website" property="og:type"/>
+<meta content="Sogepps" property="og:site_name"/>
+<meta content="fr_FR" property="og:locale"/>
+<meta content="Roll or Dare: Jeu de soirée – Dés, gages et monstres (YerseYap)" property="og:title"/>
+<meta content="Roll or Dare (YerseYap) est un jeu de plateau de soirée pour 2 à 10 joueurs sur un seul téléphone. Lancez le dé, réalisez le gage, explorez l'Île de l'Aventure, évitez les monstres, gagnez des mini-jeux et faites tourner la Roue du Destin. Des centaines de gages en 73 langues." property="og:description"/>
+<meta content="https://sogepps.tr/yerseyap/fr/" property="og:url"/>
+<meta content="https://sogepps.tr/yerseyap/img/og-image.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Roll or Dare: Jeu de soirée – Dés, gages et monstres (YerseYap)" name="twitter:title"/>
+<meta content="Roll or Dare (YerseYap) est un jeu de plateau de soirée pour 2 à 10 joueurs sur un seul téléphone. Lancez le dé, réalisez le gage, explorez l'Île de l'Aventure, évitez les monstres, gagnez des mini-jeux et faites tourner la Roue du Destin. Des centaines de gages en 73 langues." name="twitter:description"/>
+<meta content="https://sogepps.tr/yerseyap/img/og-image.jpg" name="twitter:image"/>
+<link href="/yerseyap/img/icon.webp" rel="icon" type="image/webp"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root {
+      --bg: #0d0716;
+      --surface: #17102a;
+      --surface-2: #1f1638;
+      --border: #33264f;
+      --text: #f6f1ff;
+      --muted: #bfb3d9;
+      --pink: #ff4fa3;
+      --purple: #8b3dff;
+      --yellow: #ffd83d;
+      --teal: #35d0c1;
+      --orange: #ff8a3d;
+      --font: 'Inter', 'Segoe UI', system-ui, sans-serif;
+      --display: 'Baloo 2', 'Inter', 'Segoe UI', sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font);
+      background:
+        radial-gradient(circle at 8% -10%, rgba(139, 61, 255, 0.35), transparent 38%),
+        radial-gradient(circle at 92% -15%, rgba(255, 79, 163, 0.28), transparent 38%),
+        radial-gradient(circle at 50% 120%, rgba(255, 138, 61, 0.14), transparent 45%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+    a { color: #ffb3d6; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3, .stat-v { font-family: var(--display); letter-spacing: -0.01em; }
+    .wrap { max-width: 1160px; margin: 0 auto; padding: 0 20px; }
+
+    /* Nav */
+    .topnav { position: sticky; top: 0; z-index: 99; border-bottom: 1px solid var(--border); background: rgba(13, 7, 22, 0.86); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+    .topnav-inner, .nav-inner { min-height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 0.92rem; flex-wrap: wrap; padding: 8px 0; }
+    .topnav-links, .nav-links { display: flex; gap: 4px 14px; align-items: center; flex-wrap: wrap; }
+    .topnav-links a { color: var(--muted); padding: 6px 4px; }
+    .topnav-links a:hover { color: var(--text); text-decoration: none; }
+
+    /* Hero */
+    .hero { padding: 64px 0 28px; display: grid; grid-template-columns: 1.05fr 1fr; gap: 36px; align-items: center; }
+    .hero-kicker { display: inline-flex; align-items: center; gap: 6px; border: 1px solid rgba(255, 216, 61, 0.35); background: rgba(255, 216, 61, 0.1); color: var(--yellow); border-radius: 999px; padding: 5px 14px; font-size: 0.78rem; font-weight: 600; margin-bottom: 18px; }
+    .hero-head { display: flex; align-items: center; gap: 16px; margin-bottom: 14px; }
+    .hero-icon { width: 84px; height: 84px; border-radius: 22px; overflow: hidden; flex: 0 0 auto; border: 1px solid rgba(255,255,255,0.14); box-shadow: 0 16px 44px rgba(139, 61, 255, 0.45); }
+    .hero-icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1.02; font-weight: 800; }
+    h1 span { display: block; font-size: 0.6em; background: linear-gradient(90deg, var(--yellow), var(--pink)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-top: 4px; }
+    .lead { color: var(--muted); font-size: 1.05rem; max-width: 620px; }
+    .hero-tags { margin-top: 18px; display: flex; gap: 8px; flex-wrap: wrap; }
+    .hero-tag { border: 1px solid rgba(255, 79, 163, 0.4); background: rgba(255, 79, 163, 0.12); color: #ffc2de; border-radius: 999px; padding: 6px 12px; font-size: 0.8rem; font-weight: 600; }
+    .hero-visual { position: relative; }
+    .hero-visual img { width: 100%; height: auto; display: block; border-radius: 22px; border: 1px solid rgba(255,255,255,0.14); box-shadow: 0 30px 80px rgba(139, 61, 255, 0.35); }
+    .hero-visual::after { content: ''; position: absolute; inset: 12% -6% -10% -6%; background: radial-gradient(ellipse, rgba(255, 79, 163, 0.35), transparent 65%); z-index: -1; filter: blur(30px); }
+    .hero-note { margin-top: 10px; font-size: 0.82rem; color: var(--muted); }
+
+    /* Google Play button */
+    .gp-actions { margin-top: 22px; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+    .gp-btn { display: inline-flex; align-items: center; gap: 10px; padding: 10px 20px; border-radius: 14px; background: #0d1016; border: 1px solid #414755; color: #ffffff; font-weight: 700; font-size: 0.98rem; line-height: 1.15; text-decoration: none; transition: border-color .2s, transform .15s, box-shadow .2s; }
+    .gp-btn:hover { text-decoration: none; border-color: #c0c7d8; transform: translateY(-1px); color: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+    .gp-btn svg { width: 26px; height: 26px; flex: 0 0 auto; fill: currentColor; }
+    .gp-btn > span { display: block; text-align: left; }
+    .gp-btn small { display: block; font-size: 0.63rem; font-weight: 600; letter-spacing: .09em; opacity: .7; }
+
+    /* Stats */
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 20px 0 8px; }
+    .stat { border: 1px solid var(--border); border-radius: 18px; padding: 16px 14px; background: linear-gradient(160deg, var(--surface), var(--surface-2)); text-align: center; }
+    .stat-v { font-size: 2rem; font-weight: 800; line-height: 1; background: linear-gradient(90deg, var(--yellow), var(--orange)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .stat-l { color: var(--muted); font-size: 0.85rem; margin-top: 6px; }
+
+    /* Sections */
+    .section { margin: 20px 0; border: 1px solid var(--border); border-radius: 22px; padding: 30px; background: linear-gradient(160deg, var(--surface), var(--surface-2)); }
+    .section h2 { font-size: 1.7rem; margin-bottom: 8px; font-weight: 800; }
+    .section > p { color: var(--muted); margin-bottom: 12px; }
+    .section h2 em { font-style: normal; background: linear-gradient(90deg, var(--pink), var(--yellow)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+
+    /* Screens */
+    .screen-grid { margin-top: 22px; display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 22px; }
+    .screen-card { border: 1px solid var(--border); border-radius: 18px; overflow: hidden; background: #120b22; box-shadow: 0 14px 40px rgba(0, 0, 0, 0.4); display: flex; flex-direction: column; transition: transform .2s, border-color .2s; }
+    .screen-card:hover { transform: translateY(-3px); border-color: rgba(255, 79, 163, 0.5); }
+    .screen-card img { width: 100%; height: auto; aspect-ratio: 16 / 9; display: block; background: #120b22; }
+    .screen-card figcaption { padding: 14px 18px 18px; }
+    .screen-card h3 { font-size: 1.1rem; margin-bottom: 6px; }
+    .screen-card p { color: var(--muted); font-size: 0.93rem; line-height: 1.6; }
+
+    /* Steps */
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin-top: 18px; counter-reset: step; }
+    .step { border: 1px solid #3d2f5f; border-radius: 16px; padding: 18px 16px 16px; background: rgba(13, 7, 22, 0.5); position: relative; }
+    .step::before { counter-increment: step; content: counter(step); display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: linear-gradient(135deg, var(--pink), var(--purple)); color: #fff; font-family: var(--display); font-weight: 800; font-size: 1.05rem; margin-bottom: 10px; box-shadow: 0 6px 18px rgba(255, 79, 163, 0.35); }
+    .step h3 { font-size: 1.05rem; margin-bottom: 6px; }
+    .step p { color: var(--muted); font-size: 0.93rem; }
+
+    /* Boards & modes */
+    .boards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 18px; }
+    .board { border: 1px solid #3d2f5f; border-radius: 16px; padding: 18px; background: rgba(13, 7, 22, 0.5); }
+    .board h3 { font-size: 1.1rem; margin-bottom: 6px; }
+    .board p { color: var(--muted); font-size: 0.93rem; }
+    .board.adv { border-color: rgba(255, 216, 61, 0.45); background: linear-gradient(160deg, rgba(255, 216, 61, 0.08), rgba(13, 7, 22, 0.5)); }
+    .cats { margin-top: 22px; }
+    .cats h3 { font-size: 1.05rem; margin-bottom: 10px; color: var(--muted); font-weight: 600; font-family: var(--font); }
+    .cat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+    .cat { border-radius: 14px; padding: 14px 16px; border: 1px solid transparent; }
+    .cat b { display: block; font-family: var(--display); font-size: 1.05rem; margin-bottom: 2px; }
+    .cat span { color: var(--muted); font-size: 0.88rem; }
+    .cat.fam { background: rgba(53, 208, 193, 0.12); border-color: rgba(53, 208, 193, 0.4); }
+    .cat.fam b { color: #8ff0e5; }
+    .cat.party { background: rgba(255, 79, 163, 0.12); border-color: rgba(255, 79, 163, 0.4); }
+    .cat.party b { color: #ffb3d6; }
+    .cat.bold { background: rgba(255, 138, 61, 0.12); border-color: rgba(255, 138, 61, 0.45); }
+    .cat.bold b { color: #ffc599; }
+
+    /* Features */
+    .feat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 18px; }
+    .feature { border: 1px solid #3d2f5f; border-radius: 14px; padding: 16px; background: rgba(13, 7, 22, 0.5); }
+    .feature h3 { font-size: 1.02rem; margin-bottom: 6px; }
+    .feature p { font-size: 0.92rem; color: var(--muted); }
+
+    /* Monsters */
+    .monsters { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 18px; }
+    .monster { border: 1px solid #3d2f5f; border-radius: 14px; padding: 14px; background: rgba(13, 7, 22, 0.5); text-align: center; }
+    .monster h3 { font-size: 1rem; margin-bottom: 4px; }
+    .monster p { color: var(--muted); font-size: 0.88rem; }
+
+    /* FAQ */
+    .faq { margin-top: 12px; display: grid; gap: 10px; }
+    .faq details { border: 1px solid #3d2f5f; border-radius: 14px; background: rgba(13, 7, 22, 0.5); padding: 0 18px; }
+    .faq summary { cursor: pointer; padding: 14px 0; font-weight: 600; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: '+'; font-family: var(--display); font-size: 1.3rem; color: var(--pink); flex: 0 0 auto; }
+    .faq details[open] summary::after { content: '−'; }
+    .faq details p { color: var(--muted); font-size: 0.94rem; padding: 0 0 16px; }
+
+    /* Articles */
+    .sg-arts { margin: 20px 0; border: 1px solid rgba(255,255,255,0.12); border-radius: 22px; padding: 26px; background: rgba(255,255,255,0.03); }
+    .sg-arts h2 { font-size: 1.5rem; margin-bottom: 6px; }
+    .sg-arts > p { opacity: .78; margin-bottom: 16px; font-size: 0.95rem; }
+    .sg-arts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+    .sg-art { display: block; border: 1px solid rgba(255,255,255,0.13); border-radius: 14px; overflow: hidden; background: rgba(0,0,0,0.28); color: inherit; text-decoration: none; transition: border-color .2s, transform .2s; }
+    .sg-art:hover { text-decoration: none; transform: translateY(-3px); border-color: rgba(255,255,255,0.38); }
+    .sg-art img { width: 100%; height: auto; aspect-ratio: 1200 / 630; display: block; }
+    .sg-art-body { padding: 14px 16px 16px; }
+    .sg-art-body h3 { font-size: 1rem; line-height: 1.4; margin-bottom: 6px; font-family: var(--font); font-weight: 600; }
+    .sg-art-body p { font-size: 0.86rem; opacity: .72; margin: 0; }
+    .sg-arts-all { display: inline-block; margin-top: 14px; font-weight: 700; font-size: 0.9rem; }
+
+    /* CTA */
+    .cta { margin: 24px 0 68px; text-align: center; border: 1px solid rgba(255, 79, 163, 0.45); border-radius: 22px; padding: 36px 22px; background: linear-gradient(135deg, rgba(139, 61, 255, 0.28), rgba(255, 79, 163, 0.18) 55%, rgba(255, 216, 61, 0.14)); }
+    .cta h2 { margin-bottom: 8px; font-size: 1.8rem; font-weight: 800; }
+    .cta p { color: var(--muted); max-width: 640px; margin: 0 auto; }
+    .cta-links { margin-top: 18px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+    .btn { display: inline-block; padding: 11px 16px; border-radius: 12px; font-weight: 700; border: 1px solid rgba(255, 79, 163, 0.6); background: linear-gradient(135deg, var(--pink), var(--purple)); color: #fff; text-decoration: none; }
+    .btn:hover { text-decoration: none; filter: brightness(1.08); }
+    .btn.secondary { background: rgba(23, 16, 42, 0.7); color: #e9defc; border-color: #4a3a73; }
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; padding-top: 40px; }
+      .hero-visual { order: -1; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 760px) {
+      .section { padding: 22px 18px; }
+      .topnav-links, .nav-links { justify-content: center; }
+      .topnav-inner { justify-content: center; }
+      .screen-grid { grid-template-columns: 1fr; }
+      .hero-head { flex-direction: column; align-items: flex-start; }
+    }
+    [dir="rtl"] .gp-btn > span { text-align: right; }
+  </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","@id":"https://sogepps.tr/yerseyap/fr/#app","name":"Yerse Yap: Parti Oyunu","alternateName":["YerseYap","Yerse Yap","Roll or Dare: Party Board Game"],"applicationCategory":"GameApplication","applicationSubCategory":"Party game","operatingSystem":"Android","url":"https://sogepps.tr/yerseyap/fr/","installUrl":"https://play.google.com/store/apps/details?id=com.Soge.YerseYap","image":"https://sogepps.tr/yerseyap/img/og-image.jpg","screenshot":["https://sogepps.tr/yerseyap/img/tr/ekran-1.webp","https://sogepps.tr/yerseyap/img/tr/ekran-2.webp","https://sogepps.tr/yerseyap/img/tr/ekran-3.webp","https://sogepps.tr/yerseyap/img/tr/ekran-4.webp","https://sogepps.tr/yerseyap/img/tr/ekran-5.webp","https://sogepps.tr/yerseyap/img/tr/ekran-6.webp","https://sogepps.tr/yerseyap/img/tr/ekran-7.webp","https://sogepps.tr/yerseyap/img/tr/ekran-8.webp"],"description":"Roll or Dare (YerseYap) est un jeu de plateau de soirée pour 2 à 10 joueurs sur un seul téléphone. Lancez le dé, réalisez le gage, explorez l'Île de l'Aventure, évitez les monstres, gagnez des mini-jeux et faites tourner la Roue du Destin. Des centaines de gages en 73 langues.","featureList":"1000+ görev, 3 kategori (Aile, Parti, Cesur 18+), Macera Adası ve Şehir tahtası, canavarlar, 4 mini oyun, Kader Çarkı, düello, herkes görevleri, takım modu, joker ve altın görev, kendi görevlerin, 12 karakter, 73 dil","author":{"@type":"Organization","name":"Sogepps","url":"https://sogepps.tr/fr/"},"offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"inLanguage":"fr"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Combien de personnes peuvent jouer à Roll or Dare ?","acceptedAnswer":{"@type":"Answer","text":"De 2 à 10 joueurs sur un seul téléphone ou une seule tablette. Les joueurs jouent à tour de rôle, aucun appareil supplémentaire n'est donc nécessaire."}},{"@type":"Question","name":"Ai-je besoin d'une connexion internet ?","acceptedAnswer":{"@type":"Answer","text":"Le jeu se joue localement sur un seul téléphone, mais il nécessite une connexion internet active pour fonctionner, car il est gratuit et financé par des publicités affichées à la fin d'une partie."}},{"@type":"Question","name":"Convient-il aux enfants et aux familles ?","acceptedAnswer":{"@type":"Answer","text":"Oui, avec la catégorie Famille. Les catégories Soirée et Osé (18+) contiennent des gages destinés aux adultes ; vous choisissez les catégories dans les paramètres de la partie avant chaque jeu."}},{"@type":"Question","name":"Puis-je ajouter mes propres gages ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Ouvrez Vos propres gages depuis le menu principal, écrivez vos gages et ils rejoindront le paquet dès votre prochaine partie."}},{"@type":"Question","name":"Quelles langues sont prises en charge ?","acceptedAnswer":{"@type":"Answer","text":"73 langues de jeu, dont l'anglais, le turc, l'allemand, le français, l'espagnol, le portugais, l'arabe, l'hindi, le japonais et le coréen. Le jeu démarre dans la langue de votre téléphone et vous pouvez la changer depuis le menu principal."}},{"@type":"Question","name":"En quoi est-ce différent d'action ou vérité ?","acceptedAnswer":{"@type":"Answer","text":"Le jeu conserve les gages et y ajoute un jeu de plateau : dés, points, Île de l'Aventure, monstres, mini-jeux, Roue du Destin, duels et mode équipes. Chaque partie a un gagnant sur le podium."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Sogepps","item":"https://sogepps.tr/fr/"},{"@type":"ListItem","position":2,"name":"Yerse Yap","item":"https://sogepps.tr/yerseyap/fr/"}]}]}</script>
+</head>
+<body>
+<nav class="topnav">
+<div class="wrap topnav-inner nav-inner">
+<a data-i18n="nav_home" href="/fr/">← Accueil Sogepps</a>
+<div class="topnav-links nav-links">
+<a data-i18n="nav_screens" href="#ekranlar">Captures d'écran</a>
+<a data-i18n="nav_how" href="#nasil">Comment jouer</a>
+<a data-i18n="nav_modes" href="#modlar">Plateaux et modes</a>
+<a data-i18n="nav_features" href="#ozellikler">Fonctionnalités</a>
+<a data-i18n="nav_faq" href="#sss">FAQ</a>
+<a data-i18n="nav_privacy" href="privacy-policy.html">Politique de confidentialité</a>
+</div>
+</div>
+</nav>
+<main class="wrap">
+<section class="hero">
+<div>
+<span class="hero-kicker" data-i18n="hero_kicker">🎲 Jeu de soirée Sogepps · Android</span>
+<div class="hero-head">
+<div class="hero-icon"><img alt="Yerse Yap uygulama simgesi" decoding="async" height="84" src="/yerseyap/img/icon.webp" width="84"/></div>
+<h1 data-i18n-html="hero_title">Roll or Dare: Jeu de soirée<br/><span>Lancez le dé, faites le gage !</span></h1>
+</div>
+<p class="lead" data-i18n="hero_lead">YerseYap est de retour, entièrement repensé sous le nom de Roll or Dare. Lancez le dé, déplacez votre pion, réalisez le gage indiqué par votre case et marquez des points. Réussissez et les points sont à vous ; dégonflez-vous et vos amis ne vous laisseront jamais l'oublier. Un seul téléphone suffit : 2 à 10 joueurs jouent à tour de rôle.</p>
+<div class="hero-tags">
+<span class="hero-tag" data-i18n="tag_1">2–10 joueurs</span>
+<span class="hero-tag" data-i18n="tag_2">Un seul téléphone</span>
+<span class="hero-tag" data-i18n="tag_3">Des centaines de gages</span>
+<span class="hero-tag" data-i18n="tag_4">73 langues</span>
+<span class="hero-tag" data-i18n="tag_5">Île de l'Aventure</span>
+</div>
+<div class="gp-actions">
+<a class="gp-btn" href="https://play.google.com/store/apps/details?id=com.Soge.YerseYap" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"></path></svg>
+<span><small>ANDROID</small><b data-i18n="btn_google_play">Disponible sur Google Play</b></span>
+</a>
+</div>
+<p class="hero-note" data-i18n="hero_note">Gratuit sur Google Play. Anciennement connu sous le nom de YerseYap.</p>
+</div>
+<div class="hero-visual">
+<img alt="Yerse Yap: Macera Adası, zar ve sevimli karakterler" data-shot="feature.webp" decoding="async" fetchpriority="high" height="500" src="/yerseyap/img/en/feature.webp" width="1024"/>
+</div>
+</section>
+<div aria-label="Öne çıkanlar" class="stats">
+<div class="stat"><div class="stat-v" data-i18n="stat_1_v">2–10</div><div class="stat-l" data-i18n="stat_1_l">joueurs, un seul téléphone</div></div>
+<div class="stat"><div class="stat-v" data-i18n="stat_2_v">100+</div><div class="stat-l" data-i18n="stat_2_l">de gages en 3 catégories</div></div>
+<div class="stat"><div class="stat-v" data-i18n="stat_3_v">12</div><div class="stat-l" data-i18n="stat_3_l">personnages mignons</div></div>
+<div class="stat"><div class="stat-v" data-i18n="stat_4_v">73</div><div class="stat-l" data-i18n="stat_4_l">langues de jeu</div></div>
+</div>
+<section class="section" id="ekranlar">
+<h2 data-i18n="screens_title">Écrans du jeu</h2>
+<p data-i18n="screens_desc">Dés, gages, Île de l'Aventure, monstres, mini-jeux, Roue du Destin, duels et podium.</p>
+<div class="screen-grid">
+<figure class="screen-card"><img alt="Yerse Yap zar atma ekranı: Macera Adası’nda zıplayan zar ve 2 adım" data-shot="ekran-1.webp" decoding="async" height="720" loading="lazy" src="/yerseyap/img/en/ekran-1.webp" width="1280"/><figcaption><h3 data-i18n="s_1_t">Lancez le dé, faites le gage</h3><p data-i18n="s_1_d">À votre tour : lancez le dé et déplacez votre pion sur les cases colorées. Le dé animé rebondissant s'accorde même à la couleur de votre joueur.</p></figcaption></figure>
+<figure class="screen-card"><img alt="Yerse Yap görev kartı: 20 puanlık görev, süre başlat ve joker butonları" data-shot="ekran-2.webp" decoding="async" height="720" loading="lazy" src="/yerseyap/img/en/ekran-2.webp" width="1280"/><figcaption><h3 data-i18n="s_2_t">Des centaines de gages délirants</h3><p data-i18n="s_2_d">Atterrissez sur une case et recevez un gage qui vaut ses points. Appuyez sur Réussi ou Raté, échangez-le contre un joker, ou lancez le chrono pour les gages chronométrés.</p></figcaption></figure>
+<figure class="screen-card"><img alt="Yerse Yap Macera Adası kuşbakışı görünüm: kıvrımlı 52 kareli tahta" data-shot="ekran-3.webp" decoding="async" height="720" loading="lazy" src="/yerseyap/img/en/ekran-3.webp" width="1280"/><figcaption><h3 data-i18n="s_3_t">Explorez l'Île de l'Aventure</h3><p data-i18n="s_3_d">Un plateau sinueux de 52 cases avec portails, fosses, pièges de boue, cases dorées et repaires de monstres. Appuyez sur Vue pour un aperçu de l'île à vol d'oiseau.</p></figcaption></figure>
+<figure class="screen-card"><img alt="Yerse Yap canavar olayı: Ejderha lidere alev püskürttü" data-shot="ekran-4.webp" decoding="async" height="720" loading="lazy" src="/yerseyap/img/en/ekran-4.webp" width="1280"/><figcaption><h3 data-i18n="s_4_t">Attention aux monstres !</h3><p data-i18n="s_4_d">Le Dragon brûle le meneur, l'Orc collecte des taxes, le Fantôme vous fait reculer de peur. Tombez dans un repaire de monstre et attendez-vous à une surprise.</p></figcaption></figure>
+<figure class="screen-card"><img alt="Yerse Yap mini oyun: Hızlı Tıkla" data-shot="ekran-5.webp" decoding="async" height="720" loading="lazy" src="/yerseyap/img/en/ekran-5.webp" width="1280"/><figcaption><h3 data-i18n="s_5_t">Gagnez des points dans les mini-jeux</h3><p data-i18n="s_5_d">Frénésie de Taps, Timing Parfait, Mémoire des Couleurs et Devine le Dé : gagnez des points supplémentaires grâce à vos réflexes et votre mémoire.</p></figcaption></figure>
+<figure class="screen-card"><img alt="Yerse Yap Kader Çarkı: +40, joker, lider −15 gibi dilimler" data-shot="ekran-6.webp" decoding="async" height="720" loading="lazy" src="/yerseyap/img/en/ekran-6.webp" width="1280"/><figcaption><h3 data-i18n="s_6_t">Faites tourner la Roue du Destin</h3><p data-i18n="s_6_d">De +40 à Meneur −15, de Relancez à Joker : faites tourner la roue et acceptez votre destin.</p></figcaption></figure>
+<figure class="screen-card"><img alt="Yerse Yap düello ekranı: iki oyuncu aynı görevi yapar, kazananı diğerleri seçer" data-shot="ekran-7.webp" decoding="async" height="720" loading="lazy" src="/yerseyap/img/en/ekran-7.webp" width="1280"/><figcaption><h3 data-i18n="s_7_t">Duel : qui le fait le mieux ?</h3><p data-i18n="s_7_d">Défiez un rival, réalisez tous les deux le même gage, et laissez le reste de la table désigner le gagnant. Gagnant +30, égalité +15 chacun.</p></figcaption></figure>
+<figure class="screen-card"><img alt="Yerse Yap oyun sonu kürsüsü: kazanan, puanlar, rövanş ve ana menü" data-shot="ekran-8.webp" decoding="async" height="720" loading="lazy" src="/yerseyap/img/en/ekran-8.webp" width="1280"/><figcaption><h3 data-i18n="s_8_t">Podium et revanche</h3><p data-i18n="s_8_d">Podium, confettis et récompenses amusantes à la fin de la partie. La revanche est à portée d'un appui. 2 à 10 joueurs, un seul téléphone.</p></figcaption></figure>
+</div>
+</section>
+<section class="section" id="nasil">
+<h2 data-i18n="how_title">Comment jouer</h2>
+<p data-i18n="how_desc">Configurez la partie en une minute, puis faites circuler le téléphone autour de la table.</p>
+<div class="steps">
+<div class="step"><h3 data-i18n="how_1_t">Configurez la partie</h3><p data-i18n="how_1_d">Choisissez le mode (classique ou équipes), le plateau (Ville ou Île de l'Aventure), les catégories de gages et le nombre de manches. Activez des règles supplémentaires comme les monstres.</p></div>
+<div class="step"><h3 data-i18n="how_2_t">Ajoutez les joueurs</h3><p data-i18n="how_2_d">Ajoutez 2 à 10 joueurs, saisissez leurs noms et choisissez un pion parmi 12 personnages. En mode équipes, répartissez-vous entre Rouge et Bleu.</p></div>
+<div class="step"><h3 data-i18n="how_3_t">Lancez le dé et faites le gage</h3><p data-i18n="how_3_d">À votre tour, lancez le dé et réalisez le gage de votre case. Réussi → les points sont à vous. Raté → vos amis s'en souviendront.</p></div>
+<div class="step"><h3 data-i18n="how_4_t">Grimpez sur le podium</h3><p data-i18n="how_4_d">Une fois les manches terminées, le meilleur score l'emporte. Podium, récompenses, statistiques des joueurs et revanche.</p></div>
+</div>
+</section>
+<section class="section" id="modlar">
+<h2 data-i18n="modes_title">Plateaux, modes et catégories</h2>
+<p data-i18n="modes_desc">Chaque partie se configure selon les envies de votre table.</p>
+<div class="boards">
+<div class="board"><h3 data-i18n="board_1_t">🏙️ Plateau Ville</h3><p data-i18n="board_1_d">Le plateau classique et simple. Rapide à apprendre, rapide à jouer : parfait pour une première partie ou une session courte.</p></div>
+<div class="board adv"><h3 data-i18n="board_2_t">🏝️ Île de l'Aventure ★</h3><p data-i18n="board_2_d">Une île sinueuse de 52 cases avec des cases spéciales : Mini-jeu, Roue du Destin, Duel, Tout le monde, Portail, Fosse, Boue, Repaire de Monstre, Dorée (2×) et Piège à Fleurs. Bonus de tour à l'arche d'arrivée.</p></div>
+<div class="board"><h3 data-i18n="team_t">🔴 Mode Équipes 🔵</h3><p data-i18n="team_d">Équipe Rouge contre équipe Bleue. Les points sont mis en commun, donc chaque gage compte pour toute l'équipe.</p></div>
+</div>
+<div class="cats">
+<h3 data-i18n="cat_title">Catégories de gages</h3>
+<div class="cat-grid">
+<div class="cat fam"><b data-i18n="cat_1_t">Famille</b><span data-i18n="cat_1_d">Adapté à tous, enfants compris.</span></div>
+<div class="cat party"><b data-i18n="cat_2_t">Soirée</b><span data-i18n="cat_2_d">Des gages drôles, créatifs et embarrassants entre amis.</span></div>
+<div class="cat bold"><b data-i18n="cat_3_t">Osé 18+</b><span data-i18n="cat_3_d">Réservé aux adultes. Choisissez ce qui convient à votre groupe dans les paramètres de la partie.</span></div>
+</div>
+</div>
+</section>
+<section class="section" id="ozellikler">
+<h2 data-i18n="feat_title">Les nouveautés de Roll or Dare</h2>
+<p data-i18n="feat_desc">Le jeu a été entièrement repensé. Voici ce que vous obtenez.</p>
+<div class="feat-grid">
+<div class="feature"><h3 data-i18n="f_1_t">🎡 Roue du Destin</h3><p data-i18n="f_1_d">+40, +25, +10, −10, Meneur −15, Tout le monde +5, Relancez ou Joker. Tournez et acceptez votre destin.</p></div>
+<div class="feature"><h3 data-i18n="f_2_t">⚔️ Duels</h3><p data-i18n="f_2_d">Défiez un rival sur le même gage. Les autres joueurs votent pour le gagnant : +30 pour le gagnant, +15 chacun en cas d'égalité.</p></div>
+<div class="feature"><h3 data-i18n="f_3_t">👥 Gage collectif</h3><p data-i18n="f_3_d">Toute la table réalise le même gage en même temps. Vos amis décident qui l'a le mieux réussi.</p></div>
+<div class="feature"><h3 data-i18n="f_4_t">🎮 4 mini-jeux</h3><p data-i18n="f_4_d">Frénésie de Taps, Timing Parfait, Mémoire des Couleurs et Devine le Dé pour des points supplémentaires.</p></div>
+<div class="feature"><h3 data-i18n="f_5_t">🃏 Jokers et gages dorés</h3><p data-i18n="f_5_d">Échangez un gage contre un joker, doublez vos points sur les cases dorées et obtenez des bonus de série pour des gages réussis d'affilée.</p></div>
+<div class="feature"><h3 data-i18n="f_6_t">✍️ Vos propres gages</h3><p data-i18n="f_6_d">Écrivez vos propres gages et ajoutez-les au paquet. Blagues entre amis comprises.</p></div>
+<div class="feature"><h3 data-i18n="f_7_t">⏱️ Gages chronométrés</h3><p data-i18n="f_7_d">Les gages à durée limitée affichent un compte à rebours automatique directement sur la carte.</p></div>
+<div class="feature"><h3 data-i18n="f_8_t">🏆 Podium, récompenses et revanche</h3><p data-i18n="f_8_d">Un podium de victoire avec confettis, des récompenses amusantes de fin de partie et une revanche en un seul appui.</p></div>
+<div class="feature"><h3 data-i18n="f_9_t">📊 Profils, statistiques et gage du jour</h3><p data-i18n="f_9_d">Les statistiques des joueurs sur l'ensemble des parties et un nouveau Gage du Jour chaque jour.</p></div>
+<div class="feature"><h3 data-i18n="f_10_t">🌍 73 langues</h3><p data-i18n="f_10_d">Démarre automatiquement dans la langue de votre téléphone. Changez-la à tout moment depuis le menu principal.</p></div>
+<div class="feature"><h3 data-i18n="f_11_t">🐾 12 personnages</h3><p data-i18n="f_11_d">Chat, pingouin, mouton, canard, chien, poule, Pinky, magicien, ninja, yéti, extraterrestre et cactus.</p></div>
+<div class="feature"><h3 data-i18n="f_12_t">📱 Un seul téléphone, sans compte</h3><p data-i18n="f_12_d">Aucune inscription, aucun appareil supplémentaire. Faites circuler le téléphone et jouez.</p></div>
+</div>
+</section>
+<section class="section" id="canavarlar">
+<h2 data-i18n="mon_title">Découvrez les monstres</h2>
+<p data-i18n="mon_desc">Atterrissez dans un repaire de monstre, ou tombez sur une case malchanceuse, et l'un d'eux apparaît. Les monstres peuvent être désactivés dans les paramètres de la partie.</p>
+<div class="monsters">
+<div class="monster"><h3 data-i18n="m_1_t">🍄 Roi Champignon</h3><p data-i18n="m_1_d">Apporte des cadeaux.</p></div>
+<div class="monster"><h3 data-i18n="m_2_t">🐸 Grenouille</h3><p data-i18n="m_2_d">Échange votre place avec un autre joueur.</p></div>
+<div class="monster"><h3 data-i18n="m_3_t">👹 Orc</h3><p data-i18n="m_3_d">Prélève une taxe sur vos points.</p></div>
+<div class="monster"><h3 data-i18n="m_4_t">🐉 Dragon</h3><p data-i18n="m_4_d">Crache du feu sur le meneur.</p></div>
+<div class="monster"><h3 data-i18n="m_5_t">👻 Fantôme</h3><p data-i18n="m_5_d">Vous fait reculer de peur sur le plateau.</p></div>
+</div>
+</section>
+<section class="section" id="sss">
+<h2 data-i18n="faq_title">Questions fréquentes</h2>
+<p data-i18n="faq_desc">Des réponses rapides avant de télécharger.</p>
+<div class="faq">
+<details open=""><summary data-i18n="q_1">Combien de personnes peuvent jouer à Roll or Dare ?</summary><p data-i18n="a_1">De 2 à 10 joueurs sur un seul téléphone ou une seule tablette. Les joueurs jouent à tour de rôle, aucun appareil supplémentaire n'est donc nécessaire.</p></details>
+<details><summary data-i18n="q_2">Ai-je besoin d'une connexion internet ?</summary><p data-i18n="a_2">Le jeu se joue localement sur un seul téléphone, mais il nécessite une connexion internet active pour fonctionner, car il est gratuit et financé par des publicités affichées à la fin d'une partie.</p></details>
+<details><summary data-i18n="q_3">Convient-il aux enfants et aux familles ?</summary><p data-i18n="a_3">Oui, avec la catégorie Famille. Les catégories Soirée et Osé (18+) contiennent des gages destinés aux adultes ; vous choisissez les catégories dans les paramètres de la partie avant chaque jeu.</p></details>
+<details><summary data-i18n="q_4">Puis-je ajouter mes propres gages ?</summary><p data-i18n="a_4">Oui. Ouvrez Vos propres gages depuis le menu principal, écrivez vos gages et ils rejoindront le paquet dès votre prochaine partie.</p></details>
+<details><summary data-i18n="q_5">Quelles langues sont prises en charge ?</summary><p data-i18n="a_5">73 langues de jeu, dont l'anglais, le turc, l'allemand, le français, l'espagnol, le portugais, l'arabe, l'hindi, le japonais et le coréen. Le jeu démarre dans la langue de votre téléphone et vous pouvez la changer depuis le menu principal.</p></details>
+<details><summary data-i18n="q_6">En quoi est-ce différent d'action ou vérité ?</summary><p data-i18n="a_6">Le jeu conserve les gages et y ajoute un jeu de plateau : dés, points, Île de l'Aventure, monstres, mini-jeux, Roue du Destin, duels et mode équipes. Chaque partie a un gagnant sur le podium.</p></details>
+</div>
+</section>
+<section class="section sg-arts" id="makaleler">
+<h2 data-i18n="arts_title">Articles</h2>
+<p data-i18n="arts_desc">Guides et idées de jeu autour de YerseYap (en turc).</p>
+<div class="sg-arts-grid">
+<a class="sg-art" href="/makale/fr/zarli-tahta-oyunu-nasil-oynanir.html">
+<img alt="Comment jouer au jeu de plateau à dés ? Les règles de Yerse Yap" height="630" loading="lazy" src="/makale/img/fr/zarli-tahta-oyunu-nasil-oynanir.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>Comment jouer au jeu de plateau à dés ? Les règles de Yerse Yap</h3>
+<p>Zar at, ilerle, göreve gel, puan topla. Zarlı tahta parti oyunu Yerse Yap nasıl oynanır, kare renkleri ne anlama gelir…</p>
+</div>
+</a>
+<a class="sg-art" href="/makale/fr/gorevli-parti-oyunlari-fikirleri.html">
+<img alt="Jeux de Fête avec Défis : 20 Idées de Défis pour Égayer la Réunion" height="630" loading="lazy" src="/makale/img/fr/gorevli-parti-oyunlari-fikirleri.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>Jeux de Fête avec Défis : 20 Idées de Défis pour Égayer la Réunion</h3>
+<p>Idées de défis pour les fêtes à la maison et les réunions d'amis : défis d'échauffement, défis de performance et…</p>
+</div>
+</a>
+<a class="sg-art" href="/makale/fr/evde-sikildiginizda-oynanacak-oyun.html">
+<img alt="Un Jeu à Jouer avec des Amis à la Maison Quand Vous vous Ennuyez" height="630" loading="lazy" src="/makale/img/fr/evde-sikildiginizda-oynanacak-oyun.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>Un Jeu à Jouer avec des Amis à la Maison Quand Vous vous Ennuyez</h3>
+<p>Si vous vous ennuyez à la maison et que vous êtes bloqués à « que faire ? » : un jeu de défi aux dés qui ne…</p>
+</div>
+</a>
+<a class="sg-art" href="/makale/fr/gencler-icin-grup-oyunlari.html">
+<img alt="Jeux de Groupe pour les Jeunes : À Jouer dans les Groupes de Lycée et d'Université" height="630" loading="lazy" src="/makale/img/fr/gencler-icin-grup-oyunlari.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>Jeux de Groupe pour les Jeunes : À Jouer dans les Groupes de Lycée et d'Université</h3>
+<p>Jeux de groupe à jouer dans les groupes d'amis du lycée et de l'université : idées de jeux qui fonctionnent dans une…</p>
+</div>
+</a>
+</div>
+<a class="sg-arts-all" data-i18n="arts_all" href="/makale/fr/">Tous les articles →</a>
+</section>
+<section class="cta">
+<h2 data-i18n="cta_title">Rassemblez vos amis et lancez : Roll or Dare !</h2>
+<p data-i18n="cta_desc">Anniversaire, fête à la maison, réveillon du Nouvel An, camping, chambre d'internat ou soirée en famille : Roll or Dare lance la fête.</p>
+<div class="cta-links">
+<a class="gp-btn" href="https://play.google.com/store/apps/details?id=com.Soge.YerseYap" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"></path></svg>
+<span><small>ANDROID</small><b data-i18n="btn_google_play">Disponible sur Google Play</b></span>
+</a>
+<a class="btn" data-i18n="btn_home" href="/fr/">Retour à l'accueil Sogepps</a>
+<a class="btn secondary" data-i18n="footer_privacy" href="privacy-policy.html">Politique de confidentialité</a>
+<a class="btn secondary" data-i18n="btn_contact" href="mailto:sogepps@gmail.com">Contact</a>
+</div>
+</section>
+</main>
+
+
+
+<script defer="" src="/js/i18n.js?v=ac9834aa"></script>
+</body>
+</html>

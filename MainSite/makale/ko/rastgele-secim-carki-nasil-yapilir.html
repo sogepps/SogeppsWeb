@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>무작위 선택 룰렛을 어떻게 만들어요? 자신의 룰렛을 만들어 | Sogepps</title>
+<meta content="무작위 선택 룰렛을 어떻게 준비해요: 선택지 입력, 슬라이스 가중치, 중첩 룰렛, 제거 모드. 반 학급, 사무실, 집을 위한 준비 룰렛 예시." name="description"/>
+<meta content="무작위 선택 룰렛, 결정 룰렛, 룰렛 만들기, 회전판 앱, 무작위 선택 앱, 이름 룰렛" name="keywords"/>
+<link href="https://sogepps.tr/makale/ko/rastgele-secim-carki-nasil-yapilir.html" rel="canonical"/><link href="https://sogepps.tr/makale/rastgele-secim-carki-nasil-yapilir.html" hreflang="tr" rel="alternate"/><link href="https://sogepps.tr/makale/en/rastgele-secim-carki-nasil-yapilir.html" hreflang="en" rel="alternate"/><link href="https://sogepps.tr/makale/de/rastgele-secim-carki-nasil-yapilir.html" hreflang="de" rel="alternate"/><link href="https://sogepps.tr/makale/fr/rastgele-secim-carki-nasil-yapilir.html" hreflang="fr" rel="alternate"/><link href="https://sogepps.tr/makale/es/rastgele-secim-carki-nasil-yapilir.html" hreflang="es" rel="alternate"/><link href="https://sogepps.tr/makale/it/rastgele-secim-carki-nasil-yapilir.html" hreflang="it" rel="alternate"/><link href="https://sogepps.tr/makale/pt/rastgele-secim-carki-nasil-yapilir.html" hreflang="pt" rel="alternate"/><link href="https://sogepps.tr/makale/nl/rastgele-secim-carki-nasil-yapilir.html" hreflang="nl" rel="alternate"/><link href="https://sogepps.tr/makale/ru/rastgele-secim-carki-nasil-yapilir.html" hreflang="ru" rel="alternate"/><link href="https://sogepps.tr/makale/ja/rastgele-secim-carki-nasil-yapilir.html" hreflang="ja" rel="alternate"/><link href="https://sogepps.tr/makale/ko/rastgele-secim-carki-nasil-yapilir.html" hreflang="ko" rel="alternate"/><link href="https://sogepps.tr/makale/ar/rastgele-secim-carki-nasil-yapilir.html" hreflang="ar" rel="alternate"/><link href="https://sogepps.tr/makale/hi/rastgele-secim-carki-nasil-yapilir.html" hreflang="hi" rel="alternate"/><link href="https://sogepps.tr/makale/id/rastgele-secim-carki-nasil-yapilir.html" hreflang="id" rel="alternate"/><link href="https://sogepps.tr/makale/pl/rastgele-secim-carki-nasil-yapilir.html" hreflang="pl" rel="alternate"/><link href="https://sogepps.tr/makale/rastgele-secim-carki-nasil-yapilir.html" hreflang="x-default" rel="alternate"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<meta content="article" property="og:type"/>
+<meta content="Sogepps" property="og:site_name"/>
+<meta content="ko_KR" property="og:locale"/>
+<meta content="무작위 선택 룰렛을 어떻게 만들어요? 자신만의 룰렛을 만들어" property="og:title"/>
+<meta content="무작위 선택 룰렛을 어떻게 준비해요: 선택지 입력, 슬라이스 가중치, 중첩 룰렛, 제거 모드. 반 학급, 사무실, 집을 위한 준비 룰렛 예시." property="og:description"/>
+<meta content="https://sogepps.tr/makale/ko/rastgele-secim-carki-nasil-yapilir.html" property="og:url"/>
+<meta content="https://sogepps.tr/img/spinify-icon.png" property="og:image"/>
+<meta content="2026-09-03" property="article:published_time"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="무작위 선택 룰렛을 어떻게 만들어요? 자신만의 룰렛을 만들어" name="twitter:title"/>
+<meta content="무작위 선택 룰렛을 어떻게 준비해요: 선택지 입력, 슬라이스 가중치, 중첩 룰렛, 제거 모드. 반 학급, 사무실, 집을 위한 준비 룰렛 예시." name="twitter:description"/>
+<meta content="https://sogepps.tr/img/spinify-icon.png" name="twitter:image"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root { --bg:#050608; --surface:#0f1218; --surface-2:#171c26; --border:#1f2937; --text:#f0f4f8; --muted:#9ca3af; --accent:#6366f1; --accent-light:#818cf8; --glow:rgba(99,102,241,0.12); --font:'Inter', system-ui, -apple-system, sans-serif; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.7; }
+    a { color: var(--accent-light); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(5,6,8,0.86); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: 1000px; margin: 0 auto; padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .nav-brand { display: flex; align-items: center; gap: 10px; color: var(--text); font-weight: 800; font-size: 1.1rem; letter-spacing: -0.02em; text-decoration: none; }
+    .nav-logo { width: 32px; height: 32px; border-radius: 10px; background: linear-gradient(135deg, var(--accent), #a855f7); display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 800; color: #fff; }
+    .nav-links { display: flex; gap: 4px; list-style: none; align-items: center; }
+    .nav-links a { color: var(--muted); font-size: 0.85rem; font-weight: 500; padding: 8px 12px; border-radius: 8px; text-decoration: none; }
+    .nav-links a:hover, .nav-links a.active { color: var(--text); background: var(--glow); }
+    .wrap { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+    .crumb { font-size: 0.8rem; color: var(--muted); padding: 26px 0 0; }
+    .crumb a { color: var(--muted); }
+    .crumb span { margin: 0 6px; opacity: .5; }
+    footer { border-top: 1px solid var(--border); margin-top: 56px; padding: 40px 24px; text-align: center; color: var(--muted); font-size: 0.85rem; }
+    footer a { color: var(--accent-light); }
+    article { max-width: 760px; margin: 0 auto; padding: 8px 0 0; }
+    .post-head h1 { font-size: clamp(1.85rem, 4.2vw, 2.6rem); font-weight: 800; line-height: 1.18; letter-spacing: -0.02em; margin: 14px 0 12px; }
+    .post-meta { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; font-size: 0.82rem; color: var(--muted); margin-bottom: 22px; }
+    .post-meta .pill { background: var(--glow); color: var(--accent-light); border: 1px solid rgba(99,102,241,0.2); border-radius: 999px; padding: 4px 12px; font-weight: 600; }
+    .banner { width: 100%; height: auto; aspect-ratio: 1200 / 630; border-radius: 18px; border: 1px solid var(--border); display: block; margin-bottom: 26px; }
+    .lead { font-size: 1.1rem; color: #d6dde6; margin-bottom: 8px; }
+    article h2 { font-size: 1.35rem; font-weight: 700; letter-spacing: -0.01em; margin: 34px 0 12px; }
+    article p { color: #c7ced8; margin-bottom: 14px; }
+    article ul { color: #c7ced8; margin: 0 0 16px 0; padding-left: 1.3rem; }
+    article li { margin-bottom: 8px; }
+    article strong { color: var(--text); }
+    figure { margin: 22px 0; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; background: var(--surface); }
+    figure img { width: 100%; height: auto; display: block; }
+    figcaption { padding: 12px 16px; font-size: 0.83rem; color: var(--muted); }
+    .notice { border: 1px solid #4b3a1a; background: rgba(234,179,8,0.08); color: #e8d9a8; border-radius: 14px; padding: 12px 16px; font-size: 0.86rem; margin-bottom: 22px; }
+    .faq { margin-top: 38px; border-top: 1px solid var(--border); padding-top: 26px; }
+    .faq h2 { margin-top: 0; }
+    details { border: 1px solid var(--border); border-radius: 12px; padding: 12px 16px; margin-bottom: 10px; background: var(--surface); }
+    summary { cursor: pointer; font-weight: 600; }
+    details p { margin: 10px 0 0; }
+    .appcard { margin: 38px 0 10px; display: flex; gap: 18px; align-items: center; flex-wrap: wrap; border: 1px solid var(--border); border-radius: 18px; padding: 22px; background: linear-gradient(150deg, var(--surface), var(--surface-2)); }
+    .appcard img.ico { width: 68px; height: 68px; border-radius: 18px; object-fit: cover; }
+    .appcard .txt { flex: 1 1 260px; }
+    .appcard h3 { font-size: 1.15rem; margin-bottom: 4px; }
+    .appcard p { color: var(--muted); font-size: 0.9rem; margin: 0 0 12px; }
+    .appcard .links { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+    .appcard .more { font-size: 0.88rem; font-weight: 600; }
+    .related { margin-top: 44px; }
+    .related h2 { font-size: 1.2rem; margin-bottom: 14px; }
+    .rel-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+    .rel-card { display: block; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; background: var(--surface); color: inherit; text-decoration: none; }
+    .rel-card:hover { border-color: var(--accent); text-decoration: none; }
+    .rel-card img { width: 100%; height: auto; display: block; }
+    .rel-card div { padding: 12px 14px; }
+    .rel-app { display: block; font-size: 0.72rem; text-transform: uppercase; letter-spacing: .06em; color: var(--accent-light); margin-bottom: 4px; }
+    .rel-card strong { font-size: 0.93rem; font-weight: 600; line-height: 1.4; }
+    .gp-btn { display: inline-flex; align-items: center; gap: 10px; padding: 9px 18px; border-radius: 12px; background: #0d1016; border: 1px solid #414755; color: #fff; font-weight: 700; font-size: 0.95rem; line-height: 1.15; text-decoration: none; transition: border-color .2s, transform .15s; }
+    .gp-btn:hover { text-decoration: none; border-color: #9aa3b5; transform: translateY(-1px); color: #fff; }
+    .gp-btn svg { width: 22px; height: 22px; flex: 0 0 auto; fill: currentColor; }
+    .gp-btn > span { display: block; text-align: left; }
+    .gp-btn small { display: block; font-size: 0.62rem; font-weight: 600; letter-spacing: .09em; opacity: .7; }
+    .gp-btn-soon { opacity: .5; cursor: default; }
+    .gp-btn-soon:hover { transform: none; border-color: #414755; }
+  </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"무작위 선택 룰렛을 어떻게 만들어요? 자신만의 룰렛을 만들어","description":"무작위 선택 룰렛을 어떻게 준비해요: 선택지 입력, 슬라이스 가중치, 중첩 룰렛, 제거 모드. 반 학급, 사무실, 집을 위한 준비 룰렛 예시.","image":["https://sogepps.tr/img/spinify-icon.png","https://sogepps.tr/makale/img/ko/rastgele-secim-carki-nasil-yapilir.svg"],"datePublished":"2026-09-03","dateModified":"2026-09-03","inLanguage":"ko","mainEntityOfPage":{"@type":"WebPage","@id":"https://sogepps.tr/makale/ko/rastgele-secim-carki-nasil-yapilir.html","inLanguage":"ko"},"author":{"@type":"Organization","name":"Sogepps","url":"https://sogepps.tr/ko/"},"publisher":{"@type":"Organization","name":"Sogepps","url":"https://sogepps.tr/ko/","logo":{"@type":"ImageObject","url":"https://sogepps.tr/img/spinify-icon.png"}}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://sogepps.tr/ko/"},{"@type":"ListItem","position":2,"name":"글","item":"https://sogepps.tr/makale/ko/"},{"@type":"ListItem","position":3,"name":"무작위 선택 룰렛을 어떻게 만들어요? 자신만의 룰렛을 만들어","item":"https://sogepps.tr/makale/ko/rastgele-secim-carki-nasil-yapilir.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"무작위 선택 룰렛을 어떻게 만들어요?","acceptedAnswer":{"@type":"Answer","text":"선택지를 하나씩 입력해요, 숫자를 3~8 사이로 유지해요, 필요하면 부분에 가중치를 줘요, 룰렛을 저장해요. 설정이 1분 이하가 걸려요."}},{"@type":"Question","name":"룰렛이 정말 무작위예요?","acceptedAnswer":{"@type":"Answer","text":"부분이 나올 확률은 룰렛 위에서 차지하는 넓이와 같아요. 같은 크기 부분에서는 모든 선택지가 같은 확률로, 가중 부분에서는 정한 비율로 나와요."}},{"@type":"Question","name":"같은 선택지가 다시 나오는 걸 어떻게 방지해요?","acceptedAnswer":{"@type":"Answer","text":"제거 모드를 켜요. 나온 선택지가 룰렛에서 지워져요, 남은 부분의 확률이 자동으로 다시 배분돼요."}}]}]}</script>
+</head>
+<body>
+<nav>
+<div class="nav-inner">
+<a class="nav-brand" href="/ko/"><span class="nav-logo">S</span> Sogepps</a>
+<ul class="nav-links">
+<li><a href="/ko/#apps">앱</a></li>
+<li><a class="active" href="/makale/ko/">글</a></li>
+<li><a href="mailto:sogepps@gmail.com">문의</a></li>
+</ul>
+</div>
+</nav>
+<div class="wrap">
+<div class="crumb"><a href="/ko/">홈</a><span>›</span><a href="/makale/ko/">글</a><span>›</span>Spinify</div>
+<article>
+<div class="post-head">
+<h1>무작위 선택 룰렛을 어떻게 만들어요? 자신만의 룰렛을 만들어</h1>
+<div class="post-meta">
+<a class="pill" href="/spinify/ko/">Spinify</a>
+<span>2026년 9월 3일</span><span>·</span><span>2분 읽기</span>
+</div>
+</div>
+<img alt="무작위 선택 룰렛을 어떻게 만들어요? 자신만의 룰렛을 만들어" class="banner" height="630" src="/makale/img/ko/rastgele-secim-carki-nasil-yapilir.svg" width="1200"/>
+<p class="lead">무작위 선택 룰렛은 "누가 할까" 그리고 "뭐가 될까" 싸움을 3초에 끝내는 가장 간단한 도구야요. 만드는 데도 1분이 걸려요 — 하지만 잘 만든 룰렛과 못 만든 것 사이에는 진짜 차이가 있어요.</p>
+<h2>룰렛을 만드는 4가지 단계</h2>
+<ul>
+<li><strong>1. 선택지를 적어요.</strong> 각 부분에 한 가지 선택. 짧게 유지해요; 긴 텍스트는 룰렛 위에 안 읽혀요.</li>
+<li><strong>2. 숫자를 3~8 사이로 유지해요.</strong> 더 적으면 불필요하고, 더 많으면 못 읽게 돼요.</li>
+<li><strong>3. 필요하면 가중치를 줘요.</strong> 어떤 선택지가 더 자주 나오길 원하면 부분 너비를 늘려요.</li>
+<li><strong>4. 저장해요.</strong> 같은 룰렛을 매주 다시 만드는 게 가장 시간을 낭비하는 단계예요.</li>
+</ul>
+<h2>준비된 룰렛 예</h2>
+<p>가장 자주 만드는 룰렛들이 아래에 있어요; 직접 복사할 수 있어요.</p>
+<ul>
+<li><strong>저녁 식사:</strong> 집 요리 · 배달 · 외식 · 남은 거 · 토스트</li>
+<li><strong>집안일:</strong> 설거지 · 쓰레기 · 장보기 · 청소 · 빨래</li>
+<li><strong>반에서 발언:</strong> 학생 이름 (제거 모드로)</li>
+<li><strong>사무실 작업:</strong> 회의 기록 · 프레젠테이션 · 커피 · 주말 당번</li>
+<li><strong>스포츠:</strong> 조깅 · 산책 · 스트레칭 · 쉬는 날</li>
+<li><strong>영화의 밤:</strong> 액션 · 코미디 · 공포 · 다큐멘터리 (그 다음 두 번째 룰렛으로 영화)</li>
+</ul>
+<h2>가중치는 언제 필요해요?</h2>
+<p>같은 크기 부분의 룰렛에서 각 선택지는 같은 확률로 나와요. 이건 추첨에서는 맞지만, 일상 결정에서는 현실을 반영하지 않아요: 주에 3번 가는 곳과 년에 1번 가는 곳이 같은 기회를 가지는 건 말이 안 돼요.</p>
+<p>가중치를 주면 부분이 나올 확률이 차지하는 넓이와 같아요. 4-2-1-1 가중치는 전체 8 단위가 돼요; 첫 선택지는 50%, 두 번째는 25%, 다른 건 12.5% 확률로 나와요.</p>
+<h2>중첩 룰렛: 2단계 선택</h2>
+<p>어떤 결정은 한 개 룰렛에 안 맞아요. "뭘 봐요?" 질문에서 먼저 장르를 선택하고 그 다음 그 장르에서 영화를 선택해요. 중첩 룰렛에서 첫 룰렛의 결과가 두 번째 룰렛의 내용을 정해요; 그래서 40개 선택지를 한 룰렛에 우겨 넣을 필요가 없어요.</p>
+<h2>제거 모드: 순서 정하기</h2>
+<p>한 명의 승자가 아니라 순서를 정하고 싶으면 제거 모드를 켜요: 나온 선택지가 룰렛에서 지워지고 다시 안 나와요. 발표 순서, 게임 순서, 작업 배정을 위한 올바른 도구가 이거예요.</p>
+<p>일반 모드에서는 매 회전마다 모든 선택지가 목록에 있어요; 같은 결과가 연속으로 나올 수 있고 이건 완전히 정상이예요.</p>
+<h2>자주하는 세 가지 실수</h2>
+<ul>
+<li><strong>마음에 안 드는 결과를 다시 돌리기.</strong> 이건 도구의 모든 이점을 없애줘요. 안 나오길 원하는 선택지는 룰렛에 있으면 안 돼요.</li>
+<li><strong>너무 많은 선택지를 넣기.</strong> 15개 부분의 룰렛은 결정하는 것만큼 피곤해져요.</li>
+<li><strong>큰 결정에서 사용하기.</strong> 룰렛은 되돌릴 수 있는 작은 결정을 빠르게 하는 도구예요.</li>
+</ul>
+<h2>준비된 템플릿으로 시작하기</h2>
+<p>Spinify; 14개 준비된 룰렛 템플릿, 부분당 가중치 조정, 중첩 룰렛, 제거 모드를 한 앱에 모아요. 만든 룰렛을 저장하고 매주 같은 걸 쓸 수 있어요.</p>
+<section class="faq">
+<h2>자주 묻는 질문</h2>
+<details>
+<summary>무작위 선택 룰렛을 어떻게 만들어요?</summary>
+<p>선택지를 하나씩 입력해요, 숫자를 3~8 사이로 유지해요, 필요하면 부분에 가중치를 줘요, 룰렛을 저장해요. 설정이 1분 이하가 걸려요.</p>
+</details>
+<details>
+<summary>룰렛이 정말 무작위예요?</summary>
+<p>부분이 나올 확률은 룰렛 위에서 차지하는 넓이와 같아요. 같은 크기 부분에서는 모든 선택지가 같은 확률로, 가중 부분에서는 정한 비율로 나와요.</p>
+</details>
+<details>
+<summary>같은 선택지가 다시 나오는 걸 어떻게 방지해요?</summary>
+<p>제거 모드를 켜요. 나온 선택지가 룰렛에서 지워져요, 남은 부분의 확률이 자동으로 다시 배분돼요.</p>
+</details>
+</section>
+<div class="appcard">
+<img alt="Spinify 앱 아이콘" class="ico" height="68" loading="lazy" src="/img/spinify-icon.png" width="68"/>
+<div class="txt">
+<h3>Spinify</h3>
+<p>가중 확률, 중첩 룰렛, 14가지 준비된 템플릿으로 온 고급 룰렛.</p>
+<div class="links">
+<a class="gp-btn" href="https://play.google.com/store/apps/details?id=com.Soge.Spinify" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"></path></svg><span><small>ANDROID</small><b>Google Play 다운로드</b></span></a>
+<a class="more" href="/spinify/ko/">앱 페이지 →</a>
+</div>
+</div>
+</div>
+<section class="related">
+<h2>관련 글</h2>
+<div class="rel-grid">
+<a class="rel-card" href="/makale/ko/karar-veremiyorum-ne-yapmaliyim.html">
+<img alt="" loading="lazy" src="/makale/img/ko/karar-veremiyorum-ne-yapmaliyim.svg"/>
+<div><span class="rel-app">Spinify</span><strong>결정을 못해: 룰렛으로 일상의 결정을 해결하기</strong></div>
+</a>
+<a class="rel-card" href="/makale/ko/agirlikli-sans-carki-nedir.html">
+<img alt="" loading="lazy" src="/makale/img/ko/agirlikli-sans-carki-nedir.svg"/>
+<div><span class="rel-app">Spinify</span><strong>가중 행운의 룰렛이란? 확률을 직접 맞춰봐</strong></div>
+</a>
+<a class="rel-card" href="/makale/ko/evde-arkadaslarla-oynanacak-oyunlar.html">
+<img alt="" loading="lazy" src="/makale/img/ko/evde-arkadaslarla-oynanacak-oyunlar.svg"/>
+<div><span class="rel-app">HomeParty</span><strong>집에서 친구와 함께 할 수 있는 30가지 이상의 재미있는 게임</strong></div>
+</a>
+</div>
+</section>
+</article>
+</div>
+<footer>
+<div>© 2026 Sogepps · <a href="/ko/">홈</a> · <a href="/makale/ko/">글</a> · <a href="mailto:sogepps@gmail.com">sogepps@gmail.com</a></div>
+</footer>
+
+<script defer="" src="/js/i18n.js?v=ac9834aa"></script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>리그 &amp; 토너먼트 메이커 – 쉽게 토너먼트 만들기</title>
+<meta content="몇 초 만에 리그, 토너먼트 대진표, 라운드 로빈 토너먼트를 만드세요. 점수를 기록하고, 순위를 확인하고, 결과를 공유하세요." name="description"/>
+<link href="https://sogepps.tr/tournament-portal/ko/" rel="canonical"/><link href="https://sogepps.tr/tournament-portal/" hreflang="tr" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/en/" hreflang="en" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/de/" hreflang="de" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/fr/" hreflang="fr" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/es/" hreflang="es" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/it/" hreflang="it" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/pt/" hreflang="pt" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/nl/" hreflang="nl" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/ru/" hreflang="ru" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/ja/" hreflang="ja" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/ko/" hreflang="ko" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/ar/" hreflang="ar" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/hi/" hreflang="hi" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/id/" hreflang="id" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/pl/" hreflang="pl" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/" hreflang="x-default" rel="alternate"/>
+
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<meta content="website" property="og:type"/>
+<meta content="Sogepps" property="og:site_name"/>
+<meta content="리그 &amp; 토너먼트 메이커 – 쉽게 토너먼트 만들기" property="og:title"/>
+<meta content="몇 초 만에 리그, 토너먼트 대진표, 라운드 로빈 토너먼트를 만드세요. 점수를 기록하고, 순위를 확인하고, 결과를 공유하세요." property="og:description"/>
+<meta content="https://sogepps.tr/tournament-portal/ko/" property="og:url"/>
+<meta content="https://sogepps.tr/img/tournament-icon.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"League & Tournament Maker","applicationCategory":"GameApplication","operatingSystem":"Android","description":"몇 초 만에 리그, 토너먼트 대진표, 라운드 로빈 토너먼트를 만드세요. 점수를 기록하고, 순위를 확인하고, 결과를 공유하세요.","url":"https://sogepps.tr/tournament-portal/ko/","image":"https://sogepps.tr/img/tournament-icon.png","downloadUrl":"https://play.google.com/store/apps/details?id=com.Soge.LigTurnuvaOlutur","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"publisher":{"@type":"Organization","name":"Sogepps","url":"https://sogepps.tr/ko/"},"inLanguage":"ko"}</script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root {
+      --bg: #050608;
+      --surface: #0f1218;
+      --surface-2: #171c26;
+      --border: #1f2937;
+      --text: #f0f4f8;
+      --text-muted: #9ca3af;
+      --accent: #3b82f6;
+      --accent-light: #60a5fa;
+      --accent-glow: rgba(59, 130, 246, 0.12);
+      --purple: #8b5cf6;
+      --font: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--bg); color: var(--text); overflow-x: hidden; }
+
+    /* Nav */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(5,6,8,0.82); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); font-weight: 700; font-size: 1.05rem; }
+    .nav-icon { width: 34px; height: 34px; border-radius: 10px; background: linear-gradient(135deg, var(--accent), var(--purple)); display: flex; align-items: center; justify-content: center; font-size: 17px; position: relative; overflow: hidden; flex-shrink: 0; }
+    .nav-icon img { width: 100%; height: 100%; object-fit: cover; border-radius: inherit; display: block; }
+    .nav-icon .nav-icon-fallback { display: none; position: absolute; inset: 0; align-items: center; justify-content: center; font-size: 17px; }
+    .nav-icon img[src=""] + .nav-icon-fallback,
+    .nav-icon .nav-icon-fallback.show { display: flex; }
+    .nav-links { display: flex; gap: 4px; list-style: none; flex-wrap: wrap; align-items: center; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; font-weight: 500; padding: 7px 12px; border-radius: 8px; transition: all 0.2s; white-space: nowrap; }
+    .nav-links a:hover { color: var(--text); background: var(--accent-glow); }
+    .nav-links a.active { color: var(--accent-light); background: var(--accent-glow); }
+    .nav-back { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; font-weight: 500; display: flex; align-items: center; gap: 4px; margin-right: 8px; padding: 7px 10px; border-radius: 8px; transition: all 0.2s; }
+    .nav-back:hover { color: var(--text); background: var(--accent-glow); }
+    .nav-sep { width: 1px; height: 20px; background: var(--border); margin: 0 4px; }
+
+    /* Hero */
+    .hero { padding: 150px 24px 100px; text-align: center; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -150px; left: 50%; transform: translateX(-50%); width: 1000px; height: 700px; background: radial-gradient(ellipse, rgba(59,130,246,0.08) 0%, rgba(139,92,246,0.04) 40%, transparent 70%); pointer-events: none; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; padding: 5px 16px; background: var(--accent-glow); border: 1px solid rgba(59,130,246,0.2); border-radius: 999px; font-size: 0.78rem; font-weight: 600; color: var(--accent-light); margin-bottom: 28px; }
+    .hero h1 { font-size: clamp(2.4rem, 5.5vw, 3.8rem); font-weight: 800; line-height: 1.1; letter-spacing: -0.04em; margin-bottom: 20px; }
+    .hero h1 .grad { background: linear-gradient(135deg, var(--accent-light) 20%, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero p { font-size: 1.15rem; color: var(--text-muted); max-width: 580px; margin: 0 auto 40px; line-height: 1.7; }
+    .hero-actions { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 10px; padding: 14px 30px; background: linear-gradient(135deg, var(--accent), var(--purple)); color: #fff; text-decoration: none; font-weight: 600; font-size: 1rem; border-radius: 12px; transition: transform 0.15s, box-shadow 0.2s; box-shadow: 0 4px 24px rgba(59,130,246,0.3); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(59,130,246,0.4); text-decoration: none; }
+    .btn-primary svg { width: 20px; height: 20px; }
+    .btn-ghost { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; color: var(--text); text-decoration: none; font-weight: 600; font-size: 1rem; border-radius: 12px; border: 1px solid var(--border); transition: all 0.2s; }
+    .btn-ghost:hover { border-color: var(--accent); background: var(--accent-glow); text-decoration: none; }
+
+    /* Features */
+    .features { max-width: 1100px; margin: 0 auto; padding: 80px 24px; }
+    .section-label { display: inline-flex; align-items: center; gap: 6px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-light); margin-bottom: 16px; }
+    .features h2 { font-size: 2rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 12px; }
+    .features > p { color: var(--text-muted); font-size: 1rem; margin-bottom: 44px; max-width: 500px; }
+    .feat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+    .feat-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 28px; transition: border-color 0.2s, transform 0.15s; }
+    .feat-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+    .feat-icon { width: 50px; height: 50px; border-radius: 14px; background: var(--accent-glow); display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 18px; }
+    .feat-card h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 8px; }
+    .feat-card p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.65; }
+
+    /* How it works */
+    .how { max-width: 1100px; margin: 0 auto; padding: 80px 24px; }
+    .how h2 { font-size: 2rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 44px; text-align: center; }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+    .step { text-align: center; padding: 32px 20px; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; }
+    .step-num { width: 48px; height: 48px; border-radius: 14px; background: linear-gradient(135deg, var(--accent), var(--purple)); display: inline-flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: 800; color: #fff; margin-bottom: 16px; }
+    .step h3 { font-size: 1rem; font-weight: 600; margin-bottom: 8px; }
+    .step p { color: var(--text-muted); font-size: 0.875rem; line-height: 1.6; }
+
+    /* CTA */
+    .cta-section { text-align: center; padding: 80px 24px; }
+    .cta-card { max-width: 700px; margin: 0 auto; background: linear-gradient(135deg, rgba(59,130,246,0.1), rgba(139,92,246,0.08)); border: 1px solid rgba(59,130,246,0.2); border-radius: 24px; padding: 48px 32px; }
+    .cta-card h2 { font-size: 1.8rem; font-weight: 700; margin-bottom: 12px; }
+    .cta-card p { color: var(--text-muted); font-size: 1rem; margin-bottom: 28px; }
+
+    /* Footer */
+    footer { border-top: 1px solid var(--border); padding: 40px 24px; margin-top: 20px; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 32px; }
+    .footer-brand-text { font-weight: 700; font-size: 1rem; margin-bottom: 6px; }
+    .footer-sub { color: var(--text-muted); font-size: 0.82rem; }
+    .footer-col h4 { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 10px; }
+    .footer-col a { display: block; color: var(--text-muted); font-size: 0.85rem; padding: 3px 0; text-decoration: none; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--text); }
+    .footer-bottom { max-width: 1100px; margin: 28px auto 0; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted); font-size: 0.78rem; }
+    .footer-bottom a { color: var(--text-muted); text-decoration: none; }
+    .footer-bottom a:hover { color: var(--text); }
+
+    @media (max-width: 640px) {
+      .nav-links a { padding: 6px 8px; font-size: 0.78rem; }
+      .nav-back { padding: 6px 8px; font-size: 0.78rem; }
+      .hero { padding: 120px 20px 70px; }
+      .features, .how { padding: 60px 20px; }
+      .footer-inner { flex-direction: column; }
+    }
+    /* Makale bolumu */
+    .sg-arts { margin: 20px 0; border: 1px solid rgba(255,255,255,0.12); border-radius: 20px; padding: 26px; background: rgba(255,255,255,0.03); }
+    .sg-arts h2 { font-size: 1.4rem; margin-bottom: 6px; }
+    .sg-arts > p { opacity: .78; margin-bottom: 16px; font-size: 0.95rem; }
+    .sg-arts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+    .sg-art { display: block; border: 1px solid rgba(255,255,255,0.13); border-radius: 14px; overflow: hidden; background: rgba(0,0,0,0.28); color: inherit; text-decoration: none; transition: border-color .2s, transform .2s; }
+    .sg-art:hover { text-decoration: none; transform: translateY(-3px); border-color: rgba(255,255,255,0.38); }
+    .sg-art img { width: 100%; height: auto; aspect-ratio: 1200 / 630; display: block; }
+    .sg-art-body { padding: 14px 16px 16px; }
+    .sg-art-body h3 { font-size: 1rem; line-height: 1.4; margin-bottom: 6px; }
+    .sg-art-body p { font-size: 0.86rem; opacity: .72; margin: 0; }
+    .sg-arts-all { display: inline-block; margin-top: 14px; font-weight: 700; font-size: 0.9rem; }
+    .sg-arts { max-width: 1100px; margin: 0 auto 40px; }
+  </style>
+<meta content="ko_KR" property="og:locale"/></head>
+<body>
+<nav>
+<div class="nav-inner">
+<div style="display:flex;align-items:center;">
+<a class="nav-back" data-i18n="nav_back" href="/ko/">← Sogepps</a>
+<div class="nav-sep"></div>
+<a class="nav-brand" href="/tournament-portal/ko/">
+<div class="nav-icon">
+<img alt="" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" src="/tournament-portal/img/icon.png"/>
+<span aria-hidden="true" class="nav-icon-fallback">⚗</span>
+</div>
+          Tournament Maker
+        </a>
+</div>
+<ul class="nav-links">
+<li><a data-i18n="nav_features" href="#features">기능</a></li>
+<li><a data-i18n="nav_privacy" href="/tournament-portal/ko/privacy-policy.html">개인정보 처리방침</a></li>
+<li><a data-i18n="nav_delete" href="/tournament-portal/ko/delete-account.html">계정 삭제</a></li>
+</ul>
+</div>
+</nav>
+<!-- Hero -->
+<section class="hero">
+<div class="hero-badge" data-i18n="hero_badge">🏆 #1 토너먼트 오거나이저</div>
+<h1 data-i18n-html="hero_title">토너먼트를 만드세요<br/><span class="grad">프로처럼</span></h1>
+<p data-i18n="hero_desc">1분 이내에 리그, 토너먼트 대진표, 라운드 로빈 토너먼트를 설정하세요. 점수를 입력하고, 실시간 순위를 추적하고, 결과를 공유하세요 — 모두 휴대폰에서.</p>
+<div class="hero-actions">
+<a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.Soge.LigTurnuvaOlutur" rel="noopener noreferrer" target="_blank">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"></path></svg>
+<span data-i18n="btn_google_play">Google Play에서 다운로드</span>
+</a>
+<a class="btn-ghost" data-i18n="btn_see_features" href="#features">기능 보기 ↓</a>
+</div>
+</section>
+<!-- Features -->
+<section class="features" id="features">
+<div class="section-label" data-i18n="feat_label">◆ 기능</div>
+<h2 data-i18n="feat_title">조직에 필요한 모든 것</h2>
+<p data-i18n="feat_desc">모든 토너먼트 형식을 위한 강력한 도구, 주머니 속에.</p>
+<div class="feat-grid">
+<div class="feat-card">
+<div class="feat-icon">🏆</div>
+<h3 data-i18n="feat1_title">리그 &amp; 라운드 로빈</h3>
+<p data-i18n="feat1_desc">싱글 또는 더블 라운드 지원으로 라운드 로빈 리그를 만드세요. 리그당 최대 20팀의 경기 설정을 사용자 지정하세요.</p>
+</div>
+<div class="feat-card">
+<div class="feat-icon">⚖</div>
+<h3 data-i18n="feat2_title">토너먼트 대진표</h3>
+<p data-i18n="feat2_desc">2~32명 참가자를 위한 싱글 엘리미네이션 대진표. 홀수 참가자를 위한 BYE 지원으로 자동 크기 조정.</p>
+</div>
+<div class="feat-card">
+<div class="feat-icon">📈</div>
+<h3 data-i18n="feat3_title">실시간 순위 &amp; 내보내기</h3>
+<p data-i18n="feat3_desc">포인트, 골, 승, 무, 패가 포함된 실시간 순위표. PDF, CSV로 내보내거나 스크린샷으로 공유.</p>
+</div>
+<div class="feat-card">
+<div class="feat-icon">⚽</div>
+<h3 data-i18n="feat4_title">다양한 스포츠</h3>
+<p data-i18n="feat4_desc">축구, 농구, 배구, 테니스 및 사용자 정의 스포츠에 대한 기본 지원. 스포츠별 점수 규칙 포함.</p>
+</div>
+<div class="feat-card">
+<div class="feat-icon">🔒</div>
+<h3 data-i18n="feat5_title">개인정보 보호 중심</h3>
+<p data-i18n="feat5_desc">개인 데이터를 수집하지 않습니다. 추적 없음. 토너먼트는 여러분의 것입니다. 사용자 동의 관리를 통한 완전한 GDPR 준수.</p>
+</div>
+<div class="feat-card">
+<div class="feat-icon">🌐</div>
+<h3 data-i18n="feat6_title">16개 이상의 언어</h3>
+<p data-i18n="feat6_desc">터키어, 영어, 독일어, 프랑스어, 스페인어, 이탈리아어, 포르투갈어, 네덜란드어, 러시아어, 일본어, 한국어, 아랍어 등으로 제공.</p>
+</div>
+</div>
+</section>
+<!-- How It Works -->
+<section class="how">
+<div class="section-label" data-i18n="how_label" style="text-align:center;display:block;">◆ 사용 방법</div>
+<h2 data-i18n="how_title">세 가지 간단한 단계</h2>
+<div class="steps">
+<div class="step">
+<div class="step-num">1</div>
+<h3 data-i18n="step1_title">형식 선택</h3>
+<p data-i18n="step1_desc">리그(라운드 로빈) 또는 토너먼트(엘리미네이션 대진표) 형식 중 선택하세요.</p>
+</div>
+<div class="step">
+<div class="step-num">2</div>
+<h3 data-i18n="step2_title">팀 추가</h3>
+<p data-i18n="step2_desc">팀 또는 선수 이름을 입력하세요. 대진표가 자동으로 생성됩니다.</p>
+</div>
+<div class="step">
+<div class="step-num">3</div>
+<h3 data-i18n="step3_title">플레이 &amp; 추적</h3>
+<p data-i18n="step3_desc">경기하면서 점수를 입력하세요. 순위와 대진표가 실시간으로 업데이트됩니다.</p>
+</div>
+</div>
+</section>
+<!-- CTA -->
+<section class="section sg-arts" id="makaleler">
+<h2 data-i18n="arts_title">아티클</h2>
+<p data-i18n="arts_desc">League &amp; Tournament Maker 관련 가이드와 게임 아이디어예요.</p>
+<div class="sg-arts-grid">
+<a class="sg-art" href="/makale/ko/hali-saha-ligi-nasil-kurulur.html">
+<img alt="풋살 리그를 어떻게 만들어요? 전적, 순위표, 규칙" height="630" loading="lazy" src="/makale/img/ko/hali-saha-ligi-nasil-kurulur.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>풋살 리그를 어떻게 만들어요? 전적, 순위표, 규칙</h3>
+<p>친구 그룹으로 풋살 리그 만들기: 팀 수에 따른 전적, 더블 라운드 리그 계산, 포인트 시스템, 골득실 규칙, 시즌 계획.</p>
+</div>
+</a>
+<a class="sg-art" href="/makale/ko/eleme-usulu-turnuva-cetveli.html">
+<img alt="탈락전 토너먼트 표를 어떻게 만들어요?" height="630" loading="lazy" src="/makale/img/ko/eleme-usulu-turnuva-cetveli.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>탈락전 토너먼트 표를 어떻게 만들어요?</h3>
+<p>탈락전 토너먼트 만드는 가이드: 참가자 수에 따른 라운드 계산, 불참자 처리, 시드 배치, 싱글 매치인지 더블 매치인지, 3위 경기 결정.</p>
+</div>
+</a>
+<a class="sg-art" href="/makale/ko/lig-turnuva-olusturma-uygulamasi.html">
+<img alt="리그 만드는 앱: 휴대폰에서 전적, 순위표, 표" height="630" loading="lazy" src="/makale/img/ko/lig-turnuva-olusturma-uygulamasi.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>리그 만드는 앱: 휴대폰에서 전적, 순위표, 표</h3>
+<p>리그 만드는 프로그램을 찾는 사람들을 위해: 휴대폰에서 전적 만들기, 순위표 추적, 탈락전 표, 그룹 토너먼트 설정을 어떻게 하는지.</p>
+</div>
+</a>
+</div>
+<a class="sg-arts-all" data-i18n="arts_all" href="/makale/ko/">모든 아티클 보기 →</a>
+</section>
+<section class="cta-section">
+<div class="cta-card">
+<h2 data-i18n="cta_title">조직할 준비가 되셨나요?</h2>
+<p data-i18n="cta_desc">앱을 다운로드하고 1분 이내에 첫 번째 토너먼트를 만드세요. 선택적 프리미엄 기능과 함께 무료로 사용.</p>
+<a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.Soge.LigTurnuvaOlutur" rel="noopener noreferrer" target="_blank">
+<svg fill="currentColor" style="width:20px;height:20px;" viewbox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"></path></svg>
+<span data-i18n="cta_btn">Google Play에서 무료 다운로드</span>
+</a>
+</div>
+</section>
+<!-- Footer -->
+<footer>
+<div class="footer-inner">
+<div>
+<div class="footer-brand-text" data-i18n="footer_brand">리그 &amp; 토너먼트 메이커</div>
+<div class="footer-sub"><span data-i18n="footer_by">제작</span> <a href="/ko/" style="color:var(--accent-light);">Sogepps</a></div>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer_app">앱</h4>
+<a data-i18n="footer_google_play" href="https://play.google.com/store/apps/details?id=com.Soge.LigTurnuvaOlutur" rel="noopener noreferrer" target="_blank">Google Play</a>
+<a data-i18n="footer_features" href="#features">기능</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer_legal">법적 고지</h4>
+<a data-i18n="footer_privacy" href="/tournament-portal/ko/privacy-policy.html">개인정보 처리방침</a>
+<a data-i18n="footer_delete" href="/tournament-portal/ko/delete-account.html">계정 삭제</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer_contact">문의</h4>
+<a href="mailto:sogepps@gmail.com">sogepps@gmail.com</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span data-i18n="footer_rights">© 2026</span> <a href="/ko/">Sogepps</a><span data-i18n="footer_rights_tail">. All rights reserved.</span>
+</div>
+</footer>
+
+
+
+<script defer="" src="/js/i18n.js?v=ac9834aa"></script>
+</body>
+</html>

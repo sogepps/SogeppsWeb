@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Roll or Dare: 파티 보드게임 – 주사위, 미션 &amp; 몬스터 (YerseYap)</title>
+<meta content="Roll or Dare(YerseYap)는 한 대의 휴대폰으로 2–10명이 즐기는 파티 보드게임이에요. 주사위를 굴리고, 미션을 수행하고, 어드벤처 아일랜드를 탐험하고, 몬스터를 피하고, 미니게임에서 승리하고, 운명의 휠을 돌려보세요. 73개 언어로 수백 개의 미션을 제공해요." name="description"/>
+
+<link href="https://sogepps.tr/yerseyap/ko/" rel="canonical"/><link href="https://sogepps.tr/yerseyap/" hreflang="tr" rel="alternate"/><link href="https://sogepps.tr/yerseyap/en/" hreflang="en" rel="alternate"/><link href="https://sogepps.tr/yerseyap/de/" hreflang="de" rel="alternate"/><link href="https://sogepps.tr/yerseyap/fr/" hreflang="fr" rel="alternate"/><link href="https://sogepps.tr/yerseyap/es/" hreflang="es" rel="alternate"/><link href="https://sogepps.tr/yerseyap/it/" hreflang="it" rel="alternate"/><link href="https://sogepps.tr/yerseyap/pt/" hreflang="pt" rel="alternate"/><link href="https://sogepps.tr/yerseyap/nl/" hreflang="nl" rel="alternate"/><link href="https://sogepps.tr/yerseyap/ru/" hreflang="ru" rel="alternate"/><link href="https://sogepps.tr/yerseyap/ja/" hreflang="ja" rel="alternate"/><link href="https://sogepps.tr/yerseyap/ko/" hreflang="ko" rel="alternate"/><link href="https://sogepps.tr/yerseyap/ar/" hreflang="ar" rel="alternate"/><link href="https://sogepps.tr/yerseyap/hi/" hreflang="hi" rel="alternate"/><link href="https://sogepps.tr/yerseyap/id/" hreflang="id" rel="alternate"/><link href="https://sogepps.tr/yerseyap/pl/" hreflang="pl" rel="alternate"/><link href="https://sogepps.tr/yerseyap/" hreflang="x-default" rel="alternate"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<meta content="#7c1fd6" name="theme-color"/>
+<meta content="website" property="og:type"/>
+<meta content="Sogepps" property="og:site_name"/>
+<meta content="ko_KR" property="og:locale"/>
+<meta content="Roll or Dare: 파티 보드게임 – 주사위, 미션 &amp; 몬스터 (YerseYap)" property="og:title"/>
+<meta content="Roll or Dare(YerseYap)는 한 대의 휴대폰으로 2–10명이 즐기는 파티 보드게임이에요. 주사위를 굴리고, 미션을 수행하고, 어드벤처 아일랜드를 탐험하고, 몬스터를 피하고, 미니게임에서 승리하고, 운명의 휠을 돌려보세요. 73개 언어로 수백 개의 미션을 제공해요." property="og:description"/>
+<meta content="https://sogepps.tr/yerseyap/ko/" property="og:url"/>
+<meta content="https://sogepps.tr/yerseyap/img/og-image.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Roll or Dare: 파티 보드게임 – 주사위, 미션 &amp; 몬스터 (YerseYap)" name="twitter:title"/>
+<meta content="Roll or Dare(YerseYap)는 한 대의 휴대폰으로 2–10명이 즐기는 파티 보드게임이에요. 주사위를 굴리고, 미션을 수행하고, 어드벤처 아일랜드를 탐험하고, 몬스터를 피하고, 미니게임에서 승리하고, 운명의 휠을 돌려보세요. 73개 언어로 수백 개의 미션을 제공해요." name="twitter:description"/>
+<meta content="https://sogepps.tr/yerseyap/img/og-image.jpg" name="twitter:image"/>
+<link href="/yerseyap/img/icon.webp" rel="icon" type="image/webp"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root {
+      --bg: #0d0716;
+      --surface: #17102a;
+      --surface-2: #1f1638;
+      --border: #33264f;
+      --text: #f6f1ff;
+      --muted: #bfb3d9;
+      --pink: #ff4fa3;
+      --purple: #8b3dff;
+      --yellow: #ffd83d;
+      --teal: #35d0c1;
+      --orange: #ff8a3d;
+      --font: 'Inter', 'Segoe UI', system-ui, sans-serif;
+      --display: 'Baloo 2', 'Inter', 'Segoe UI', sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font);
+      background:
+        radial-gradient(circle at 8% -10%, rgba(139, 61, 255, 0.35), transparent 38%),
+        radial-gradient(circle at 92% -15%, rgba(255, 79, 163, 0.28), transparent 38%),
+        radial-gradient(circle at 50% 120%, rgba(255, 138, 61, 0.14), transparent 45%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+    a { color: #ffb3d6; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3, .stat-v { font-family: var(--display); letter-spacing: -0.01em; }
+    .wrap { max-width: 1160px; margin: 0 auto; padding: 0 20px; }
+
+    /* Nav */
+    .topnav { position: sticky; top: 0; z-index: 99; border-bottom: 1px solid var(--border); background: rgba(13, 7, 22, 0.86); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+    .topnav-inner, .nav-inner { min-height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 0.92rem; flex-wrap: wrap; padding: 8px 0; }
+    .topnav-links, .nav-links { display: flex; gap: 4px 14px; align-items: center; flex-wrap: wrap; }
+    .topnav-links a { color: var(--muted); padding: 6px 4px; }
+    .topnav-links a:hover { color: var(--text); text-decoration: none; }
+
+    /* Hero */
+    .hero { padding: 64px 0 28px; display: grid; grid-template-columns: 1.05fr 1fr; gap: 36px; align-items: center; }
+    .hero-kicker { display: inline-flex; align-items: center; gap: 6px; border: 1px solid rgba(255, 216, 61, 0.35); background: rgba(255, 216, 61, 0.1); color: var(--yellow); border-radius: 999px; padding: 5px 14px; font-size: 0.78rem; font-weight: 600; margin-bottom: 18px; }
+    .hero-head { display: flex; align-items: center; gap: 16px; margin-bottom: 14px; }
+    .hero-icon { width: 84px; height: 84px; border-radius: 22px; overflow: hidden; flex: 0 0 auto; border: 1px solid rgba(255,255,255,0.14); box-shadow: 0 16px 44px rgba(139, 61, 255, 0.45); }
+    .hero-icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1.02; font-weight: 800; }
+    h1 span { display: block; font-size: 0.6em; background: linear-gradient(90deg, var(--yellow), var(--pink)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-top: 4px; }
+    .lead { color: var(--muted); font-size: 1.05rem; max-width: 620px; }
+    .hero-tags { margin-top: 18px; display: flex; gap: 8px; flex-wrap: wrap; }
+    .hero-tag { border: 1px solid rgba(255, 79, 163, 0.4); background: rgba(255, 79, 163, 0.12); color: #ffc2de; border-radius: 999px; padding: 6px 12px; font-size: 0.8rem; font-weight: 600; }
+    .hero-visual { position: relative; }
+    .hero-visual img { width: 100%; height: auto; display: block; border-radius: 22px; border: 1px solid rgba(255,255,255,0.14); box-shadow: 0 30px 80px rgba(139, 61, 255, 0.35); }
+    .hero-visual::after { content: ''; position: absolute; inset: 12% -6% -10% -6%; background: radial-gradient(ellipse, rgba(255, 79, 163, 0.35), transparent 65%); z-index: -1; filter: blur(30px); }
+    .hero-note { margin-top: 10px; font-size: 0.82rem; color: var(--muted); }
+
+    /* Google Play button */
+    .gp-actions { margin-top: 22px; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+    .gp-btn { display: inline-flex; align-items: center; gap: 10px; padding: 10px 20px; border-radius: 14px; background: #0d1016; border: 1px solid #414755; color: #ffffff; font-weight: 700; font-size: 0.98rem; line-height: 1.15; text-decoration: none; transition: border-color .2s, transform .15s, box-shadow .2s; }
+    .gp-btn:hover { text-decoration: none; border-color: #c0c7d8; transform: translateY(-1px); color: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+    .gp-btn svg { width: 26px; height: 26px; flex: 0 0 auto; fill: currentColor; }
+    .gp-btn > span { display: block; text-align: left; }
+    .gp-btn small { display: block; font-size: 0.63rem; font-weight: 600; letter-spacing: .09em; opacity: .7; }
+
+    /* Stats */
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 20px 0 8px; }
+    .stat { border: 1px solid var(--border); border-radius: 18px; padding: 16px 14px; background: linear-gradient(160deg, var(--surface), var(--surface-2)); text-align: center; }
+    .stat-v { font-size: 2rem; font-weight: 800; line-height: 1; background: linear-gradient(90deg, var(--yellow), var(--orange)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .stat-l { color: var(--muted); font-size: 0.85rem; margin-top: 6px; }
+
+    /* Sections */
+    .section { margin: 20px 0; border: 1px solid var(--border); border-radius: 22px; padding: 30px; background: linear-gradient(160deg, var(--surface), var(--surface-2)); }
+    .section h2 { font-size: 1.7rem; margin-bottom: 8px; font-weight: 800; }
+    .section > p { color: var(--muted); margin-bottom: 12px; }
+    .section h2 em { font-style: normal; background: linear-gradient(90deg, var(--pink), var(--yellow)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+
+    /* Screens */
+    .screen-grid { margin-top: 22px; display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 22px; }
+    .screen-card { border: 1px solid var(--border); border-radius: 18px; overflow: hidden; background: #120b22; box-shadow: 0 14px 40px rgba(0, 0, 0, 0.4); display: flex; flex-direction: column; transition: transform .2s, border-color .2s; }
+    .screen-card:hover { transform: translateY(-3px); border-color: rgba(255, 79, 163, 0.5); }
+    .screen-card img { width: 100%; height: auto; aspect-ratio: 16 / 9; display: block; background: #120b22; }
+    .screen-card figcaption { padding: 14px 18px 18px; }
+    .screen-card h3 { font-size: 1.1rem; margin-bottom: 6px; }
+    .screen-card p { color: var(--muted); font-size: 0.93rem; line-height: 1.6; }
+
+    /* Steps */
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin-top: 18px; counter-reset: step; }
+    .step { border: 1px solid #3d2f5f; border-radius: 16px; padding: 18px 16px 16px; background: rgba(13, 7, 22, 0.5); position: relative; }
+    .step::before { counter-increment: step; content: counter(step); display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: linear-gradient(135deg, var(--pink), var(--purple)); color: #fff; font-family: var(--display); font-weight: 800; font-size: 1.05rem; margin-bottom: 10px; box-shadow: 0 6px 18px rgba(255, 79, 163, 0.35); }
+    .step h3 { font-size: 1.05rem; margin-bottom: 6px; }
+    .step p { color: var(--muted); font-size: 0.93rem; }
+
+    /* Boards & modes */
+    .boards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 18px; }
+    .board { border: 1px solid #3d2f5f; border-radius: 16px; padding: 18px; background: rgba(13, 7, 22, 0.5); }
+    .board h3 { font-size: 1.1rem; margin-bottom: 6px; }
+    .board p { color: var(--muted); font-size: 0.93rem; }
+    .board.adv { border-color: rgba(255, 216, 61, 0.45); background: linear-gradient(160deg, rgba(255, 216, 61, 0.08), rgba(13, 7, 22, 0.5)); }
+    .cats { margin-top: 22px; }
+    .cats h3 { font-size: 1.05rem; margin-bottom: 10px; color: var(--muted); font-weight: 600; font-family: var(--font); }
+    .cat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+    .cat { border-radius: 14px; padding: 14px 16px; border: 1px solid transparent; }
+    .cat b { display: block; font-family: var(--display); font-size: 1.05rem; margin-bottom: 2px; }
+    .cat span { color: var(--muted); font-size: 0.88rem; }
+    .cat.fam { background: rgba(53, 208, 193, 0.12); border-color: rgba(53, 208, 193, 0.4); }
+    .cat.fam b { color: #8ff0e5; }
+    .cat.party { background: rgba(255, 79, 163, 0.12); border-color: rgba(255, 79, 163, 0.4); }
+    .cat.party b { color: #ffb3d6; }
+    .cat.bold { background: rgba(255, 138, 61, 0.12); border-color: rgba(255, 138, 61, 0.45); }
+    .cat.bold b { color: #ffc599; }
+
+    /* Features */
+    .feat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 18px; }
+    .feature { border: 1px solid #3d2f5f; border-radius: 14px; padding: 16px; background: rgba(13, 7, 22, 0.5); }
+    .feature h3 { font-size: 1.02rem; margin-bottom: 6px; }
+    .feature p { font-size: 0.92rem; color: var(--muted); }
+
+    /* Monsters */
+    .monsters { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 18px; }
+    .monster { border: 1px solid #3d2f5f; border-radius: 14px; padding: 14px; background: rgba(13, 7, 22, 0.5); text-align: center; }
+    .monster h3 { font-size: 1rem; margin-bottom: 4px; }
+    .monster p { color: var(--muted); font-size: 0.88rem; }
+
+    /* FAQ */
+    .faq { margin-top: 12px; display: grid; gap: 10px; }
+    .faq details { border: 1px solid #3d2f5f; border-radius: 14px; background: rgba(13, 7, 22, 0.5); padding: 0 18px; }
+    .faq summary { cursor: pointer; padding: 14px 0; font-weight: 600; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: '+'; font-family: var(--display); font-size: 1.3rem; color: var(--pink); flex: 0 0 auto; }
+    .faq details[open] summary::after { content: '−'; }
+    .faq details p { color: var(--muted); font-size: 0.94rem; padding: 0 0 16px; }
+
+    /* Articles */
+    .sg-arts { margin: 20px 0; border: 1px solid rgba(255,255,255,0.12); border-radius: 22px; padding: 26px; background: rgba(255,255,255,0.03); }
+    .sg-arts h2 { font-size: 1.5rem; margin-bottom: 6px; }
+    .sg-arts > p { opacity: .78; margin-bottom: 16px; font-size: 0.95rem; }
+    .sg-arts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+    .sg-art { display: block; border: 1px solid rgba(255,255,255,0.13); border-radius: 14px; overflow: hidden; background: rgba(0,0,0,0.28); color: inherit; text-decoration: none; transition: border-color .2s, transform .2s; }
+    .sg-art:hover { text-decoration: none; transform: translateY(-3px); border-color: rgba(255,255,255,0.38); }
+    .sg-art img { width: 100%; height: auto; aspect-ratio: 1200 / 630; display: block; }
+    .sg-art-body { padding: 14px 16px 16px; }
+    .sg-art-body h3 { font-size: 1rem; line-height: 1.4; margin-bottom: 6px; font-family: var(--font); font-weight: 600; }
+    .sg-art-body p { font-size: 0.86rem; opacity: .72; margin: 0; }
+    .sg-arts-all { display: inline-block; margin-top: 14px; font-weight: 700; font-size: 0.9rem; }
+
+    /* CTA */
+    .cta { margin: 24px 0 68px; text-align: center; border: 1px solid rgba(255, 79, 163, 0.45); border-radius: 22px; padding: 36px 22px; background: linear-gradient(135deg, rgba(139, 61, 255, 0.28), rgba(255, 79, 163, 0.18) 55%, rgba(255, 216, 61, 0.14)); }
+    .cta h2 { margin-bottom: 8px; font-size: 1.8rem; font-weight: 800; }
+    .cta p { color: var(--muted); max-width: 640px; margin: 0 auto; }
+    .cta-links { margin-top: 18px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+    .btn { display: inline-block; padding: 11px 16px; border-radius: 12px; font-weight: 700; border: 1px solid rgba(255, 79, 163, 0.6); background: linear-gradient(135deg, var(--pink), var(--purple)); color: #fff; text-decoration: none; }
+    .btn:hover { text-decoration: none; filter: brightness(1.08); }
+    .btn.secondary { background: rgba(23, 16, 42, 0.7); color: #e9defc; border-color: #4a3a73; }
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; padding-top: 40px; }
+      .hero-visual { order: -1; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 760px) {
+      .section { padding: 22px 18px; }
+      .topnav-links, .nav-links { justify-content: center; }
+      .topnav-inner { justify-content: center; }
+      .screen-grid { grid-template-columns: 1fr; }
+      .hero-head { flex-direction: column; align-items: flex-start; }
+    }
+    [dir="rtl"] .gp-btn > span { text-align: right; }
+  </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","@id":"https://sogepps.tr/yerseyap/ko/#app","name":"Yerse Yap: Parti Oyunu","alternateName":["YerseYap","Yerse Yap","Roll or Dare: Party Board Game"],"applicationCategory":"GameApplication","applicationSubCategory":"Party game","operatingSystem":"Android","url":"https://sogepps.tr/yerseyap/ko/","installUrl":"https://play.google.com/store/apps/details?id=com.Soge.YerseYap","image":"https://sogepps.tr/yerseyap/img/og-image.jpg","screenshot":["https://sogepps.tr/yerseyap/img/tr/ekran-1.webp","https://sogepps.tr/yerseyap/img/tr/ekran-2.webp","https://sogepps.tr/yerseyap/img/tr/ekran-3.webp","https://sogepps.tr/yerseyap/img/tr/ekran-4.webp","https://sogepps.tr/yerseyap/img/tr/ekran-5.webp","https://sogepps.tr/yerseyap/img/tr/ekran-6.webp","https://sogepps.tr/yerseyap/img/tr/ekran-7.webp","https://sogepps.tr/yerseyap/img/tr/ekran-8.webp"],"description":"Roll or Dare(YerseYap)는 한 대의 휴대폰으로 2–10명이 즐기는 파티 보드게임이에요. 주사위를 굴리고, 미션을 수행하고, 어드벤처 아일랜드를 탐험하고, 몬스터를 피하고, 미니게임에서 승리하고, 운명의 휠을 돌려보세요. 73개 언어로 수백 개의 미션을 제공해요.","featureList":"1000+ görev, 3 kategori (Aile, Parti, Cesur 18+), Macera Adası ve Şehir tahtası, canavarlar, 4 mini oyun, Kader Çarkı, düello, herkes görevleri, takım modu, joker ve altın görev, kendi görevlerin, 12 karakter, 73 dil","author":{"@type":"Organization","name":"Sogepps","url":"https://sogepps.tr/ko/"},"offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"inLanguage":"ko"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Roll or Dare는 몇 명이서 플레이할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"휴대폰이나 태블릿 한 대로 2명에서 10명까지 플레이할 수 있어요. 플레이어들이 차례로 돌아가며 플레이하므로 추가 기기가 필요 없어요."}},{"@type":"Question","name":"인터넷 연결이 필요한가요?","acceptedAnswer":{"@type":"Answer","text":"게임은 휴대폰 한 대에서 로컬로 진행되지만, 무료로 제공되며 매치가 끝날 때 광고가 표시되기 때문에 실행하려면 인터넷 연결이 필요해요."}},{"@type":"Question","name":"아이들과 가족이 즐기기에 적합한가요?","acceptedAnswer":{"@type":"Answer","text":"네, 가족 카테고리를 사용하면 돼요. 파티와 볼드(18+) 카테고리는 성인을 위한 미션을 포함하고 있으며, 매 게임 전에 매치 설정에서 카테고리를 선택할 수 있어요."}},{"@type":"Question","name":"나만의 미션을 추가할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"네. 메인 메뉴에서 나만의 미션을 열어 미션을 작성하면 다음 매치부터 덱에 추가돼요."}},{"@type":"Question","name":"어떤 언어를 지원하나요?","acceptedAnswer":{"@type":"Answer","text":"영어, 터키어, 독일어, 프랑스어, 스페인어, 포르투갈어, 아랍어, 힌디어, 일본어, 한국어를 포함한 73개 게임 언어를 지원해요. 게임은 휴대폰 언어로 시작되며 메인 메뉴에서 변경할 수 있어요."}},{"@type":"Question","name":"진실 또는 도전 게임과는 어떻게 다른가요?","acceptedAnswer":{"@type":"Answer","text":"미션은 그대로 유지하면서 주사위, 점수, 어드벤처 아일랜드, 몬스터, 미니게임, 운명의 휠, 듀얼, 팀 모드 같은 보드게임 요소를 더했어요. 모든 매치에는 시상대에 오르는 승자가 있어요."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Sogepps","item":"https://sogepps.tr/ko/"},{"@type":"ListItem","position":2,"name":"Yerse Yap","item":"https://sogepps.tr/yerseyap/ko/"}]}]}</script>
+</head>
+<body>
+<nav class="topnav">
+<div class="wrap topnav-inner nav-inner">
+<a data-i18n="nav_home" href="/ko/">← Sogepps 홈</a>
+<div class="topnav-links nav-links">
+<a data-i18n="nav_screens" href="#ekranlar">스크린샷</a>
+<a data-i18n="nav_how" href="#nasil">플레이 방법</a>
+<a data-i18n="nav_modes" href="#modlar">보드 &amp; 모드</a>
+<a data-i18n="nav_features" href="#ozellikler">기능</a>
+<a data-i18n="nav_faq" href="#sss">자주 묻는 질문</a>
+<a data-i18n="nav_privacy" href="privacy-policy.html">개인정보 처리방침</a>
+</div>
+</div>
+</nav>
+<main class="wrap">
+<section class="hero">
+<div>
+<span class="hero-kicker" data-i18n="hero_kicker">🎲 Sogepps 파티 게임 · Android</span>
+<div class="hero-head">
+<div class="hero-icon"><img alt="Yerse Yap uygulama simgesi" decoding="async" height="84" src="/yerseyap/img/icon.webp" width="84"/></div>
+<h1 data-i18n-html="hero_title">Roll or Dare: 파티 보드게임<br/><span>주사위를 굴리고, 미션을 수행하세요!</span></h1>
+</div>
+<p class="lead" data-i18n="hero_lead">YerseYap이 Roll or Dare로 완전히 새롭게 돌아왔어요. 주사위를 굴리고, 말을 옮기고, 도착한 칸의 미션을 수행해서 점수를 모으세요. 미션을 완료하면 점수는 당신 것, 포기하면 친구들이 절대 잊지 않을 거예요. 휴대폰 한 대면 충분해요: 2–10명이 돌아가며 플레이해요.</p>
+<div class="hero-tags">
+<span class="hero-tag" data-i18n="tag_1">2–10명</span>
+<span class="hero-tag" data-i18n="tag_2">휴대폰 한 대</span>
+<span class="hero-tag" data-i18n="tag_3">수백 개의 미션</span>
+<span class="hero-tag" data-i18n="tag_4">73개 언어</span>
+<span class="hero-tag" data-i18n="tag_5">어드벤처 아일랜드</span>
+</div>
+<div class="gp-actions">
+<a class="gp-btn" href="https://play.google.com/store/apps/details?id=com.Soge.YerseYap" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"></path></svg>
+<span><small>ANDROID</small><b data-i18n="btn_google_play">Google Play 다운로드</b></span>
+</a>
+</div>
+<p class="hero-note" data-i18n="hero_note">Google Play에서 무료. 이전 이름은 YerseYap이에요.</p>
+</div>
+<div class="hero-visual">
+<img alt="Yerse Yap: Macera Adası, zar ve sevimli karakterler" data-shot="feature.webp" decoding="async" fetchpriority="high" height="500" src="/yerseyap/img/en/feature.webp" width="1024"/>
+</div>
+</section>
+<div aria-label="Öne çıkanlar" class="stats">
+<div class="stat"><div class="stat-v" data-i18n="stat_1_v">2–10</div><div class="stat-l" data-i18n="stat_1_l">명, 휴대폰 한 대</div></div>
+<div class="stat"><div class="stat-v" data-i18n="stat_2_v">수백</div><div class="stat-l" data-i18n="stat_2_l">개의 미션, 3가지 카테고리</div></div>
+<div class="stat"><div class="stat-v" data-i18n="stat_3_v">12</div><div class="stat-l" data-i18n="stat_3_l">가지 귀여운 캐릭터</div></div>
+<div class="stat"><div class="stat-v" data-i18n="stat_4_v">73</div><div class="stat-l" data-i18n="stat_4_l">개 게임 언어</div></div>
+</div>
+<section class="section" id="ekranlar">
+<h2 data-i18n="screens_title">인게임 화면</h2>
+<p data-i18n="screens_desc">주사위, 미션, 어드벤처 아일랜드, 몬스터, 미니게임, 운명의 휠, 듀얼, 시상대까지.</p>
+<div class="screen-grid">
+<figure class="screen-card"><img alt="Yerse Yap zar atma ekranı: Macera Adası’nda zıplayan zar ve 2 adım" data-shot="ekran-1.webp" decoding="async" height="720" loading="lazy" src="/yerseyap/img/en/ekran-1.webp" width="1280"/><figcaption><h3 data-i18n="s_1_t">주사위를 굴리고 미션을 수행하세요</h3><p data-i18n="s_1_d">당신의 차례: 주사위를 굴려 화려한 칸 위로 말을 옮기세요. 통통 튀는 카툰 주사위는 플레이어 색상과도 맞춰져요.</p></figcaption></figure>
+<figure class="screen-card"><img alt="Yerse Yap görev kartı: 20 puanlık görev, süre başlat ve joker butonları" data-shot="ekran-2.webp" decoding="async" height="720" loading="lazy" src="/yerseyap/img/en/ekran-2.webp" width="1280"/><figcaption><h3 data-i18n="s_2_t">수백 가지 기상천외한 미션</h3><p data-i18n="s_2_d">칸에 도착하면 점수가 걸린 미션을 받아요. 완료 또는 실패를 탭하거나, 조커로 교체하거나, 시간제한 미션은 타이머를 시작하세요.</p></figcaption></figure>
+<figure class="screen-card"><img alt="Yerse Yap Macera Adası kuşbakışı görünüm: kıvrımlı 52 kareli tahta" data-shot="ekran-3.webp" decoding="async" height="720" loading="lazy" src="/yerseyap/img/en/ekran-3.webp" width="1280"/><figcaption><h3 data-i18n="s_3_t">어드벤처 아일랜드를 탐험하세요</h3><p data-i18n="s_3_d">포탈, 구덩이, 진흙 함정, 황금 칸, 몬스터 소굴이 있는 52칸짜리 구불구불한 보드예요. 보기를 탭하면 섬을 한눈에 볼 수 있어요.</p></figcaption></figure>
+<figure class="screen-card"><img alt="Yerse Yap canavar olayı: Ejderha lidere alev püskürttü" data-shot="ekran-4.webp" decoding="async" height="720" loading="lazy" src="/yerseyap/img/en/ekran-4.webp" width="1280"/><figcaption><h3 data-i18n="s_4_t">몬스터를 조심하세요!</h3><p data-i18n="s_4_d">드래곤은 1등을 불태우고, 오크는 세금을 걷어가고, 유령은 겁을 줘서 뒤로 보내요. 몬스터 소굴에 빠지면 깜짝 놀랄 일이 기다려요.</p></figcaption></figure>
+<figure class="screen-card"><img alt="Yerse Yap mini oyun: Hızlı Tıkla" data-shot="ekran-5.webp" decoding="async" height="720" loading="lazy" src="/yerseyap/img/en/ekran-5.webp" width="1280"/><figcaption><h3 data-i18n="s_5_t">미니게임에서 점수를 얻으세요</h3><p data-i18n="s_5_d">탭 프렌지, 퍼펙트 타이밍, 컬러 메모리, 주사위 맞히기: 순발력과 기억력으로 추가 점수를 얻어보세요.</p></figcaption></figure>
+<figure class="screen-card"><img alt="Yerse Yap Kader Çarkı: +40, joker, lider −15 gibi dilimler" data-shot="ekran-6.webp" decoding="async" height="720" loading="lazy" src="/yerseyap/img/en/ekran-6.webp" width="1280"/><figcaption><h3 data-i18n="s_6_t">운명의 휠을 돌려보세요</h3><p data-i18n="s_6_d">+40부터 1등 −15까지, 다시 굴리기부터 조커까지: 휠을 돌리고 운명을 받아들이세요.</p></figcaption></figure>
+<figure class="screen-card"><img alt="Yerse Yap düello ekranı: iki oyuncu aynı görevi yapar, kazananı diğerleri seçer" data-shot="ekran-7.webp" decoding="async" height="720" loading="lazy" src="/yerseyap/img/en/ekran-7.webp" width="1280"/><figcaption><h3 data-i18n="s_7_t">듀얼: 누가 더 잘할까요?</h3><p data-i18n="s_7_d">라이벌에게 도전해서 같은 미션을 수행하고, 나머지 사람들이 승자를 뽑게 하세요. 승자는 +30점, 무승부는 각각 +15점이에요.</p></figcaption></figure>
+<figure class="screen-card"><img alt="Yerse Yap oyun sonu kürsüsü: kazanan, puanlar, rövanş ve ana menü" data-shot="ekran-8.webp" decoding="async" height="720" loading="lazy" src="/yerseyap/img/en/ekran-8.webp" width="1280"/><figcaption><h3 data-i18n="s_8_t">시상대와 재대결</h3><p data-i18n="s_8_d">게임이 끝나면 시상대와 컨페티, 재미있는 시상식이 펼쳐져요. 재대결은 탭 한 번이면 돼요. 2–10명, 휴대폰 한 대.</p></figcaption></figure>
+</div>
+</section>
+<section class="section" id="nasil">
+<h2 data-i18n="how_title">플레이 방법</h2>
+<p data-i18n="how_desc">1분 만에 설정하고, 테이블을 돌아가며 휴대폰을 전달하세요.</p>
+<div class="steps">
+<div class="step"><h3 data-i18n="how_1_t">매치 설정하기</h3><p data-i18n="how_1_d">모드(클래식 또는 팀전), 보드(시티 또는 어드벤처 아일랜드), 미션 카테고리, 라운드 수를 선택하세요. 몬스터 같은 추가 규칙도 켜고 끌 수 있어요.</p></div>
+<div class="step"><h3 data-i18n="how_2_t">플레이어 추가하기</h3><p data-i18n="how_2_d">2–10명을 추가하고 이름을 입력한 뒤 12가지 캐릭터 중 하나를 선택하세요. 팀 모드에서는 레드팀과 블루팀으로 나눠요.</p></div>
+<div class="step"><h3 data-i18n="how_3_t">굴리고 미션 수행하기</h3><p data-i18n="how_3_d">차례가 되면 주사위를 굴리고 도착한 칸의 미션을 수행하세요. 성공하면 점수는 당신 것, 실패하면 친구들이 기억할 거예요.</p></div>
+<div class="step"><h3 data-i18n="how_4_t">시상대에 오르기</h3><p data-i18n="how_4_d">라운드가 끝나면 최고 점수가 승리해요. 시상대, 시상식, 플레이어 통계와 재대결까지.</p></div>
+</div>
+</section>
+<section class="section" id="modlar">
+<h2 data-i18n="modes_title">보드, 모드 &amp; 카테고리</h2>
+<p data-i18n="modes_desc">모든 매치를 우리 테이블 취향에 맞게 설정할 수 있어요.</p>
+<div class="boards">
+<div class="board"><h3 data-i18n="board_1_t">🏙️ 시티 보드</h3><p data-i18n="board_1_d">클래식하고 단순한 보드예요. 빠르게 배우고 빠르게 플레이할 수 있어 첫 게임이나 짧은 세션에 딱이에요.</p></div>
+<div class="board adv"><h3 data-i18n="board_2_t">🏝️ 어드벤처 아일랜드 ★</h3><p data-i18n="board_2_d">미니게임, 운명의 휠, 듀얼, 모두 함께, 포탈, 구덩이, 진흙, 몬스터 소굴, 황금(2배), 꽃 함정 등 특수 칸이 있는 52칸짜리 구불구불한 섬이에요. 결승 아치에서 바퀴 보너스를 받아요.</p></div>
+<div class="board"><h3 data-i18n="team_t">🔴 팀 모드 🔵</h3><p data-i18n="team_d">레드팀 대 블루팀. 점수가 합산되므로 모든 미션이 팀 전체에 반영돼요.</p></div>
+</div>
+<div class="cats">
+<h3 data-i18n="cat_title">미션 카테고리</h3>
+<div class="cat-grid">
+<div class="cat fam"><b data-i18n="cat_1_t">가족</b><span data-i18n="cat_1_d">아이를 포함한 모두에게 적합해요.</span></div>
+<div class="cat party"><b data-i18n="cat_2_t">파티</b><span data-i18n="cat_2_d">친구들과 함께하는 재미있고 창의적이며 민망한 미션이에요.</span></div>
+<div class="cat bold"><b data-i18n="cat_3_t">볼드 18+</b><span data-i18n="cat_3_d">성인 전용이에요. 매치 설정에서 우리 그룹에 맞는 카테고리를 선택하세요.</span></div>
+</div>
+</div>
+</section>
+<section class="section" id="ozellikler">
+<h2 data-i18n="feat_title">Roll or Dare의 새로운 점</h2>
+<p data-i18n="feat_desc">게임이 처음부터 새롭게 만들어졌어요. 무엇이 달라졌는지 확인해보세요.</p>
+<div class="feat-grid">
+<div class="feature"><h3 data-i18n="f_1_t">🎡 운명의 휠</h3><p data-i18n="f_1_d">+40, +25, +10, −10, 1등 −15, 모두 +5, 다시 굴리기 또는 조커. 돌리고 운명을 받아들이세요.</p></div>
+<div class="feature"><h3 data-i18n="f_2_t">⚔️ 듀얼</h3><p data-i18n="f_2_d">라이벌에게 같은 미션으로 도전하세요. 다른 플레이어들이 승자에게 투표해요: 승자는 +30점, 무승부는 각각 +15점.</p></div>
+<div class="feature"><h3 data-i18n="f_3_t">👥 모두 함께 미션</h3><p data-i18n="f_3_d">테이블 전체가 동시에 같은 미션을 수행해요. 누가 가장 잘했는지는 친구들이 결정해요.</p></div>
+<div class="feature"><h3 data-i18n="f_4_t">🎮 4가지 미니게임</h3><p data-i18n="f_4_d">탭 프렌지, 퍼펙트 타이밍, 컬러 메모리, 주사위 맞히기로 추가 점수를 얻어보세요.</p></div>
+<div class="feature"><h3 data-i18n="f_5_t">🃏 조커 &amp; 황금 미션</h3><p data-i18n="f_5_d">미션을 조커로 교체하고, 황금 칸에서 두 배 점수를 받고, 연속 성공 보너스를 챙겨보세요.</p></div>
+<div class="feature"><h3 data-i18n="f_6_t">✍️ 나만의 미션</h3><p data-i18n="f_6_d">직접 미션을 작성해서 덱에 추가하세요. 우리끼리만 아는 농담도 넣을 수 있어요.</p></div>
+<div class="feature"><h3 data-i18n="f_7_t">⏱️ 시간제한 미션</h3><p data-i18n="f_7_d">시간제한이 있는 미션은 카드에 자동으로 카운트다운이 표시돼요.</p></div>
+<div class="feature"><h3 data-i18n="f_8_t">🏆 시상대, 시상식 &amp; 재대결</h3><p data-i18n="f_8_d">컨페티가 터지는 우승 시상대, 재미있는 게임 종료 시상식, 탭 한 번으로 재대결까지.</p></div>
+<div class="feature"><h3 data-i18n="f_9_t">📊 프로필, 통계 &amp; 오늘의 미션</h3><p data-i18n="f_9_d">게임 전반의 플레이어 통계와 매일 새로워지는 오늘의 미션.</p></div>
+<div class="feature"><h3 data-i18n="f_10_t">🌍 73개 언어</h3><p data-i18n="f_10_d">휴대폰 언어에 맞춰 자동으로 시작돼요. 메인 메뉴에서 언제든 변경할 수 있어요.</p></div>
+<div class="feature"><h3 data-i18n="f_11_t">🐾 12가지 캐릭터</h3><p data-i18n="f_11_d">고양이, 펭귄, 양, 오리, 강아지, 닭, 핑키, 마법사, 닌자, 예티, 외계인, 선인장.</p></div>
+<div class="feature"><h3 data-i18n="f_12_t">📱 휴대폰 한 대, 계정 불필요</h3><p data-i18n="f_12_d">가입도, 추가 기기도 필요 없어요. 휴대폰을 돌려가며 플레이하세요.</p></div>
+</div>
+</section>
+<section class="section" id="canavarlar">
+<h2 data-i18n="mon_title">몬스터를 만나보세요</h2>
+<p data-i18n="mon_desc">몬스터 소굴에 도착하거나 미션 칸에서 운이 나쁘면 몬스터 중 하나가 나타나요. 매치 설정에서 몬스터를 끌 수 있어요.</p>
+<div class="monsters">
+<div class="monster"><h3 data-i18n="m_1_t">🍄 버섯왕</h3><p data-i18n="m_1_d">선물을 가져다줘요.</p></div>
+<div class="monster"><h3 data-i18n="m_2_t">🐸 개구리</h3><p data-i18n="m_2_d">다른 플레이어와 위치를 바꿔요.</p></div>
+<div class="monster"><h3 data-i18n="m_3_t">👹 오크</h3><p data-i18n="m_3_d">당신의 점수에서 세금을 걷어가요.</p></div>
+<div class="monster"><h3 data-i18n="m_4_t">🐉 드래곤</h3><p data-i18n="m_4_d">1등에게 불을 뿜어요.</p></div>
+<div class="monster"><h3 data-i18n="m_5_t">👻 유령</h3><p data-i18n="m_5_d">겁을 줘서 보드 뒤쪽으로 보내요.</p></div>
+</div>
+</section>
+<section class="section" id="sss">
+<h2 data-i18n="faq_title">자주 묻는 질문</h2>
+<p data-i18n="faq_desc">다운로드 전에 빠르게 확인해보세요.</p>
+<div class="faq">
+<details open=""><summary data-i18n="q_1">Roll or Dare는 몇 명이서 플레이할 수 있나요?</summary><p data-i18n="a_1">휴대폰이나 태블릿 한 대로 2명에서 10명까지 플레이할 수 있어요. 플레이어들이 차례로 돌아가며 플레이하므로 추가 기기가 필요 없어요.</p></details>
+<details><summary data-i18n="q_2">인터넷 연결이 필요한가요?</summary><p data-i18n="a_2">게임은 휴대폰 한 대에서 로컬로 진행되지만, 무료로 제공되며 매치가 끝날 때 광고가 표시되기 때문에 실행하려면 인터넷 연결이 필요해요.</p></details>
+<details><summary data-i18n="q_3">아이들과 가족이 즐기기에 적합한가요?</summary><p data-i18n="a_3">네, 가족 카테고리를 사용하면 돼요. 파티와 볼드(18+) 카테고리는 성인을 위한 미션을 포함하고 있으며, 매 게임 전에 매치 설정에서 카테고리를 선택할 수 있어요.</p></details>
+<details><summary data-i18n="q_4">나만의 미션을 추가할 수 있나요?</summary><p data-i18n="a_4">네. 메인 메뉴에서 나만의 미션을 열어 미션을 작성하면 다음 매치부터 덱에 추가돼요.</p></details>
+<details><summary data-i18n="q_5">어떤 언어를 지원하나요?</summary><p data-i18n="a_5">영어, 터키어, 독일어, 프랑스어, 스페인어, 포르투갈어, 아랍어, 힌디어, 일본어, 한국어를 포함한 73개 게임 언어를 지원해요. 게임은 휴대폰 언어로 시작되며 메인 메뉴에서 변경할 수 있어요.</p></details>
+<details><summary data-i18n="q_6">진실 또는 도전 게임과는 어떻게 다른가요?</summary><p data-i18n="a_6">미션은 그대로 유지하면서 주사위, 점수, 어드벤처 아일랜드, 몬스터, 미니게임, 운명의 휠, 듀얼, 팀 모드 같은 보드게임 요소를 더했어요. 모든 매치에는 시상대에 오르는 승자가 있어요.</p></details>
+</div>
+</section>
+<section class="section sg-arts" id="makaleler">
+<h2 data-i18n="arts_title">아티클</h2>
+<p data-i18n="arts_desc">YerseYap 관련 가이드와 게임 아이디어예요(터키어).</p>
+<div class="sg-arts-grid">
+<a class="sg-art" href="/makale/ko/zarli-tahta-oyunu-nasil-oynanir.html">
+<img alt="주사위 보드 게임은 어떻게 하나요? Yerse Yap 규칙" height="630" loading="lazy" src="/makale/img/ko/zarli-tahta-oyunu-nasil-oynanir.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>주사위 보드 게임은 어떻게 하나요? Yerse Yap 규칙</h3>
+<p>Zar at, ilerle, göreve gel, puan topla. Zarlı tahta parti oyunu Yerse Yap nasıl oynanır, kare renkleri ne anlama gelir…</p>
+</div>
+</a>
+<a class="sg-art" href="/makale/ko/gorevli-parti-oyunlari-fikirleri.html">
+<img alt="과제 파티 게임: 모임을 밝게 하는 20가지 과제 아이디어" height="630" loading="lazy" src="/makale/img/ko/gorevli-parti-oyunlari-fikirleri.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>과제 파티 게임: 모임을 밝게 하는 20가지 과제 아이디어</h3>
+<p>집 파티와 친구 모임을 위한 과제 아이디어: 워밍업 과제, 공연 과제, 그룹 과제. 누도 강요하지 않으면서 밤의 에너지를 높이세요.</p>
+</div>
+</a>
+<a class="sg-art" href="/makale/ko/evde-sikildiginizda-oynanacak-oyun.html">
+<img alt="집에서 심심할 때 친구들과 할 게임" height="630" loading="lazy" src="/makale/img/ko/evde-sikildiginizda-oynanacak-oyun.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>집에서 심심할 때 친구들과 할 게임</h3>
+<p>집에서 지루했고 "뭐 할까"에 갇혀있어요? 준비가 필요 없고, 5분 안에 시작되고, 2-10명이 할 수 있는 주사위 과제 게임과 그룹에 따라 어떻게 조정할지예요.</p>
+</div>
+</a>
+<a class="sg-art" href="/makale/ko/gencler-icin-grup-oyunlari.html">
+<img alt="청소년 그룹 게임: 고등학교와 대학교 그룹에서 할 거" height="630" loading="lazy" src="/makale/img/ko/gencler-icin-grup-oyunlari.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>청소년 그룹 게임: 고등학교와 대학교 그룹에서 할 거</h3>
+<p>고등학교와 대학교 친구 그룹에서 할 그룹 게임: 기숙사 방, 학급 행사, 집 모임에서 작동하고, 준비가 필요 없는 게임 아이디어예요.</p>
+</div>
+</a>
+</div>
+<a class="sg-arts-all" data-i18n="arts_all" href="/makale/ko/">모든 아티클 보기 →</a>
+</section>
+<section class="cta">
+<h2 data-i18n="cta_title">친구들을 모으고 외쳐보세요: Roll or Dare!</h2>
+<p data-i18n="cta_desc">생일, 홈파티, 새해 전야, 캠핑, 기숙사, 가족 모임까지: Roll or Dare가 즐거움을 시작해줘요.</p>
+<div class="cta-links">
+<a class="gp-btn" href="https://play.google.com/store/apps/details?id=com.Soge.YerseYap" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"></path></svg>
+<span><small>ANDROID</small><b data-i18n="btn_google_play">Google Play 다운로드</b></span>
+</a>
+<a class="btn" data-i18n="btn_home" href="/ko/">Sogepps 홈으로 돌아가기</a>
+<a class="btn secondary" data-i18n="footer_privacy" href="privacy-policy.html">개인정보 처리방침</a>
+<a class="btn secondary" data-i18n="btn_contact" href="mailto:sogepps@gmail.com">문의하기</a>
+</div>
+</section>
+</main>
+
+
+
+<script defer="" src="/js/i18n.js?v=ac9834aa"></script>
+</body>
+</html>

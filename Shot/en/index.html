@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shot Çarkı - Party Wheel Game with Dares</title>
+<meta content="Shot Çarkı is a fun party wheel game for 2–12 players. Spin the wheel, get a dare by difficulty, complete it for points or take a shot. Highest score wins!" name="description"/>
+
+<link href="https://sogepps.tr/shot/en/" rel="canonical"/><link href="https://sogepps.tr/shot/" hreflang="tr" rel="alternate"/><link href="https://sogepps.tr/shot/en/" hreflang="en" rel="alternate"/><link href="https://sogepps.tr/shot/de/" hreflang="de" rel="alternate"/><link href="https://sogepps.tr/shot/fr/" hreflang="fr" rel="alternate"/><link href="https://sogepps.tr/shot/es/" hreflang="es" rel="alternate"/><link href="https://sogepps.tr/shot/it/" hreflang="it" rel="alternate"/><link href="https://sogepps.tr/shot/pt/" hreflang="pt" rel="alternate"/><link href="https://sogepps.tr/shot/nl/" hreflang="nl" rel="alternate"/><link href="https://sogepps.tr/shot/ru/" hreflang="ru" rel="alternate"/><link href="https://sogepps.tr/shot/ja/" hreflang="ja" rel="alternate"/><link href="https://sogepps.tr/shot/ko/" hreflang="ko" rel="alternate"/><link href="https://sogepps.tr/shot/ar/" hreflang="ar" rel="alternate"/><link href="https://sogepps.tr/shot/hi/" hreflang="hi" rel="alternate"/><link href="https://sogepps.tr/shot/id/" hreflang="id" rel="alternate"/><link href="https://sogepps.tr/shot/pl/" hreflang="pl" rel="alternate"/><link href="https://sogepps.tr/shot/" hreflang="x-default" rel="alternate"/>
+<meta content="Shot Çarkı - Party Wheel Game with Dares" property="og:title"/>
+<meta content="Shot Çarkı is a fun party wheel game for 2–12 players. Spin the wheel, get a dare by difficulty, complete it for points or take a shot. Highest score wins!" property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://sogepps.tr/shot/en/" property="og:url"/>
+<meta content="https://sogepps.tr/shot/img/icon.webp" property="og:image"/>
+<style>
+    :root { --bg:#070913; --surface:#11172a; --surface-2:#18213a; --border:#2a3559; --text:#edf2ff; --muted:#b3bfdc; --primary:#a855f7; --secondary:#ec4899; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: radial-gradient(circle at 10% -10%, rgba(168, 85, 247, 0.32), transparent 35%), radial-gradient(circle at 90% -20%, rgba(236, 72, 153, 0.18), transparent 35%), var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    a { color: #d8b4fe; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1160px; margin: 0 auto; padding: 0 20px; }
+    .topnav { position: sticky; top: 0; z-index: 99; border-bottom: 1px solid var(--border); background: rgba(7, 9, 19, 0.86); backdrop-filter: blur(10px); }
+    .topnav-inner, .nav-inner { min-height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 0.92rem; flex-wrap: wrap; padding: 8px 0; }
+    .topnav-links, .nav-links { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+    .hero { padding: 82px 0 40px; display: grid; grid-template-columns: 132px 1fr; gap: 22px; align-items: center; }
+    .hero-icon { width: 132px; height: 132px; border-radius: 30px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 20px 58px rgba(168, 85, 247, 0.35); background: linear-gradient(135deg, var(--primary), var(--secondary)); }
+    .hero-icon img { width: 100%; height: 100%; object-fit: cover; }
+    h1 { font-size: clamp(2rem, 5.2vw, 3.3rem); line-height: 1.08; margin-bottom: 12px; letter-spacing: -0.02em; }
+    .lead { color: var(--muted); max-width: 840px; font-size: 1.05rem; }
+    .hero-tags { margin-top: 16px; display: flex; gap: 8px; flex-wrap: wrap; }
+    .hero-tag { border: 1px solid #5b3d8a; background: rgba(168, 85, 247, 0.16); color: #e9d5ff; border-radius: 999px; padding: 6px 12px; font-size: 0.8rem; font-weight: 600; }
+    .section { margin: 20px 0; border: 1px solid var(--border); border-radius: 20px; padding: 28px; background: linear-gradient(160deg, var(--surface), var(--surface-2)); }
+    .section h2 { font-size: 1.5rem; margin-bottom: 12px; }
+    .section > p { color: var(--muted); margin-bottom: 10px; }
+    .level-grid { margin-top: 16px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+    .level-item { border: 1px solid #3a4a7b; border-radius: 14px; padding: 14px; background: rgba(16, 23, 42, 0.6); display: flex; gap: 12px; align-items: flex-start; }
+    .level-dot { width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0; margin-top: 4px; }
+    .level-item h3 { font-size: 1rem; margin-bottom: 4px; }
+    .level-item p { font-size: 0.88rem; margin: 0; color: var(--muted); }
+    .feat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 16px; }
+    .feature { border: 1px solid #32406c; border-radius: 14px; padding: 14px; background: rgba(16, 23, 42, 0.6); }
+    .feature h3 { font-size: 1rem; margin-bottom: 6px; }
+    .feature p { font-size: 0.93rem; margin: 0; color: var(--muted); }
+    .warn { margin: 20px 0; border: 1px solid #7f1d1d; border-radius: 16px; padding: 18px 22px; background: rgba(127, 29, 29, 0.25); }
+    .warn h2 { font-size: 1.15rem; margin-bottom: 8px; color: #fca5a5; }
+    .warn p { color: #fbcfe8; margin: 0; font-size: 0.95rem; }
+    .cta { margin: 24px 0 68px; text-align: center; border: 1px solid #5a4a9a; border-radius: 20px; padding: 30px 22px; background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(236, 72, 153, 0.12)); }
+    .cta h2 { margin-bottom: 8px; }
+    .cta p { color: var(--muted); }
+    .cta-links { margin-top: 14px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+    .btn { display: inline-block; padding: 10px 15px; border-radius: 11px; font-weight: 700; border: 1px solid #7c3aed; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #fff; text-decoration: none; }
+    .btn.secondary { background: rgba(17, 23, 42, 0.65); color: #d7e2ff; border-color: #3a4a7b; }
+    @media (max-width: 760px) { .hero { grid-template-columns: 1fr; text-align: center; } .hero-icon { margin: 0 auto; } .topnav-links, .nav-links { justify-content: center; } }
+    /* Google Play indirme butonu */
+    .gp-actions { margin-top: 18px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .gp-btn { display: inline-flex; align-items: center; gap: 10px; padding: 9px 18px; border-radius: 12px; background: #0d1016; border: 1px solid #414755; color: #ffffff; font-weight: 700; font-size: 0.98rem; line-height: 1.15; text-decoration: none; transition: border-color .2s, transform .15s; }
+    .gp-btn:hover { text-decoration: none; border-color: #9aa3b5; transform: translateY(-1px); color: #fff; }
+    .gp-btn svg { width: 24px; height: 24px; flex: 0 0 auto; fill: currentColor; }
+    .gp-btn > span { display: block; text-align: left; }
+    .gp-btn small { display: block; font-size: 0.63rem; font-weight: 600; letter-spacing: .09em; opacity: .7; }
+    .gp-btn-soon { opacity: .5; cursor: default; }
+    .gp-btn-soon:hover { transform: none; border-color: #414755; }
+    /* Makale bolumu */
+    .sg-arts { margin: 20px 0; border: 1px solid rgba(255,255,255,0.12); border-radius: 20px; padding: 26px; background: rgba(255,255,255,0.03); }
+    .sg-arts h2 { font-size: 1.4rem; margin-bottom: 6px; }
+    .sg-arts > p { opacity: .78; margin-bottom: 16px; font-size: 0.95rem; }
+    .sg-arts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+    .sg-art { display: block; border: 1px solid rgba(255,255,255,0.13); border-radius: 14px; overflow: hidden; background: rgba(0,0,0,0.28); color: inherit; text-decoration: none; transition: border-color .2s, transform .2s; }
+    .sg-art:hover { text-decoration: none; transform: translateY(-3px); border-color: rgba(255,255,255,0.38); }
+    .sg-art img { width: 100%; height: auto; aspect-ratio: 1200 / 630; display: block; }
+    .sg-art-body { padding: 14px 16px 16px; }
+    .sg-art-body h3 { font-size: 1rem; line-height: 1.4; margin-bottom: 6px; }
+    .sg-art-body p { font-size: 0.86rem; opacity: .72; margin: 0; }
+    .sg-arts-all { display: inline-block; margin-top: 14px; font-weight: 700; font-size: 0.9rem; }
+  </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Shot Çarkı","applicationCategory":"GameApplication","operatingSystem":"Android","description":"Shot Çarkı is a fun party wheel game for 2–12 players. Spin the wheel, get a dare by difficulty, complete it for points or take a shot. Highest score wins!","inLanguage":"en"}</script>
+<meta content="en_US" property="og:locale"/></head>
+<body>
+<nav class="topnav">
+<div class="wrap topnav-inner nav-inner">
+<a data-i18n="nav_home" href="/en/">← Sogepps Home</a>
+<div class="topnav-links nav-links">
+<a data-i18n="nav_levels" href="#zorluklar">Difficulties</a>
+<a data-i18n="nav_how" href="#nasil">How To Play</a>
+<a data-i18n="feat_title" href="#ozellikler">Why Shot Çarkı?</a>
+<a data-i18n="nav_privacy" href="privacy-policy.html">Privacy Policy</a>
+<a href="mailto:sogepps@gmail.com">sogepps@gmail.com</a>
+</div>
+</div>
+</nav>
+<main class="wrap">
+<section class="hero">
+<div class="hero-icon"><img alt="Shot Çarkı uygulama simgesi" decoding="async" height="132" src="/shot/img/icon.webp" width="132"/></div>
+<div>
+<h1 data-i18n-html="hero_title">Shot Çarkı<br/>Spin, Dare &amp; Score</h1>
+<p class="lead" data-i18n="hero_lead">Shot Çarkı is a party wheel game for friends. Add 2–12 players, spin the animated wheel, get a task by difficulty level — complete it for points or take a shot. Highest score wins!</p>
+<div class="hero-tags">
+<span class="hero-tag" data-i18n="tag_1">2–12 players</span>
+<span class="hero-tag" data-i18n="tag_2">Weighted wheel</span>
+<span class="hero-tag" data-i18n="tag_3">5 difficulty levels</span>
+<span class="hero-tag" data-i18n="tag_4">Live scoreboard</span>
+</div>
+<div class="gp-actions">
+<a class="gp-btn" href="https://play.google.com/store/apps/details?id=com.DefaultCompany.meOyunuShotOyunu" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"></path></svg>
+<span><small>ANDROID</small><b data-i18n="btn_google_play">Get it on Google Play</b></span>
+</a>
+</div>
+</div>
+</section>
+<section class="section" id="zorluklar">
+<h2 data-i18n="levels_title">Difficulty Levels</h2>
+<p data-i18n="levels_desc">Harder tasks are rarer but worth more points.</p>
+<div class="level-grid">
+<div class="level-item"><span class="level-dot" style="background:#22c55e"></span><div><h3 data-i18n="lv_1_t">Very Easy</h3><p data-i18n="lv_1_d">30% chance · 10 points — verbal &amp; simple</p></div></div>
+<div class="level-item"><span class="level-dot" style="background:#84cc16"></span><div><h3 data-i18n="lv_2_t">Easy</h3><p data-i18n="lv_2_d">25% chance · 20 points — light challenges</p></div></div>
+<div class="level-item"><span class="level-dot" style="background:#eab308"></span><div><h3 data-i18n="lv_3_t">Normal</h3><p data-i18n="lv_3_d">20% chance · 30 points — medium tasks</p></div></div>
+<div class="level-item"><span class="level-dot" style="background:#f97316"></span><div><h3 data-i18n="lv_4_t">Hard</h3><p data-i18n="lv_4_d">15% chance · 40 points — courage &amp; action</p></div></div>
+<div class="level-item"><span class="level-dot" style="background:#ef4444"></span><div><h3 data-i18n="lv_5_t">Very Hard</h3><p data-i18n="lv_5_d">10% chance · 50 points — tough dares</p></div></div>
+</div>
+</section>
+<section class="section" id="nasil">
+<h2 data-i18n="how_title">How To Play Shot Çarkı</h2>
+<p data-i18n="how_desc">Simple rules for a loud game night.</p>
+<div class="feat-grid">
+<div class="feature"><h3 data-i18n="how_1_t">1) Add players</h3><p data-i18n="how_1_d">Choose 2–12 players and enter everyone’s name.</p></div>
+<div class="feature"><h3 data-i18n="how_2_t">2) Spin the wheel</h3><p data-i18n="how_2_d">On your turn, tap Spin. The wheel lands on a difficulty.</p></div>
+<div class="feature"><h3 data-i18n="how_3_t">3) Do it or take a shot</h3><p data-i18n="how_3_d">Complete the task and tap Done for points — or take a shot and skip the points.</p></div>
+<div class="feature"><h3 data-i18n="how_4_t">4) Climb the scoreboard</h3><p data-i18n="how_4_d">Track scores and shots anytime. Most points wins!</p></div>
+</div>
+</section>
+<section class="section" id="ozellikler">
+<h2 data-i18n="feat_title">Why Shot Çarkı?</h2>
+<p data-i18n="feat_desc">Built for parties, dorm nights and friend hangouts.</p>
+<div class="feat-grid">
+<div class="feature"><h3 data-i18n="f_1_t">Animated SVG Wheel</h3><p data-i18n="f_1_d">Smooth 5-second spin with real weighted odds.</p></div>
+<div class="feature"><h3 data-i18n="f_2_t">Huge Task Bank</h3><p data-i18n="f_2_d">~30 tasks per level — from verbal fun to physical dares.</p></div>
+<div class="feature"><h3 data-i18n="f_3_t">Score &amp; Shots</h3><p data-i18n="f_3_d">Live scoreboard with points and shot count.</p></div>
+<div class="feature"><h3 data-i18n="f_4_t">No Account Needed</h3><p data-i18n="f_4_d">Jump straight into the game without signing up.</p></div>
+</div>
+</section>
+<section class="warn">
+<h2 data-i18n="warn_title">Play Responsibly</h2>
+<p data-i18n="warn_desc">This is an entertainment app. Don’t force anyone. Don’t overdo alcohol. Players under 18 should not drink.</p>
+</section>
+<section class="section sg-arts" id="makaleler">
+<h2 data-i18n="arts_title">Articles</h2>
+<p data-i18n="arts_desc">Guides and game ideas around Shot Çarkı.</p>
+<div class="sg-arts-grid">
+<a class="sg-art" href="/makale/en/ev-partisi-icin-shot-oyunlari.html">
+<img alt="Spinning Game for a House Party: Rules and Scoring (18+)" height="630" loading="lazy" src="/makale/img/en/ev-partisi-icin-shot-oyunlari.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>Spinning Game for a House Party: Rules and Scoring (18+)</h3>
+<p>How to set up a spinner-based task game for a house party: difficulty levels, scoring, pass rights, and alcohol-free…</p>
+</div>
+</a>
+<a class="sg-art" href="/makale/en/dogruluk-mu-cesaret-mi-gorev-fikirleri.html">
+<img alt="Truth or Dare? Party-Heating Task Ideas" height="630" loading="lazy" src="/makale/img/en/dogruluk-mu-cesaret-mi-gorev-fikirleri.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>Truth or Dare? Party-Heating Task Ideas</h3>
+<p>A list of questions and tasks you can use while playing Truth or Dare, difficulty levels, and ways to keep the group…</p>
+</div>
+</a>
+<a class="sg-art" href="/makale/en/ev-partisinde-neler-yapilir.html">
+<img alt="What Do You Do at a House Party? Flow, Game Order, and Ideas" height="630" loading="lazy" src="/makale/img/en/ev-partisinde-neler-yapilir.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>What Do You Do at a House Party? Flow, Game Order, and Ideas</h3>
+<p>How to throw a house party: hour-by-hour flow of the night, which game to play when, music and snack planning, ways…</p>
+</div>
+</a>
+</div>
+<a class="sg-arts-all" data-i18n="arts_all" href="/makale/en/">All articles →</a>
+</section>
+<section class="cta">
+<h2 data-i18n="cta_title">Start The Party With Shot Çarkı</h2>
+<p data-i18n="cta_desc">Shot Çarkı is the newest party game from the Sogepps family.</p>
+<div class="cta-links">
+<a class="gp-btn" href="https://play.google.com/store/apps/details?id=com.DefaultCompany.meOyunuShotOyunu" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"></path></svg>
+<span><small>ANDROID</small><b data-i18n="btn_google_play">Get it on Google Play</b></span>
+</a>
+<a class="btn" data-i18n="btn_home" href="/en/">Back to Sogepps home</a>
+<a class="btn secondary" data-i18n="footer_privacy" href="privacy-policy.html">Privacy Policy</a>
+<a class="btn secondary" data-i18n="btn_contact" href="mailto:sogepps@gmail.com">Contact</a>
+</div>
+</section>
+</main>
+
+
+
+<script defer="" src="/js/i18n.js?v=ac9834aa"></script>
+</body>
+</html>

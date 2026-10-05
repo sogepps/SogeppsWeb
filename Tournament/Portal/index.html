@@ -1,14 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>League &amp; Tournament Maker – Create Tournaments Easily</title>
-  <meta name="description" content="Create leagues, knockout brackets, and round-robin tournaments in seconds. Track scores, view standings, share results." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lig ve Turnuva Oluşturucu – Kolayca Turnuva Oluşturun</title>
+<meta content="Saniyeler içinde lig, eleme tabloları ve turnuvalar oluşturun. Skorları girin, puan durumunu görüntüleyin." name="description"/>
+<link href="https://sogepps.tr/tournament-portal/" rel="canonical"/><link href="https://sogepps.tr/tournament-portal/" hreflang="tr" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/en/" hreflang="en" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/de/" hreflang="de" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/fr/" hreflang="fr" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/es/" hreflang="es" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/it/" hreflang="it" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/pt/" hreflang="pt" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/nl/" hreflang="nl" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/ru/" hreflang="ru" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/ja/" hreflang="ja" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/ko/" hreflang="ko" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/ar/" hreflang="ar" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/hi/" hreflang="hi" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/id/" hreflang="id" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/pl/" hreflang="pl" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/" hreflang="x-default" rel="alternate"/>
+<meta content="turnuva oluşturma, fikstür programı, lig oluşturma, puan durumu, eleme cetveli, halı saha ligi" name="keywords"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<meta content="website" property="og:type"/>
+<meta content="Sogepps" property="og:site_name"/>
+<meta content="Lig ve Turnuva Oluşturucu – Kolayca Turnuva Oluşturun" property="og:title"/>
+<meta content="Saniyeler içinde lig, eleme tabloları ve turnuvalar oluşturun. Skorları girin, puan durumunu görüntüleyin." property="og:description"/>
+<meta content="https://sogepps.tr/tournament-portal/" property="og:url"/>
+<meta content="https://sogepps.tr/img/tournament-icon.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"League & Tournament Maker","applicationCategory":"GameApplication","operatingSystem":"Android","description":"Lig, eleme ve gruplu turnuvaları dakikalar içinde kurun. Fikstür otomatik oluşur, skor girdikçe puan durumu güncellenir, sonuçlar PDF olarak paylaşılır.","url":"https://sogepps.tr/tournament-portal/","image":"https://sogepps.tr/img/tournament-icon.png","downloadUrl":"https://play.google.com/store/apps/details?id=com.Soge.LigTurnuvaOlutur","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"publisher":{"@type":"Organization","name":"Sogepps","url":"https://sogepps.tr/"},"inLanguage":"tr"}</script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
     :root {
       --bg: #050608;
       --surface: #0f1218;
@@ -103,149 +115,183 @@
       .features, .how { padding: 60px 20px; }
       .footer-inner { flex-direction: column; }
     }
+    /* Makale bolumu */
+    .sg-arts { margin: 20px 0; border: 1px solid rgba(255,255,255,0.12); border-radius: 20px; padding: 26px; background: rgba(255,255,255,0.03); }
+    .sg-arts h2 { font-size: 1.4rem; margin-bottom: 6px; }
+    .sg-arts > p { opacity: .78; margin-bottom: 16px; font-size: 0.95rem; }
+    .sg-arts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+    .sg-art { display: block; border: 1px solid rgba(255,255,255,0.13); border-radius: 14px; overflow: hidden; background: rgba(0,0,0,0.28); color: inherit; text-decoration: none; transition: border-color .2s, transform .2s; }
+    .sg-art:hover { text-decoration: none; transform: translateY(-3px); border-color: rgba(255,255,255,0.38); }
+    .sg-art img { width: 100%; height: auto; aspect-ratio: 1200 / 630; display: block; }
+    .sg-art-body { padding: 14px 16px 16px; }
+    .sg-art-body h3 { font-size: 1rem; line-height: 1.4; margin-bottom: 6px; }
+    .sg-art-body p { font-size: 0.86rem; opacity: .72; margin: 0; }
+    .sg-arts-all { display: inline-block; margin-top: 14px; font-weight: 700; font-size: 0.9rem; }
+    .sg-arts { max-width: 1100px; margin: 0 auto 40px; }
   </style>
-</head>
+<meta content="tr_TR" property="og:locale"/></head>
 <body>
-
-  <nav>
-    <div class="nav-inner">
-      <div style="display:flex;align-items:center;">
-        <a href="/" class="nav-back" data-i18n="nav_back">&#8592; Sogepps</a>
-        <div class="nav-sep"></div>
-        <a href="/tournament-portal/" class="nav-brand">
-          <div class="nav-icon">
-            <img src="img/icon.png" alt="" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" />
-            <span class="nav-icon-fallback" aria-hidden="true">&#9879;</span>
-          </div>
+<nav>
+<div class="nav-inner">
+<div style="display:flex;align-items:center;">
+<a class="nav-back" data-i18n="nav_back" href="/">← Sogepps</a>
+<div class="nav-sep"></div>
+<a class="nav-brand" href="/tournament-portal/">
+<div class="nav-icon">
+<img alt="" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" src="img/icon.png"/>
+<span aria-hidden="true" class="nav-icon-fallback">⚗</span>
+</div>
           Tournament Maker
         </a>
-      </div>
-      <ul class="nav-links">
-        <li><a href="#features" data-i18n="nav_features">Features</a></li>
-        <li><a href="/tournament-portal/privacy-policy.html" data-i18n="nav_privacy">Privacy Policy</a></li>
-        <li><a href="/tournament-portal/delete-account.html" data-i18n="nav_delete">Delete Account</a></li>
-      </ul>
-    </div>
-  </nav>
+</div>
+<ul class="nav-links">
+<li><a data-i18n="nav_features" href="#features">Özellikler</a></li>
+<li><a data-i18n="nav_privacy" href="/tournament-portal/privacy-policy.html">Gizlilik Politikası</a></li>
+<li><a data-i18n="nav_delete" href="/tournament-portal/delete-account.html">Hesap Sil</a></li>
+</ul>
+</div>
+</nav>
+<!-- Hero -->
+<section class="hero">
+<div class="hero-badge" data-i18n="hero_badge">🏆 #1 Turnuva Organizatörü</div>
+<h1 data-i18n-html="hero_title">Profesyonel Gibi<br/><span class="grad">Turnuva Oluşturun</span></h1>
+<p data-i18n="hero_desc">Bir dakikadan kısa sürede lig, eleme tabloları ve çift devreli turnuvalar kurun. Skorları girin, canlı puan durumunu takip edin ve sonuçları paylaşın.</p>
+<div class="hero-actions">
+<a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.Soge.LigTurnuvaOlutur" rel="noopener noreferrer" target="_blank">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"></path></svg>
+<span data-i18n="btn_google_play">Google Play'den İndir</span>
+</a>
+<a class="btn-ghost" data-i18n="btn_see_features" href="#features">Özellikleri Gör ↓</a>
+</div>
+</section>
+<!-- Features -->
+<section class="features" id="features">
+<div class="section-label" data-i18n="feat_label">◆ Özellikler</div>
+<h2 data-i18n="feat_title">Organize Etmek İçin İhtiyacınız Olan Her Şey</h2>
+<p data-i18n="feat_desc">Her turnuva formatı için güçlü araçlar, cebinizde.</p>
+<div class="feat-grid">
+<div class="feat-card">
+<div class="feat-icon">🏆</div>
+<h3 data-i18n="feat1_title">Lig ve Çift Devreli</h3>
+<p data-i18n="feat1_desc">Tek veya çift devreli lig turnuvaları oluşturun. Lig başına 20 takıma kadar maç ayarlarını özelleştirin.</p>
+</div>
+<div class="feat-card">
+<div class="feat-icon">⚖</div>
+<h3 data-i18n="feat2_title">Eleme Tabloları</h3>
+<p data-i18n="feat2_desc">2 ile 32 katılımcı için tek eleme tabloları. Tek sayılı katılımcılar için BYE desteğiyle otomatik tablo boyutlandırma.</p>
+</div>
+<div class="feat-card">
+<div class="feat-icon">📈</div>
+<h3 data-i18n="feat3_title">Canlı Puan Durumu ve Dışa Aktarma</h3>
+<p data-i18n="feat3_desc">Puanlar, goller, galibiyetler, beraberlikler ve mağlubiyetlerle gerçek zamanlı puan durumu. PDF, CSV veya ekran görüntüsü olarak dışa aktarın.</p>
+</div>
+<div class="feat-card">
+<div class="feat-icon">⚽</div>
+<h3 data-i18n="feat4_title">Çoklu Spor Dalları</h3>
+<p data-i18n="feat4_desc">Futbol, basketbol, voleybol, tenis ve özel sporlar için yerleşik destek. Spora özel puanlama kuralları dahil.</p>
+</div>
+<div class="feat-card">
+<div class="feat-icon">🔒</div>
+<h3 data-i18n="feat5_title">Gizlilik Odaklı</h3>
+<p data-i18n="feat5_desc">Kişisel veri toplanmaz. Takip yok. Turnuvalarınız sizin. Kullanıcı onay yönetimi ile tam GDPR uyumluluğu.</p>
+</div>
+<div class="feat-card">
+<div class="feat-icon">🌐</div>
+<h3 data-i18n="feat6_title">16+ Dil Desteği</h3>
+<p data-i18n="feat6_desc">Türkçe, İngilizce, Almanca, Fransızca, İspanyolca, İtalyanca, Portekizce, Felemenkçe, Rusça, Japonca, Korece, Arapça ve daha fazlası.</p>
+</div>
+</div>
+</section>
+<!-- How It Works -->
+<section class="how">
+<div class="section-label" data-i18n="how_label" style="text-align:center;display:block;">◆ Nasıl Çalışır</div>
+<h2 data-i18n="how_title">Üç Basit Adım</h2>
+<div class="steps">
+<div class="step">
+<div class="step-num">1</div>
+<h3 data-i18n="step1_title">Format Seçin</h3>
+<p data-i18n="step1_desc">Lig (çift devreli) veya eleme (tek eleme tablosu) formatı arasında seçim yapın.</p>
+</div>
+<div class="step">
+<div class="step-num">2</div>
+<h3 data-i18n="step2_title">Takımları Ekleyin</h3>
+<p data-i18n="step2_desc">Takım veya oyuncu isimlerini girin. Fikstür otomatik olarak oluşturulur.</p>
+</div>
+<div class="step">
+<div class="step-num">3</div>
+<h3 data-i18n="step3_title">Oyna ve Takip Et</h3>
+<p data-i18n="step3_desc">Oynarken maç skorlarını girin. Puan durumu ve tablolar gerçek zamanlı güncellenir.</p>
+</div>
+</div>
+</section>
+<!-- CTA -->
+<section class="section sg-arts" id="makaleler">
+<h2 data-i18n="arts_title">Makaleler</h2>
+<p data-i18n="arts_desc">Lig &amp; Turnuva Oluştur ile ilgili rehberler ve oyun fikirleri.</p>
+<div class="sg-arts-grid">
+<a class="sg-art" href="/makale/hali-saha-ligi-nasil-kurulur.html">
+<img alt="Halı Saha Ligi Nasıl Kurulur? Fikstür, Puan Durumu ve Kurallar" height="630" loading="lazy" src="/makale/img/hali-saha-ligi-nasil-kurulur.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>Halı Saha Ligi Nasıl Kurulur? Fikstür, Puan Durumu ve Kurallar</h3>
+<p>Arkadaş grubuyla halı saha ligi kurmak: takım sayısına göre fikstür, çift devreli lig hesabı, puanlama sistemi, avera…</p>
+</div>
+</a>
+<a class="sg-art" href="/makale/eleme-usulu-turnuva-cetveli.html">
+<img alt="Eleme Usulü Turnuva Cetveli Nasıl Hazırlanır?" height="630" loading="lazy" src="/makale/img/eleme-usulu-turnuva-cetveli.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>Eleme Usulü Turnuva Cetveli Nasıl Hazırlanır?</h3>
+<p>Eleme turnuvası kurma rehberi: katılımcı sayısına göre tur hesabı, bay geçme, seribaşı yerleşimi, tek maç mı çift maç…</p>
+</div>
+</a>
+<a class="sg-art" href="/makale/lig-turnuva-olusturma-uygulamasi.html">
+<img alt="Lig Oluşturma Uygulaması: Telefondan Fikstür, Puan Durumu ve Cetvel" height="630" loading="lazy" src="/makale/img/lig-turnuva-olusturma-uygulamasi.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>Lig Oluşturma Uygulaması: Telefondan Fikstür, Puan Durumu ve Cetvel</h3>
+<p>Lig oluşturma programı arayanlar için: telefondan fikstür oluşturma, puan durumu takibi, eleme cetveli ve gruplu turn…</p>
+</div>
+</a>
+</div>
+<a class="sg-arts-all" data-i18n="arts_all" href="/makale/">Tüm makaleler →</a>
+</section>
+<section class="cta-section">
+<div class="cta-card">
+<h2 data-i18n="cta_title">Organize Etmeye Hazır mısınız?</h2>
+<p data-i18n="cta_desc">Uygulamayı indirin ve bir dakikadan kısa sürede ilk turnuvanızı oluşturun. Opsiyonel premium özelliklerle ücretsiz kullanın.</p>
+<a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.Soge.LigTurnuvaOlutur" rel="noopener noreferrer" target="_blank">
+<svg fill="currentColor" style="width:20px;height:20px;" viewbox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"></path></svg>
+<span data-i18n="cta_btn">Google Play'den Ücretsiz İndir</span>
+</a>
+</div>
+</section>
+<!-- Footer -->
+<footer>
+<div class="footer-inner">
+<div>
+<div class="footer-brand-text" data-i18n="footer_brand">Lig ve Turnuva Oluşturucu</div>
+<div class="footer-sub"><span data-i18n="footer_by">yapımcı</span> <a href="/" style="color:var(--accent-light);">Sogepps</a></div>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer_app">Uygulama</h4>
+<a data-i18n="footer_google_play" href="https://play.google.com/store/apps/details?id=com.Soge.LigTurnuvaOlutur" rel="noopener noreferrer" target="_blank">Google Play</a>
+<a data-i18n="footer_features" href="#features">Özellikler</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer_legal">Yasal</h4>
+<a data-i18n="footer_privacy" href="/tournament-portal/privacy-policy.html">Gizlilik Politikası</a>
+<a data-i18n="footer_delete" href="/tournament-portal/delete-account.html">Hesap Sil</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer_contact">İletişim</h4>
+<a href="mailto:sogepps@gmail.com">sogepps@gmail.com</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span data-i18n="footer_rights">© 2026</span> <a href="/">Sogepps</a><span data-i18n="footer_rights_tail">. Tüm hakları saklıdır.</span>
+</div>
+</footer>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-badge" data-i18n="hero_badge">&#127942; #1 Tournament Organizer</div>
-    <h1 data-i18n-html="hero_title">Create Tournaments<br /><span class="grad">Like a Pro</span></h1>
-    <p data-i18n="hero_desc">Set up leagues, knockout brackets, and round-robin tournaments in under a minute. Enter scores, track live standings, and share results — all from your phone.</p>
-    <div class="hero-actions">
-      <a href="https://play.google.com/store/apps/details?id=com.Soge.LigTurnuvaOlutur" class="btn-primary" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"/></svg>
-        <span data-i18n="btn_google_play">Get it on Google Play</span>
-      </a>
-      <a href="#features" class="btn-ghost" data-i18n="btn_see_features">See Features &#8595;</a>
-    </div>
-  </section>
 
-  <!-- Features -->
-  <section class="features" id="features">
-    <div class="section-label" data-i18n="feat_label">&#9670; Features</div>
-    <h2 data-i18n="feat_title">Everything You Need to Organize</h2>
-    <p data-i18n="feat_desc">Powerful tools for any tournament format, right in your pocket.</p>
-    <div class="feat-grid">
-      <div class="feat-card">
-        <div class="feat-icon">&#127942;</div>
-        <h3 data-i18n="feat1_title">League &amp; Round-Robin</h3>
-        <p data-i18n="feat1_desc">Create round-robin leagues with single or double round support. Customize match settings for up to 20 teams per league.</p>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon">&#9878;</div>
-        <h3 data-i18n="feat2_title">Knockout Brackets</h3>
-        <p data-i18n="feat2_desc">Single-elimination brackets for 2 to 32 participants. Automatic bracket sizing with BYE support for uneven numbers.</p>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon">&#128200;</div>
-        <h3 data-i18n="feat3_title">Live Standings &amp; Export</h3>
-        <p data-i18n="feat3_desc">Real-time standings with points, goals, wins, draws, and losses. Export as PDF, CSV, or share as a screenshot image.</p>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon">&#9917;</div>
-        <h3 data-i18n="feat4_title">Multiple Sports</h3>
-        <p data-i18n="feat4_desc">Built-in support for football, basketball, volleyball, tennis, and custom sports. Sport-specific scoring rules included.</p>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon">&#128274;</div>
-        <h3 data-i18n="feat5_title">Privacy Focused</h3>
-        <p data-i18n="feat5_desc">No personal data collected. No tracking. Your tournaments stay yours. Full GDPR compliance with user consent management.</p>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon">&#127760;</div>
-        <h3 data-i18n="feat6_title">16+ Languages</h3>
-        <p data-i18n="feat6_desc">Available in Turkish, English, German, French, Spanish, Italian, Portuguese, Dutch, Russian, Japanese, Korean, Arabic, and more.</p>
-      </div>
-    </div>
-  </section>
 
-  <!-- How It Works -->
-  <section class="how">
-    <div class="section-label" style="text-align:center;display:block;" data-i18n="how_label">&#9670; How It Works</div>
-    <h2 data-i18n="how_title">Three Simple Steps</h2>
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <h3 data-i18n="step1_title">Choose Format</h3>
-        <p data-i18n="step1_desc">Pick between league (round-robin) or knockout (elimination bracket) format.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <h3 data-i18n="step2_title">Add Teams</h3>
-        <p data-i18n="step2_desc">Enter team or player names. The fixture is generated automatically.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <h3 data-i18n="step3_title">Play &amp; Track</h3>
-        <p data-i18n="step3_desc">Enter match scores as you play. Standings and brackets update in real time.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta-section">
-    <div class="cta-card">
-      <h2 data-i18n="cta_title">Ready to Organize?</h2>
-      <p data-i18n="cta_desc">Download the app and create your first tournament in under a minute. Free to use with optional premium features.</p>
-      <a href="https://play.google.com/store/apps/details?id=com.Soge.LigTurnuvaOlutur" class="btn-primary" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" fill="currentColor" style="width:20px;height:20px;"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"/></svg>
-        <span data-i18n="cta_btn">Download Free on Google Play</span>
-      </a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-inner">
-      <div>
-        <div class="footer-brand-text" data-i18n="footer_brand">League &amp; Tournament Maker</div>
-        <div class="footer-sub"><span data-i18n="footer_by">by</span> <a href="/" style="color:var(--accent-light);">Sogepps</a></div>
-      </div>
-      <div class="footer-col">
-        <h4 data-i18n="footer_app">App</h4>
-        <a href="https://play.google.com/store/apps/details?id=com.Soge.LigTurnuvaOlutur" target="_blank" rel="noopener noreferrer" data-i18n="footer_google_play">Google Play</a>
-        <a href="#features" data-i18n="footer_features">Features</a>
-      </div>
-      <div class="footer-col">
-        <h4 data-i18n="footer_legal">Legal</h4>
-        <a href="/tournament-portal/privacy-policy.html" data-i18n="footer_privacy">Privacy Policy</a>
-        <a href="/tournament-portal/delete-account.html" data-i18n="footer_delete">Delete Account</a>
-      </div>
-      <div class="footer-col">
-        <h4 data-i18n="footer_contact">Contact</h4>
-        <a href="mailto:sogepps@gmail.com">sogepps@gmail.com</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span data-i18n="footer_rights">&copy; 2026</span> <a href="/">Sogepps</a>. All rights reserved.
-    </div>
-  </footer>
-
-<script src="js/i18n.js"></script>
-<script src="js/lang-portal.js"></script>
-<script>I18N.init('portal', PORTAL_TRANSLATIONS);</script>
-
+<script defer="" src="/js/i18n.js?v=ac9834aa"></script>
 </body>
 </html>

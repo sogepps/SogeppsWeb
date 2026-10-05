@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HomeParty - Evde Arkadaşlarla Oynamalık Oyunlar ve Parti Oyunları</title>
+  <meta name="description" content="HomeParty ile evde arkadaşlarla oynamalık oyunlar tek uygulamada. Sessiz Kelime, Tabu, Ajan Kim, Şans Çarkı, Ben Kimim ve daha fazlası." />
+  <meta name="keywords" content="HomeParty, evde arkadaşlarla oynamalık oyunlar, arkadaşlarla oynamalık oyunlar, parti oyunları, mobil parti oyunu" />
+  <link rel="canonical" href="https://sogepps.tr/homeparty/" />
+  <meta property="og:title" content="HomeParty - Evde Arkadaşlarla Oynamalık Oyunlar" />
+  <meta property="og:description" content="Arkadaş buluşmaları için çok oyunlu mobil parti uygulaması." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sogepps.tr/homeparty/" />
+  <meta property="og:image" content="https://sogepps.tr/homeparty/img/icon.webp" />
+  <style>
+    :root { --bg:#070913; --surface:#11172a; --surface-2:#18213a; --border:#2a3559; --text:#edf2ff; --muted:#b3bfdc; --primary:#8b5cf6; --secondary:#ec4899; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: radial-gradient(circle at 10% -10%, rgba(139, 92, 246, 0.35), transparent 35%), radial-gradient(circle at 90% -20%, rgba(236, 72, 153, 0.22), transparent 35%), var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    a { color: #d8ccff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1160px; margin: 0 auto; padding: 0 20px; }
+    .topnav { position: sticky; top: 0; z-index: 99; border-bottom: 1px solid var(--border); background: rgba(7, 9, 19, 0.86); backdrop-filter: blur(10px); }
+    .topnav-inner, .nav-inner { height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 0.92rem; }
+    .topnav-links, .nav-links { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+    .hero { padding: 82px 0 40px; display: grid; grid-template-columns: 132px 1fr; gap: 22px; align-items: center; }
+    .hero-icon { width: 132px; height: 132px; border-radius: 30px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 20px 58px rgba(139, 92, 246, 0.35); background: linear-gradient(135deg, var(--primary), var(--secondary)); }
+    .hero-icon img { width: 100%; height: 100%; object-fit: cover; }
+    h1 { font-size: clamp(2rem, 5.2vw, 3.3rem); line-height: 1.08; margin-bottom: 12px; letter-spacing: -0.02em; }
+    .lead { color: var(--muted); max-width: 840px; font-size: 1.05rem; }
+    .hero-tags { margin-top: 16px; display: flex; gap: 8px; flex-wrap: wrap; }
+    .hero-tag { border: 1px solid #44356f; background: rgba(139, 92, 246, 0.16); color: #dccdff; border-radius: 999px; padding: 6px 12px; font-size: 0.8rem; font-weight: 600; }
+    .section { margin: 20px 0; border: 1px solid var(--border); border-radius: 20px; padding: 28px; background: linear-gradient(160deg, var(--surface), var(--surface-2)); }
+    .section h2 { font-size: 1.5rem; margin-bottom: 12px; }
+    .section p { color: var(--muted); margin-bottom: 10px; }
+    .game-cards { margin-top: 16px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+    .game-card { border: 1px solid var(--border); border-radius: 14px; overflow: hidden; background: #0d1324; }
+    .game-card img { width: 100%; height: 180px; object-fit: cover; display: block; background: #0d1324; }
+    .game-card figcaption { padding: 10px 12px; }
+    .game-card h3 { font-size: 0.98rem; margin-bottom: 6px; }
+    .game-card p { color: var(--muted); font-size: 0.87rem; margin: 0; }
+    .mini-cards { margin-top: 16px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+    .mini-card { border: 1px solid var(--border); border-radius: 14px; padding: 16px; background: #0d1324; display: flex; gap: 12px; align-items: flex-start; }
+    .mini-card .mc-icon { font-size: 1.8rem; line-height: 1; flex: 0 0 auto; }
+    .mini-card h3 { font-size: 0.95rem; margin-bottom: 4px; }
+    .mini-card p { color: var(--muted); font-size: 0.83rem; margin: 0; }
+    .section-sub { color: var(--muted); font-size: 0.88rem; margin-bottom: 14px; opacity: 0.85; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 16px; }
+    .feature { border: 1px solid #32406c; border-radius: 14px; padding: 14px; background: rgba(16, 23, 42, 0.6); }
+    .feature h3 { font-size: 1rem; margin-bottom: 6px; }
+    .feature p { font-size: 0.93rem; margin: 0; }
+    .cta { margin: 24px 0 68px; text-align: center; border: 1px solid #4b4282; border-radius: 20px; padding: 30px 22px; background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(236, 72, 153, 0.15)); }
+    .cta h2 { margin-bottom: 8px; }
+    .cta p { color: var(--muted); }
+    .cta-links { margin-top: 14px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+    .btn { display: inline-block; padding: 10px 15px; border-radius: 11px; font-weight: 700; border: 1px solid #5f4aa1; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #fff; text-decoration: none; }
+    .btn.secondary { background: rgba(17, 23, 42, 0.65); color: #d7e2ff; border-color: #3a4a7b; }
+    @media (max-width: 760px) { .hero { grid-template-columns: 1fr; text-align: center; } .hero-icon { margin: 0 auto; } .topnav-inner { height: auto; padding: 10px 0; } .topnav-links, .nav-links { justify-content: center; } }
+    /* Google Play indirme butonu */
+    .gp-actions { margin-top: 18px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .gp-btn { display: inline-flex; align-items: center; gap: 10px; padding: 9px 18px; border-radius: 12px; background: #0d1016; border: 1px solid #414755; color: #ffffff; font-weight: 700; font-size: 0.98rem; line-height: 1.15; text-decoration: none; transition: border-color .2s, transform .15s; }
+    .gp-btn:hover { text-decoration: none; border-color: #9aa3b5; transform: translateY(-1px); color: #fff; }
+    .gp-btn svg { width: 24px; height: 24px; flex: 0 0 auto; fill: currentColor; }
+    .gp-btn > span { display: block; text-align: left; }
+    .gp-btn small { display: block; font-size: 0.63rem; font-weight: 600; letter-spacing: .09em; opacity: .7; }
+    /* Makale bolumu */
+    .sg-arts { margin: 20px 0; border: 1px solid rgba(255,255,255,0.12); border-radius: 20px; padding: 26px; background: rgba(255,255,255,0.03); }
+    .sg-arts h2 { font-size: 1.4rem; margin-bottom: 6px; }
+    .sg-arts > p { opacity: .78; margin-bottom: 16px; font-size: 0.95rem; }
+    .sg-arts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+    .sg-art { display: block; border: 1px solid rgba(255,255,255,0.13); border-radius: 14px; overflow: hidden; background: rgba(0,0,0,0.28); color: inherit; text-decoration: none; transition: border-color .2s, transform .2s; }
+    .sg-art:hover { text-decoration: none; transform: translateY(-3px); border-color: rgba(255,255,255,0.38); }
+    .sg-art img { width: 100%; height: auto; aspect-ratio: 1200 / 630; display: block; }
+    .sg-art-body { padding: 14px 16px 16px; }
+    .sg-art-body h3 { font-size: 1rem; line-height: 1.4; margin-bottom: 6px; }
+    .sg-art-body p { font-size: 0.86rem; opacity: .72; margin: 0; }
+    .sg-arts-all { display: inline-block; margin-top: 14px; font-weight: 700; font-size: 0.9rem; }
+  </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"HomeParty","applicationCategory":"GameApplication","operatingSystem":"Android","description":"Evde arkadaşlarla oynamalık oyunlar için parti oyunları uygulaması.","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"downloadUrl":"https://play.google.com/store/apps/details?id=com.soge.HomeParty"}
+  </script>
+</head>
+<body>
+  <nav class="topnav">
+    <div class="wrap topnav-inner nav-inner">
+      <a href="/" data-i18n="nav_home">&larr; Sogepps ana sayfa</a>
+      <div class="topnav-links nav-links">
+        <a href="#oyunlar" data-i18n="nav_games">Oyunlar</a>
+        <a href="#nasil-oynanir" data-i18n="nav_how">Nasıl Oynanır</a>
+        <a href="privacy-policy.html" data-i18n="nav_privacy">Gizlilik Politikası</a>
+        <a href="mailto:sogepps@gmail.com">sogepps@gmail.com</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero-icon"><img src="img/icon.webp" alt="HomeParty uygulama simgesi" width="132" height="132" decoding="async" /></div>
+      <div>
+        <h1 data-i18n-html="hero_title">HomeParty<br />Evde Arkadaşlarla Oynamalık Oyunlar</h1>
+        <p class="lead" data-i18n="hero_lead">HomeParty; arkadaş buluşmaları, ev partileri, doğum günü geceleri ve takım oyunları için tasarlanmış çok oyunlu mobil parti uygulamasıdır.</p>
+        <div class="hero-tags">
+          <span class="hero-tag" data-i18n="tag_1">30+ oyun</span>
+          <span class="hero-tag" data-i18n="tag_2">2-16 oyuncu</span>
+          <span class="hero-tag" data-i18n="tag_3">Takımlı ve bireysel modlar</span>
+          <span class="hero-tag" data-i18n="tag_4">Telefon elden ele oyun deneyimi</span>
+        </div>
+        <div class="gp-actions">
+          <a class="gp-btn" href="https://play.google.com/store/apps/details?id=com.soge.HomeParty" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"/></svg>
+            <span><small>ANDROID</small><b data-i18n="btn_google_play">Google Play’den indir</b></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="oyunlar">
+      <h2 data-i18n="games_title">Parti Oyunları</h2>
+      <p data-i18n="games_desc">Takımlı, bireysel, sesli veya sessiz — her ortama uygun parti oyunları.</p>
+      <div class="game-cards">
+        <figure class="game-card"><img src="img/funSeries.webp" alt="HomeParty Eğlenceli Seri" width="480" height="270" loading="lazy" decoding="async" /><figcaption><h3 data-i18n="g_funSeries_t">Eğlenceli Seri</h3><p data-i18n="g_funSeries_d">7 turdan oluşan parti maratonu: oylama, çizim, bomba, tabu, cesaret, sessiz kelime ve ben kimim.</p></figcaption></figure>
+        <figure class="game-card"><img src="img/silentWord.webp" alt="HomeParty Sessiz Kelime" width="480" height="270" loading="lazy" decoding="async" /><figcaption><h3 data-i18n="g_silentWord_t">Sessiz Kelime</h3><p data-i18n="g_silentWord_d">Konuşmadan kelimeleri anlat, takımın tahmin etsin.</p></figcaption></figure>
+        <figure class="game-card"><img src="img/silentCinema.webp" alt="HomeParty Sessiz Sinema" width="480" height="270" loading="lazy" decoding="async" /><figcaption><h3 data-i18n="g_silentCinema_t">Sessiz Sinema</h3><p data-i18n="g_silentCinema_d">Film canlandırma oyunu ile parti temposunu yükselt.</p></figcaption></figure>
+        <figure class="game-card"><img src="img/whoAmI.webp" alt="HomeParty Ben Kimim" width="480" height="270" loading="lazy" decoding="async" /><figcaption><h3 data-i18n="g_whoAmI_t">Ben Kimim?</h3><p data-i18n="g_whoAmI_d">Evet/hayır sorularıyla gizli kimliğini bul.</p></figcaption></figure>
+        <figure class="game-card"><img src="img/storyCreation.png" alt="HomeParty Hikaye Yaratma" width="480" height="270" loading="lazy" decoding="async" /><figcaption><h3 data-i18n="g_storyCreation_t">Hikaye Yaratma</h3><p data-i18n="g_storyCreation_d">Sırayla cümle ekleyerek ortak bir hikaye oluşturun. Zincir uzadıkça sürprizler çıkar.</p></figcaption></figure>
+        <figure class="game-card"><img src="img/drawChain.webp" alt="HomeParty Çizim Zinciri" width="480" height="270" loading="lazy" decoding="async" /><figcaption><h3 data-i18n="g_drawChain_t">Çizim Zinciri</h3><p data-i18n="g_drawChain_d">Yaz, çiz, tahmin et; sonunda komik zinciri açığa çıkar.</p></figcaption></figure>
+        <figure class="game-card"><img src="img/explodingWord.webp" alt="HomeParty Patlayan Kelime" width="480" height="270" loading="lazy" decoding="async" /><figcaption><h3 data-i18n="g_explodingWord_t">Patlayan Kelime</h3><p data-i18n="g_explodingWord_d">Gizli süre dolmadan kelimeyi bul ve pasla.</p></figcaption></figure>
+        <figure class="game-card"><img src="img/wheelChallenge.webp" alt="HomeParty Şans Çarkı" width="480" height="270" loading="lazy" decoding="async" /><figcaption><h3 data-i18n="g_wheelChallenge_t">Şans Çarkı</h3><p data-i18n="g_wheelChallenge_d">Çarkı çevir, görevi tamamla, puanı topla.</p></figcaption></figure>
+        <figure class="game-card"><img src="img/taboo.webp" alt="HomeParty Tabu" width="480" height="270" loading="lazy" decoding="async" /><figcaption><h3 data-i18n="g_taboo_t">Tabu</h3><p data-i18n="g_taboo_d">Yasaklı kelimeleri kullanmadan ana kelimeyi anlat.</p></figcaption></figure>
+        <figure class="game-card"><img src="img/trueOrFalse.webp" alt="HomeParty Doğru mu Yalan mı" width="480" height="270" loading="lazy" decoding="async" /><figcaption><h3 data-i18n="g_trueOrFalse_t">Doğru mu Yalan mı?</h3><p data-i18n="g_trueOrFalse_d">Cümleni yaz, diğerleri doğru mu yalan mı tahmin etsin.</p></figcaption></figure>
+        <figure class="game-card"><img src="img/whosMore.webp" alt="HomeParty Kim Daha" width="480" height="270" loading="lazy" decoding="async" /><figcaption><h3 data-i18n="g_whosMore_t">Kim Daha?</h3><p data-i18n="g_whosMore_d">"En çok kim?" sorularında grupça oylama yapın.</p></figcaption></figure>
+        <figure class="game-card"><img src="img/hotSeat.webp" alt="HomeParty Sıcak Koltuk" width="480" height="270" loading="lazy" decoding="async" /><figcaption><h3 data-i18n="g_hotSeat_t">Sıcak Koltuk</h3><p data-i18n="g_hotSeat_d">Soruları sesli yanıtla, herkes seni puanlasın.</p></figcaption></figure>
+        <figure class="game-card"><img src="img/spyfall.webp" alt="HomeParty Ajan Kim" width="480" height="270" loading="lazy" decoding="async" /><figcaption><h3 data-i18n="g_spyfall_t">Ajan Kim?</h3><p data-i18n="g_spyfall_d">Mekanı bilenler ajanı, ajan mekanı bulmaya çalışır.</p></figcaption></figure>
+        <figure class="game-card"><img src="img/mostLikely.webp" alt="HomeParty En Çok Kim" width="480" height="270" loading="lazy" decoding="async" /><figcaption><h3 data-i18n="g_mostLikely_t">En Çok Kim</h3><p data-i18n="g_mostLikely_d">Arkadaş grubunda en çok kime uyduğunu oylayın.</p></figcaption></figure>
+      </div>
+
+      <h2 style="margin-top:28px" data-i18n="mini_party_title">Parti Mini Oyunları</h2>
+      <p class="section-sub" data-i18n="mini_party_desc">Klasik parti oyunlarının mobil versiyonları — hızlı turlar, kolay kurallar.</p>
+      <div class="mini-cards">
+        <div class="mini-card"><span class="mc-icon">🏙️</span><div><h3 data-i18n="g_namecity_t">İsim Şehir</h3><p data-i18n="g_namecity_d">Harf çek, 6 kategoriyi 60 saniyede doldur.</p></div></div>
+        <div class="mini-card"><span class="mc-icon">🎱</span><div><h3 data-i18n="g_tombala_t">Tombala</h3><p data-i18n="g_tombala_d">Klasik tombala: torbadan sayı çek, kartını işaretle.</p></div></div>
+        <div class="mini-card"><span class="mc-icon">🧠</span><div><h3 data-i18n="g_trivia_t">Bilgi Yarışması</h3><p data-i18n="g_trivia_d">4 şıklı sorular, hız bonusu. Hızlı cevap daha çok puan.</p></div></div>
+        <div class="mini-card"><span class="mc-icon">🔗</span><div><h3 data-i18n="g_wordchain_t">Kelime Zinciri</h3><p data-i18n="g_wordchain_d">Son harfle başlayan kelime bul, bulamazsan elenirsin.</p></div></div>
+        <div class="mini-card"><span class="mc-icon">💀</span><div><h3 data-i18n="g_hangman_t">Adam Asmaca</h3><p data-i18n="g_hangman_d">Harfleri tahmin et, kelimeyi çöz — çöp adam tamamlanmadan.</p></div></div>
+      </div>
+
+      <h2 style="margin-top:28px" data-i18n="mini_mind_title">Zeka ve Bulmaca</h2>
+      <p class="section-sub" data-i18n="mini_mind_desc">Strateji, hafıza ve refleks oyunları — baş başa düellolar ve grup yarışları.</p>
+      <div class="mini-cards">
+        <div class="mini-card"><span class="mc-icon">⚫</span><div><h3 data-i18n="g_ninemills_t">Dokuz Taş</h3><p data-i18n="g_ninemills_d">Üçlü sıra yap, rakibin taşını al. Klasik strateji.</p></div></div>
+        <div class="mini-card"><span class="mc-icon">🔤</span><div><h3 data-i18n="g_sos_t">SOS</h3><p data-i18n="g_sos_d">S-O-S dizisini tamamla, rakibinden fazla puan topla.</p></div></div>
+        <div class="mini-card"><span class="mc-icon">❌</span><div><h3 data-i18n="g_ultimatexox_t">Ultimate XOX</h3><p data-i18n="g_ultimatexox_d">9 iç içe XOX tahtası. Hamlen rakibin oynayacağı tahtayı belirler.</p></div></div>
+        <div class="mini-card"><span class="mc-icon">📦</span><div><h3 data-i18n="g_dotsboxes_t">Kutu Kapmaca</h3><p data-i18n="g_dotsboxes_d">Çizgi çek, kutuyu kapat, kutuyu kap.</p></div></div>
+        <div class="mini-card"><span class="mc-icon">🃏</span><div><h3 data-i18n="g_memory_t">Hafıza Kartları</h3><p data-i18n="g_memory_d">Eşleşen emoji çiftlerini bul — en az denemede.</p></div></div>
+        <div class="mini-card"><span class="mc-icon">🌈</span><div><h3 data-i18n="g_colorchain_t">Renk Zinciri</h3><p data-i18n="g_colorchain_d">Renk sırasını hafızadan tekrarla, her tur bir renk eklenir.</p></div></div>
+        <div class="mini-card"><span class="mc-icon">⚡</span><div><h3 data-i18n="g_reflex_t">Refleks Düellosu</h3><p data-i18n="g_reflex_d">Ekran yeşile döndüğünde ilk dokunan kazanır.</p></div></div>
+        <div class="mini-card"><span class="mc-icon">🎨</span><div><h3 data-i18n="g_colortrap_t">Renk Şaşırtmaca</h3><p data-i18n="g_colortrap_d">Renk adı farklı renkte yazılır — doğru cevabı seç.</p></div></div>
+        <div class="mini-card"><span class="mc-icon">🔍</span><div><h3 data-i18n="g_oddone_t">Farklı Kare</h3><p data-i18n="g_oddone_d">Izgarada farklı tonlu kareyi bul. 45 saniye, her hata -3 saniye.</p></div></div>
+        <div class="mini-card"><span class="mc-icon">🧩</span><div><h3 data-i18n="g_slidepuzzle_t">Kayan Bulmaca</h3><p data-i18n="g_slidepuzzle_d">Klasik 15-bulmaca. Aynı karışım, en hızlı çözen kazanır.</p></div></div>
+        <div class="mini-card"><span class="mc-icon">🔐</span><div><h3 data-i18n="g_codebreaker_t">Şifre Kırma</h3><p data-i18n="g_codebreaker_d">Gizli kodu yeşil/sarı ipuçlarıyla çöz — en az denemede.</p></div></div>
+        <div class="mini-card"><span class="mc-icon">🔢</span><div><h3 data-i18n="g_numseq_t">Sayı Dizisi</h3><p data-i18n="g_numseq_d">Örüntüyü keşfet, sıradaki sayıyı bul.</p></div></div>
+        <div class="mini-card"><span class="mc-icon">➕</span><div><h3 data-i18n="g_mathduel_t">Matematik Düellosu</h3><p data-i18n="g_mathduel_d">Aynı işlem, iki yarı ekran. Doğru cevaba ilk dokunan alır.</p></div></div>
+      </div>
+    </section>
+
+    <section class="section" id="nasil-oynanir">
+      <h2 data-i18n="how_title">HomeParty Nasıl Oynanır?</h2>
+      <p data-i18n="how_desc">Kurulumdan skor ekranına kadar hızlı oyun akışı.</p>
+      <div class="grid">
+        <div class="feature"><h3 data-i18n="how_1_t">1) Oyuncuları belirleyin</h3><p data-i18n="how_1_d">Oyun türüne göre kişi sayısını belirleyin.</p></div>
+        <div class="feature"><h3 data-i18n="how_2_t">2) Oyun modunu seçin</h3><p data-i18n="how_2_d">Ortamın enerjisine uygun modu başlatın.</p></div>
+        <div class="feature"><h3 data-i18n="how_3_t">3) Telefonu sırayla verin</h3><p data-i18n="how_3_d">Çoğu oyun kolay elden-ele deneyim için tasarlanır.</p></div>
+        <div class="feature"><h3 data-i18n="how_4_t">4) Sonuçları görün</h3><p data-i18n="how_4_d">Skor, oylama ve kazanan ekranı otomatik gösterilir.</p></div>
+      </div>
+    </section>
+
+    <section class="section sg-arts" id="makaleler">
+      <h2 data-i18n="arts_title">Makaleler</h2>
+      <p data-i18n="arts_desc">HomeParty ile ilgili rehberler ve oyun fikirleri.</p>
+      <div class="sg-arts-grid">
+        <a class="sg-art" href="/makale/evde-arkadaslarla-oynanacak-oyunlar.html">
+          <img src="/makale/img/evde-arkadaslarla-oynanacak-oyunlar.svg" alt="Evde Arkadaşlarla Oynanacak 30+ Eğlenceli Oyun" width="1200" height="630" loading="lazy" />
+          <div class="sg-art-body">
+            <h3>Evde Arkadaşlarla Oynanacak 30+ Eğlenceli Oyun</h3>
+            <p>Evde arkadaşlarla oynanacak 30'dan fazla parti oyunu ve zeka oyunu: tabu, sessiz kelime, ajan kim, tombala, bilgi yarışması, dokuz taş ve dahası.…</p>
+          </div>
+        </a>
+        <a class="sg-art" href="/makale/kalabalik-grup-oyunlari.html">
+          <img src="/makale/img/kalabalik-grup-oyunlari.svg" alt="Kalabalık Grup Oyunları: 8+ Kişiyle Sıkılmadan Oynamak" width="1200" height="630" loading="lazy" />
+          <div class="sg-art-body">
+            <h3>Kalabalık Grup Oyunları: 8+ Kişiyle Sıkılmadan Oynamak</h3>
+            <p>8, 10, 16 kişilik kalabalık gruplarda herkesin oyuna dahil olduğu parti oyunları, takım kurma yöntemleri ve sıra bekl…</p>
+          </div>
+        </a>
+        <a class="sg-art" href="/makale/az-kisiyle-evde-oynanacak-oyunlar.html">
+          <img src="/makale/img/az-kisiyle-evde-oynanacak-oyunlar.svg" alt="2, 3 ve 4 Kişiyle Evde Oynanacak Oyunlar" width="1200" height="630" loading="lazy" />
+          <div class="sg-art-body">
+            <h3>2, 3 ve 4 Kişiyle Evde Oynanacak Oyunlar</h3>
+            <p>Az kişiyiz diye oyun bulamıyor musunuz? 2 kişilik, 3 kişilik ve 4 kişilik gruplar için malzeme istemeyen, kutu oyunu …</p>
+          </div>
+        </a>
+      </div>
+      <a class="sg-arts-all" href="/makale/" data-i18n="arts_all">Tüm makaleler &rarr;</a>
+    </section>
+
+    <section class="cta">
+      <h2 data-i18n="cta_title">HomeParty ile Eğlenceyi Başlat</h2>
+      <p data-i18n="cta_desc">30'dan fazla parti oyunu ve zeka oyunu tek uygulamada. Telefon elden ele dolaşsın, gece başlasın.</p>
+      <div class="cta-links">
+        <a class="gp-btn" href="https://play.google.com/store/apps/details?id=com.soge.HomeParty" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"/></svg>
+          <span><small>ANDROID</small><b data-i18n="btn_google_play">Google Play’den indir</b></span>
+          </a>
+        <a class="btn" href="/" data-i18n="btn_home">Sogepps ana sayfaya dön</a>
+        <a class="btn secondary" href="mailto:sogepps@gmail.com" data-i18n="btn_contact">İletişim</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/lang-homeparty.js"></script>
+  <script>I18N.init('homeparty', HOMEPARTY_TRANSLATIONS);</script>
+</body>
+</html>

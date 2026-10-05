@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sogepps – Aplicaciones Móviles y Software</title>
+<meta content="Sogepps desarrolla aplicaciones móviles que simplifican las tareas diarias. Explora nuestras apps." name="description"/>
+
+<link href="https://sogepps.tr/es/" rel="canonical"/><link href="https://sogepps.tr/" hreflang="tr" rel="alternate"/><link href="https://sogepps.tr/en/" hreflang="en" rel="alternate"/><link href="https://sogepps.tr/de/" hreflang="de" rel="alternate"/><link href="https://sogepps.tr/fr/" hreflang="fr" rel="alternate"/><link href="https://sogepps.tr/es/" hreflang="es" rel="alternate"/><link href="https://sogepps.tr/it/" hreflang="it" rel="alternate"/><link href="https://sogepps.tr/pt/" hreflang="pt" rel="alternate"/><link href="https://sogepps.tr/nl/" hreflang="nl" rel="alternate"/><link href="https://sogepps.tr/ru/" hreflang="ru" rel="alternate"/><link href="https://sogepps.tr/ja/" hreflang="ja" rel="alternate"/><link href="https://sogepps.tr/ko/" hreflang="ko" rel="alternate"/><link href="https://sogepps.tr/ar/" hreflang="ar" rel="alternate"/><link href="https://sogepps.tr/hi/" hreflang="hi" rel="alternate"/><link href="https://sogepps.tr/id/" hreflang="id" rel="alternate"/><link href="https://sogepps.tr/pl/" hreflang="pl" rel="alternate"/><link href="https://sogepps.tr/" hreflang="x-default" rel="alternate"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<meta content="website" property="og:type"/>
+<meta content="Sogepps" property="og:site_name"/>
+<meta content="Sogepps – Aplicaciones Móviles y Software" property="og:title"/>
+<meta content="Sogepps desarrolla aplicaciones móviles que simplifican las tareas diarias. Explora nuestras apps." property="og:description"/>
+<meta content="https://sogepps.tr/es/" property="og:url"/>
+<meta content="https://sogepps.tr/img/sogegammon-icon.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root {
+      --bg: #050608;
+      --surface: #0f1218;
+      --surface-2: #171c26;
+      --border: #1f2937;
+      --text: #f0f4f8;
+      --text-muted: #9ca3af;
+      --accent: #6366f1;
+      --accent-light: #818cf8;
+      --accent-glow: rgba(99, 102, 241, 0.12);
+      --font: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--bg); color: var(--text); overflow-x: hidden; }
+    a { color: var(--accent-light); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Nav */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(5,6,8,0.82); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); font-weight: 800; font-size: 1.15rem; letter-spacing: -0.02em; }
+    .nav-logo { width: 34px; height: 34px; border-radius: 10px; background: linear-gradient(135deg, var(--accent), #a855f7); display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 800; color: #fff; }
+    .nav-links { display: flex; gap: 6px; list-style: none; align-items: center; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.875rem; font-weight: 500; padding: 8px 14px; border-radius: 8px; transition: all 0.2s; }
+    .nav-links a:hover { color: var(--text); background: var(--accent-glow); }
+
+    /* Hero */
+    .hero { padding: 160px 24px 120px; text-align: center; position: relative; }
+    .hero::before { content: ''; position: absolute; top: -100px; left: 50%; transform: translateX(-50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(99,102,241,0.07) 0%, transparent 65%); pointer-events: none; }
+    .hero-label { display: inline-flex; align-items: center; gap: 6px; background: var(--accent-glow); border: 1px solid rgba(99,102,241,0.2); border-radius: 999px; padding: 5px 16px; font-size: 0.78rem; font-weight: 600; color: var(--accent-light); margin-bottom: 28px; }
+    .hero h1 { font-size: clamp(2.5rem, 5.5vw, 4rem); font-weight: 800; line-height: 1.1; letter-spacing: -0.04em; margin-bottom: 20px; }
+    .hero h1 span { background: linear-gradient(135deg, var(--accent-light), #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero p { font-size: 1.15rem; color: var(--text-muted); max-width: 520px; margin: 0 auto 44px; line-height: 1.7; }
+    .hero-cta { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; background: linear-gradient(135deg, var(--accent), #7c3aed); color: #fff; font-weight: 600; font-size: 1rem; border-radius: 12px; text-decoration: none; transition: transform 0.15s, box-shadow 0.2s; box-shadow: 0 4px 24px rgba(99,102,241,0.3); }
+    .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(99,102,241,0.4); text-decoration: none; }
+
+    /* About */
+    .about { max-width: 1100px; margin: 0 auto; padding: 80px 24px; }
+    .section-label { display: inline-flex; align-items: center; gap: 6px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-light); margin-bottom: 16px; }
+    .about h2 { font-size: 2rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 16px; }
+    .about p { color: var(--text-muted); font-size: 1.05rem; line-height: 1.8; max-width: 680px; }
+    .about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 40px; }
+    .about-stat { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 24px; text-align: center; }
+    .about-stat .num { font-size: 2rem; font-weight: 800; background: linear-gradient(135deg, var(--accent-light), #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .about-stat .label { font-size: 0.85rem; color: var(--text-muted); margin-top: 6px; }
+
+    /* Apps */
+    .apps { max-width: 1100px; margin: 0 auto; padding: 80px 24px; }
+    .apps h2 { font-size: 2rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 12px; }
+    .apps > p { color: var(--text-muted); font-size: 1rem; margin-bottom: 40px; }
+    .app-card { display: flex; gap: 28px; background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 32px; transition: border-color 0.25s, transform 0.2s; text-decoration: none; color: inherit; margin-bottom: 16px; }
+    .app-card:hover { border-color: var(--accent); transform: translateY(-4px); text-decoration: none; }
+    .app-icon { width: 80px; height: 80px; border-radius: 20px; background: linear-gradient(135deg, #3b82f6, #8b5cf6); display: flex; align-items: center; justify-content: center; font-size: 36px; flex-shrink: 0; position: relative; overflow: hidden; }
+    .app-icon img { width: 100%; height: 100%; object-fit: cover; border-radius: inherit; display: block; }
+    .app-icon .app-icon-fallback { display: none; position: absolute; inset: 0; align-items: center; justify-content: center; font-size: 36px; }
+    .app-icon img[src=""] + .app-icon-fallback,
+    .app-icon .app-icon-fallback.show { display: flex; }
+    .app-info h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 8px; }
+    .app-info p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.65; margin-bottom: 16px; }
+    .app-badges { display: flex; gap: 8px; flex-wrap: wrap; }
+    .app-badge { display: inline-flex; align-items: center; gap: 4px; font-size: 0.75rem; font-weight: 600; padding: 4px 10px; border-radius: 6px; background: var(--accent-glow); color: var(--accent-light); border: 1px solid rgba(99,102,241,0.15); }
+    .app-arrow { display: flex; align-items: center; gap: 6px; font-size: 0.9rem; font-weight: 600; color: var(--accent-light); margin-top: 12px; }
+
+    /* Footer */
+    footer { border-top: 1px solid var(--border); padding: 48px 24px; margin-top: 40px; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 32px; }
+    .footer-brand { font-weight: 700; font-size: 1.1rem; margin-bottom: 8px; }
+    .footer-text { color: var(--text-muted); font-size: 0.85rem; line-height: 1.6; max-width: 300px; }
+    .footer-col h4 { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 12px; }
+    .footer-col a { display: block; color: var(--text-muted); font-size: 0.875rem; padding: 4px 0; transition: color 0.2s; text-decoration: none; }
+    .footer-col a:hover { color: var(--text); }
+    .footer-bottom { max-width: 1100px; margin: 32px auto 0; padding-top: 24px; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted); font-size: 0.8rem; }
+
+    @media (max-width: 640px) {
+      .nav-links a { padding: 8px 10px; font-size: 0.8rem; }
+      .hero { padding: 130px 20px 80px; }
+      .app-card { flex-direction: column; gap: 20px; }
+      .footer-inner { flex-direction: column; }
+    }
+    /* Makale kartlari */
+    .art-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+    .art-card { display: block; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; background: var(--surface); color: inherit; text-decoration: none; transition: border-color .25s, transform .2s; }
+    .art-card:hover { border-color: var(--accent); transform: translateY(-4px); text-decoration: none; }
+    .art-card img { width: 100%; height: auto; aspect-ratio: 1200 / 630; display: block; }
+    .art-body { padding: 14px 16px 18px; }
+    .art-app { display: block; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent-light); margin-bottom: 6px; }
+    .art-body h3 { font-size: 0.97rem; font-weight: 600; line-height: 1.42; }
+  </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"Sogepps","url":"https://sogepps.tr/es/","email":"sogepps@gmail.com","logo":{"@type":"ImageObject","url":"https://sogepps.tr/img/sogegammon-icon.png"}},{"@type":"WebSite","name":"Sogepps","url":"https://sogepps.tr/es/","inLanguage":"es","publisher":{"@type":"Organization","name":"Sogepps"}},{"@type":"ItemList","name":"Sogepps uygulamaları","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"SoftwareApplication","name":"HomeParty","applicationCategory":"GameApplication","operatingSystem":"Android","url":"https://sogepps.tr/homeparty/es/","image":"https://sogepps.tr/img/homeparty-icon.png","description":"Sogepps desarrolla aplicaciones móviles que simplifican las tareas diarias. Explora nuestras apps.","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"inLanguage":"es"}},{"@type":"ListItem","position":2,"item":{"@type":"SoftwareApplication","name":"Yerse Yap: Parti Oyunu","alternateName":["YerseYap","Roll or Dare: Party Board Game"],"applicationCategory":"GameApplication","operatingSystem":"Android","url":"https://sogepps.tr/yerseyap/es/","image":"https://sogepps.tr/img/yerseyap-icon.webp","description":"Sogepps desarrolla aplicaciones móviles que simplifican las tareas diarias. Explora nuestras apps.","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"inLanguage":"es"}},{"@type":"ListItem","position":3,"item":{"@type":"SoftwareApplication","name":"Shot Çarkı","applicationCategory":"GameApplication","operatingSystem":"Android","url":"https://sogepps.tr/shot/es/","image":"https://sogepps.tr/img/shot-icon.webp","description":"Sogepps desarrolla aplicaciones móviles que simplifican las tareas diarias. Explora nuestras apps.","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"inLanguage":"es"}},{"@type":"ListItem","position":4,"item":{"@type":"SoftwareApplication","name":"Sessiz Kelime","applicationCategory":"GameApplication","operatingSystem":"Android","url":"https://sogepps.tr/sessizkelime/es/","image":"https://sogepps.tr/img/sessizkelime-icon.png","description":"Sogepps desarrolla aplicaciones móviles que simplifican las tareas diarias. Explora nuestras apps.","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"inLanguage":"es"}},{"@type":"ListItem","position":5,"item":{"@type":"SoftwareApplication","name":"Spinify","applicationCategory":"GameApplication","operatingSystem":"Android","url":"https://sogepps.tr/spinify/es/","image":"https://sogepps.tr/img/spinify-icon.png","description":"Sogepps desarrolla aplicaciones móviles que simplifican las tareas diarias. Explora nuestras apps.","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"inLanguage":"es"}},{"@type":"ListItem","position":6,"item":{"@type":"SoftwareApplication","name":"Hızlı Çekiliş","applicationCategory":"GameApplication","operatingSystem":"Android","url":"https://sogepps.tr/quickraffle-portal/es/","image":"https://sogepps.tr/img/quickraffle-icon.png","description":"Sogepps desarrolla aplicaciones móviles que simplifican las tareas diarias. Explora nuestras apps.","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"inLanguage":"es"}},{"@type":"ListItem","position":7,"item":{"@type":"SoftwareApplication","name":"Lig & Turnuva Oluştur","applicationCategory":"GameApplication","operatingSystem":"Android","url":"https://sogepps.tr/tournament-portal/es/","image":"https://sogepps.tr/img/tournament-icon.png","description":"Sogepps desarrolla aplicaciones móviles que simplifican las tareas diarias. Explora nuestras apps.","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"inLanguage":"es"}},{"@type":"ListItem","position":8,"item":{"@type":"SoftwareApplication","name":"Tahmin Meleği - İddaa","applicationCategory":"GameApplication","operatingSystem":"Android","url":"https://sogepps.tr/tahminmelegi/es/","image":"https://sogepps.tr/img/tahminmelegi-icon.webp","description":"Sogepps desarrolla aplicaciones móviles que simplifican las tareas diarias. Explora nuestras apps.","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"inLanguage":"es"}},{"@type":"ListItem","position":9,"item":{"@type":"SoftwareApplication","name":"Metin2 Okey","applicationCategory":"GameApplication","operatingSystem":"Android","url":"https://sogepps.tr/metin2okey/es/","image":"https://sogepps.tr/img/metin2okey-icon.png","description":"Sogepps desarrolla aplicaciones móviles que simplifican las tareas diarias. Explora nuestras apps.","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"inLanguage":"es"}},{"@type":"ListItem","position":10,"item":{"@type":"SoftwareApplication","name":"SogeGammon","applicationCategory":"GameApplication","operatingSystem":"Android","url":"https://sogepps.tr/sogegammon/es/","image":"https://sogepps.tr/img/sogegammon-icon.png","description":"Sogepps desarrolla aplicaciones móviles que simplifican las tareas diarias. Explora nuestras apps.","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"inLanguage":"es"}}]}]}</script>
+<meta content="es_ES" property="og:locale"/></head>
+<body>
+<nav>
+<div class="nav-inner">
+<a class="nav-brand" href="/es/">
+<div class="nav-logo">S</div>
+        Sogepps
+      </a>
+<ul class="nav-links">
+<li><a data-i18n="nav_about" href="#about">Nosotros</a></li>
+<li><a data-i18n="nav_apps" href="#apps">Aplicaciones</a></li>
+<li><a data-i18n="nav_articles" href="/makale/es/">Artículos</a></li>
+<li><a data-i18n="nav_contact" href="mailto:sogepps@gmail.com">Contacto</a></li>
+</ul>
+</div>
+</nav>
+<!-- Hero -->
+<section class="hero">
+<div class="hero-label" data-i18n="hero_badge">⚡ Creamos aplicaciones móviles útiles</div>
+<h1 data-i18n-html="hero_title">Creamos apps que<br/><span>simplifican tu vida</span></h1>
+<p data-i18n="hero_desc">Sogepps crea aplicaciones móviles intuitivas diseñadas para resolver problemas reales. Simples, confiables y desarrolladas con cuidado.</p>
+<a class="hero-cta" data-i18n="hero_cta" href="#apps">Explora nuestras apps ↓</a>
+</section>
+<!-- About -->
+<section class="about" id="about">
+<div class="section-label" data-i18n="about_label">◆ Nosotros</div>
+<h2 data-i18n="about_title">Quiénes somos</h2>
+<p data-i18n="about_desc">Sogepps es un estudio de software enfocado en el desarrollo de aplicaciones móviles. Creemos que un gran software debe ser fácil de usar, confiable y accesible para todos. Nuestras apps están diseñadas con la experiencia del usuario como máxima prioridad.</p>
+<div class="about-grid">
+<div class="about-stat">
+<div class="num">15</div>
+<div class="label" data-i18n="stat_apps">Apps publicadas</div>
+</div>
+<div class="about-stat">
+<div class="num">⚡</div>
+<div class="label" data-i18n="stat_fast">Rápido y Confiable</div>
+</div>
+<div class="about-stat">
+<div class="num">🔒</div>
+<div class="label" data-i18n="stat_privacy">Privacidad primero</div>
+</div>
+<div class="about-stat">
+<div class="num">🌐</div>
+<div class="label" data-i18n="stat_languages">16+ Idiomas</div>
+</div>
+</div>
+</section>
+<!-- Apps -->
+<section class="apps" id="apps">
+<div class="section-label" data-i18n="apps_label">◆ Nuestras Apps</div>
+<h2 data-i18n="apps_title">Aplicaciones</h2>
+<p data-i18n="apps_desc">Explora nuestras aplicaciones móviles publicadas.</p>
+<a class="app-card" href="/tournament-portal/es/">
+<div class="app-icon">
+<img alt="" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" src="/img/tournament-icon.png"/>
+<span aria-hidden="true" class="app-icon-fallback">⚗</span>
+</div>
+<div class="app-info">
+<h3 data-i18n="app_name">Creador de Ligas y Torneos</h3>
+<p data-i18n="app_desc">Crea ligas, llaves de eliminación y torneos de todos contra todos en segundos. Registra puntuaciones, consulta clasificaciones en vivo, exporta resultados en PDF — todo desde tu teléfono. Disponible en Android.</p>
+<div class="app-badges">
+<span class="app-badge" data-i18n="badge_sports">⚽ Deportes</span>
+<span class="app-badge" data-i18n="badge_tournaments">🏆 Torneos</span>
+<span class="app-badge" data-i18n="badge_standings">📈 Clasificaciones</span>
+<span class="app-badge" data-i18n="badge_brackets">⚖ Llaves</span>
+</div>
+<div class="app-arrow" data-i18n="app_view">Ver detalles →</div>
+</div>
+</a>
+<a class="app-card" href="/quickraffle-portal/es/">
+<div class="app-icon">
+<img alt="" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" src="/img/quickraffle-icon.png"/>
+<span aria-hidden="true" class="app-icon-fallback">🍀</span>
+</div>
+<div class="app-info">
+<h3 data-i18n="app_name_quickraffle">Quick Raffle</h3>
+<p data-i18n="app_desc_quickraffle">App de sorteos todo-en-uno: selector de nombres, números, ruleta, lotería, equipos, dados, cara o cruz, cartas, barajar listas, bingo y más. Rápido, justo y divertido.</p>
+<div class="app-badges">
+<span class="app-badge" data-i18n="badge_raffle">🎰 Sorteos</span>
+<span class="app-badge" data-i18n="badge_wheel">💰 Ruleta</span>
+<span class="app-badge" data-i18n="badge_teams">👥 Equipos</span>
+<span class="app-badge" data-i18n="badge_random">⚏ Aleatorio</span>
+</div>
+<div class="app-arrow" data-i18n="app_view">Ver detalles →</div>
+</div>
+</a>
+<a class="app-card" href="/homeparty/es/">
+<div class="app-icon">
+<img alt="HomeParty uygulama simgesi" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" src="/img/homeparty-icon.png"/>
+<span aria-hidden="true" class="app-icon-fallback">🎉</span>
+</div>
+<div class="app-info">
+<h3>HomeParty</h3>
+<p data-i18n="app_desc_homeparty">HomeParty es una app divertida para quienes buscan juegos para jugar con amigos en casa. Te ayuda a elegir y empezar un juego en segundos en noches de fiesta, reuniones familiares y encuentros con amigos.</p>
+<div class="app-badges">
+<span class="app-badge" data-i18n="badge_homeparty_party">🎉 Juegos de fiesta</span>
+<span class="app-badge" data-i18n="badge_homeparty_friends">👥 Amigos</span>
+<span class="app-badge" data-i18n="badge_homeparty_home">🏠 Diversión en casa</span>
+<span class="app-badge" data-i18n="badge_homeparty_group">🎲 Juego en grupo</span>
+</div>
+<div class="app-arrow" data-i18n="app_view">Ver detalles →</div>
+</div>
+</a>
+<a class="app-card" href="/spinify/es/">
+<div class="app-icon" style="background: linear-gradient(135deg, #7c5cff, #ff5ca8);">
+<img alt="Spinify uygulama simgesi" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" src="/img/spinify-icon.png"/>
+<span aria-hidden="true" class="app-icon-fallback">🎰</span>
+</div>
+<div class="app-info">
+<h3 data-i18n="app_name_spinify">Spinify</h3>
+<p data-i18n="app_desc_spinify">App avanzada de ruleta giratoria: crea ruedas personalizadas, define pesos de probabilidad reales, usa 14 plantillas listas, ruedas anidadas, modo eliminación y personalización total del giro. Elección de comida, juegos de fiesta, tareas del hogar, entrenamientos y decisiones del día a día.</p>
+<div class="app-badges">
+<span class="app-badge" data-i18n="badge_spinify_wheel">🎡 Ruleta</span>
+<span class="app-badge" data-i18n="badge_spinify_odds">⚙ Probabilidades ponderadas</span>
+<span class="app-badge" data-i18n="badge_spinify_presets">★ 14 plantillas</span>
+<span class="app-badge" data-i18n="badge_spinify_nested">🔀 Anidadas</span>
+</div>
+<div class="app-arrow" data-i18n="app_view">Ver detalles →</div>
+</div>
+</a>
+<a class="app-card" href="/yerseyap/es/">
+<div class="app-icon" style="background: linear-gradient(135deg, #8b3dff, #ff4fa3);">
+<img alt="Yerse Yap uygulama simgesi" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" src="/img/yerseyap-icon.webp"/>
+<span aria-hidden="true" class="app-icon-fallback">🎲</span>
+</div>
+<div class="app-info">
+<h3 data-i18n="app_name_yerseyap">Roll or Dare: Juego de fiesta</h3>
+<p data-i18n="app_desc_yerseyap">¡Lanza el dado, haz el reto! El juego de fiesta más divertido para amigos. 2–10 jugadores, un solo móvil.</p>
+<div class="app-badges">
+<span class="app-badge" data-i18n="badge_yerseyap_dice">🎲 Dados</span>
+<span class="app-badge" data-i18n="badge_yerseyap_board">🏝️ Isla de la Aventura</span>
+<span class="app-badge" data-i18n="badge_yerseyap_tasks">🃏 Retos</span>
+<span class="app-badge" data-i18n="badge_yerseyap_group">👥 2–10 jugadores</span>
+</div>
+<div class="app-arrow" data-i18n="app_view">Ver detalles →</div>
+</div>
+</a>
+<a class="app-card" href="/shot/es/">
+<div class="app-icon" style="background: linear-gradient(135deg, #a855f7, #ec4899);">
+<img alt="Shot Çarkı uygulama simgesi" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" src="/img/shot-icon.webp"/>
+<span aria-hidden="true" class="app-icon-fallback">🍾</span>
+</div>
+<div class="app-info">
+<h3 data-i18n="app_name_shot">Shot Çarkı</h3>
+<p data-i18n="app_desc_shot">Gira la ruleta de la fiesta, recibe un reto según la dificultad, cúmplelo para ganar puntos o toma un trago. Probabilidades ponderadas, marcador en vivo — para 2–12 jugadores.</p>
+<div class="app-badges">
+<span class="app-badge" data-i18n="badge_shot_wheel">🎡 Ruleta</span>
+<span class="app-badge" data-i18n="badge_shot_dares">🃏 Retos</span>
+<span class="app-badge" data-i18n="badge_shot_shots">🥃 Tragos</span>
+<span class="app-badge" data-i18n="badge_shot_group">👥 2–12 jugadores</span>
+</div>
+<div class="app-arrow" data-i18n="app_view">Ver detalles →</div>
+</div>
+</a>
+<a class="app-card" href="/tahminmelegi/es/">
+<div class="app-icon" style="background: linear-gradient(135deg, #7b2ff7, #f0a500);">
+<img alt="Tahmin Meleği - İddaa uygulama simgesi" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" src="/img/tahminmelegi-icon.webp"/>
+<span aria-hidden="true" class="app-icon-fallback">🔮</span>
+</div>
+<div class="app-info">
+<h3 data-i18n="app_name_tahminmelegi">Tahmin Meleği - İddaa</h3>
+<p data-i18n="app_desc_tahminmelegi">Piensa en un partido de fútbol, frota el caldero del destino de la bruja y lee una única profecía en el pergamino. Resultado del partido, más/menos, ambos equipos marcan y más — solo entretenimiento.</p>
+<div class="app-badges">
+<span class="app-badge" data-i18n="badge_tahmin_ritual">🔮 Ritual</span>
+<span class="app-badge" data-i18n="badge_tahmin_markets">⚽ Mercados de İddaa</span>
+<span class="app-badge" data-i18n="badge_tahmin_fun">🎭 Entretenimiento</span>
+<span class="app-badge" data-i18n="badge_tahmin_noaccount">✨ Sin cuenta</span>
+</div>
+<div class="app-arrow" data-i18n="app_view">Ver detalles →</div>
+</div>
+</a>
+<a class="app-card" href="/metin2okey/es/">
+<div class="app-icon" style="background: linear-gradient(135deg, #7c5a1a, #d4a72c);">
+<img alt="Metin2 Okey uygulama simgesi" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" src="/img/metin2okey-icon.png"/>
+<span aria-hidden="true" class="app-icon-fallback">🃏</span>
+</div>
+<div class="app-info">
+<h3 data-i18n="app_name_metin2okey">Metin2 Okey</h3>
+<p data-i18n="app_desc_metin2okey">Ayudante de Metin2 Okey: sigue las fichas, consulta las mejores combinaciones restantes y practica en la web. Descarga la app móvil o juega la versión web.</p>
+<div class="app-badges">
+<span class="app-badge" data-i18n="badge_m2okey_helper">🃏 Ayudante</span>
+<span class="app-badge" data-i18n="badge_m2okey_combos">🏆 Combinaciones</span>
+<span class="app-badge" data-i18n="badge_m2okey_web">🌐 Jugar en la web</span>
+<span class="app-badge" data-i18n="badge_m2okey_mobile">📱 Móvil</span>
+</div>
+<div class="app-arrow" data-i18n="app_view">Ver detalles →</div>
+</div>
+</a>
+<a class="app-card" href="/fishingdiary/es/">
+<div class="app-icon" style="background: linear-gradient(135deg, #0a4f7a, #29b6f6);">
+<img alt="Fishing Diary: Ocean Legends uygulama simgesi" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" src="/img/fishingdiary-icon.png"/>
+<span aria-hidden="true" class="app-icon-fallback">🎣</span>
+</div>
+<div class="app-info">
+<h3 data-i18n="app_name_fishingdiary">Fishing Diary: Ocean Legends</h3>
+<p data-i18n="app_desc_fishingdiary">¡Lanza redes con tu cañón y captura más de 150 especies! 40 armas legendarias, 20 zonas oceánicas, 200 profundidades, jefes épicos y compañeros. Se juega sin conexión. Juego de pesca gratis para Android.</p>
+<div class="app-badges">
+<span class="app-badge" data-i18n="badge_fd_species">🎣 150+ especies</span>
+<span class="app-badge" data-i18n="badge_fd_weapons">🔱 40 armas</span>
+<span class="app-badge" data-i18n="badge_fd_langs">🌐 70+ idiomas</span>
+</div>
+<div class="app-arrow" data-i18n="app_view">Ver detalles →</div>
+</div>
+</a>
+<a class="app-card" href="/neonkaleler/es/">
+<div class="app-icon" style="background: linear-gradient(135deg, #2a0a58, #ff3df0);">
+<img alt="Neon Kaleler uygulama simgesi" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" src="/img/neonkaleler-icon.png"/>
+<span aria-hidden="true" class="app-icon-fallback">🏰</span>
+</div>
+<div class="app-info">
+<h3 data-i18n="app_name_neonkaleler">Neon Castillos</h3>
+<p data-i18n="app_desc_neonkaleler">Entrena tropas, gestiona minas y derrota castillos! 300 niveles neón.</p>
+<div class="app-badges">
+<span class="app-badge" data-i18n="badge_nk_units">⚔️ 16 unidades, 5 hechizos y 7 mejoras de castillo</span>
+<span class="app-badge" data-i18n="badge_nk_offline">📴 Juega sin conexión, sin internet requerido</span>
+<span class="app-badge" data-i18n="badge_nk_speed">⚡ Velocidad de batalla 2x y 3x</span>
+</div>
+<div class="app-arrow" data-i18n="app_view">Ver detalles →</div>
+</div>
+</a>
+<a class="app-card" href="/kalemuhafizlari/es/">
+<div class="app-icon" style="background: linear-gradient(135deg, #1d4d2b, #3f8f3a);">
+<img alt="Kale Muhafızları uygulama simgesi" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" src="/img/kalemuhafizlari-icon.png"/>
+<span aria-hidden="true" class="app-icon-fallback">🏰</span>
+</div>
+<div class="app-info">
+<h3 data-i18n="app_name_kalemuhafizlari">Guardianes del Castillo</h3>
+<p data-i18n="app_desc_kalemuhafizlari">Equipa tu castillo con torres, detén las oleadas enemigas y vence a los jefes. 250 niveles, 5 tipos de torres, 4 héroes, 75 idiomas. Un juego de tower defense gratuito.</p>
+<div class="app-badges">
+<span class="app-badge" data-i18n="badge_km_levels">⚔️ 250 niveles</span>
+<span class="app-badge" data-i18n="badge_km_towers">🏰 5 torres · 4 héroes</span>
+<span class="app-badge" data-i18n="badge_ss_langs">🌐 75 idiomas</span>
+</div>
+<div class="app-arrow" data-i18n="app_view">Ver detalles →</div>
+</div>
+</a>
+<a class="app-card" href="/cadiyasor/es/">
+<div class="app-icon" style="background: linear-gradient(135deg, #241250, #5a2fa0);">
+<img alt="Cadıya Sor uygulama simgesi" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" src="/img/cadiyasor-icon.png"/>
+<span aria-hidden="true" class="app-icon-fallback">🔮</span>
+</div>
+<div class="app-info">
+<h3 data-i18n="app_name_cadiyasor">Pregúntale a la bruja (Cadıya Sor)</h3>
+<p data-i18n="app_desc_cadiyasor">Haz una pregunta, frota el caldero de la bruja y lee tu destino. Un libro de respuestas mágico con bola de cristal, presagio del día y 75 idiomas.</p>
+<div class="app-badges">
+<span class="app-badge" data-i18n="badge_cs_answers">🔮 200 respuestas</span>
+<span class="app-badge" data-i18n="badge_cs_omen">🌙 Presagio del día</span>
+<span class="app-badge" data-i18n="badge_ss_langs">🌐 75 idiomas</span>
+</div>
+<div class="app-arrow" data-i18n="app_view">Ver detalles →</div>
+</div>
+</a>
+<a class="app-card" href="/sessizsinema/es/">
+<div class="app-icon" style="background: linear-gradient(135deg, #C8102E, #F5C518);">
+<img alt="Sessiz Sinema uygulama simgesi" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" src="/img/sessizsinema-icon.png"/>
+<span aria-hidden="true" class="app-icon-fallback">🎬</span>
+</div>
+<div class="app-info">
+<h3 data-i18n="app_name_sessizsinema">Cine Mudo (Sessiz Sinema)</h3>
+<p data-i18n="app_desc_sessizsinema">Representa películas sin decir una palabra y que tu equipo adivine. 600 películas en 11 géneros, con los títulos de tu país, en 75 idiomas.</p>
+<div class="app-badges">
+<span class="app-badge" data-i18n="badge_ss_films">🎬 600 películas</span>
+<span class="app-badge" data-i18n="badge_ss_langs">🌐 75 idiomas</span>
+<span class="app-badge" data-i18n="badge_sk_teams">👥 2 equipos</span>
+<span class="app-badge" data-i18n="badge_sk_party">🎉 Fiesta</span>
+</div>
+<div class="app-arrow" data-i18n="app_view">Ver detalles →</div>
+</div>
+</a>
+<a class="app-card" href="/sessizkelime/es/">
+<div class="app-icon" style="background: linear-gradient(135deg, #8B5CF6, #ec4899);">
+<img alt="Sessiz Kelime uygulama simgesi" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" src="/img/sessizkelime-icon.png"/>
+<span aria-hidden="true" class="app-icon-fallback">🗣</span>
+</div>
+<div class="app-info">
+<h3 data-i18n="app_name_sessizkelime">Sessiz Kelime</h3>
+<p data-i18n="app_desc_sessizkelime">Dos equipos compiten por adivinar palabras sin hablar. Desliza a la derecha si es correcto, a la izquierda si es incorrecto, hacia abajo para pasar. Más de 20 categorías, temporizadores y límites de pases — lista para la fiesta.</p>
+<div class="app-badges">
+<span class="app-badge" data-i18n="badge_sk_teams">👥 2 equipos</span>
+<span class="app-badge" data-i18n="badge_sk_words">💬 Juego de palabras</span>
+<span class="app-badge" data-i18n="badge_sk_cats">🏷️ Más de 20 categorías</span>
+<span class="app-badge" data-i18n="badge_sk_party">🎉 Fiesta</span>
+</div>
+<div class="app-arrow" data-i18n="app_view">Ver detalles →</div>
+</div>
+</a>
+<a class="app-card" href="/sogegammon/es/">
+<div class="app-icon" style="background: linear-gradient(135deg, #0A1024, #C9A227);">
+<img alt="SogeGammon uygulama simgesi" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" src="/img/sogegammon-icon.png"/>
+<span aria-hidden="true" class="app-icon-fallback">🎲</span>
+</div>
+<div class="app-info">
+<h3 data-i18n="app_name_sogegammon">SogeGammon</h3>
+<p data-i18n="app_desc_sogegammon">Backgammon en línea sin fichas. No necesitas fichas para sentarte a la mesa: partidas en vivo contra rivales reales, un torneo gratuito cada 3 horas, clasificación por ranking, invitaciones a amigos, temas de tablero y dados. Juega en la web y en Android.</p>
+<div class="app-badges">
+<span class="app-badge" data-i18n="badge_sg_online">🎲 Backgammon</span>
+<span class="app-badge" data-i18n="badge_sg_live">👥 Rivales en vivo</span>
+<span class="app-badge" data-i18n="badge_sg_tournament">🏆 Torneos</span>
+<span class="app-badge" data-i18n="badge_sg_rank">📈 Con ranking</span>
+</div>
+<div class="app-arrow" data-i18n="app_view">Ver detalles →</div>
+</div>
+</a>
+</section>
+<!-- Makaleler -->
+<section class="apps" id="makaleler">
+<div class="section-label" data-i18n="articles_label">◆ Artículos</div>
+<h2 data-i18n="articles_title">Guías e ideas de juegos</h2>
+<p data-i18n="articles_desc">Guías sobre nuestras apps: ideas de juegos de fiesta, organización de sorteos y torneos, reglas y tácticas.</p>
+<div class="art-grid">
+<a class="art-card" href="/makale/es/evde-arkadaslarla-oynanacak-oyunlar.html">
+<img alt="Más de 30 juegos divertidos para jugar en casa con amigos" height="630" loading="lazy" src="/makale/img/es/evde-arkadaslarla-oynanacak-oyunlar.svg" width="1200"/>
+<div class="art-body">
+<span class="art-app">HomeParty</span>
+<h3>Más de 30 juegos divertidos para jugar en casa con amigos</h3>
+</div>
+</a>
+<a class="art-card" href="/makale/es/instagram-cekilisi-nasil-yapilir.html">
+<img alt="¿Cómo Hacer un Sorteo de Instagram? Método Justo y Transparente" height="630" loading="lazy" src="/makale/img/es/instagram-cekilisi-nasil-yapilir.svg" width="1200"/>
+<div class="art-body">
+<span class="art-app">Quick Raffle</span>
+<h3>¿Cómo Hacer un Sorteo de Instagram? Método Justo y Transparente</h3>
+</div>
+</a>
+<a class="art-card" href="/makale/es/hali-saha-ligi-nasil-kurulur.html">
+<img alt="¿Cómo Crear una Liga de Futsal? Fixture, Tabla de Puntos y Reglas" height="630" loading="lazy" src="/makale/img/es/hali-saha-ligi-nasil-kurulur.svg" width="1200"/>
+<div class="art-body">
+<span class="art-app">Creador de Ligas y Torneos</span>
+<h3>¿Cómo Crear una Liga de Futsal? Fixture, Tabla de Puntos y Reglas</h3>
+</div>
+</a>
+<a class="art-card" href="/makale/es/tavlada-kazanma-taktikleri.html">
+<img alt="Tácticas para Ganar en Backgammon: 7 Reglas para Principiantes" height="630" loading="lazy" src="/makale/img/es/tavlada-kazanma-taktikleri.svg" width="1200"/>
+<div class="art-body">
+<span class="art-app">SogeGammon</span>
+<h3>Tácticas para Ganar en Backgammon: 7 Reglas para Principiantes</h3>
+</div>
+</a>
+</div>
+<a class="hero-cta" data-i18n="articles_cta" href="/makale/es/" style="margin-top:28px">Ver todos los artículos →</a>
+</section>
+<!-- Footer -->
+<footer>
+<div class="footer-inner">
+<div>
+<div class="footer-brand" data-i18n="footer_brand">Sogepps</div>
+<div class="footer-text" data-i18n="footer_desc">Desarrollamos aplicaciones móviles útiles. Simples, confiables y enfocadas en la privacidad.</div>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer_apps">Aplicaciones</h4>
+<a data-i18n="app_name" href="/tournament-portal/es/">Creador de Ligas y Torneos</a>
+<a data-i18n="app_name_quickraffle" href="/quickraffle-portal/es/">Quick Raffle</a>
+<a href="/homeparty/es/">HomeParty</a>
+<a data-i18n="app_name_spinify" href="/spinify/es/">Spinify</a>
+<a data-i18n="app_name_yerseyap" href="/yerseyap/es/">Roll or Dare: Juego de fiesta</a>
+<a data-i18n="app_name_shot" href="/shot/es/">Shot Çarkı</a>
+<a data-i18n="app_name_tahminmelegi" href="/tahminmelegi/es/">Tahmin Meleği - İddaa</a>
+<a data-i18n="app_name_metin2okey" href="/metin2okey/es/">Metin2 Okey</a>
+<a data-i18n="app_name_fishingdiary" href="/fishingdiary/es/">Fishing Diary: Ocean Legends</a>
+<a data-i18n="app_name_neonkaleler" href="/neonkaleler/es/">Neon Castillos</a>
+<a data-i18n="app_name_kalemuhafizlari" href="/kalemuhafizlari/es/">Guardianes del Castillo</a>
+<a data-i18n="app_name_cadiyasor" href="/cadiyasor/es/">Pregúntale a la bruja (Cadıya Sor)</a>
+<a data-i18n="app_name_sessizsinema" href="/sessizsinema/es/">Cine Mudo (Sessiz Sinema)</a>
+<a data-i18n="app_name_sessizkelime" href="/sessizkelime/es/">Sessiz Kelime</a>
+<a data-i18n="app_name_sogegammon" href="/sogegammon/es/">SogeGammon</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer_legal">Legal</h4>
+<a data-i18n="footer_privacy" href="/tournament-portal/es/privacy-policy.html">Política de privacidad</a>
+<a data-i18n="footer_privacy_quickraffle" href="/quickraffle-portal/es/privacy-policy.html">Quick Raffle Privacidad</a>
+<a data-i18n="footer_privacy_spinify" href="/spinify/es/privacy-policy.html">Privacidad de Spinify</a>
+<a data-i18n="footer_privacy_yerseyap" href="/yerseyap/es/privacy-policy.html">Roll or Dare Privacidad</a>
+<a data-i18n="footer_privacy_shot" href="/shot/es/privacy-policy.html">Privacidad de Shot Çarkı</a>
+<a data-i18n="footer_privacy_tahminmelegi" href="/tahminmelegi/es/privacy-policy.html">Privacidad de Tahmin Meleği</a>
+<a data-i18n="footer_privacy_metin2okey" href="/metin2okey/es/privacy-policy.html">Privacidad de Metin2 Okey</a>
+<a data-i18n="footer_privacy_fishingdiary" href="/fishingdiary/es/privacy-policy.html">Fishing Diary: Ocean Legends – Política de Privacidad</a>
+<a data-i18n="footer_privacy_neonkaleler" href="/neonkaleler/es/privacy-policy.html">Neon Castillos – Política de Privacidad</a>
+<a data-i18n="footer_privacy_kalemuhafizlari" href="/kalemuhafizlari/es/privacy-policy.html">Guardianes del Castillo – Política de Privacidad</a>
+<a data-i18n="footer_privacy_cadiyasor" href="/cadiyasor/es/privacy-policy.html">Pregúntale a la bruja Privacidad</a>
+<a data-i18n="footer_privacy_sessizsinema" href="/sessizsinema/es/privacy-policy.html">Cine Mudo Privacidad</a>
+<a data-i18n="footer_privacy_sessizkelime" href="/sessizkelime/es/privacy-policy.html">Privacidad de Sessiz Kelime</a>
+<a data-i18n="footer_privacy_sogegammon" href="/sogegammon/es/privacy-policy.html">Privacidad de SogeGammon</a>
+<a data-i18n="footer_delete" href="/tournament-portal/es/delete-account.html">Eliminar cuenta</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer_contact">Contacto</h4>
+<a href="mailto:sogepps@gmail.com">sogepps@gmail.com</a>
+<a data-i18n="nav_articles" href="/makale/es/">Artículos</a>
+</div>
+</div>
+<div class="footer-bottom" data-i18n="footer_rights">© 2026 Sogepps. Todos los derechos reservados.</div>
+</footer>
+
+
+
+<script defer="" src="/js/i18n.js?v=ac9834aa"></script>
+</body>
+</html>

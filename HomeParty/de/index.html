@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HomeParty - Partyspiele für Freunde</title>
+<meta content="HomeParty: 30+ Party- und Denkspiele in einer App. Tabu, Pantomime, Wer bin ich, Tombola, Quiz und mehr." name="description"/>
+
+<link href="https://sogepps.tr/homeparty/de/" rel="canonical"/><link href="https://sogepps.tr/homeparty/" hreflang="tr" rel="alternate"/><link href="https://sogepps.tr/homeparty/en/" hreflang="en" rel="alternate"/><link href="https://sogepps.tr/homeparty/de/" hreflang="de" rel="alternate"/><link href="https://sogepps.tr/homeparty/fr/" hreflang="fr" rel="alternate"/><link href="https://sogepps.tr/homeparty/es/" hreflang="es" rel="alternate"/><link href="https://sogepps.tr/homeparty/it/" hreflang="it" rel="alternate"/><link href="https://sogepps.tr/homeparty/pt/" hreflang="pt" rel="alternate"/><link href="https://sogepps.tr/homeparty/nl/" hreflang="nl" rel="alternate"/><link href="https://sogepps.tr/homeparty/ru/" hreflang="ru" rel="alternate"/><link href="https://sogepps.tr/homeparty/ja/" hreflang="ja" rel="alternate"/><link href="https://sogepps.tr/homeparty/ko/" hreflang="ko" rel="alternate"/><link href="https://sogepps.tr/homeparty/ar/" hreflang="ar" rel="alternate"/><link href="https://sogepps.tr/homeparty/hi/" hreflang="hi" rel="alternate"/><link href="https://sogepps.tr/homeparty/id/" hreflang="id" rel="alternate"/><link href="https://sogepps.tr/homeparty/pl/" hreflang="pl" rel="alternate"/><link href="https://sogepps.tr/homeparty/" hreflang="x-default" rel="alternate"/>
+<meta content="HomeParty - Partyspiele für Freunde" property="og:title"/>
+<meta content="HomeParty: 30+ Party- und Denkspiele in einer App. Tabu, Pantomime, Wer bin ich, Tombola, Quiz und mehr." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://sogepps.tr/homeparty/de/" property="og:url"/>
+<meta content="https://sogepps.tr/homeparty/img/icon.webp" property="og:image"/>
+<style>
+    :root { --bg:#070913; --surface:#11172a; --surface-2:#18213a; --border:#2a3559; --text:#edf2ff; --muted:#b3bfdc; --primary:#8b5cf6; --secondary:#ec4899; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: radial-gradient(circle at 10% -10%, rgba(139, 92, 246, 0.35), transparent 35%), radial-gradient(circle at 90% -20%, rgba(236, 72, 153, 0.22), transparent 35%), var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    a { color: #d8ccff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1160px; margin: 0 auto; padding: 0 20px; }
+    .topnav { position: sticky; top: 0; z-index: 99; border-bottom: 1px solid var(--border); background: rgba(7, 9, 19, 0.86); backdrop-filter: blur(10px); }
+    .topnav-inner, .nav-inner { height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 0.92rem; }
+    .topnav-links, .nav-links { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+    .hero { padding: 82px 0 40px; display: grid; grid-template-columns: 132px 1fr; gap: 22px; align-items: center; }
+    .hero-icon { width: 132px; height: 132px; border-radius: 30px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 20px 58px rgba(139, 92, 246, 0.35); background: linear-gradient(135deg, var(--primary), var(--secondary)); }
+    .hero-icon img { width: 100%; height: 100%; object-fit: cover; }
+    h1 { font-size: clamp(2rem, 5.2vw, 3.3rem); line-height: 1.08; margin-bottom: 12px; letter-spacing: -0.02em; }
+    .lead { color: var(--muted); max-width: 840px; font-size: 1.05rem; }
+    .hero-tags { margin-top: 16px; display: flex; gap: 8px; flex-wrap: wrap; }
+    .hero-tag { border: 1px solid #44356f; background: rgba(139, 92, 246, 0.16); color: #dccdff; border-radius: 999px; padding: 6px 12px; font-size: 0.8rem; font-weight: 600; }
+    .section { margin: 20px 0; border: 1px solid var(--border); border-radius: 20px; padding: 28px; background: linear-gradient(160deg, var(--surface), var(--surface-2)); }
+    .section h2 { font-size: 1.5rem; margin-bottom: 12px; }
+    .section p { color: var(--muted); margin-bottom: 10px; }
+    .game-cards { margin-top: 16px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+    .game-card { border: 1px solid var(--border); border-radius: 14px; overflow: hidden; background: #0d1324; }
+    .game-card img { width: 100%; height: 180px; object-fit: cover; display: block; background: #0d1324; }
+    .game-card figcaption { padding: 10px 12px; }
+    .game-card h3 { font-size: 0.98rem; margin-bottom: 6px; }
+    .game-card p { color: var(--muted); font-size: 0.87rem; margin: 0; }
+    .mini-cards { margin-top: 16px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+    .mini-card { border: 1px solid var(--border); border-radius: 14px; padding: 16px; background: #0d1324; display: flex; gap: 12px; align-items: flex-start; }
+    .mini-card .mc-icon { font-size: 1.8rem; line-height: 1; flex: 0 0 auto; }
+    .mini-card h3 { font-size: 0.95rem; margin-bottom: 4px; }
+    .mini-card p { color: var(--muted); font-size: 0.83rem; margin: 0; }
+    .section-sub { color: var(--muted); font-size: 0.88rem; margin-bottom: 14px; opacity: 0.85; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 16px; }
+    .feature { border: 1px solid #32406c; border-radius: 14px; padding: 14px; background: rgba(16, 23, 42, 0.6); }
+    .feature h3 { font-size: 1rem; margin-bottom: 6px; }
+    .feature p { font-size: 0.93rem; margin: 0; }
+    .cta { margin: 24px 0 68px; text-align: center; border: 1px solid #4b4282; border-radius: 20px; padding: 30px 22px; background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(236, 72, 153, 0.15)); }
+    .cta h2 { margin-bottom: 8px; }
+    .cta p { color: var(--muted); }
+    .cta-links { margin-top: 14px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+    .btn { display: inline-block; padding: 10px 15px; border-radius: 11px; font-weight: 700; border: 1px solid #5f4aa1; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #fff; text-decoration: none; }
+    .btn.secondary { background: rgba(17, 23, 42, 0.65); color: #d7e2ff; border-color: #3a4a7b; }
+    @media (max-width: 760px) { .hero { grid-template-columns: 1fr; text-align: center; } .hero-icon { margin: 0 auto; } .topnav-inner { height: auto; padding: 10px 0; } .topnav-links, .nav-links { justify-content: center; } }
+    /* Google Play indirme butonu */
+    .gp-actions { margin-top: 18px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .gp-btn { display: inline-flex; align-items: center; gap: 10px; padding: 9px 18px; border-radius: 12px; background: #0d1016; border: 1px solid #414755; color: #ffffff; font-weight: 700; font-size: 0.98rem; line-height: 1.15; text-decoration: none; transition: border-color .2s, transform .15s; }
+    .gp-btn:hover { text-decoration: none; border-color: #9aa3b5; transform: translateY(-1px); color: #fff; }
+    .gp-btn svg { width: 24px; height: 24px; flex: 0 0 auto; fill: currentColor; }
+    .gp-btn > span { display: block; text-align: left; }
+    .gp-btn small { display: block; font-size: 0.63rem; font-weight: 600; letter-spacing: .09em; opacity: .7; }
+    /* Makale bolumu */
+    .sg-arts { margin: 20px 0; border: 1px solid rgba(255,255,255,0.12); border-radius: 20px; padding: 26px; background: rgba(255,255,255,0.03); }
+    .sg-arts h2 { font-size: 1.4rem; margin-bottom: 6px; }
+    .sg-arts > p { opacity: .78; margin-bottom: 16px; font-size: 0.95rem; }
+    .sg-arts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+    .sg-art { display: block; border: 1px solid rgba(255,255,255,0.13); border-radius: 14px; overflow: hidden; background: rgba(0,0,0,0.28); color: inherit; text-decoration: none; transition: border-color .2s, transform .2s; }
+    .sg-art:hover { text-decoration: none; transform: translateY(-3px); border-color: rgba(255,255,255,0.38); }
+    .sg-art img { width: 100%; height: auto; aspect-ratio: 1200 / 630; display: block; }
+    .sg-art-body { padding: 14px 16px 16px; }
+    .sg-art-body h3 { font-size: 1rem; line-height: 1.4; margin-bottom: 6px; }
+    .sg-art-body p { font-size: 0.86rem; opacity: .72; margin: 0; }
+    .sg-arts-all { display: inline-block; margin-top: 14px; font-weight: 700; font-size: 0.9rem; }
+  </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"HomeParty","applicationCategory":"GameApplication","operatingSystem":"Android","description":"HomeParty: 30+ Party- und Denkspiele in einer App. Tabu, Pantomime, Wer bin ich, Tombola, Quiz und mehr.","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"downloadUrl":"https://play.google.com/store/apps/details?id=com.soge.HomeParty","inLanguage":"de"}</script>
+<meta content="de_DE" property="og:locale"/></head>
+<body>
+<nav class="topnav">
+<div class="wrap topnav-inner nav-inner">
+<a data-i18n="nav_home" href="/de/">← Sogepps Startseite</a>
+<div class="topnav-links nav-links">
+<a data-i18n="nav_games" href="#oyunlar">Spiele</a>
+<a data-i18n="nav_how" href="#nasil-oynanir">Spielanleitung</a>
+<a data-i18n="nav_privacy" href="privacy-policy.html">Datenschutzerklärung</a>
+<a href="mailto:sogepps@gmail.com">sogepps@gmail.com</a>
+</div>
+</div>
+</nav>
+<main class="wrap">
+<section class="hero">
+<div class="hero-icon"><img alt="HomeParty uygulama simgesi" decoding="async" height="132" src="/homeparty/img/icon.webp" width="132"/></div>
+<div>
+<h1 data-i18n-html="hero_title">HomeParty<br/>Partyspiele für Freunde zu Hause</h1>
+<p class="lead" data-i18n="hero_lead">HomeParty ist eine mobile Party-App mit über 30 Spielen für Freundetreffen, Hauspartys, Geburtstage und Teamspiele.</p>
+<div class="hero-tags">
+<span class="hero-tag" data-i18n="tag_1">30+ Spiele</span>
+<span class="hero-tag" data-i18n="tag_2">2-16 Spieler</span>
+<span class="hero-tag" data-i18n="tag_3">Team- und Einzelspiele</span>
+<span class="hero-tag" data-i18n="tag_4">Spielerlebnis zum Herumreichen</span>
+</div>
+<div class="gp-actions">
+<a class="gp-btn" href="https://play.google.com/store/apps/details?id=com.soge.HomeParty" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"></path></svg>
+<span><small>ANDROID</small><b data-i18n="btn_google_play">Jetzt bei Google Play</b></span>
+</a>
+</div>
+</div>
+</section>
+<section class="section" id="oyunlar">
+<h2 data-i18n="games_title">Partyspiele</h2>
+<p data-i18n="games_desc">Team, Solo, laut oder leise — Partyspiele für jede Stimmung.</p>
+<div class="game-cards">
+<figure class="game-card"><img alt="HomeParty Eğlenceli Seri" decoding="async" height="270" loading="lazy" src="/homeparty/img/funSeries.webp" width="480"/><figcaption><h3 data-i18n="g_funSeries_t">Spaß-Serie</h3><p data-i18n="g_funSeries_d">Ein Party-Marathon mit 7 Runden: Abstimmen, Zeichnen, Wortbombe, Tabu, Wahrheit oder Pflicht, Stilles Wort und Wer bin ich.</p></figcaption></figure>
+<figure class="game-card"><img alt="HomeParty Sessiz Kelime" decoding="async" height="270" loading="lazy" src="/homeparty/img/silentWord.webp" width="480"/><figcaption><h3 data-i18n="g_silentWord_t">Stilles Wort</h3><p data-i18n="g_silentWord_d">Stelle Wörter pantomimisch dar, ohne zu sprechen, und lass dein Team raten.</p></figcaption></figure>
+<figure class="game-card"><img alt="HomeParty Sessiz Sinema" decoding="async" height="270" loading="lazy" src="/homeparty/img/silentCinema.webp" width="480"/><figcaption><h3 data-i18n="g_silentCinema_t">Stilles Kino</h3><p data-i18n="g_silentCinema_d">Film-Scharade-Modus für Gruppenpartys.</p></figcaption></figure>
+<figure class="game-card"><img alt="HomeParty Ben Kimim" decoding="async" height="270" loading="lazy" src="/homeparty/img/whoAmI.webp" width="480"/><figcaption><h3 data-i18n="g_whoAmI_t">Wer bin ich?</h3><p data-i18n="g_whoAmI_d">Stelle Ja/Nein-Fragen, um deine geheime Identität herauszufinden.</p></figcaption></figure>
+<figure class="game-card"><img alt="HomeParty Hikaye Yaratma" decoding="async" height="270" loading="lazy" src="/homeparty/img/storyCreation.png" width="480"/><figcaption><h3 data-i18n="g_storyCreation_t">Geschichte Erstellen</h3><p data-i18n="g_storyCreation_d">Erstellt zusammen eine lustige Geschichte, ein Satz nach dem anderen!</p></figcaption></figure>
+<figure class="game-card"><img alt="HomeParty Çizim Zinciri" decoding="async" height="270" loading="lazy" src="/homeparty/img/drawChain.webp" width="480"/><figcaption><h3 data-i18n="g_drawChain_t">Zeichenkette</h3><p data-i18n="g_drawChain_d">Schreiben, zeichnen, raten: Enthülle am Ende die lustigste Kette.</p></figcaption></figure>
+<figure class="game-card"><img alt="HomeParty Patlayan Kelime" decoding="async" height="270" loading="lazy" src="/homeparty/img/explodingWord.webp" width="480"/><figcaption><h3 data-i18n="g_explodingWord_t">Explodierendes Wort</h3><p data-i18n="g_explodingWord_d">Löse und gib weiter, bevor der versteckte Timer explodiert.</p></figcaption></figure>
+<figure class="game-card"><img alt="HomeParty Şans Çarkı" decoding="async" height="270" loading="lazy" src="/homeparty/img/wheelChallenge.webp" width="480"/><figcaption><h3 data-i18n="g_wheelChallenge_t">Glücksrad-Challenge</h3><p data-i18n="g_wheelChallenge_d">Dreh am Glücksrad und meistere die Challenge.</p></figcaption></figure>
+<figure class="game-card"><img alt="HomeParty Tabu" decoding="async" height="270" loading="lazy" src="/homeparty/img/taboo.webp" width="480"/><figcaption><h3 data-i18n="g_taboo_t">Tabu</h3><p data-i18n="g_taboo_d">Erkläre das Hauptwort, ohne die verbotenen Wörter zu benutzen.</p></figcaption></figure>
+<figure class="game-card"><img alt="HomeParty Doğru mu Yalan mı" decoding="async" height="270" loading="lazy" src="/homeparty/img/trueOrFalse.webp" width="480"/><figcaption><h3 data-i18n="g_trueOrFalse_t">Wahr oder Falsch</h3><p data-i18n="g_trueOrFalse_d">Schreibe eine Aussage und lass alle raten, ob sie wahr ist.</p></figcaption></figure>
+<figure class="game-card"><img alt="HomeParty Kim Daha" decoding="async" height="270" loading="lazy" src="/homeparty/img/whosMore.webp" width="480"/><figcaption><h3 data-i18n="g_whosMore_t">Wer ist es eher?</h3><p data-i18n="g_whosMore_d">Stimme ab, wer in deiner Gruppe am besten zur Aussage passt.</p></figcaption></figure>
+<figure class="game-card"><img alt="HomeParty Sıcak Koltuk" decoding="async" height="270" loading="lazy" src="/homeparty/img/hotSeat.webp" width="480"/><figcaption><h3 data-i18n="g_hotSeat_t">Heißer Stuhl</h3><p data-i18n="g_hotSeat_d">Beantworte Blitzfragen und lass dich von den anderen bewerten.</p></figcaption></figure>
+<figure class="game-card"><img alt="HomeParty Ajan Kim" decoding="async" height="270" loading="lazy" src="/homeparty/img/spyfall.webp" width="480"/><figcaption><h3 data-i18n="g_spyfall_t">Wer ist der Agent?</h3><p data-i18n="g_spyfall_d">Die meisten Spieler kennen den Ort, ein geheimer Agent nicht.</p></figcaption></figure>
+<figure class="game-card"><img alt="HomeParty En Çok Kim" decoding="async" height="270" loading="lazy" src="/homeparty/img/mostLikely.webp" width="480"/><figcaption><h3 data-i18n="g_mostLikely_t">Höchstwahrscheinlich</h3><p data-i18n="g_mostLikely_d">Klassische „Wer würde eher …“-Partyfragen.</p></figcaption></figure>
+</div>
+<h2 data-i18n="mini_party_title" style="margin-top:28px">Party-Minispiele</h2>
+<p class="section-sub" data-i18n="mini_party_desc">Mobile Versionen klassischer Partyspiele — schnelle Runden, einfache Regeln.</p>
+<div class="mini-cards">
+<div class="mini-card"><span class="mc-icon">🏙️</span><div><h3 data-i18n="g_namecity_t">Stadt Land Fluss</h3><p data-i18n="g_namecity_d">Ein Buchstabe wird gezogen, die Zeit läuft! Sechs Kategorien — einzigartig zä...</p></div></div>
+<div class="mini-card"><span class="mc-icon">🎱</span><div><h3 data-i18n="g_tombala_t">Tombala</h3><p data-i18n="g_tombala_d">Der Silvester-Klassiker! Beutel schütteln, Reihe abräumen.</p></div></div>
+<div class="mini-card"><span class="mc-icon">🧠</span><div><h3 data-i18n="g_trivia_t">Quizrunde</h3><p data-i18n="g_trivia_d">Vier Optionen, zwanzig Sekunden. Wissen und schnell sein!</p></div></div>
+<div class="mini-card"><span class="mc-icon">🔗</span><div><h3 data-i18n="g_wordchain_t">Wortkette</h3><p data-i18n="g_wordchain_d">Letzter Buchstabe, neues Wort — wer reißt, ist raus!</p></div></div>
+<div class="mini-card"><span class="mc-icon">💀</span><div><h3 data-i18n="g_hangman_t">Galgenmännchen</h3><p data-i18n="g_hangman_d">Wähle Buchstabe für Buchstabe und rette den armen Kerl!</p></div></div>
+</div>
+<h2 data-i18n="mini_mind_title" style="margin-top:28px">Denk- &amp; Knobelspiele</h2>
+<p class="section-sub" data-i18n="mini_mind_desc">Strategie-, Gedächtnis- und Reflexspiele — Duelle und Gruppenwettbewerbe.</p>
+<div class="mini-cards">
+<div class="mini-card"><span class="mc-icon">⚫</span><div><h3 data-i18n="g_ninemills_t">Mühle</h3><p data-i18n="g_ninemills_d">Mühle schließen, Stein kassieren!</p></div></div>
+<div class="mini-card"><span class="mc-icon">🔤</span><div><h3 data-i18n="g_sos_t">SOS</h3><p data-i18n="g_sos_d">Der Papierklassiker! Buchstaben legen, SOS kassieren.</p></div></div>
+<div class="mini-card"><span class="mc-icon">❌</span><div><h3 data-i18n="g_ultimatexox_t">Ultimate XOX</h3><p data-i18n="g_ultimatexox_d">Neun Felder, ein Match. Dein Zug lenkt den Gegner!</p></div></div>
+<div class="mini-card"><span class="mc-icon">📦</span><div><h3 data-i18n="g_dotsboxes_t">Käsekästchen</h3><p data-i18n="g_dotsboxes_d">Linie ziehen, Kästchen kapern, Feld erobern!</p></div></div>
+<div class="mini-card"><span class="mc-icon">🃏</span><div><h3 data-i18n="g_memory_t">Memory-Karten</h3><p data-i18n="g_memory_d">Karten umdrehen, Paare schnappen, am Zug bleiben!</p></div></div>
+<div class="mini-card"><span class="mc-icon">🌈</span><div><h3 data-i18n="g_colorchain_t">Farbkette</h3><p data-i18n="g_colorchain_d">Kette merken, Farbe anhängen, den Nächsten reinlegen!</p></div></div>
+<div class="mini-card"><span class="mc-icon">⚡</span><div><h3 data-i18n="g_reflex_t">Reflex-Duell</h3><p data-i18n="g_reflex_d">Handy in die Mitte – der schnellste Daumen bei Grün gewinnt!</p></div></div>
+<div class="mini-card"><span class="mc-icon">🎨</span><div><h3 data-i18n="g_colortrap_t">Farbfalle</h3><p data-i18n="g_colortrap_d">Farben, die deine Augen täuschen! Wie viele schaffst du in 30 Sekunden?</p></div></div>
+<div class="mini-card"><span class="mc-icon">🔍</span><div><h3 data-i18n="g_oddone_t">Anderes Kästchen</h3><p data-i18n="g_oddone_d">Augen auf! Finde in 45 Sekunden das eine Kästchen mit dem anderen Ton.</p></div></div>
+<div class="mini-card"><span class="mc-icon">🧩</span><div><h3 data-i18n="g_slidepuzzle_t">Schiebepuzzle</h3><p data-i18n="g_slidepuzzle_d">Gleiches Puzzle, eine Stoppuhr: Wer am schnellsten löst, gewinnt!</p></div></div>
+<div class="mini-card"><span class="mc-icon">🔐</span><div><h3 data-i18n="g_codebreaker_t">Code Knacken</h3><p data-i18n="g_codebreaker_d">Knacke den Geheimcode mit so wenig Versuchen wie möglich!</p></div></div>
+<div class="mini-card"><span class="mc-icon">🔢</span><div><h3 data-i18n="g_numseq_t">Zahlenreihe</h3><p data-i18n="g_numseq_d">Knack das Muster und finde die nächste Zahl!</p></div></div>
+<div class="mini-card"><span class="mc-icon">➕</span><div><h3 data-i18n="g_mathduel_t">Mathe-Duell</h3><p data-i18n="g_mathduel_d">Eine Frage, zwei Spieler – der erste richtige Tipp punktet!</p></div></div>
+</div>
+</section>
+<section class="section" id="nasil-oynanir">
+<h2 data-i18n="how_title">So spielst du HomeParty</h2>
+<p data-i18n="how_desc">Einfacher Ablauf von der Einrichtung bis zur Endwertung.</p>
+<div class="grid">
+<div class="feature"><h3 data-i18n="how_1_t">1) Spieler hinzufügen</h3><p data-i18n="how_1_d">Lege die Spielerzahl passend zum gewählten Spielmodus fest.</p></div>
+<div class="feature"><h3 data-i18n="how_2_t">2) Spiel auswählen</h3><p data-i18n="how_2_d">Wähle den Modus, der am besten zur Stimmung deiner Gruppe passt.</p></div>
+<div class="feature"><h3 data-i18n="how_3_t">3) Handy weitergeben</h3><p data-i18n="how_3_d">Die meisten Modi sind für einfache Runden von Hand zu Hand gemacht.</p></div>
+<div class="feature"><h3 data-i18n="how_4_t">4) Abschließen und werten</h3><p data-i18n="how_4_d">Sieh Ergebnisse, Stimmen, Punkte und Gewinner automatisch.</p></div>
+</div>
+</section>
+<section class="section sg-arts" id="makaleler">
+<h2 data-i18n="arts_title">Artikel</h2>
+<p data-i18n="arts_desc">Anleitungen und Spielideen rund um HomeParty.</p>
+<div class="sg-arts-grid">
+<a class="sg-art" href="/makale/de/evde-arkadaslarla-oynanacak-oyunlar.html">
+<img alt="30+ lustige Spiele für zu Hause mit Freunden" height="630" loading="lazy" src="/makale/img/de/evde-arkadaslarla-oynanacak-oyunlar.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>30+ lustige Spiele für zu Hause mit Freunden</h3>
+<p>Über 30 Party- und Denkspiele für zu Hause mit Freunden: Tabu, Stilles Wort, Wer ist der Agent, Bingo, Quiz, Mühle und mehr. Alles in einer App.</p>
+</div>
+</a>
+<a class="sg-art" href="/makale/de/kalabalik-grup-oyunlari.html">
+<img alt="Spiele für große Gruppen: Mit 8+ Personen ohne Langeweile spielen" height="630" loading="lazy" src="/makale/img/de/kalabalik-grup-oyunlari.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>Spiele für große Gruppen: Mit 8+ Personen ohne Langeweile spielen</h3>
+<p>Artikel</p>
+</div>
+</a>
+<a class="sg-art" href="/makale/de/az-kisiyle-evde-oynanacak-oyunlar.html">
+<img alt="Nicht direkt, aber mit rotierenden Rollen gelöst: jede Runde erklärt einer, einer rät, einer leitet und die Rollen wechseln." height="630" loading="lazy" src="/makale/img/de/az-kisiyle-evde-oynanacak-oyunlar.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>Nicht direkt, aber mit rotierenden Rollen gelöst: jede Runde erklärt einer, einer rät, einer leitet und die Rollen wechseln.</h3>
+<p>Nur wenige von euch? Spiele für 2er, 3er und 4er Gruppen, die kein Material benötigen und keine Brettspiele…</p>
+</div>
+</a>
+</div>
+<a class="sg-arts-all" data-i18n="arts_all" href="/makale/de/">Alle Artikel →</a>
+</section>
+<section class="cta">
+<h2 data-i18n="cta_title">Starte die Party mit HomeParty</h2>
+<p data-i18n="cta_desc">30+ Party- und Denkspiele in einer App. Handy weiterreichen, der Abend kann beginnen.</p>
+<div class="cta-links">
+<a class="gp-btn" href="https://play.google.com/store/apps/details?id=com.soge.HomeParty" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"></path></svg>
+<span><small>ANDROID</small><b data-i18n="btn_google_play">Jetzt bei Google Play</b></span>
+</a>
+<a class="btn" data-i18n="btn_home" href="/de/">Zurück zur Sogepps-Startseite</a>
+<a class="btn secondary" data-i18n="btn_contact" href="mailto:sogepps@gmail.com">Kontakt</a>
+</div>
+</section>
+</main>
+
+
+
+<script defer="" src="/js/i18n.js?v=ac9834aa"></script>
+</body>
+</html>

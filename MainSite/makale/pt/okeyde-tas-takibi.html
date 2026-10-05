@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rastreio de Peças no Okey: Método de Contagem de Peças Restantes | Sogepps</title>
+<meta content="Ao jogar Okey, rastreie os azulejos jogados para ver quais séries ainda são possíveis: método de contagem simples, em quais azulejos prestar atenção e momentos de decisão." name="description"/>
+<meta content="táticas de okey, contagem de peças, dicas de okey, peças restantes, estratégia de okey" name="keywords"/>
+<link href="https://sogepps.tr/makale/pt/okeyde-tas-takibi.html" rel="canonical"/><link href="https://sogepps.tr/makale/okeyde-tas-takibi.html" hreflang="tr" rel="alternate"/><link href="https://sogepps.tr/makale/en/okeyde-tas-takibi.html" hreflang="en" rel="alternate"/><link href="https://sogepps.tr/makale/de/okeyde-tas-takibi.html" hreflang="de" rel="alternate"/><link href="https://sogepps.tr/makale/fr/okeyde-tas-takibi.html" hreflang="fr" rel="alternate"/><link href="https://sogepps.tr/makale/es/okeyde-tas-takibi.html" hreflang="es" rel="alternate"/><link href="https://sogepps.tr/makale/it/okeyde-tas-takibi.html" hreflang="it" rel="alternate"/><link href="https://sogepps.tr/makale/pt/okeyde-tas-takibi.html" hreflang="pt" rel="alternate"/><link href="https://sogepps.tr/makale/nl/okeyde-tas-takibi.html" hreflang="nl" rel="alternate"/><link href="https://sogepps.tr/makale/ru/okeyde-tas-takibi.html" hreflang="ru" rel="alternate"/><link href="https://sogepps.tr/makale/ja/okeyde-tas-takibi.html" hreflang="ja" rel="alternate"/><link href="https://sogepps.tr/makale/ko/okeyde-tas-takibi.html" hreflang="ko" rel="alternate"/><link href="https://sogepps.tr/makale/ar/okeyde-tas-takibi.html" hreflang="ar" rel="alternate"/><link href="https://sogepps.tr/makale/hi/okeyde-tas-takibi.html" hreflang="hi" rel="alternate"/><link href="https://sogepps.tr/makale/id/okeyde-tas-takibi.html" hreflang="id" rel="alternate"/><link href="https://sogepps.tr/makale/pl/okeyde-tas-takibi.html" hreflang="pl" rel="alternate"/><link href="https://sogepps.tr/makale/okeyde-tas-takibi.html" hreflang="x-default" rel="alternate"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<meta content="article" property="og:type"/>
+<meta content="Sogepps" property="og:site_name"/>
+<meta content="pt_PT" property="og:locale"/>
+<meta content="Metin2 Okey" property="og:title"/>
+<meta content="Ao jogar Okey, rastreie os azulejos jogados para ver quais séries ainda são possíveis: método de contagem simples, em quais azulejos prestar atenção e momentos de decisão." property="og:description"/>
+<meta content="https://sogepps.tr/makale/pt/okeyde-tas-takibi.html" property="og:url"/>
+<meta content="https://sogepps.tr/img/metin2okey-icon.png" property="og:image"/>
+<meta content="2026-08-27" property="article:published_time"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Metin2 Okey" name="twitter:title"/>
+<meta content="Ao jogar Okey, rastreie os azulejos jogados para ver quais séries ainda são possíveis: método de contagem simples, em quais azulejos prestar atenção e momentos de decisão." name="twitter:description"/>
+<meta content="https://sogepps.tr/img/metin2okey-icon.png" name="twitter:image"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root { --bg:#050608; --surface:#0f1218; --surface-2:#171c26; --border:#1f2937; --text:#f0f4f8; --muted:#9ca3af; --accent:#6366f1; --accent-light:#818cf8; --glow:rgba(99,102,241,0.12); --font:'Inter', system-ui, -apple-system, sans-serif; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.7; }
+    a { color: var(--accent-light); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(5,6,8,0.86); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: 1000px; margin: 0 auto; padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .nav-brand { display: flex; align-items: center; gap: 10px; color: var(--text); font-weight: 800; font-size: 1.1rem; letter-spacing: -0.02em; text-decoration: none; }
+    .nav-logo { width: 32px; height: 32px; border-radius: 10px; background: linear-gradient(135deg, var(--accent), #a855f7); display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 800; color: #fff; }
+    .nav-links { display: flex; gap: 4px; list-style: none; align-items: center; }
+    .nav-links a { color: var(--muted); font-size: 0.85rem; font-weight: 500; padding: 8px 12px; border-radius: 8px; text-decoration: none; }
+    .nav-links a:hover, .nav-links a.active { color: var(--text); background: var(--glow); }
+    .wrap { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+    .crumb { font-size: 0.8rem; color: var(--muted); padding: 26px 0 0; }
+    .crumb a { color: var(--muted); }
+    .crumb span { margin: 0 6px; opacity: .5; }
+    footer { border-top: 1px solid var(--border); margin-top: 56px; padding: 40px 24px; text-align: center; color: var(--muted); font-size: 0.85rem; }
+    footer a { color: var(--accent-light); }
+    article { max-width: 760px; margin: 0 auto; padding: 8px 0 0; }
+    .post-head h1 { font-size: clamp(1.85rem, 4.2vw, 2.6rem); font-weight: 800; line-height: 1.18; letter-spacing: -0.02em; margin: 14px 0 12px; }
+    .post-meta { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; font-size: 0.82rem; color: var(--muted); margin-bottom: 22px; }
+    .post-meta .pill { background: var(--glow); color: var(--accent-light); border: 1px solid rgba(99,102,241,0.2); border-radius: 999px; padding: 4px 12px; font-weight: 600; }
+    .banner { width: 100%; height: auto; aspect-ratio: 1200 / 630; border-radius: 18px; border: 1px solid var(--border); display: block; margin-bottom: 26px; }
+    .lead { font-size: 1.1rem; color: #d6dde6; margin-bottom: 8px; }
+    article h2 { font-size: 1.35rem; font-weight: 700; letter-spacing: -0.01em; margin: 34px 0 12px; }
+    article p { color: #c7ced8; margin-bottom: 14px; }
+    article ul { color: #c7ced8; margin: 0 0 16px 0; padding-left: 1.3rem; }
+    article li { margin-bottom: 8px; }
+    article strong { color: var(--text); }
+    figure { margin: 22px 0; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; background: var(--surface); }
+    figure img { width: 100%; height: auto; display: block; }
+    figcaption { padding: 12px 16px; font-size: 0.83rem; color: var(--muted); }
+    .notice { border: 1px solid #4b3a1a; background: rgba(234,179,8,0.08); color: #e8d9a8; border-radius: 14px; padding: 12px 16px; font-size: 0.86rem; margin-bottom: 22px; }
+    .faq { margin-top: 38px; border-top: 1px solid var(--border); padding-top: 26px; }
+    .faq h2 { margin-top: 0; }
+    details { border: 1px solid var(--border); border-radius: 12px; padding: 12px 16px; margin-bottom: 10px; background: var(--surface); }
+    summary { cursor: pointer; font-weight: 600; }
+    details p { margin: 10px 0 0; }
+    .appcard { margin: 38px 0 10px; display: flex; gap: 18px; align-items: center; flex-wrap: wrap; border: 1px solid var(--border); border-radius: 18px; padding: 22px; background: linear-gradient(150deg, var(--surface), var(--surface-2)); }
+    .appcard img.ico { width: 68px; height: 68px; border-radius: 18px; object-fit: cover; }
+    .appcard .txt { flex: 1 1 260px; }
+    .appcard h3 { font-size: 1.15rem; margin-bottom: 4px; }
+    .appcard p { color: var(--muted); font-size: 0.9rem; margin: 0 0 12px; }
+    .appcard .links { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+    .appcard .more { font-size: 0.88rem; font-weight: 600; }
+    .related { margin-top: 44px; }
+    .related h2 { font-size: 1.2rem; margin-bottom: 14px; }
+    .rel-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+    .rel-card { display: block; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; background: var(--surface); color: inherit; text-decoration: none; }
+    .rel-card:hover { border-color: var(--accent); text-decoration: none; }
+    .rel-card img { width: 100%; height: auto; display: block; }
+    .rel-card div { padding: 12px 14px; }
+    .rel-app { display: block; font-size: 0.72rem; text-transform: uppercase; letter-spacing: .06em; color: var(--accent-light); margin-bottom: 4px; }
+    .rel-card strong { font-size: 0.93rem; font-weight: 600; line-height: 1.4; }
+    .gp-btn { display: inline-flex; align-items: center; gap: 10px; padding: 9px 18px; border-radius: 12px; background: #0d1016; border: 1px solid #414755; color: #fff; font-weight: 700; font-size: 0.95rem; line-height: 1.15; text-decoration: none; transition: border-color .2s, transform .15s; }
+    .gp-btn:hover { text-decoration: none; border-color: #9aa3b5; transform: translateY(-1px); color: #fff; }
+    .gp-btn svg { width: 22px; height: 22px; flex: 0 0 auto; fill: currentColor; }
+    .gp-btn > span { display: block; text-align: left; }
+    .gp-btn small { display: block; font-size: 0.62rem; font-weight: 600; letter-spacing: .09em; opacity: .7; }
+    .gp-btn-soon { opacity: .5; cursor: default; }
+    .gp-btn-soon:hover { transform: none; border-color: #414755; }
+  </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Metin2 Okey","description":"Ao jogar Okey, rastreie os azulejos jogados para ver quais séries ainda são possíveis: método de contagem simples, em quais azulejos prestar atenção e momentos de decisão.","image":["https://sogepps.tr/img/metin2okey-icon.png","https://sogepps.tr/makale/img/pt/okeyde-tas-takibi.svg"],"datePublished":"2026-08-27","dateModified":"2026-08-27","inLanguage":"pt","mainEntityOfPage":{"@type":"WebPage","@id":"https://sogepps.tr/makale/pt/okeyde-tas-takibi.html","inLanguage":"pt"},"author":{"@type":"Organization","name":"Sogepps","url":"https://sogepps.tr/pt/"},"publisher":{"@type":"Organization","name":"Sogepps","url":"https://sogepps.tr/pt/","logo":{"@type":"ImageObject","url":"https://sogepps.tr/img/metin2okey-icon.png"}}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Página inicial","item":"https://sogepps.tr/pt/"},{"@type":"ListItem","position":2,"name":"Artigos","item":"https://sogepps.tr/makale/pt/"},{"@type":"ListItem","position":3,"name":"Metin2 Okey","item":"https://sogepps.tr/makale/pt/okeyde-tas-takibi.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"É obrigatório contar peças no Okey?","acceptedAnswer":{"@type":"Answer","text":"Não é obrigatório, mas faz diferença. Apenas acompanhar as 3-4 peças que espera evita que insista em grupos que não vão acontecer."}},{"@type":"Question","name":"Que peças são mais seguras de descartar?","acceptedAnswer":{"@type":"Answer","text":"Os números das pontas (1 e 13) entram em menos combinações, por isso são geralmente mais seguros. Os números do meio servem tanto a si como ao seu adversário."}},{"@type":"Question","name":"Quando deve usar a peça okey?","acceptedAnswer":{"@type":"Answer","text":"Tão tarde quanto possível. Usá-la cedo termina a flexibilidade da sua mão; guardá-la para preencher a última peça em falta é mais eficiente."}}]}]}</script>
+</head>
+<body>
+<nav>
+<div class="nav-inner">
+<a class="nav-brand" href="/pt/"><span class="nav-logo">S</span> Sogepps</a>
+<ul class="nav-links">
+<li><a href="/pt/#apps">Aplicações</a></li>
+<li><a class="active" href="/makale/pt/">Artigos</a></li>
+<li><a href="mailto:sogepps@gmail.com">Contacto</a></li>
+</ul>
+</div>
+</nav>
+<div class="wrap">
+<div class="crumb"><a href="/pt/">Página inicial</a><span>›</span><a href="/makale/pt/">Artigos</a><span>›</span>Metin2 Okey</div>
+<article>
+<div class="post-head">
+<h1>Metin2 Okey</h1>
+<div class="post-meta">
+<a class="pill" href="/metin2okey/pt/">Metin2 Okey</a>
+<span>27 de agosto de 2026</span><span>·</span><span>2 min de leitura</span>
+</div>
+</div>
+<img alt="Metin2 Okey" class="banner" height="630" src="/makale/img/pt/okeyde-tas-takibi.svg" width="1200"/>
+<p class="lead">O que separa um bom jogador de Okey da sorte não é a sorte; é informação. Cada peça descartada na mesa é informação, e o jogador que acompanha esta informação vê quais grupos ainda são possíveis antes de outros.</p>
+<h2>Porque é que é necessário acompanhar?</h2>
+<p>Há duas de cada peça no baralho. Se ambas as peças que está à espera já foram descartadas, esse grupo não pode ser feito — e quanto mais cedo tomar essa decisão, menos peças desperdiçará.</p>
+<p>Na prática, a maioria das mãos perde-se por "esperar por um grupo que não vai acontecer". O rastreio evita exatamente essa perda.</p>
+<h2>Método simples de contagem</h2>
+<ul>
+<li><strong>Apenas conte as peças que está à espera.</strong> Tentar memorizar toda a mesa é desnecessário; concentre-se nas 3-4 peças que faltam à sua mão.</li>
+<li><strong>Conte até dois.</strong> Há dois de cada peça; se viu uma, tem uma oportunidade restante, se viu ambas, tem de mudar de plano.</li>
+<li><strong>Acompanhe o grupo de cores.</strong> Se está a fazer um grupo, é suficiente acompanhar qual das quatro cores do mesmo número foi descartada.</li>
+<li><strong>Note as pontas.</strong> Enquanto espera por uma sequência, se uma das duas extremidades foi fechada, as suas hipóteses reduzem para metade.</li>
+</ul>
+<h2>Que peças são mais valiosas?</h2>
+<p>Os números do meio (6, 7, 8) entram em mais combinações tanto para sequência como para grupo; os números das pontas (1, 13) são menos flexíveis. Se tem ambos, em igualdade de circunstâncias, descartar o número da ponta é geralmente menos arriscado.</p>
+<p>As peças okey e okey falsas são as últimas que devem ser descartadas; toda a flexibilidade está nelas.</p>
+<h2>Momentos de decisão: quando mudar de plano?</h2>
+<ul>
+<li>Se ambas as peças que espera foram descartadas, mude para um grupo alternativo imediatamente.</li>
+<li>Se tem mais de 3 peças em falta na sua mão e o baralho está a meio, apunte a terminar com menos penalidade do que terminar.</li>
+<li>Se o adversário começar a recolher peças de uma cor, não descarte as extremidades dessa cor.</li>
+<li>Se a peça okey chegou à sua mão tarde, use-a para preencher espaços, não como a peça final.</li>
+</ul>
+<h2>Ler o que o adversário está a recolher</h2>
+<p>As peças que os adversários não recolheram são tão informativas como as que descartaram. Uma peça que não foi recolhida do centro mostra que o jogador não precisa dessa cor ou número. Passadas algumas voltas, esta informação determina qual peça pode descartar com segurança.</p>
+<p>Da mesma forma, um jogador que de repente desacelera normalmente está à espera apenas de uma peça; nesta fase, não descarte peças arriscadas.</p>
+<h2>Delegar o rastreio à aplicação</h2>
+<p>Metin2 Okey faz este rastreio por si, mostrando as peças descartadas e as combinações fortes restantes no ecrã. Pode experimentar na web ou descarregar a versão móvel do Google Play.</p>
+<section class="faq">
+<h2>Perguntas Frequentes</h2>
+<details>
+<summary>É obrigatório contar peças no Okey?</summary>
+<p>Não é obrigatório, mas faz diferença. Apenas acompanhar as 3-4 peças que espera evita que insista em grupos que não vão acontecer.</p>
+</details>
+<details>
+<summary>Que peças são mais seguras de descartar?</summary>
+<p>Os números das pontas (1 e 13) entram em menos combinações, por isso são geralmente mais seguros. Os números do meio servem tanto a si como ao seu adversário.</p>
+</details>
+<details>
+<summary>Quando deve usar a peça okey?</summary>
+<p>Tão tarde quanto possível. Usá-la cedo termina a flexibilidade da sua mão; guardá-la para preencher a última peça em falta é mais eficiente.</p>
+</details>
+</section>
+<div class="appcard">
+<img alt="Como Se Joga Okey? Regras de Peças, Grupos e Terminar" class="ico" height="68" loading="lazy" src="/img/metin2okey-icon.png" width="68"/>
+<div class="txt">
+<h3>Metin2 Okey</h3>
+<p>ANDROID</p>
+<div class="links">
+<a class="gp-btn" href="https://play.google.com/store/apps/details?id=com.Soge.Metin2Okey" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"></path></svg><span><small>ANDROID</small><b>Disponível no Google Play</b></span></a>
+<a class="more" href="/metin2okey/pt/">Página da aplicação →</a>
+</div>
+</div>
+</div>
+<section class="related">
+<h2>Artigos Relacionados</h2>
+<div class="rel-grid">
+<a class="rel-card" href="/makale/pt/okey-nasil-oynanir-kurallar.html">
+<img alt="" loading="lazy" src="/makale/img/pt/okey-nasil-oynanir-kurallar.svg"/>
+<div><span class="rel-app">Metin2 Okey</span><strong>Quantas peças há no Okey?</strong></div>
+</a>
+<a class="rel-card" href="/makale/pt/okey-101-nasil-oynanir.html">
+<img alt="" loading="lazy" src="/makale/img/pt/okey-101-nasil-oynanir.svg"/>
+<div><span class="rel-app">Metin2 Okey</span><strong>HomeParty</strong></div>
+</a>
+<a class="rel-card" href="/makale/pt/evde-arkadaslarla-oynanacak-oyunlar.html">
+<img alt="" loading="lazy" src="/makale/img/pt/evde-arkadaslarla-oynanacak-oyunlar.svg"/>
+<div><span class="rel-app">HomeParty</span><strong>30+ jogos divertidos para jogar em casa com amigos</strong></div>
+</a>
+</div>
+</section>
+</article>
+</div>
+<footer>
+<div>© 2026 Sogepps · <a href="/pt/">Página inicial</a> · <a href="/makale/pt/">Artigos</a> · <a href="mailto:sogepps@gmail.com">sogepps@gmail.com</a></div>
+</footer>
+
+<script defer="" src="/js/i18n.js?v=ac9834aa"></script>
+</body>
+</html>

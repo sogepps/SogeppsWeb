@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" role="img" aria-label="Tavla hareket yönü">
+<rect width="760" height="300" rx="16" fill="#0f1218"/>
+<rect x="30" y="50" width="700" height="200" rx="8" fill="#1e2636" stroke="#3a4a6a" stroke-width="1.5"/>
+<rect x="365" y="50" width="30" height="200" fill="#2a3448"/>
+<!-- Top points -->
+<g opacity="0.4">
+<polygon points="50,58 80,58 65,140" fill="#c9a227"/><polygon points="100,58 130,58 115,140" fill="#4a5580"/><polygon points="150,58 180,58 165,140" fill="#c9a227"/><polygon points="200,58 230,58 215,140" fill="#4a5580"/><polygon points="250,58 280,58 265,140" fill="#c9a227"/><polygon points="300,58 330,58 315,140" fill="#4a5580"/>
+<polygon points="410,58 440,58 425,140" fill="#c9a227"/><polygon points="460,58 490,58 475,140" fill="#4a5580"/><polygon points="510,58 540,58 525,140" fill="#c9a227"/><polygon points="560,58 590,58 575,140" fill="#4a5580"/><polygon points="610,58 640,58 625,140" fill="#c9a227"/><polygon points="660,58 690,58 675,140" fill="#4a5580"/>
+</g>
+<!-- Bottom points -->
+<g opacity="0.4">
+<polygon points="50,242 80,242 65,160" fill="#4a5580"/><polygon points="100,242 130,242 115,160" fill="#c9a227"/><polygon points="150,242 180,242 165,160" fill="#4a5580"/><polygon points="200,242 230,242 215,160" fill="#c9a227"/><polygon points="250,242 280,242 265,160" fill="#c9a227"/><polygon points="300,242 330,242 315,160" fill="#4a5580"/>
+<polygon points="410,242 440,242 425,160" fill="#4a5580"/><polygon points="460,242 490,242 475,160" fill="#c9a227"/><polygon points="510,242 540,242 525,160" fill="#4a5580"/><polygon points="560,242 590,242 575,160" fill="#c9a227"/><polygon points="610,242 640,242 625,160" fill="#c9a227"/><polygon points="660,242 690,242 675,160" fill="#4a5580"/>
+</g>
+<!-- White movement arrows (24→1, counterclockwise) -->
+<defs><marker id="wArrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0,0 8,3 0,6" fill="#34d399"/></marker></defs>
+<!-- Top row: 24→19→13 (right to left) -->
+<line x1="660" y1="72" x2="440" y2="72" stroke="#34d399" stroke-width="2.5" marker-end="url(#wArrow)" opacity="0.8"/>
+<text x="550" y="65" font-family="Segoe UI,sans-serif" font-size="10" fill="#34d399" text-anchor="middle" font-weight="600">24 → 19</text>
+<line x1="320" y1="72" x2="80" y2="72" stroke="#34d399" stroke-width="2.5" marker-end="url(#wArrow)" opacity="0.8"/>
+<text x="200" y="65" font-family="Segoe UI,sans-serif" font-size="10" fill="#34d399" text-anchor="middle" font-weight="600">18 → 13</text>
+<!-- Down arrow at left side -->
+<line x1="55" y1="100" x2="55" y2="195" stroke="#34d399" stroke-width="2.5" marker-end="url(#wArrow)" opacity="0.8"/>
+<!-- Bottom row: 12→7→1 (left to right) -->
+<line x1="80" y1="228" x2="320" y2="228" stroke="#34d399" stroke-width="2.5" marker-end="url(#wArrow)" opacity="0.8"/>
+<text x="200" y="221" font-family="Segoe UI,sans-serif" font-size="10" fill="#34d399" text-anchor="middle" font-weight="600">12 → 7</text>
+<line x1="440" y1="228" x2="680" y2="228" stroke="#34d399" stroke-width="2.5" marker-end="url(#wArrow)" opacity="0.8"/>
+<text x="560" y="221" font-family="Segoe UI,sans-serif" font-size="10" fill="#34d399" text-anchor="middle" font-weight="600">6 → 1 (Ev)</text>
+<!-- EV label -->
+<rect x="645" y="244" width="60" height="20" rx="4" fill="rgba(52,211,153,0.2)" stroke="rgba(52,211,153,0.4)" stroke-width="1"/>
+<text x="675" y="258" font-family="Segoe UI,sans-serif" font-size="10" fill="#34d399" text-anchor="middle" font-weight="700">EV</text>
+<!-- Title -->
+<text x="380" y="30" font-family="Segoe UI,sans-serif" font-size="14" fill="#f0f4f8" text-anchor="middle" font-weight="700">Beyaz taşların hareket yönü</text>
+<!-- Point numbers -->
+<text x="675" y="48" font-family="Segoe UI,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">24</text>
+<text x="425" y="48" font-family="Segoe UI,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">19</text>
+<text x="315" y="48" font-family="Segoe UI,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">18</text>
+<text x="65" y="48" font-family="Segoe UI,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">13</text>
+<text x="65" y="264" font-family="Segoe UI,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">12</text>
+<text x="315" y="264" font-family="Segoe UI,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">7</text>
+<text x="425" y="264" font-family="Segoe UI,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">6</text>
+<text x="675" y="264" font-family="Segoe UI,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">1</text>
+</svg>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sessiz Kelime - Takımlı Tabu / Charades Oyunu | Sogepps</title>
+  <meta name="description" content="Sessiz Kelime ile iki takım halinde yarışın. Konuşmadan kelime anlatın, doğru/yanlış/pas ile puan toplayın. 20+ kategori, süre ve pas ayarları, Türkçe &amp; İngilizce." />
+  <meta name="keywords" content="Sessiz Kelime, sessiz kelime oyunu, tabu, charades, parti oyunu, takım oyunu, kelime anlatma, Sogepps" />
+  <link rel="canonical" href="https://sogepps.tr/sessizkelime/" />
+  <meta property="og:title" content="Sessiz Kelime - Takımlı Kelime Anlatma Oyunu" />
+  <meta property="og:description" content="Konuşmadan anlat, takımın kazansın. Parti geceleri için sessiz kelime oyunu." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sogepps.tr/sessizkelime/" />
+  <meta property="og:image" content="https://sogepps.tr/sessizkelime/img/icon.png" />
+  <style>
+    :root { --bg:#0B0616; --surface:#160d28; --surface-2:#1e1436; --border:#3b2a68; --text:#f3eefe; --muted:#c4b5e0; --primary:#8B5CF6; --secondary:#ec4899; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: radial-gradient(circle at 12% -10%, rgba(139, 92, 246, 0.36), transparent 38%), radial-gradient(circle at 92% -18%, rgba(236, 72, 153, 0.18), transparent 36%), var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    a { color: #d8b4fe; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1160px; margin: 0 auto; padding: 0 20px; }
+    .topnav { position: sticky; top: 0; z-index: 99; border-bottom: 1px solid var(--border); background: rgba(11, 6, 22, 0.88); backdrop-filter: blur(10px); }
+    .topnav-inner { min-height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 0.92rem; flex-wrap: wrap; padding: 8px 0; }
+    .topnav-links { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+    .hero { padding: 82px 0 40px; display: grid; grid-template-columns: 132px 1fr; gap: 22px; align-items: center; }
+    .hero-icon { width: 132px; height: 132px; border-radius: 30px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 20px 58px rgba(139, 92, 246, 0.4); background: linear-gradient(135deg, var(--primary), var(--secondary)); }
+    .hero-icon img { width: 100%; height: 100%; object-fit: cover; }
+    h1 { font-size: clamp(2rem, 5.2vw, 3.3rem); line-height: 1.08; margin-bottom: 12px; letter-spacing: -0.02em; }
+    .lead { color: var(--muted); max-width: 840px; font-size: 1.05rem; }
+    .hero-tags { margin-top: 16px; display: flex; gap: 8px; flex-wrap: wrap; }
+    .hero-tag { border: 1px solid #5b3d8a; background: rgba(139, 92, 246, 0.16); color: #e9d5ff; border-radius: 999px; padding: 6px 12px; font-size: 0.8rem; font-weight: 600; }
+    .hero-actions { margin-top: 18px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .section { margin: 20px 0; border: 1px solid var(--border); border-radius: 20px; padding: 28px; background: linear-gradient(160deg, var(--surface), var(--surface-2)); }
+    .section h2 { font-size: 1.5rem; margin-bottom: 12px; }
+    .section > p { color: var(--muted); margin-bottom: 10px; }
+    .feat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-top: 16px; }
+    .feature { border: 1px solid #4a3278; border-radius: 14px; padding: 14px; background: rgba(12, 6, 22, 0.55); }
+    .feature h3 { font-size: 1rem; margin-bottom: 6px; }
+    .feature p { font-size: 0.93rem; margin: 0; color: var(--muted); }
+    .screen-grid { margin-top: 16px; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; }
+    .screen-card { border: 1px solid var(--border); border-radius: 16px; overflow: hidden; background: #0d0718; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35); }
+    .screen-card img { width: 100%; height: auto; display: block; }
+    .screen-card figcaption { padding: 12px 14px; }
+    .screen-card h3 { font-size: 0.98rem; margin-bottom: 4px; }
+    .screen-card p { color: var(--muted); font-size: 0.85rem; margin: 0; }
+    .cta { margin: 24px 0 68px; text-align: center; border: 1px solid #5a4a9a; border-radius: 20px; padding: 30px 22px; background: linear-gradient(135deg, rgba(139, 92, 246, 0.22), rgba(236, 72, 153, 0.12)); }
+    .cta h2 { margin-bottom: 8px; }
+    .cta p { color: var(--muted); }
+    .cta-links { margin-top: 14px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 15px; border-radius: 11px; font-weight: 700; border: 1px solid #7c3aed; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #fff; text-decoration: none; }
+    .btn:hover { text-decoration: none; }
+    .btn.secondary { background: rgba(17, 10, 32, 0.65); color: #e8dcff; border-color: #4a3278; }
+    @media (max-width: 760px) {
+      .hero { grid-template-columns: 1fr; text-align: center; }
+      .hero-icon { margin: 0 auto; }
+      .hero-tags, .hero-actions { justify-content: center; }
+      .topnav-links { justify-content: center; }
+    }
+    /* Google Play indirme butonu */
+    .gp-actions { margin-top: 18px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .gp-btn { display: inline-flex; align-items: center; gap: 10px; padding: 9px 18px; border-radius: 12px; background: #0d1016; border: 1px solid #414755; color: #ffffff; font-weight: 700; font-size: 0.98rem; line-height: 1.15; text-decoration: none; transition: border-color .2s, transform .15s; }
+    .gp-btn:hover { text-decoration: none; border-color: #9aa3b5; transform: translateY(-1px); color: #fff; }
+    .gp-btn svg { width: 24px; height: 24px; flex: 0 0 auto; fill: currentColor; }
+    .gp-btn > span { display: block; text-align: left; }
+    .gp-btn small { display: block; font-size: 0.63rem; font-weight: 600; letter-spacing: .09em; opacity: .7; }
+    /* Makale bolumu */
+    .sg-arts { margin: 20px 0; border: 1px solid rgba(255,255,255,0.12); border-radius: 20px; padding: 26px; background: rgba(255,255,255,0.03); }
+    .sg-arts h2 { font-size: 1.4rem; margin-bottom: 6px; }
+    .sg-arts > p { opacity: .78; margin-bottom: 16px; font-size: 0.95rem; }
+    .sg-arts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+    .sg-art { display: block; border: 1px solid rgba(255,255,255,0.13); border-radius: 14px; overflow: hidden; background: rgba(0,0,0,0.28); color: inherit; text-decoration: none; transition: border-color .2s, transform .2s; }
+    .sg-art:hover { text-decoration: none; transform: translateY(-3px); border-color: rgba(255,255,255,0.38); }
+    .sg-art img { width: 100%; height: auto; aspect-ratio: 1200 / 630; display: block; }
+    .sg-art-body { padding: 14px 16px 16px; }
+    .sg-art-body h3 { font-size: 1rem; line-height: 1.4; margin-bottom: 6px; }
+    .sg-art-body p { font-size: 0.86rem; opacity: .72; margin: 0; }
+    .sg-arts-all { display: inline-block; margin-top: 14px; font-weight: 700; font-size: 0.9rem; }
+  </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Sessiz Kelime","applicationCategory":"GameApplication","operatingSystem":"Android","description":"İki takımlı sessiz kelime anlatma oyunu. Konuşmadan anlat, doğru/yanlış/pas ile puan topla.","url":"https://sogepps.tr/sessizkelime/","downloadUrl":"https://play.google.com/store/apps/details?id=com.Soge.SessizKelimeSessizTabu","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"}}
+  </script>
+</head>
+<body>
+  <nav class="topnav">
+    <div class="wrap topnav-inner">
+      <a href="/" data-i18n="nav_home">&larr; Sogepps ana sayfa</a>
+      <div class="topnav-links">
+        <a href="#nasil" data-i18n="nav_how">Nasıl Oynanır</a>
+        <a href="#ozellikler" data-i18n="nav_features">Özellikler</a>
+        <a href="#gorseller" data-i18n="nav_screens">Görseller</a>
+        <a href="privacy-policy.html" data-i18n="nav_privacy">Gizlilik Politikası</a>
+        <a href="mailto:sogepps@gmail.com">sogepps@gmail.com</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero-icon"><img src="img/icon.png" alt="Sessiz Kelime uygulama simgesi" data-i18n-alt="hero_icon_alt" width="132" height="132" decoding="async" /></div>
+      <div>
+        <h1 data-i18n-html="hero_title">Sessiz Kelime<br />Anlat, Tahmin Et, Kazan</h1>
+        <p class="lead" data-i18n="hero_lead">İki takımın yarıştığı klasik sessiz kelime oyunu. Konuşmadan anlat, takım arkadaşların tahmin etsin. Süre, pas hakkı, tur sayısı ve 20+ kategoriyle partiyi sen kur.</p>
+        <div class="hero-tags">
+          <span class="hero-tag" data-i18n="tag_1">2 takım</span>
+          <span class="hero-tag" data-i18n="tag_2">20+ kategori</span>
+          <span class="hero-tag" data-i18n="tag_3">Kaydır / tuş kontrol</span>
+          <span class="hero-tag" data-i18n="tag_4">TR &amp; EN</span>
+        </div>
+        <div class="hero-actions">
+          <a class="gp-btn" href="https://play.google.com/store/apps/details?id=com.Soge.SessizKelimeSessizTabu" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"/></svg>
+            <span><small>ANDROID</small><b data-i18n="btn_google_play">Google Play’den indir</b></span>
+          </a>
+          <a class="btn secondary" href="privacy-policy.html" data-i18n="footer_privacy">Gizlilik Politikası</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="nasil">
+      <h2 data-i18n="how_title">Nasıl Oynanır?</h2>
+      <p data-i18n="how_desc">Her turda her oyuncu bir kez anlatır; ayarlardaki tur sayısı dolunca oyun biter.</p>
+      <div class="feat-grid">
+        <div class="feature"><h3 data-i18n="how_1_t">1) Takımları kur</h3><p data-i18n="how_1_d">Oyuncuları iki takıma dağıt. Süre, pas hakkı, tur sayısı ve kategorileri seç.</p></div>
+        <div class="feature"><h3 data-i18n="how_2_t">2) Hazırlan</h3><p data-i18n="how_2_d">Telefon kime verilecek, kimler tahmin edecek — ekranda net yazar.</p></div>
+        <div class="feature"><h3 data-i18n="how_3_t">3) Anlat</h3><p data-i18n="how_3_d">Geri sayım bitince kelime açılır. Sağa doğru, sola yanlış, aşağı pas — veya alttaki tuşlar.</p></div>
+        <div class="feature"><h3 data-i18n="how_4_t">4) Skoru takip et</h3><p data-i18n="how_4_d">Doğru +1, yanlış −1, pas 0. Tur sonu dökümü ve finalde kazanan takım görünür.</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="ozellikler">
+      <h2 data-i18n="feat_title">Neden Sessiz Kelime?</h2>
+      <p data-i18n="feat_desc">Parti, yurt gecesi ve arkadaş buluşmaları için tasarlandı.</p>
+      <div class="feat-grid">
+        <div class="feature"><h3 data-i18n="f_1_t">Bol kategori</h3><p data-i18n="f_1_d">Film, müzik, spor, yemek, marka, ünlü ve daha fazlası — kelime havuzu bitmez.</p></div>
+        <div class="feature"><h3 data-i18n="f_2_t">Esnek kurallar</h3><p data-i18n="f_2_d">Süre, pas hakkı ve tur sayısını gruba göre ayarla; kurulum cihazda saklanır.</p></div>
+        <div class="feature"><h3 data-i18n="f_3_t">Hızlı oynanış</h3><p data-i18n="f_3_d">Kaydırma jestleri veya büyük tuşlarla tek elle rahat kontrol.</p></div>
+        <div class="feature"><h3 data-i18n="f_4_t">Hesap gerekmez</h3><p data-i18n="f_4_d">İndir, isimleri gir, hemen başla. Türkçe ve İngilizce destekli.</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="gorseller">
+      <h2 data-i18n="screens_title">Uygulama Görselleri</h2>
+      <p data-i18n="screens_desc">Ana menü, kurulum ve nasıl oynanır ekranlarından örnekler.</p>
+      <div class="screen-grid">
+        <figure class="screen-card">
+          <img src="img/01-home.png" alt="Sessiz Kelime ana menü ekranı" data-i18n-alt="shot_1_alt" loading="lazy" />
+          <figcaption><h3 data-i18n="s_1_t">Ana menü</h3><p data-i18n="s_1_d">Oyuna başla, nasıl oynanır ve ayarlar.</p></figcaption>
+        </figure>
+        <figure class="screen-card">
+          <img src="img/02-setup.png" alt="Sessiz Kelime kurulum ekranı" data-i18n-alt="shot_2_alt" loading="lazy" />
+          <figcaption><h3 data-i18n="s_2_t">Kurulum</h3><p data-i18n="s_2_d">Takımlar, süre, pas ve kategoriler.</p></figcaption>
+        </figure>
+        <figure class="screen-card">
+          <img src="img/03-howto.png" alt="Sessiz Kelime nasıl oynanır ekranı" data-i18n-alt="shot_3_alt" loading="lazy" />
+          <figcaption><h3 data-i18n="s_3_t">Nasıl oynanır</h3><p data-i18n="s_3_d">Kurallar ve kontroller tek bakışta.</p></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section sg-arts" id="makaleler">
+      <h2 data-i18n="arts_title">Makaleler</h2>
+      <p data-i18n="arts_desc">Sessiz Kelime ile ilgili rehberler ve oyun fikirleri.</p>
+      <div class="sg-arts-grid">
+        <a class="sg-art" href="/makale/sessiz-kelime-nasil-oynanir.html">
+          <img src="/makale/img/sessiz-kelime-nasil-oynanir.svg" alt="Sessiz Kelime Nasıl Oynanır? Kurallar ve Puanlama" width="1200" height="630" loading="lazy" />
+          <div class="sg-art-body">
+            <h3>Sessiz Kelime Nasıl Oynanır? Kurallar ve Puanlama</h3>
+            <p>Sessiz kelime (sessiz sinema + tabu) nasıl oynanır: takım kurulumu, süre ve pas ayarları, doğru-yanlış-pas puanlaması…</p>
+          </div>
+        </a>
+        <a class="sg-art" href="/makale/kelime-anlatma-taktikleri.html">
+          <img src="/makale/img/kelime-anlatma-taktikleri.svg" alt="Kelime Anlatma Taktikleri: Tabu ve Sessiz Kelime İçin 9 Yöntem" width="1200" height="630" loading="lazy" />
+          <div class="sg-art-body">
+            <h3>Kelime Anlatma Taktikleri: Tabu ve Sessiz Kelime İçin 9 Yöntem</h3>
+            <p>Tabu ve sessiz kelime oynarken kelimeyi hızlı anlatmanın yolları: kategori verme, parçalara bölme, zıt anlam kullanma…</p>
+          </div>
+        </a>
+        <a class="sg-art" href="/makale/sessiz-sinema-kelimeleri-listesi.html">
+          <img src="/makale/img/sessiz-sinema-kelimeleri-listesi.svg" alt="Sessiz Sinema Kelimeleri ve Film Listesi (Kolaydan Zora)" width="1200" height="630" loading="lazy" />
+          <div class="sg-art-body">
+            <h3>Sessiz Sinema Kelimeleri ve Film Listesi (Kolaydan Zora)</h3>
+            <p>Sessiz sinemada anlatılacak kelimeler ve filmler: kolay, orta ve zor seviyede hazır liste, kategori önerileri ve anla…</p>
+          </div>
+        </a>
+      </div>
+      <a class="sg-arts-all" href="/makale/" data-i18n="arts_all">Tüm makaleler &rarr;</a>
+    </section>
+
+    <section class="cta">
+      <h2 data-i18n="cta_title">Sessiz Kelime ile Partiyi Başlat</h2>
+      <p data-i18n="cta_desc">Sogepps uygulama ailesinin yeni takım kelime oyunu.</p>
+      <div class="cta-links">
+        <a class="gp-btn" href="https://play.google.com/store/apps/details?id=com.Soge.SessizKelimeSessizTabu" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"/></svg>
+          <span><small>ANDROID</small><b data-i18n="btn_google_play">Google Play’den indir</b></span>
+          </a>
+        <a class="btn secondary" href="/" data-i18n="btn_home">Sogepps ana sayfa</a>
+        <a class="btn secondary" href="privacy-policy.html" data-i18n="footer_privacy">Gizlilik Politikası</a>
+        <a class="btn secondary" href="mailto:sogepps@gmail.com" data-i18n="btn_contact">İletişim</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

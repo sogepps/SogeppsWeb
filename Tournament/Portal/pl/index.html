@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kreator Lig i Turniejów – Twórz turnieje z łatwością</title>
+<meta content="Twórz ligi, drabinki pucharowe i turnieje każdy z każdym w kilka sekund. Zapisuj wyniki, sprawdzaj tabele, udostępniaj rezultaty." name="description"/>
+<link href="https://sogepps.tr/tournament-portal/pl/" rel="canonical"/><link href="https://sogepps.tr/tournament-portal/" hreflang="tr" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/en/" hreflang="en" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/de/" hreflang="de" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/fr/" hreflang="fr" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/es/" hreflang="es" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/it/" hreflang="it" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/pt/" hreflang="pt" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/nl/" hreflang="nl" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/ru/" hreflang="ru" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/ja/" hreflang="ja" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/ko/" hreflang="ko" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/ar/" hreflang="ar" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/hi/" hreflang="hi" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/id/" hreflang="id" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/pl/" hreflang="pl" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/" hreflang="x-default" rel="alternate"/>
+
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<meta content="website" property="og:type"/>
+<meta content="Sogepps" property="og:site_name"/>
+<meta content="Kreator Lig i Turniejów – Twórz turnieje z łatwością" property="og:title"/>
+<meta content="Twórz ligi, drabinki pucharowe i turnieje każdy z każdym w kilka sekund. Zapisuj wyniki, sprawdzaj tabele, udostępniaj rezultaty." property="og:description"/>
+<meta content="https://sogepps.tr/tournament-portal/pl/" property="og:url"/>
+<meta content="https://sogepps.tr/img/tournament-icon.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"League & Tournament Maker","applicationCategory":"GameApplication","operatingSystem":"Android","description":"Twórz ligi, drabinki pucharowe i turnieje każdy z każdym w kilka sekund. Zapisuj wyniki, sprawdzaj tabele, udostępniaj rezultaty.","url":"https://sogepps.tr/tournament-portal/pl/","image":"https://sogepps.tr/img/tournament-icon.png","downloadUrl":"https://play.google.com/store/apps/details?id=com.Soge.LigTurnuvaOlutur","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"publisher":{"@type":"Organization","name":"Sogepps","url":"https://sogepps.tr/pl/"},"inLanguage":"pl"}</script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root {
+      --bg: #050608;
+      --surface: #0f1218;
+      --surface-2: #171c26;
+      --border: #1f2937;
+      --text: #f0f4f8;
+      --text-muted: #9ca3af;
+      --accent: #3b82f6;
+      --accent-light: #60a5fa;
+      --accent-glow: rgba(59, 130, 246, 0.12);
+      --purple: #8b5cf6;
+      --font: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--bg); color: var(--text); overflow-x: hidden; }
+
+    /* Nav */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(5,6,8,0.82); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); font-weight: 700; font-size: 1.05rem; }
+    .nav-icon { width: 34px; height: 34px; border-radius: 10px; background: linear-gradient(135deg, var(--accent), var(--purple)); display: flex; align-items: center; justify-content: center; font-size: 17px; position: relative; overflow: hidden; flex-shrink: 0; }
+    .nav-icon img { width: 100%; height: 100%; object-fit: cover; border-radius: inherit; display: block; }
+    .nav-icon .nav-icon-fallback { display: none; position: absolute; inset: 0; align-items: center; justify-content: center; font-size: 17px; }
+    .nav-icon img[src=""] + .nav-icon-fallback,
+    .nav-icon .nav-icon-fallback.show { display: flex; }
+    .nav-links { display: flex; gap: 4px; list-style: none; flex-wrap: wrap; align-items: center; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; font-weight: 500; padding: 7px 12px; border-radius: 8px; transition: all 0.2s; white-space: nowrap; }
+    .nav-links a:hover { color: var(--text); background: var(--accent-glow); }
+    .nav-links a.active { color: var(--accent-light); background: var(--accent-glow); }
+    .nav-back { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; font-weight: 500; display: flex; align-items: center; gap: 4px; margin-right: 8px; padding: 7px 10px; border-radius: 8px; transition: all 0.2s; }
+    .nav-back:hover { color: var(--text); background: var(--accent-glow); }
+    .nav-sep { width: 1px; height: 20px; background: var(--border); margin: 0 4px; }
+
+    /* Hero */
+    .hero { padding: 150px 24px 100px; text-align: center; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -150px; left: 50%; transform: translateX(-50%); width: 1000px; height: 700px; background: radial-gradient(ellipse, rgba(59,130,246,0.08) 0%, rgba(139,92,246,0.04) 40%, transparent 70%); pointer-events: none; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; padding: 5px 16px; background: var(--accent-glow); border: 1px solid rgba(59,130,246,0.2); border-radius: 999px; font-size: 0.78rem; font-weight: 600; color: var(--accent-light); margin-bottom: 28px; }
+    .hero h1 { font-size: clamp(2.4rem, 5.5vw, 3.8rem); font-weight: 800; line-height: 1.1; letter-spacing: -0.04em; margin-bottom: 20px; }
+    .hero h1 .grad { background: linear-gradient(135deg, var(--accent-light) 20%, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero p { font-size: 1.15rem; color: var(--text-muted); max-width: 580px; margin: 0 auto 40px; line-height: 1.7; }
+    .hero-actions { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 10px; padding: 14px 30px; background: linear-gradient(135deg, var(--accent), var(--purple)); color: #fff; text-decoration: none; font-weight: 600; font-size: 1rem; border-radius: 12px; transition: transform 0.15s, box-shadow 0.2s; box-shadow: 0 4px 24px rgba(59,130,246,0.3); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(59,130,246,0.4); text-decoration: none; }
+    .btn-primary svg { width: 20px; height: 20px; }
+    .btn-ghost { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; color: var(--text); text-decoration: none; font-weight: 600; font-size: 1rem; border-radius: 12px; border: 1px solid var(--border); transition: all 0.2s; }
+    .btn-ghost:hover { border-color: var(--accent); background: var(--accent-glow); text-decoration: none; }
+
+    /* Features */
+    .features { max-width: 1100px; margin: 0 auto; padding: 80px 24px; }
+    .section-label { display: inline-flex; align-items: center; gap: 6px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-light); margin-bottom: 16px; }
+    .features h2 { font-size: 2rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 12px; }
+    .features > p { color: var(--text-muted); font-size: 1rem; margin-bottom: 44px; max-width: 500px; }
+    .feat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+    .feat-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 28px; transition: border-color 0.2s, transform 0.15s; }
+    .feat-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+    .feat-icon { width: 50px; height: 50px; border-radius: 14px; background: var(--accent-glow); display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 18px; }
+    .feat-card h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 8px; }
+    .feat-card p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.65; }
+
+    /* How it works */
+    .how { max-width: 1100px; margin: 0 auto; padding: 80px 24px; }
+    .how h2 { font-size: 2rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 44px; text-align: center; }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+    .step { text-align: center; padding: 32px 20px; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; }
+    .step-num { width: 48px; height: 48px; border-radius: 14px; background: linear-gradient(135deg, var(--accent), var(--purple)); display: inline-flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: 800; color: #fff; margin-bottom: 16px; }
+    .step h3 { font-size: 1rem; font-weight: 600; margin-bottom: 8px; }
+    .step p { color: var(--text-muted); font-size: 0.875rem; line-height: 1.6; }
+
+    /* CTA */
+    .cta-section { text-align: center; padding: 80px 24px; }
+    .cta-card { max-width: 700px; margin: 0 auto; background: linear-gradient(135deg, rgba(59,130,246,0.1), rgba(139,92,246,0.08)); border: 1px solid rgba(59,130,246,0.2); border-radius: 24px; padding: 48px 32px; }
+    .cta-card h2 { font-size: 1.8rem; font-weight: 700; margin-bottom: 12px; }
+    .cta-card p { color: var(--text-muted); font-size: 1rem; margin-bottom: 28px; }
+
+    /* Footer */
+    footer { border-top: 1px solid var(--border); padding: 40px 24px; margin-top: 20px; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 32px; }
+    .footer-brand-text { font-weight: 700; font-size: 1rem; margin-bottom: 6px; }
+    .footer-sub { color: var(--text-muted); font-size: 0.82rem; }
+    .footer-col h4 { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 10px; }
+    .footer-col a { display: block; color: var(--text-muted); font-size: 0.85rem; padding: 3px 0; text-decoration: none; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--text); }
+    .footer-bottom { max-width: 1100px; margin: 28px auto 0; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted); font-size: 0.78rem; }
+    .footer-bottom a { color: var(--text-muted); text-decoration: none; }
+    .footer-bottom a:hover { color: var(--text); }
+
+    @media (max-width: 640px) {
+      .nav-links a { padding: 6px 8px; font-size: 0.78rem; }
+      .nav-back { padding: 6px 8px; font-size: 0.78rem; }
+      .hero { padding: 120px 20px 70px; }
+      .features, .how { padding: 60px 20px; }
+      .footer-inner { flex-direction: column; }
+    }
+    /* Makale bolumu */
+    .sg-arts { margin: 20px 0; border: 1px solid rgba(255,255,255,0.12); border-radius: 20px; padding: 26px; background: rgba(255,255,255,0.03); }
+    .sg-arts h2 { font-size: 1.4rem; margin-bottom: 6px; }
+    .sg-arts > p { opacity: .78; margin-bottom: 16px; font-size: 0.95rem; }
+    .sg-arts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+    .sg-art { display: block; border: 1px solid rgba(255,255,255,0.13); border-radius: 14px; overflow: hidden; background: rgba(0,0,0,0.28); color: inherit; text-decoration: none; transition: border-color .2s, transform .2s; }
+    .sg-art:hover { text-decoration: none; transform: translateY(-3px); border-color: rgba(255,255,255,0.38); }
+    .sg-art img { width: 100%; height: auto; aspect-ratio: 1200 / 630; display: block; }
+    .sg-art-body { padding: 14px 16px 16px; }
+    .sg-art-body h3 { font-size: 1rem; line-height: 1.4; margin-bottom: 6px; }
+    .sg-art-body p { font-size: 0.86rem; opacity: .72; margin: 0; }
+    .sg-arts-all { display: inline-block; margin-top: 14px; font-weight: 700; font-size: 0.9rem; }
+    .sg-arts { max-width: 1100px; margin: 0 auto 40px; }
+  </style>
+<meta content="pl_PL" property="og:locale"/></head>
+<body>
+<nav>
+<div class="nav-inner">
+<div style="display:flex;align-items:center;">
+<a class="nav-back" data-i18n="nav_back" href="/pl/">← Sogepps</a>
+<div class="nav-sep"></div>
+<a class="nav-brand" href="/tournament-portal/pl/">
+<div class="nav-icon">
+<img alt="" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" src="/tournament-portal/img/icon.png"/>
+<span aria-hidden="true" class="nav-icon-fallback">⚗</span>
+</div>
+          Tournament Maker
+        </a>
+</div>
+<ul class="nav-links">
+<li><a data-i18n="nav_features" href="#features">Funkcje</a></li>
+<li><a data-i18n="nav_privacy" href="/tournament-portal/pl/privacy-policy.html">Polityka prywatności</a></li>
+<li><a data-i18n="nav_delete" href="/tournament-portal/pl/delete-account.html">Usuń konto</a></li>
+</ul>
+</div>
+</nav>
+<!-- Hero -->
+<section class="hero">
+<div class="hero-badge" data-i18n="hero_badge">🏆 #1 Organizator turniejów</div>
+<h1 data-i18n-html="hero_title">Twórz turnieje<br/><span class="grad">Jak profesjonalista</span></h1>
+<p data-i18n="hero_desc">Skonfiguruj ligi, drabinki pucharowe i turnieje każdy z każdym w mniej niż minutę. Wprowadzaj wyniki, śledź tabele na żywo i udostępniaj rezultaty — wszystko z telefonu.</p>
+<div class="hero-actions">
+<a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.Soge.LigTurnuvaOlutur" rel="noopener noreferrer" target="_blank">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"></path></svg>
+<span data-i18n="btn_google_play">Pobierz z Google Play</span>
+</a>
+<a class="btn-ghost" data-i18n="btn_see_features" href="#features">Zobacz funkcje ↓</a>
+</div>
+</section>
+<!-- Features -->
+<section class="features" id="features">
+<div class="section-label" data-i18n="feat_label">◆ Funkcje</div>
+<h2 data-i18n="feat_title">Wszystko, czego potrzebujesz do organizacji</h2>
+<p data-i18n="feat_desc">Potężne narzędzia do każdego formatu turnieju, prosto w Twojej kieszeni.</p>
+<div class="feat-grid">
+<div class="feat-card">
+<div class="feat-icon">🏆</div>
+<h3 data-i18n="feat1_title">Liga i każdy z każdym</h3>
+<p data-i18n="feat1_desc">Twórz ligi każdy z każdym z obsługą jednej lub dwóch rund. Dostosuj ustawienia meczów dla maksymalnie 20 drużyn na ligę.</p>
+</div>
+<div class="feat-card">
+<div class="feat-icon">⚖</div>
+<h3 data-i18n="feat2_title">Drabinki pucharowe</h3>
+<p data-i18n="feat2_desc">Drabinki eliminacji pojedynczej dla 2 do 32 uczestników. Automatyczne dopasowanie rozmiaru drabinki z obsługą BYE dla nieparzystych liczb.</p>
+</div>
+<div class="feat-card">
+<div class="feat-icon">📈</div>
+<h3 data-i18n="feat3_title">Tabele na żywo i eksport</h3>
+<p data-i18n="feat3_desc">Tabele w czasie rzeczywistym z punktami, bramkami, wygranymi, remisami i przegranymi. Eksportuj jako PDF, CSV lub udostępnij jako zrzut ekranu.</p>
+</div>
+<div class="feat-card">
+<div class="feat-icon">⚽</div>
+<h3 data-i18n="feat4_title">Wiele dyscyplin sportowych</h3>
+<p data-i18n="feat4_desc">Wbudowane wsparcie dla piłki nożnej, koszykówki, siatkówki, tenisa i sportów niestandardowych. Reguły punktacji specyficzne dla danego sportu.</p>
+</div>
+<div class="feat-card">
+<div class="feat-icon">🔒</div>
+<h3 data-i18n="feat5_title">Skupienie na prywatności</h3>
+<p data-i18n="feat5_desc">Żadne dane osobowe nie są zbierane. Bez śledzenia. Twoje turnieje pozostają Twoje. Pełna zgodność z RODO z zarządzaniem zgodami użytkowników.</p>
+</div>
+<div class="feat-card">
+<div class="feat-icon">🌐</div>
+<h3 data-i18n="feat6_title">16+ Języków</h3>
+<p data-i18n="feat6_desc">Dostępny w tureckim, angielskim, niemieckim, francuskim, hiszpańskim, włoskim, portugalskim, niderlandzkim, rosyjskim, japońskim, koreańskim, arabskim i innych.</p>
+</div>
+</div>
+</section>
+<!-- How It Works -->
+<section class="how">
+<div class="section-label" data-i18n="how_label" style="text-align:center;display:block;">◆ Jak to działa</div>
+<h2 data-i18n="how_title">Trzy proste kroki</h2>
+<div class="steps">
+<div class="step">
+<div class="step-num">1</div>
+<h3 data-i18n="step1_title">Wybierz format</h3>
+<p data-i18n="step1_desc">Wybierz między ligą (każdy z każdym) a pucharem (drabinka eliminacyjna).</p>
+</div>
+<div class="step">
+<div class="step-num">2</div>
+<h3 data-i18n="step2_title">Dodaj drużyny</h3>
+<p data-i18n="step2_desc">Wprowadź nazwy drużyn lub zawodników. Terminarz jest generowany automatycznie.</p>
+</div>
+<div class="step">
+<div class="step-num">3</div>
+<h3 data-i18n="step3_title">Graj i śledź</h3>
+<p data-i18n="step3_desc">Wprowadzaj wyniki meczów w trakcie gry. Tabele i drabinki aktualizują się w czasie rzeczywistym.</p>
+</div>
+</div>
+</section>
+<!-- CTA -->
+<section class="section sg-arts" id="makaleler">
+<h2 data-i18n="arts_title">Artykuły</h2>
+<p data-i18n="arts_desc">Poradniki i pomysły na gry związane z League &amp; Tournament Maker.</p>
+<div class="sg-arts-grid">
+<a class="sg-art" href="/makale/pl/hali-saha-ligi-nasil-kurulur.html">
+<img alt="Jak Założyć Ligę Piłki Nożnej? Harmonogram, Tabela Wyników i Zasady" height="630" loading="lazy" src="/makale/img/pl/hali-saha-ligi-nasil-kurulur.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>Jak Założyć Ligę Piłki Nożnej? Harmonogram, Tabela Wyników i Zasady</h3>
+<p>Zakładanie ligi halowej z grupą przyjaciół: harmonogram na podstawie liczby drużyn, runda powrotna, system…</p>
+</div>
+</a>
+<a class="sg-art" href="/makale/pl/eleme-usulu-turnuva-cetveli.html">
+<img alt="Jak Przygotować Plan Turnieju Eliminacyjnego?" height="630" loading="lazy" src="/makale/img/pl/eleme-usulu-turnuva-cetveli.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>Jak Przygotować Plan Turnieju Eliminacyjnego?</h3>
+<p>Przewodnik tworzenia turnieju eliminacyjnego: liczenie rund w zależności od liczby uczestników, BYE, umiejscowienie…</p>
+</div>
+</a>
+<a class="sg-art" href="/makale/pl/lig-turnuva-olusturma-uygulamasi.html">
+<img alt="Aplikacja do Tworzenia Ligi: Harmonogram, Tabela Wyników i Plan z Telefonu" height="630" loading="lazy" src="/makale/img/pl/lig-turnuva-olusturma-uygulamasi.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>Aplikacja do Tworzenia Ligi: Harmonogram, Tabela Wyników i Plan z Telefonu</h3>
+<p>Dla tych szukających programu do tworzenia ligi: tworzenie harmonogramu z telefonu, śledzenie tabeli wyników…</p>
+</div>
+</a>
+</div>
+<a class="sg-arts-all" data-i18n="arts_all" href="/makale/pl/">Wszystkie artykuły →</a>
+</section>
+<section class="cta-section">
+<div class="cta-card">
+<h2 data-i18n="cta_title">Gotowy do organizacji?</h2>
+<p data-i18n="cta_desc">Pobierz aplikację i stwórz swój pierwszy turniej w mniej niż minutę. Darmowa z opcjonalnymi funkcjami premium.</p>
+<a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.Soge.LigTurnuvaOlutur" rel="noopener noreferrer" target="_blank">
+<svg fill="currentColor" style="width:20px;height:20px;" viewbox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"></path></svg>
+<span data-i18n="cta_btn">Pobierz za darmo z Google Play</span>
+</a>
+</div>
+</section>
+<!-- Footer -->
+<footer>
+<div class="footer-inner">
+<div>
+<div class="footer-brand-text" data-i18n="footer_brand">Kreator Lig i Turniejów</div>
+<div class="footer-sub"><span data-i18n="footer_by">od</span> <a href="/pl/" style="color:var(--accent-light);">Sogepps</a></div>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer_app">Aplikacja</h4>
+<a data-i18n="footer_google_play" href="https://play.google.com/store/apps/details?id=com.Soge.LigTurnuvaOlutur" rel="noopener noreferrer" target="_blank">Google Play</a>
+<a data-i18n="footer_features" href="#features">Funkcje</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer_legal">Informacje prawne</h4>
+<a data-i18n="footer_privacy" href="/tournament-portal/pl/privacy-policy.html">Polityka prywatności</a>
+<a data-i18n="footer_delete" href="/tournament-portal/pl/delete-account.html">Usuń konto</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer_contact">Kontakt</h4>
+<a href="mailto:sogepps@gmail.com">sogepps@gmail.com</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span data-i18n="footer_rights">© 2026</span> <a href="/pl/">Sogepps</a><span data-i18n="footer_rights_tail">. Wszelkie prawa zastrzeżone.</span>
+</div>
+</footer>
+
+
+
+<script defer="" src="/js/i18n.js?v=ac9834aa"></script>
+</body>
+</html>

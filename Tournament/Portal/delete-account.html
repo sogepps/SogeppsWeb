@@ -1,14 +1,23 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+
+<html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Delete Account – League &amp; Tournament Maker</title>
-  <meta name="description" content="Permanently delete your League &amp; Tournament Maker account and all associated data." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://sogepps.tr/tournament-portal/delete-account.html" rel="canonical"/><link href="https://sogepps.tr/tournament-portal/delete-account.html" hreflang="tr" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/en/delete-account.html" hreflang="en" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/de/delete-account.html" hreflang="de" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/fr/delete-account.html" hreflang="fr" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/es/delete-account.html" hreflang="es" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/it/delete-account.html" hreflang="it" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/pt/delete-account.html" hreflang="pt" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/nl/delete-account.html" hreflang="nl" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/ru/delete-account.html" hreflang="ru" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/ja/delete-account.html" hreflang="ja" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/ko/delete-account.html" hreflang="ko" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/ar/delete-account.html" hreflang="ar" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/hi/delete-account.html" hreflang="hi" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/id/delete-account.html" hreflang="id" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/pl/delete-account.html" hreflang="pl" rel="alternate"/><link href="https://sogepps.tr/tournament-portal/delete-account.html" hreflang="x-default" rel="alternate"/>
+<meta content="index, follow" name="robots"/>
+<meta content="website" property="og:type"/>
+<meta content="Sogepps" property="og:site_name"/>
+<meta content="tr_TR" property="og:locale"/>
+<meta content="Hesap Sil – Lig ve Turnuva Oluşturucu" property="og:title"/>
+<meta content="Lig ve Turnuva Oluşturucu hesabınızı ve tüm ilişkili verileri kalıcı olarak silin." property="og:description"/>
+<meta content="https://sogepps.tr/tournament-portal/delete-account.html" property="og:url"/>
+<title>Hesap Sil – Lig ve Turnuva Oluşturucu</title>
+<meta content="Lig ve Turnuva Oluşturucu hesabınızı ve tüm ilişkili verileri kalıcı olarak silin." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
     :root {
       --bg: #050608;
       --surface: #0f1218;
@@ -83,163 +92,63 @@
   </style>
 </head>
 <body>
+<nav>
+<div class="nav-inner">
+<a class="nav-back" data-i18n="nav_back" href="/tournament-portal/">← Turnuva Oluşturucu</a>
+<div class="nav-sep"></div>
+<ul class="nav-links">
+<li><a data-i18n="nav_privacy" href="/tournament-portal/privacy-policy.html">Gizlilik Politikası</a></li>
+<li><a class="active" data-i18n="nav_delete" href="/tournament-portal/delete-account.html">Hesap Sil</a></li>
+</ul>
+</div>
+</nav>
+<div class="container">
+<div class="card">
+<h1 data-i18n="title">Hesap Sil</h1>
+<p class="subtitle" data-i18n="subtitle">E-posta ve şifrenizle giriş yapın, ardından hesabınızı ve tüm ilişkili verileri kalıcı olarak silmek için onay ifadesini yazın.</p>
+<div class="info-section">
+<div class="info-title" data-i18n="info1_title">Silinecekler</div>
+<ul>
+<li data-i18n="info1_li1">Hesap profil bilgileri</li>
+<li data-i18n="info1_li2">Hesaba bağlı kimlik doğrulama bilgileri</li>
+<li data-i18n="info1_li3">Kullanıcının oluşturduğu turnuva ve lig kayıtları</li>
+<li data-i18n="info1_li4">Kullanıcıya ait uygulama tercihleri ve ayarları</li>
+</ul>
+</div>
+<div class="info-section">
+<div class="info-title" data-i18n="info2_title">Veri saklama</div>
+<p data-i18n="info2_desc">Hesap silindikten sonra tüm kişisel veriler kalıcı olarak silinir. Hiçbir kişisel veri saklanmaz. Verilerinizin hiçbir kopyasını tutmuyoruz; silme sonrası saklama süresi yoktur.</p>
+</div>
+<div class="info-section">
+<div class="info-title" data-i18n="info3_title">Silme zamanlaması</div>
+<p data-i18n="info3_desc">Silme işlemi başarılı onaydan hemen sonra gerçekleştirilir. Formu tamamlar tamamlamaz hesabınız ve verileriniz kaldırılır.</p>
+</div>
+<form autocomplete="on" id="form">
+<div class="form-group">
+<label data-i18n="label_email" for="email">E-posta</label>
+<input autocomplete="email" data-i18n-placeholder="placeholder_email" id="email" name="email" placeholder="ornek@email.com" required="" type="email"/>
+</div>
+<div class="form-group">
+<label data-i18n="label_password" for="password">Şifre</label>
+<input autocomplete="current-password" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+</div>
+<div class="form-group">
+<label data-i18n="label_confirm" for="confirm">Onay ifadesi</label>
+<input autocomplete="off" data-i18n-placeholder="placeholder_confirm" id="confirm" name="confirm" placeholder="I confirm" required="" type="text"/>
+<p class="hint" data-i18n-html="hint">Tam olarak <strong>I confirm</strong> yazmalısınız (İngilizce, büyük/küçük harf duyarsız). Bu işlem kalıcıdır ve geri alınamaz.</p>
+</div>
+<button class="btn btn-danger" data-i18n="btn_delete" id="submitBtn" type="submit">Hesabımı sil</button>
+</form>
+<div class="message" id="message" role="alert"></div>
+<div class="card-footer">
+<div><span data-i18n="footer_brand">Lig ve Turnuva Oluşturucu</span> <span data-i18n="footer_by">yapımcı</span> <a href="/">Sogepps</a></div>
+<div><span data-i18n="footer_support">Destek:</span> <a href="mailto:sogepps@gmail.com">sogepps@gmail.com</a></div>
+</div>
+</div>
+</div>
 
-  <nav>
-    <div class="nav-inner">
-      <a href="/tournament-portal/" class="nav-back" data-i18n="nav_back">&#8592; Tournament Maker</a>
-      <div class="nav-sep"></div>
-      <ul class="nav-links">
-        <li><a href="/tournament-portal/privacy-policy.html" data-i18n="nav_privacy">Privacy Policy</a></li>
-        <li><a href="/tournament-portal/delete-account.html" class="active" data-i18n="nav_delete">Delete Account</a></li>
-      </ul>
-    </div>
-  </nav>
 
-  <div class="container">
-    <div class="card">
-      <h1 data-i18n="title">Delete Account</h1>
-      <p class="subtitle" data-i18n="subtitle">Sign in with your email and password, then type the confirmation phrase to permanently delete your account and all associated data.</p>
 
-      <div class="info-section">
-        <div class="info-title" data-i18n="info1_title">What will be deleted</div>
-        <ul>
-          <li data-i18n="info1_li1">Account profile information</li>
-          <li data-i18n="info1_li2">Authentication credentials linked to the account</li>
-          <li data-i18n="info1_li3">User-created tournament and league records</li>
-          <li data-i18n="info1_li4">Any user-associated app preferences and settings</li>
-        </ul>
-      </div>
-
-      <div class="info-section">
-        <div class="info-title" data-i18n="info2_title">Data retention</div>
-        <p data-i18n="info2_desc">All personal data is permanently deleted after account deletion. No personal data is retained. We do not keep any copy of your data; there is no retention period after deletion.</p>
-      </div>
-
-      <div class="info-section">
-        <div class="info-title" data-i18n="info3_title">Deletion timing</div>
-        <p data-i18n="info3_desc">Deletion is processed immediately after successful confirmation. Your account and data are removed as soon as you complete the form.</p>
-      </div>
-
-      <form id="form" autocomplete="on">
-        <div class="form-group">
-          <label for="email" data-i18n="label_email">Email</label>
-          <input id="email" name="email" type="email" required placeholder="you@example.com" data-i18n-placeholder="placeholder_email" autocomplete="email" />
-        </div>
-        <div class="form-group">
-          <label for="password" data-i18n="label_password">Password</label>
-          <input id="password" name="password" type="password" required placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;" autocomplete="current-password" />
-        </div>
-        <div class="form-group">
-          <label for="confirm" data-i18n="label_confirm">Confirmation phrase</label>
-          <input id="confirm" name="confirm" type="text" required placeholder="I confirm" data-i18n-placeholder="placeholder_confirm" autocomplete="off" />
-          <p class="hint" data-i18n-html="hint">You must type exactly <strong>I confirm</strong> (in English, case-insensitive). This action is permanent and cannot be undone.</p>
-        </div>
-        <button type="submit" class="btn btn-danger" id="submitBtn" data-i18n="btn_delete">Delete my account</button>
-      </form>
-      <div id="message" class="message" role="alert"></div>
-
-      <div class="card-footer">
-        <div><span data-i18n="footer_brand">League &amp; Tournament Maker</span> <span data-i18n="footer_by">by</span> <a href="/">Sogepps</a></div>
-        <div><span data-i18n="footer_support">Support:</span> <a href="mailto:sogepps@gmail.com">sogepps@gmail.com</a></div>
-      </div>
-    </div>
-  </div>
-
-   <script src="js/i18n.js"></script>
-   <script src="js/lang-delete.js"></script>
-  <script>
-    I18N.init('deleteAccount', DELETE_TRANSLATIONS);
-
-    (function () {
-      var API_BASE = window.location.origin + "/tournament";
-
-      var form = document.getElementById("form");
-      var submitBtn = document.getElementById("submitBtn");
-      var messageEl = document.getElementById("message");
-
-      function getMsg(key) {
-        var lang = document.documentElement.lang || 'en';
-        var t = (DELETE_TRANSLATIONS[lang] || DELETE_TRANSLATIONS['en'] || {});
-        var fb = DELETE_TRANSLATIONS['en'] || {};
-        return t[key] || fb[key] || '';
-      }
-
-      function showMessage(text, isError) {
-        messageEl.textContent = text;
-        messageEl.className = "message show " + (isError ? "error" : "success");
-      }
-
-      function setLoading(loading) {
-        submitBtn.disabled = loading;
-        submitBtn.textContent = loading ? getMsg('btn_loading') : getMsg('btn_delete');
-      }
-
-      function getErrorMessage(res, body) {
-        try {
-          var j = typeof body === "string" ? JSON.parse(body) : body;
-          if (j && j.message) return j.message;
-          if (j && j.errors && j.errors.length) return j.errors[0].message || body;
-        } catch (_) {}
-        return body || null;
-      }
-
-      form.addEventListener("submit", async function (e) {
-        e.preventDefault();
-        var email = (document.getElementById("email").value || "").trim();
-        var password = document.getElementById("password").value;
-        var confirmPhrase = (document.getElementById("confirm").value || "").trim();
-
-        if (!email || !password) { showMessage(getMsg('msg_invalid'), true); return; }
-        if (!confirmPhrase) { showMessage(getMsg('msg_wrong_phrase'), true); return; }
-
-        setLoading(true);
-        showMessage("", false);
-
-        try {
-          var loginRes = await fetch(API_BASE + "/Authentication/Login", {
-            method: "POST",
-            headers: { "Content-Type": "application/json", "Accept": "application/json" },
-            body: JSON.stringify({ email: email, password: password })
-          });
-
-          var loginBody = await loginRes.text();
-          if (!loginRes.ok) { showMessage(getMsg('msg_invalid'), true); setLoading(false); return; }
-
-          var loginData;
-          try { loginData = JSON.parse(loginBody); } catch (_) { loginData = null; }
-          var token = loginData && loginData.accessToken;
-          if (!token) { showMessage(getMsg('msg_api_error'), true); setLoading(false); return; }
-
-          var deleteRes = await fetch(API_BASE + "/Authentication/DeleteAccount", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              "Accept": "application/json",
-              "Authorization": "Bearer " + token
-            },
-            body: JSON.stringify({ confirmationPhrase: confirmPhrase })
-          });
-
-          var deleteBody = await deleteRes.text();
-          if (!deleteRes.ok) {
-            var errMsg = getErrorMessage(deleteRes, deleteBody);
-            if (deleteRes.status === 400 && errMsg && (errMsg.toLowerCase().indexOf("confirmation") !== -1 || errMsg.toLowerCase().indexOf("phrase") !== -1))
-              showMessage(getMsg('msg_wrong_phrase'), true);
-            else
-              showMessage(getMsg('msg_api_error'), true);
-            setLoading(false);
-            return;
-          }
-
-          showMessage(getMsg('msg_success'), false);
-          form.reset();
-        } catch (err) {
-          showMessage(getMsg('msg_api_error'), true);
-        }
-        setLoading(false);
-      });
-    })();
-  </script>
-
+<script defer="" src="/js/i18n.js?v=ac9834aa"></script>
 </body>
 </html>

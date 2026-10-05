@@ -1,18 +1,19 @@
 <!DOCTYPE html>
+
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Spinify - Özel Çark ve Karar Uygulaması</title>
-  <meta name="description" content="Spinify ile özel şans çarkları oluşturun. Olasılık ağırlığı, 14 hazır çark, iç içe çarklar, yemek seçimi, parti oyunları ve günlük kararlar için mobil çark uygulaması." />
-  <meta name="keywords" content="Spinify, şans çarkı, karar çarkı, wheel spinner, olasılık çarkı, yemek seçimi, parti çarkı, Sogepps" />
-  <link rel="canonical" href="https://sogepps.tr/spinify/" />
-  <meta property="og:title" content="Spinify - Özel Çark ve Karar Uygulaması" />
-  <meta property="og:description" content="Şans senin elinde. Özel çarklar, ağırlıklı olasılık ve 14 hazır şablon." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://sogepps.tr/spinify/" />
-  <meta property="og:image" content="https://sogepps.tr/spinify/img/icon.webp" />
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Spinify - Özel Çark ve Karar Uygulaması</title>
+<meta content="Spinify ile özel çarklar oluşturun, olasılık ağırlıkları ayarlayın, 14 hazır çark kullanın, iç içe çarklar ve tam dönüş özelleştirmesi." name="description"/>
+<meta content="Spinify, şans çarkı, karar çarkı, wheel spinner, olasılık çarkı, yemek seçimi, parti çarkı, Sogepps" name="keywords"/>
+<link href="https://sogepps.tr/spinify/" rel="canonical"/><link href="https://sogepps.tr/spinify/" hreflang="tr" rel="alternate"/><link href="https://sogepps.tr/spinify/en/" hreflang="en" rel="alternate"/><link href="https://sogepps.tr/spinify/de/" hreflang="de" rel="alternate"/><link href="https://sogepps.tr/spinify/fr/" hreflang="fr" rel="alternate"/><link href="https://sogepps.tr/spinify/es/" hreflang="es" rel="alternate"/><link href="https://sogepps.tr/spinify/it/" hreflang="it" rel="alternate"/><link href="https://sogepps.tr/spinify/pt/" hreflang="pt" rel="alternate"/><link href="https://sogepps.tr/spinify/nl/" hreflang="nl" rel="alternate"/><link href="https://sogepps.tr/spinify/ru/" hreflang="ru" rel="alternate"/><link href="https://sogepps.tr/spinify/ja/" hreflang="ja" rel="alternate"/><link href="https://sogepps.tr/spinify/ko/" hreflang="ko" rel="alternate"/><link href="https://sogepps.tr/spinify/ar/" hreflang="ar" rel="alternate"/><link href="https://sogepps.tr/spinify/hi/" hreflang="hi" rel="alternate"/><link href="https://sogepps.tr/spinify/id/" hreflang="id" rel="alternate"/><link href="https://sogepps.tr/spinify/pl/" hreflang="pl" rel="alternate"/><link href="https://sogepps.tr/spinify/" hreflang="x-default" rel="alternate"/>
+<meta content="Spinify - Özel Çark ve Karar Uygulaması" property="og:title"/>
+<meta content="Spinify ile özel çarklar oluşturun, olasılık ağırlıkları ayarlayın, 14 hazır çark kullanın, iç içe çarklar ve tam dönüş özelleştirmesi." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://sogepps.tr/spinify/" property="og:url"/>
+<meta content="https://sogepps.tr/spinify/img/icon.webp" property="og:image"/>
+<style>
     :root { --bg:#0b0b1a; --surface:#15152b; --surface-2:#1b1b36; --border:#2e2e55; --text:#f4f4ff; --muted:#a0a0c8; --primary:#7c5cff; --secondary:#ff5ca8; --accent:#16d6c9; }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -59,114 +60,165 @@
     .btn { display: inline-block; padding: 10px 15px; border-radius: 11px; font-weight: 700; border: 1px solid #6a52c8; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #fff; text-decoration: none; }
     .btn.secondary { background: rgba(21, 21, 43, 0.65); color: #e8e6ff; border-color: #4a4a7a; }
     @media (max-width: 760px) { .hero { grid-template-columns: 1fr; text-align: center; } .hero-icon { margin: 0 auto; } .topnav-links, .nav-links { justify-content: center; } }
+    /* Google Play indirme butonu */
+    .gp-actions { margin-top: 18px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .gp-btn { display: inline-flex; align-items: center; gap: 10px; padding: 9px 18px; border-radius: 12px; background: #0d1016; border: 1px solid #414755; color: #ffffff; font-weight: 700; font-size: 0.98rem; line-height: 1.15; text-decoration: none; transition: border-color .2s, transform .15s; }
+    .gp-btn:hover { text-decoration: none; border-color: #9aa3b5; transform: translateY(-1px); color: #fff; }
+    .gp-btn svg { width: 24px; height: 24px; flex: 0 0 auto; fill: currentColor; }
+    .gp-btn > span { display: block; text-align: left; }
+    .gp-btn small { display: block; font-size: 0.63rem; font-weight: 600; letter-spacing: .09em; opacity: .7; }
+    .gp-btn-soon { opacity: .5; cursor: default; }
+    .gp-btn-soon:hover { transform: none; border-color: #414755; }
+    /* Makale bolumu */
+    .sg-arts { margin: 20px 0; border: 1px solid rgba(255,255,255,0.12); border-radius: 20px; padding: 26px; background: rgba(255,255,255,0.03); }
+    .sg-arts h2 { font-size: 1.4rem; margin-bottom: 6px; }
+    .sg-arts > p { opacity: .78; margin-bottom: 16px; font-size: 0.95rem; }
+    .sg-arts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+    .sg-art { display: block; border: 1px solid rgba(255,255,255,0.13); border-radius: 14px; overflow: hidden; background: rgba(0,0,0,0.28); color: inherit; text-decoration: none; transition: border-color .2s, transform .2s; }
+    .sg-art:hover { text-decoration: none; transform: translateY(-3px); border-color: rgba(255,255,255,0.38); }
+    .sg-art img { width: 100%; height: auto; aspect-ratio: 1200 / 630; display: block; }
+    .sg-art-body { padding: 14px 16px 16px; }
+    .sg-art-body h3 { font-size: 1rem; line-height: 1.4; margin-bottom: 6px; }
+    .sg-art-body p { font-size: 0.86rem; opacity: .72; margin: 0; }
+    .sg-arts-all { display: inline-block; margin-top: 14px; font-weight: 700; font-size: 0.9rem; }
   </style>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Spinify","applicationCategory":"UtilitiesApplication","operatingSystem":"Android","description":"Özel çark ve karar uygulaması: ağırlıklı olasılık, hazır çarklar ve iç içe çarklar."}
-  </script>
-</head>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Spinify","applicationCategory":"UtilitiesApplication","operatingSystem":"Android","description":"Özel çark ve karar uygulaması: ağırlıklı olasılık, hazır çarklar ve iç içe çarklar.","inLanguage":"tr"}</script>
+<meta content="tr_TR" property="og:locale"/></head>
 <body>
-  <nav class="topnav">
-    <div class="wrap topnav-inner nav-inner">
-      <a href="/" data-i18n="nav_home">&larr; Sogepps ana sayfa</a>
-      <div class="topnav-links nav-links">
-        <a href="#ekranlar" data-i18n="nav_screens">Görseller</a>
-        <a href="#carklar" data-i18n="nav_wheels">Hazır Çarklar</a>
-        <a href="#ozellikler" data-i18n="nav_features">Özellikler</a>
-        <a href="#nasil" data-i18n="nav_how">Nasıl Çalışır</a>
-        <a href="privacy-policy.html" data-i18n="nav_privacy">Gizlilik Politikası</a>
-        <a href="mailto:sogepps@gmail.com">sogepps@gmail.com</a>
-      </div>
-    </div>
-  </nav>
+<nav class="topnav">
+<div class="wrap topnav-inner nav-inner">
+<a data-i18n="nav_home" href="/">← Sogepps ana sayfa</a>
+<div class="topnav-links nav-links">
+<a data-i18n="nav_screens" href="#ekranlar">Görseller</a>
+<a data-i18n="nav_wheels" href="#carklar">Hazır Çarklar</a>
+<a data-i18n="nav_features" href="#ozellikler">Özellikler</a>
+<a data-i18n="nav_how" href="#nasil">Nasıl Çalışır</a>
+<a data-i18n="nav_privacy" href="privacy-policy.html">Gizlilik Politikası</a>
+<a href="mailto:sogepps@gmail.com">sogepps@gmail.com</a>
+</div>
+</div>
+</nav>
+<main class="wrap">
+<section class="hero">
+<div class="hero-icon"><img alt="Spinify uygulama simgesi" decoding="async" height="132" src="img/icon.webp" width="132"/></div>
+<div>
+<h1 data-i18n-html="hero_title">Spinify<br/>Şans Senin Elinde</h1>
+<p class="lead" data-i18n="hero_lead">Spinify; yemek seçimi, parti oyunları, ev işleri, egzersiz, tatil fikirleri ve günlük kararlar için gelişmiş bir çark uygulamasıdır. Kendi çarkını oluştur veya hazır şablonlarla başla.</p>
+<div class="hero-tags">
+<span class="hero-tag" data-i18n="tag_1">14 hazır çark</span>
+<span class="hero-tag" data-i18n="tag_2">Olasılık ağırlığı</span>
+<span class="hero-tag" data-i18n="tag_3">İç içe çarklar</span>
+<span class="hero-tag" data-i18n="tag_4">24 dil</span>
+</div>
+<div class="gp-actions">
+<a class="gp-btn" href="https://play.google.com/store/apps/details?id=com.Soge.Spinify" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"></path></svg>
+<span><small>ANDROID</small><b data-i18n="btn_google_play">Google Play’den indir</b></span>
+</a>
+</div>
+</div>
+</section>
+<section class="section" id="ekranlar">
+<h2 data-i18n="screens_title">Spinify Ekranları</h2>
+<p data-i18n="screens_desc">Uygulamadan ekran görüntüleri: kütüphane, çevirme, düzenleyici, ağırlıklar, hazır çarklar, iç içe çark, sonuç ve ayarlar.</p>
+<div class="screen-cards">
+<figure class="screen-card"><img alt="Spinify çark kütüphanesi" decoding="async" height="1280" loading="lazy" src="img/1.webp" width="720"/><figcaption><h3 data-i18n="s_1_t">Çark Kütüphanesi</h3><p data-i18n="s_1_d">Özel çarklarını ve hazır şablonları arama ve kategori filtresiyle keşfet.</p></figcaption></figure>
+<figure class="screen-card"><img alt="Spinify çevirme animasyonu" decoding="async" height="1280" loading="lazy" src="img/2.webp" width="720"/><figcaption><h3 data-i18n="s_2_t">Akıcı Çevirme</h3><p data-i18n="s_2_d">Gerçekçi fizik, titreşim, konfeti ve net kazanan dilimi.</p></figcaption></figure>
+<figure class="screen-card"><img alt="Spinify çark düzenleyici" decoding="async" height="1280" loading="lazy" src="img/3.webp" width="720"/><figcaption><h3 data-i18n="s_3_t">Canlı Düzenleyici</h3><p data-i18n="s_3_d">Dilim, emoji, renk ve açıklamaları canlı önizleme ile düzenle.</p></figcaption></figure>
+<figure class="screen-card"><img alt="Spinify olasılık ağırlıkları" decoding="async" height="1280" loading="lazy" src="img/4.webp" width="720"/><figcaption><h3 data-i18n="s_4_t">Olasılık Ağırlıkları</h3><p data-i18n="s_4_d">Dilim boyutu gerçek gelme şansını yansıtır — nadir sonuçlar nadir kalır.</p></figcaption></figure>
+<figure class="screen-card"><img alt="Spinify hazır çarklar" decoding="async" height="1280" loading="lazy" src="img/5.webp" width="720"/><figcaption><h3 data-i18n="s_5_t">Hazır Çarklar</h3><p data-i18n="s_5_d">Yemek, içecek, karar, parti, ev işi ve daha fazlası için 14 şablon.</p></figcaption></figure>
+<figure class="screen-card"><img alt="Spinify iç içe çarklar" decoding="async" height="1280" loading="lazy" src="img/6.webp" width="720"/><figcaption><h3 data-i18n="s_6_t">İç İçe Çarklar</h3><p data-i18n="s_6_d">Bir dilimi ikinci çarka bağla — akşam planı gibi çok adımlı kararlar için.</p></figcaption></figure>
+<figure class="screen-card"><img alt="Spinify sonuç ekranı" decoding="async" height="1280" loading="lazy" src="img/7.webp" width="720"/><figcaption><h3 data-i18n="s_7_t">Kutlama Sonucu</h3><p data-i18n="s_7_d">Çark durunca konfeti ve belirgin sonuç ekranı.</p></figcaption></figure>
+<figure class="screen-card"><img alt="Spinify dönüş ayarları" decoding="async" height="1280" loading="lazy" src="img/8.webp" width="720"/><figcaption><h3 data-i18n="s_8_t">Dönüş Ayarları</h3><p data-i18n="s_8_d">Süre, tur sayısı, yavaşlama, yön, etiketler ve eleme modu.</p></figcaption></figure>
+</div>
+</section>
+<section class="section" id="carklar">
+<h2 data-i18n="wheels_title">Hazır Çarklar</h2>
+<p data-i18n="wheels_desc">14 yerleşik çarkla anında başla — istediğini özelleştir veya kopyala.</p>
+<div class="wheel-grid">
+<div class="wheel-item"><h3 data-i18n="w_food_t">Bugün Ne Yesek?</h3><p data-i18n="w_food_d">Akşam yemeği kararsızlığına son.</p></div>
+<div class="wheel-item"><h3 data-i18n="w_drink_t">Ne İçsem?</h3><p data-i18n="w_drink_d">Kahve, çay, limonata ve daha fazlası.</p></div>
+<div class="wheel-item"><h3 data-i18n="w_movie_t">Film Türü</h3><p data-i18n="w_movie_d">Aksiyon, komedi, korku, bilim kurgu ve daha fazlası.</p></div>
+<div class="wheel-item"><h3 data-i18n="w_yesno_t">Evet / Hayır</h3><p data-i18n="w_yesno_d">Hızlı karar için klasik çark.</p></div>
+<div class="wheel-item"><h3 data-i18n="w_decision_t">Karar Çarkı</h3><p data-i18n="w_decision_d">Kesinlikle evet, belki, sonra, hayır, sen bilirsin.</p></div>
+<div class="wheel-item"><h3 data-i18n="w_truth_t">Doğruluk mu Cesaret mi?</h3><p data-i18n="w_truth_d">Oyun gecesi için ideal.</p></div>
+<div class="wheel-item"><h3 data-i18n="w_chores_t">Ev İşi Kim Yapacak?</h3><p data-i18n="w_chores_d">Bulaşık, süpürme, çöp, çamaşır veya izin günü.</p></div>
+<div class="wheel-item"><h3 data-i18n="w_workout_t">Egzersiz Çarkı</h3><p data-i18n="w_workout_d">Şınav, squat, plank, burpee, koşu veya dinlen.</p></div>
+<div class="wheel-item"><h3 data-i18n="w_pays_t">Hesabı Kim Ödeyecek?</h3><p data-i18n="w_pays_d">Sen, ben, o veya ortak.</p></div>
+<div class="wheel-item"><h3 data-i18n="w_numbers_t">Şanslı Sayı (1-8)</h3><p data-i18n="w_numbers_d">1 ile 8 arasında rastgele sayı.</p></div>
+<div class="wheel-item"><h3 data-i18n="w_party_t">Ceza Çarkı</h3><p data-i18n="w_party_d">Şarkı, dans, fıkra, taklit, affedildin veya sır.</p></div>
+<div class="wheel-item"><h3 data-i18n="w_travel_t">Tatil Nereye?</h3><p data-i18n="w_travel_d">Deniz, dağ, şehir, kamp, yurt dışı veya evde kal.</p></div>
+<div class="wheel-item"><h3 data-i18n="w_prize_t">Ödül Çarkı</h3><p data-i18n="w_prize_d">Ağırlıklı olasılık — büyük ödül nadir gelir.</p></div>
+<div class="wheel-item"><h3 data-i18n="w_evening_t">Akşam Ne Yapsak? (İç İçe)</h3><p data-i18n="w_evening_d">Kazanan dilim yemek veya film çarkını açar.</p></div>
+</div>
+</section>
+<section class="section" id="ozellikler">
+<h2 data-i18n="feat_title">Neden Spinify?</h2>
+<p data-i18n="feat_desc">Basit bir çarktan fazlası — olasılık, tasarım ve akış üzerinde tam kontrol.</p>
+<div class="feat-grid">
+<div class="feature"><h3 data-i18n="f_1_t">Gerçek Olasılık</h3><p data-i18n="f_1_d">Dilim ağırlıklarını ayarla, gelme şansı tam istediğin gibi olsun.</p></div>
+<div class="feature"><h3 data-i18n="f_2_t">İç İçe Çarklar</h3><p data-i18n="f_2_d">Çok adımlı kararlar için çarkları zincirle.</p></div>
+<div class="feature"><h3 data-i18n="f_3_t">Eleme Modu</h3><p data-i18n="f_3_d">Her turda kazananı çıkar, tek dilim kalana kadar devam et.</p></div>
+<div class="feature"><h3 data-i18n="f_4_t">Yerel Kayıt</h3><p data-i18n="f_4_d">Çarklarını oluştur, kopyala ve cihazında sakla.</p></div>
+<div class="feature"><h3 data-i18n="f_5_t">24 Dil</h3><p data-i18n="f_5_d">Arayüz ve hazır çarklar diline uyum sağlar.</p></div>
+<div class="feature"><h3 data-i18n="f_6_t">Modern Koyu Arayüz</h3><p data-i18n="f_6_d">SVG çarklar ve akıcı animasyonla şık tasarım.</p></div>
+</div>
+</section>
+<section class="section" id="nasil">
+<h2 data-i18n="how_title">Spinify Nasıl Çalışır?</h2>
+<p data-i18n="how_desc">Fikirden sonuca saniyeler içinde.</p>
+<div class="feat-grid">
+<div class="feature"><h3 data-i18n="how_1_t">1) Çark seç veya oluştur</h3><p data-i18n="how_1_d">Hazır şablondan başla veya emoji ve renklerle dilim ekle.</p></div>
+<div class="feature"><h3 data-i18n="how_2_t">2) Ağırlık ve ayarları yap</h3><p data-i18n="how_2_d">Olasılık, dönüş hızı, titreşim ve iç çark bağlantılarını ayarla.</p></div>
+<div class="feature"><h3 data-i18n="how_3_t">3) ÇEVİR'e bas</h3><p data-i18n="how_3_d">Gerçekçi yavaşlama ile çarkın dönmesini izle.</p></div>
+<div class="feature"><h3 data-i18n="how_4_t">4) Sonucu gör</h3><p data-i18n="how_4_d">Konfeti ile kazananı gör — tekrar çevir veya iç çarkı aç.</p></div>
+</div>
+</section>
+<section class="section sg-arts" id="makaleler">
+<h2 data-i18n="arts_title">Makaleler</h2>
+<p data-i18n="arts_desc">Spinify ile ilgili rehberler ve oyun fikirleri.</p>
+<div class="sg-arts-grid">
+<a class="sg-art" href="/makale/karar-veremiyorum-ne-yapmaliyim.html">
+<img alt="Karar Veremiyorum: Şans Çarkıyla Günlük Kararları Çözmek" height="630" loading="lazy" src="/makale/img/karar-veremiyorum-ne-yapmaliyim.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>Karar Veremiyorum: Şans Çarkıyla Günlük Kararları Çözmek</h3>
+<p>Ne yesek, kim yapsak, nereye gitsek? Küçük kararlarda tıkanmanın nedeni ve şans çarkını karar aracı olarak doğru kull…</p>
+</div>
+</a>
+<a class="sg-art" href="/makale/agirlikli-sans-carki-nedir.html">
+<img alt="Ağırlıklı Şans Çarkı Nedir? Olasılığı Kendin Ayarla" height="630" loading="lazy" src="/makale/img/agirlikli-sans-carki-nedir.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>Ağırlıklı Şans Çarkı Nedir? Olasılığı Kendin Ayarla</h3>
+<p>Ağırlıklı çark nasıl çalışır, dilim genişliği olasılığı nasıl belirler, hangi durumlarda eşit dilim yerine ağırlık ku…</p>
+</div>
+</a>
+<a class="sg-art" href="/makale/rastgele-secim-carki-nasil-yapilir.html">
+<img alt="Rastgele Seçim Çarkı Nasıl Yapılır? Kendi Çarkını Kur" height="630" loading="lazy" src="/makale/img/rastgele-secim-carki-nasil-yapilir.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>Rastgele Seçim Çarkı Nasıl Yapılır? Kendi Çarkını Kur</h3>
+<p>Rastgele seçim çarkı nasıl hazırlanır: seçenek girme, dilim ağırlıkları, iç içe çarklar ve eleme modu. Sınıf, ofis ve…</p>
+</div>
+</a>
+</div>
+<a class="sg-arts-all" data-i18n="arts_all" href="/makale/">Tüm makaleler →</a>
+</section>
+<section class="cta">
+<h2 data-i18n="cta_title">Kararı Çarka Bırak</h2>
+<p data-i18n="cta_desc">Spinify, Sogepps ailesinin 4. uygulaması — hızlı, adil ve eğlenceli kararlar telefonunda.</p>
+<div class="cta-links">
+<a class="gp-btn" href="https://play.google.com/store/apps/details?id=com.Soge.Spinify" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"></path></svg>
+<span><small>ANDROID</small><b data-i18n="btn_google_play">Google Play’den indir</b></span>
+</a>
+<a class="btn" data-i18n="btn_home" href="/">Sogepps ana sayfaya dön</a>
+<a class="btn secondary" data-i18n="footer_privacy" href="privacy-policy.html">Gizlilik Politikası</a>
+<a class="btn secondary" data-i18n="btn_contact" href="mailto:sogepps@gmail.com">İletişim</a>
+</div>
+</section>
+</main>
 
-  <main class="wrap">
-    <section class="hero">
-      <div class="hero-icon"><img src="img/icon.webp" alt="Spinify uygulama simgesi" width="132" height="132" decoding="async" /></div>
-      <div>
-        <h1 data-i18n-html="hero_title">Spinify<br />Şans Senin Elinde</h1>
-        <p class="lead" data-i18n="hero_lead">Spinify; yemek seçimi, parti oyunları, ev işleri, egzersiz, tatil fikirleri ve günlük kararlar için gelişmiş bir çark uygulamasıdır.</p>
-        <div class="hero-tags">
-          <span class="hero-tag" data-i18n="tag_1">14 hazır çark</span>
-          <span class="hero-tag" data-i18n="tag_2">Olasılık ağırlığı</span>
-          <span class="hero-tag" data-i18n="tag_3">İç içe çarklar</span>
-          <span class="hero-tag" data-i18n="tag_4">24 dil</span>
-        </div>
-      </div>
-    </section>
 
-    <section class="section" id="ekranlar">
-      <h2 data-i18n="screens_title">Spinify Ekranları</h2>
-      <p data-i18n="screens_desc">Uygulamadan ekran görüntüleri.</p>
-      <div class="screen-cards">
-        <figure class="screen-card"><img src="img/1.webp" alt="Spinify çark kütüphanesi" width="720" height="1280" loading="lazy" decoding="async" /><figcaption><h3 data-i18n="s_1_t">Çark Kütüphanesi</h3><p data-i18n="s_1_d">Özel çarklarını ve hazır şablonları keşfet.</p></figcaption></figure>
-        <figure class="screen-card"><img src="img/2.webp" alt="Spinify çevirme animasyonu" width="720" height="1280" loading="lazy" decoding="async" /><figcaption><h3 data-i18n="s_2_t">Akıcı Çevirme</h3><p data-i18n="s_2_d">Gerçekçi fizik ve konfeti ile sonuç.</p></figcaption></figure>
-        <figure class="screen-card"><img src="img/3.webp" alt="Spinify çark düzenleyici" width="720" height="1280" loading="lazy" decoding="async" /><figcaption><h3 data-i18n="s_3_t">Canlı Düzenleyici</h3><p data-i18n="s_3_d">Dilimleri canlı önizleme ile düzenle.</p></figcaption></figure>
-        <figure class="screen-card"><img src="img/4.webp" alt="Spinify olasılık ağırlıkları" width="720" height="1280" loading="lazy" decoding="async" /><figcaption><h3 data-i18n="s_4_t">Olasılık Ağırlıkları</h3><p data-i18n="s_4_d">Dilim boyutu gerçek gelme şansını yansıtır.</p></figcaption></figure>
-        <figure class="screen-card"><img src="img/5.webp" alt="Spinify hazır çarklar" width="720" height="1280" loading="lazy" decoding="async" /><figcaption><h3 data-i18n="s_5_t">Hazır Çarklar</h3><p data-i18n="s_5_d">14 şablonla anında başla.</p></figcaption></figure>
-        <figure class="screen-card"><img src="img/6.webp" alt="Spinify iç içe çarklar" width="720" height="1280" loading="lazy" decoding="async" /><figcaption><h3 data-i18n="s_6_t">İç İçe Çarklar</h3><p data-i18n="s_6_d">Çok adımlı kararlar için zincirle.</p></figcaption></figure>
-        <figure class="screen-card"><img src="img/7.webp" alt="Spinify sonuç ekranı" width="720" height="1280" loading="lazy" decoding="async" /><figcaption><h3 data-i18n="s_7_t">Kutlama Sonucu</h3><p data-i18n="s_7_d">Konfeti ile kazanan dilim.</p></figcaption></figure>
-        <figure class="screen-card"><img src="img/8.webp" alt="Spinify dönüş ayarları" width="720" height="1280" loading="lazy" decoding="async" /><figcaption><h3 data-i18n="s_8_t">Dönüş Ayarları</h3><p data-i18n="s_8_d">Süre, tur ve yavaşlama kontrolü.</p></figcaption></figure>
-      </div>
-    </section>
 
-    <section class="section" id="carklar">
-      <h2 data-i18n="wheels_title">Hazır Çarklar</h2>
-      <p data-i18n="wheels_desc">14 yerleşik çarkla anında başla.</p>
-      <div class="wheel-grid">
-        <div class="wheel-item"><h3 data-i18n="w_food_t">Bugün Ne Yesek?</h3><p data-i18n="w_food_d">Akşam yemeği kararsızlığına son.</p></div>
-        <div class="wheel-item"><h3 data-i18n="w_drink_t">Ne İçsem?</h3><p data-i18n="w_drink_d">Kahve, çay, limonata ve daha fazlası.</p></div>
-        <div class="wheel-item"><h3 data-i18n="w_movie_t">Film Türü</h3><p data-i18n="w_movie_d">Aksiyon, komedi, korku ve daha fazlası.</p></div>
-        <div class="wheel-item"><h3 data-i18n="w_yesno_t">Evet / Hayır</h3><p data-i18n="w_yesno_d">Hızlı karar için klasik çark.</p></div>
-        <div class="wheel-item"><h3 data-i18n="w_decision_t">Karar Çarkı</h3><p data-i18n="w_decision_d">Kesinlikle evet, belki, sonra, hayır.</p></div>
-        <div class="wheel-item"><h3 data-i18n="w_truth_t">Doğruluk mu Cesaret mi?</h3><p data-i18n="w_truth_d">Oyun gecesi için ideal.</p></div>
-        <div class="wheel-item"><h3 data-i18n="w_chores_t">Ev İşi Kim Yapacak?</h3><p data-i18n="w_chores_d">Bulaşık, süpürme, çöp veya izin günü.</p></div>
-        <div class="wheel-item"><h3 data-i18n="w_workout_t">Egzersiz Çarkı</h3><p data-i18n="w_workout_d">Şınav, squat, plank veya dinlen.</p></div>
-        <div class="wheel-item"><h3 data-i18n="w_pays_t">Hesabı Kim Ödeyecek?</h3><p data-i18n="w_pays_d">Sen, ben, o veya ortak.</p></div>
-        <div class="wheel-item"><h3 data-i18n="w_numbers_t">Şanslı Sayı (1-8)</h3><p data-i18n="w_numbers_d">1 ile 8 arasında rastgele sayı.</p></div>
-        <div class="wheel-item"><h3 data-i18n="w_party_t">Ceza Çarkı</h3><p data-i18n="w_party_d">Şarkı, dans, fıkra veya affedildin.</p></div>
-        <div class="wheel-item"><h3 data-i18n="w_travel_t">Tatil Nereye?</h3><p data-i18n="w_travel_d">Deniz, dağ, şehir veya evde kal.</p></div>
-        <div class="wheel-item"><h3 data-i18n="w_prize_t">Ödül Çarkı</h3><p data-i18n="w_prize_d">Büyük ödül nadir gelir.</p></div>
-        <div class="wheel-item"><h3 data-i18n="w_evening_t">Akşam Ne Yapsak?</h3><p data-i18n="w_evening_d">İç içe çark ile yemek veya film seç.</p></div>
-      </div>
-    </section>
-
-    <section class="section" id="ozellikler">
-      <h2 data-i18n="feat_title">Neden Spinify?</h2>
-      <p data-i18n="feat_desc">Olasılık, tasarım ve akış üzerinde tam kontrol.</p>
-      <div class="feat-grid">
-        <div class="feature"><h3 data-i18n="f_1_t">Gerçek Olasılık</h3><p data-i18n="f_1_d">Dilim ağırlıklarını ayarla.</p></div>
-        <div class="feature"><h3 data-i18n="f_2_t">İç İçe Çarklar</h3><p data-i18n="f_2_d">Çok adımlı kararlar için zincirle.</p></div>
-        <div class="feature"><h3 data-i18n="f_3_t">Eleme Modu</h3><p data-i18n="f_3_d">Kazananı her turda çıkar.</p></div>
-        <div class="feature"><h3 data-i18n="f_4_t">Yerel Kayıt</h3><p data-i18n="f_4_d">Çarklarını cihazında sakla.</p></div>
-        <div class="feature"><h3 data-i18n="f_5_t">24 Dil</h3><p data-i18n="f_5_d">Arayüz diline uyum sağlar.</p></div>
-        <div class="feature"><h3 data-i18n="f_6_t">Modern Koyu Arayüz</h3><p data-i18n="f_6_d">SVG çarklar ve akıcı animasyon.</p></div>
-      </div>
-    </section>
-
-    <section class="section" id="nasil">
-      <h2 data-i18n="how_title">Spinify Nasıl Çalışır?</h2>
-      <p data-i18n="how_desc">Fikirden sonuca saniyeler içinde.</p>
-      <div class="feat-grid">
-        <div class="feature"><h3 data-i18n="how_1_t">1) Çark seç veya oluştur</h3><p data-i18n="how_1_d">Hazır şablondan başla veya dilim ekle.</p></div>
-        <div class="feature"><h3 data-i18n="how_2_t">2) Ağırlık ve ayarları yap</h3><p data-i18n="how_2_d">Olasılık ve dönüş hızını ayarla.</p></div>
-        <div class="feature"><h3 data-i18n="how_3_t">3) ÇEVİR'e bas</h3><p data-i18n="how_3_d">Gerçekçi yavaşlama ile izle.</p></div>
-        <div class="feature"><h3 data-i18n="how_4_t">4) Sonucu gör</h3><p data-i18n="how_4_d">Konfeti ile kazananı gör.</p></div>
-      </div>
-    </section>
-
-    <section class="cta">
-      <h2 data-i18n="cta_title">Kararı Çarka Bırak</h2>
-      <p data-i18n="cta_desc">Spinify, Sogepps ailesinin 4. uygulamasıdır.</p>
-      <div class="cta-links">
-        <a class="btn" href="/" data-i18n="btn_home">Sogepps ana sayfaya dön</a>
-        <a class="btn secondary" href="privacy-policy.html" data-i18n="footer_privacy">Gizlilik Politikası</a>
-        <a class="btn secondary" href="mailto:sogepps@gmail.com" data-i18n="btn_contact">İletişim</a>
-      </div>
-    </section>
-  </main>
-
-  <script src="js/i18n.js"></script>
-  <script src="js/lang-spinify.js"></script>
-  <script>I18N.init('spinify', SPINIFY_TRANSLATIONS);</script>
+<script defer="" src="/js/i18n.js?v=ac9834aa"></script>
 </body>
 </html>

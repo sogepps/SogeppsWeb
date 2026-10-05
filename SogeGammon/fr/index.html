@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SogeGammon - Backgammon en ligne sans jetons | Sogepps</title>
+<meta content="Jouez au backgammon en ligne sans jetons avec SogeGammon. Aucun jeton nécessaire pour s'installer à la table : parties en direct contre de vrais adversaires, un tournoi gratuit toutes les 3 heures, classements compétitifs, invitations d'amis. Web et Android." name="description"/>
+<meta content="SogeGammon, backgammon, backgammon en ligne, backgammon sans jetons, backgammon en direct, jouer au backgammon, tournoi, tavla, Sogepps" name="keywords"/>
+<link href="https://sogepps.tr/sogegammon/fr/" rel="canonical"/><link href="https://sogepps.tr/sogegammon/" hreflang="tr" rel="alternate"/><link href="https://sogepps.tr/sogegammon/en/" hreflang="en" rel="alternate"/><link href="https://sogepps.tr/sogegammon/de/" hreflang="de" rel="alternate"/><link href="https://sogepps.tr/sogegammon/fr/" hreflang="fr" rel="alternate"/><link href="https://sogepps.tr/sogegammon/es/" hreflang="es" rel="alternate"/><link href="https://sogepps.tr/sogegammon/it/" hreflang="it" rel="alternate"/><link href="https://sogepps.tr/sogegammon/pt/" hreflang="pt" rel="alternate"/><link href="https://sogepps.tr/sogegammon/nl/" hreflang="nl" rel="alternate"/><link href="https://sogepps.tr/sogegammon/ru/" hreflang="ru" rel="alternate"/><link href="https://sogepps.tr/sogegammon/ja/" hreflang="ja" rel="alternate"/><link href="https://sogepps.tr/sogegammon/ko/" hreflang="ko" rel="alternate"/><link href="https://sogepps.tr/sogegammon/ar/" hreflang="ar" rel="alternate"/><link href="https://sogepps.tr/sogegammon/hi/" hreflang="hi" rel="alternate"/><link href="https://sogepps.tr/sogegammon/id/" hreflang="id" rel="alternate"/><link href="https://sogepps.tr/sogegammon/pl/" hreflang="pl" rel="alternate"/><link href="https://sogepps.tr/sogegammon/" hreflang="x-default" rel="alternate"/>
+<meta content="SogeGammon - Backgammon en ligne sans jetons | Sogepps" property="og:title"/>
+<meta content="Jouez au backgammon en ligne sans jetons avec SogeGammon. Aucun jeton nécessaire pour s'installer à la table : parties en direct contre de vrais adversaires, un tournoi gratuit toutes les 3 heures, classements compétitifs, invitations d'amis. Web et Android." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://sogepps.tr/sogegammon/fr/" property="og:url"/>
+<meta content="https://sogepps.tr/sogegammon/img/hero.jpg" property="og:image"/>
+<style>
+    :root { --bg:#0A1024; --surface:#111a36; --surface-2:#162143; --border:#2a3a68; --text:#f3f6ff; --muted:#aab7d8; --primary:#C9A227; --secondary:#E8C75A; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: radial-gradient(circle at 10% -12%, rgba(201, 162, 39, 0.22), transparent 38%), radial-gradient(circle at 90% -16%, rgba(58, 92, 200, 0.24), transparent 40%), var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    a { color: var(--secondary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1160px; margin: 0 auto; padding: 0 20px; }
+    .topnav { position: sticky; top: 0; z-index: 99; border-bottom: 1px solid var(--border); background: rgba(10, 16, 36, 0.88); backdrop-filter: blur(10px); }
+    .topnav-inner { min-height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 0.92rem; flex-wrap: wrap; padding: 8px 0; }
+    .topnav-links { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+    .hero { padding: 82px 0 40px; display: grid; grid-template-columns: 132px 1fr; gap: 22px; align-items: center; }
+    .hero-icon { width: 132px; height: 132px; border-radius: 30px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 20px 58px rgba(201, 162, 39, 0.34); background: linear-gradient(135deg, #162143, #0A1024); }
+    .hero-icon img { width: 100%; height: 100%; object-fit: cover; }
+    h1 { font-size: clamp(2rem, 5.2vw, 3.3rem); line-height: 1.08; margin-bottom: 12px; letter-spacing: -0.02em; }
+    .lead { color: var(--muted); max-width: 840px; font-size: 1.05rem; }
+    .hero-tags { margin-top: 16px; display: flex; gap: 8px; flex-wrap: wrap; }
+    .hero-tag { border: 1px solid #4a5c96; background: rgba(201, 162, 39, 0.12); color: #f0dfa6; border-radius: 999px; padding: 6px 12px; font-size: 0.8rem; font-weight: 600; }
+    .hero-actions { margin-top: 18px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .hero-shot { margin: 10px 0 4px; border: 1px solid var(--border); border-radius: 20px; overflow: hidden; box-shadow: 0 18px 52px rgba(0, 0, 0, 0.45); }
+    .hero-shot img { width: 100%; height: auto; display: block; }
+    .section { margin: 20px 0; border: 1px solid var(--border); border-radius: 20px; padding: 28px; background: linear-gradient(160deg, var(--surface), var(--surface-2)); }
+    .section h2 { font-size: 1.5rem; margin-bottom: 12px; }
+    .section > p { color: var(--muted); margin-bottom: 10px; }
+    .feat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-top: 16px; }
+    .feature { border: 1px solid #35477d; border-radius: 14px; padding: 14px; background: rgba(8, 13, 30, 0.55); }
+    .feature h3 { font-size: 1rem; margin-bottom: 6px; }
+    .feature p { font-size: 0.93rem; margin: 0; color: var(--muted); }
+    .modes { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-top: 16px; }
+    .mode { border: 1px solid #35477d; border-radius: 14px; padding: 16px; background: rgba(8, 13, 30, 0.55); text-align: center; }
+    .mode .mode-name { font-size: 1.05rem; font-weight: 700; color: var(--secondary); }
+    .mode .mode-detail { color: var(--muted); font-size: 0.9rem; }
+    .cta { margin: 24px 0 68px; text-align: center; border: 1px solid #4a5c96; border-radius: 20px; padding: 30px 22px; background: linear-gradient(135deg, rgba(201, 162, 39, 0.2), rgba(58, 92, 200, 0.14)); }
+    .cta h2 { margin-bottom: 8px; }
+    .cta p { color: var(--muted); }
+    .cta-links { margin-top: 14px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 15px; border-radius: 11px; font-weight: 700; border: 1px solid #b8912a; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #14100a; text-decoration: none; }
+    .btn:hover { text-decoration: none; }
+    .btn.secondary { background: rgba(12, 18, 40, 0.7); color: #e6ecff; border-color: #35477d; }
+    @media (max-width: 760px) {
+      .hero { grid-template-columns: 1fr; text-align: center; }
+      .hero-icon { margin: 0 auto; }
+      .hero-tags, .hero-actions { justify-content: center; }
+      .topnav-links { justify-content: center; }
+    }
+    /* Google Play indirme butonu */
+    .gp-actions { margin-top: 18px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .gp-btn { display: inline-flex; align-items: center; gap: 10px; padding: 9px 18px; border-radius: 12px; background: #0d1016; border: 1px solid #414755; color: #ffffff; font-weight: 700; font-size: 0.98rem; line-height: 1.15; text-decoration: none; transition: border-color .2s, transform .15s; }
+    .gp-btn:hover { text-decoration: none; border-color: #9aa3b5; transform: translateY(-1px); color: #fff; }
+    .gp-btn svg { width: 24px; height: 24px; flex: 0 0 auto; fill: currentColor; }
+    .gp-btn > span { display: block; text-align: left; }
+    .gp-btn small { display: block; font-size: 0.63rem; font-weight: 600; letter-spacing: .09em; opacity: .7; }
+    .gp-btn-soon { opacity: .5; cursor: default; }
+    .gp-btn-soon:hover { transform: none; border-color: #414755; }
+    /* Makale bolumu */
+    .sg-arts { margin: 20px 0; border: 1px solid rgba(255,255,255,0.12); border-radius: 20px; padding: 26px; background: rgba(255,255,255,0.03); }
+    .sg-arts h2 { font-size: 1.4rem; margin-bottom: 6px; }
+    .sg-arts > p { opacity: .78; margin-bottom: 16px; font-size: 0.95rem; }
+    .sg-arts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+    .sg-art { display: block; border: 1px solid rgba(255,255,255,0.13); border-radius: 14px; overflow: hidden; background: rgba(0,0,0,0.28); color: inherit; text-decoration: none; transition: border-color .2s, transform .2s; }
+    .sg-art:hover { text-decoration: none; transform: translateY(-3px); border-color: rgba(255,255,255,0.38); }
+    .sg-art img { width: 100%; height: auto; aspect-ratio: 1200 / 630; display: block; }
+    .sg-art-body { padding: 14px 16px 16px; }
+    .sg-art-body h3 { font-size: 1rem; line-height: 1.4; margin-bottom: 6px; }
+    .sg-art-body p { font-size: 0.86rem; opacity: .72; margin: 0; }
+    .sg-arts-all { display: inline-block; margin-top: 14px; font-weight: 700; font-size: 0.9rem; }
+  </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoGame","name":"SogeGammon","applicationCategory":"GameApplication","genre":["Tavla","Masa oyunu","Strateji"],"gamePlatform":["Web tarayıcı","Android"],"playMode":["MultiPlayer","SinglePlayer"],"operatingSystem":"Android, Web","inLanguage":"fr","description":"Jouez au backgammon en ligne sans jetons avec SogeGammon. Aucun jeton nécessaire pour s'installer à la table : parties en direct contre de vrais adversaires, un tournoi gratuit toutes les 3 heures, classements compétitifs, invitations d'amis. Web et Android.","url":"https://gammon.tr/","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"}}</script>
+<meta content="fr_FR" property="og:locale"/></head>
+<body>
+<nav class="topnav">
+<div class="wrap topnav-inner">
+<a data-i18n="nav_home" href="/fr/">← Accueil Sogepps</a>
+<div class="topnav-links">
+<a data-i18n="nav_how" href="#nasil">Comment jouer</a>
+<a data-i18n="nav_features" href="#ozellikler">Fonctionnalités</a>
+<a data-i18n="nav_modes" href="#modlar">Formats de partie</a>
+<a data-i18n="nav_privacy" href="privacy-policy.html">Politique de confidentialité</a>
+<a href="mailto:sogepps@gmail.com">sogepps@gmail.com</a>
+</div>
+</div>
+</nav>
+<main class="wrap">
+<section class="hero">
+<div class="hero-icon"><img alt="Icône de l'application SogeGammon" data-i18n-alt="hero_icon_alt" decoding="async" height="132" src="/sogegammon/img/icon.png" width="132"/></div>
+<div>
+<h1 data-i18n-html="hero_title">SogeGammon<br/>Backgammon en ligne sans jetons</h1>
+<p class="lead" data-i18n="hero_lead">Pas besoin de stocker des jetons pour s'installer à la table. Parties de backgammon en direct contre de vrais adversaires, un tournoi gratuit toutes les 3 heures, classements compétitifs et invitations d'amis. Jouez avec le même compte depuis votre navigateur ou votre téléphone.</p>
+<div class="hero-tags">
+<span class="hero-tag" data-i18n="tag_1">Sans jetons</span>
+<span class="hero-tag" data-i18n="tag_2">Adversaires en direct</span>
+<span class="hero-tag" data-i18n="tag_3">Tournois gratuits</span>
+<span class="hero-tag" data-i18n="tag_4">Web et Android</span>
+</div>
+<div class="hero-actions">
+<a class="btn" data-i18n="btn_play_now" href="https://gammon.tr/" rel="noopener noreferrer" target="_blank">Jouer maintenant →</a>
+<a class="btn secondary" data-i18n="footer_privacy" href="privacy-policy.html">Politique de confidentialité</a>
+<a class="gp-btn" href="https://play.google.com/store/apps/details?id=com.soge.sogegammon" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"></path></svg>
+<span><small>ANDROID</small><b data-i18n="btn_google_play">Télécharger sur Google Play</b></span>
+</a>
+</div>
+</div>
+</section>
+<div class="hero-shot">
+<img alt="Capture d'écran du plateau de backgammon SogeGammon" data-i18n-alt="hero_shot_alt" loading="lazy" src="/sogegammon/img/hero.jpg"/>
+</div>
+<section class="section" id="nasil">
+<h2 data-i18n="how_title">Comment jouer ?</h2>
+<p data-i18n="how_desc">Créez votre compte, lancez une partie, lancez vos dés. Toute personne connaissant les règles peut disputer sa première partie en moins d'une minute.</p>
+<div class="feat-grid">
+<div class="feature"><h3 data-i18n="how_1_t">1) Créez votre compte</h3><p data-i18n="how_1_d">Connectez-vous en quelques secondes avec votre e-mail ou votre compte Google. Le même compte fonctionne sur le web et sur mobile.</p></div>
+<div class="feature"><h3 data-i18n="how_2_t">2) Trouvez un adversaire</h3><p data-i18n="how_2_d">Rejoignez la file d'attente et nous vous associerons à un joueur proche de votre niveau, ou envoyez un lien d'invitation à un ami.</p></div>
+<div class="feature"><h3 data-i18n="how_3_t">3) Jouez la partie</h3><p data-i18n="how_3_d">Lancez les dés et déplacez vos pions. Les points jouables sont mis en évidence sur le plateau ; le minuteur et le score restent affichés en haut.</p></div>
+<div class="feature"><h3 data-i18n="how_4_t">4) Grimpez au classement</h3><p data-i18n="how_4_d">Votre classement augmente à chaque victoire, vous faisant progresser dans le tableau. Les gammons et les backgammons rapportent des points supplémentaires.</p></div>
+</div>
+</section>
+<section class="section" id="ozellikler">
+<h2 data-i18n="feat_title">Pourquoi SogeGammon ?</h2>
+<p data-i18n="feat_desc">Les règles du backgammon classique, avec une expérience en ligne moderne.</p>
+<div class="feat-grid">
+<div class="feature"><h3 data-i18n="f_1_t">Pas d'attente pour des jetons</h3><p data-i18n="f_1_d">Aucun jeton nécessaire pour s'installer à la table. Perdre ne vous exclut pas ; vous enchaînez directement sur une nouvelle partie.</p></div>
+<div class="feature"><h3 data-i18n="f_2_t">Parties en direct</h3><p data-i18n="f_2_d">Connexion instantanée avec de vrais adversaires : dés, coups et discussion circulent des deux côtés en même temps.</p></div>
+<div class="feature"><h3 data-i18n="f_3_t">Tournois gratuits</h3><p data-i18n="f_3_d">L'inscription est gratuite pour les tournois qui démarrent toutes les 3 heures. Survivez aux éliminations et remportez la coupe.</p></div>
+<div class="feature"><h3 data-i18n="f_4_t">Classement compétitif</h3><p data-i18n="f_4_d">Chaque partie compte pour votre classement ; mesurez-vous à de vrais adversaires sur le tableau des scores.</p></div>
+<div class="feature"><h3 data-i18n="f_5_t">Jouez avec des amis</h3><p data-i18n="f_5_d">Ajoutez des amis, partagez un lien d'invitation et défiez-les. Un simple clic sur le lien les amène directement à la table.</p></div>
+<div class="feature"><h3 data-i18n="f_6_t">Thèmes de plateau et de dés</h3><p data-i18n="f_6_d">Choisissez votre style, du feutre vert classique aux plateaux en bois et aux effets de dés enflammés ou néon.</p></div>
+<div class="feature"><h3 data-i18n="f_7_t">Animaux et cadeaux</h3><p data-i18n="f_7_d">Ajoutez de la couleur à vos parties avec des animaux affichés à côté de votre nom et des cadeaux envoyés à votre adversaire.</p></div>
+<div class="feature"><h3 data-i18n="f_8_t">Entraînez-vous contre un bot</h3><p data-i18n="f_8_d">Jouez contre un bot chaque fois que vous ne voulez pas attendre un adversaire, et travaillez tranquillement vos ouvertures.</p></div>
+</div>
+</section>
+<section class="section" id="modlar">
+<h2 data-i18n="modes_title">Formats de partie</h2>
+<p data-i18n="modes_desc">Jouez aussi longtemps que vous le souhaitez : trois formats, d'une partie rapide en un point à une longue série.</p>
+<div class="modes">
+<div class="mode"><div class="mode-name" data-i18n="mode_1_name">⚡ Éclair</div><div class="mode-detail" data-i18n="mode_1_detail">1 point · terminé en une manche</div></div>
+<div class="mode"><div class="mode-name" data-i18n="mode_2_name">🎲 Classique</div><div class="mode-detail" data-i18n="mode_2_detail">5 points · une série équilibrée</div></div>
+<div class="mode"><div class="mode-name" data-i18n="mode_3_name">🏆 Marathon</div><div class="mode-detail" data-i18n="mode_3_detail">10 points · un long combat</div></div>
+</div>
+</section>
+<section class="section sg-arts" id="makaleler">
+<h2 data-i18n="arts_title">Articles</h2>
+<p data-i18n="arts_desc">Guides et idées de jeu autour de SogeGammon (en turc).</p>
+<div class="sg-arts-grid">
+<a class="sg-art" href="/makale/fr/tavla-nasil-oynanir.html">
+<img alt="Comment jouer au backgammon? Tous les règles et détails du début à la fin" height="630" loading="lazy" src="/makale/img/fr/tavla-nasil-oynanir.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>Comment jouer au backgammon? Tous les règles et détails du début à la fin</h3>
+<p>Comment jouer au backgammon: structure du plateau, disposition des pions, lancer les dés, déplacement des pions…</p>
+</div>
+</a>
+<a class="sg-art" href="/makale/fr/tavlada-kazanma-taktikleri.html">
+<img alt="Tactiques de Victoire au Backgammon : 7 Règles pour les Débutants" height="630" loading="lazy" src="/makale/img/fr/tavlada-kazanma-taktikleri.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>Tactiques de Victoire au Backgammon : 7 Règles pour les Débutants</h3>
+<p>7 principes de base pour gagner davantage au backgammon : ne pas laisser de blot, fermer la maison, décision…</p>
+</div>
+</a>
+<a class="sg-art" href="/makale/fr/arkadasinla-online-tavla-oynamak.html">
+<img alt="Jouer au Backgammon en Ligne avec un Ami : Créer une Table Privée avec un Lien d'Invitation" height="630" loading="lazy" src="/makale/img/fr/arkadasinla-online-tavla-oynamak.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>Jouer au Backgammon en Ligne avec un Ami : Créer une Table Privée avec un Lien d'Invitation</h3>
+<p>Comment jouer au backgammon en ligne avec un ami distant : créer une table privée avec un lien d'invitation, choisir…</p>
+</div>
+</a>
+<a class="sg-art" href="/makale/fr/tavla-dizilisi-nasil-dizilir.html">
+<img alt="Configuration du Backgammon : Comment Disposer les Pions ? (Explication Schématique)" height="630" loading="lazy" src="/makale/img/fr/tavla-dizilisi-nasil-dizilir.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>Configuration du Backgammon : Comment Disposer les Pions ? (Explication Schématique)</h3>
+<p>Comment disposer les pions de backgammon : disposition initiale avec schéma, combien de pions vont sur quel carré…</p>
+</div>
+</a>
+</div>
+<a class="sg-arts-all" data-i18n="arts_all" href="/makale/fr/">Tous les articles →</a>
+</section>
+<section class="cta">
+<h2 data-i18n="cta_title">Votre table de backgammon est prête</h2>
+<p data-i18n="cta_desc">Le jeu de backgammon en ligne de la famille d'applications Sogepps. Essayez-le immédiatement dans votre navigateur, emportez-le avec vous sur Android.</p>
+<div class="cta-links">
+<a class="btn" data-i18n="btn_play_gammon" href="https://gammon.tr/" rel="noopener noreferrer" target="_blank">Jouer sur gammon.tr</a>
+<a class="btn secondary" data-i18n="btn_home" href="/fr/">Accueil Sogepps</a>
+<a class="btn secondary" data-i18n="footer_privacy" href="privacy-policy.html">Politique de confidentialité</a>
+<a class="btn secondary" data-i18n="btn_contact" href="mailto:sogepps@gmail.com">Contact</a>
+<a class="gp-btn" href="https://play.google.com/store/apps/details?id=com.soge.sogegammon" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"></path></svg>
+<span><small>ANDROID</small><b data-i18n="btn_google_play">Télécharger sur Google Play</b></span>
+</a>
+</div>
+</section>
+</main>
+<script defer="" src="/js/i18n.js?v=ac9834aa"></script>
+</body>
+</html>

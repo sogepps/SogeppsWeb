@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 260" role="img" aria-label="Tavla taş toplama">
+<rect width="500" height="260" rx="16" fill="#0f1218"/>
+<text x="250" y="28" font-family="Segoe UI,sans-serif" font-size="14" fill="#f0f4f8" text-anchor="middle" font-weight="700">Taş Toplama (Bearing Off)</text>
+<!-- Points 1-6 only -->
+<rect x="30" y="45" width="340" height="160" rx="8" fill="#1e2636" stroke="#3a4a6a" stroke-width="1.5"/>
+<g opacity="0.5">
+<polygon points="50,197 80,197 65,117" fill="#4a5580"/>
+<polygon points="100,197 130,197 115,117" fill="#c9a227"/>
+<polygon points="150,197 180,197 165,117" fill="#4a5580"/>
+<polygon points="200,197 230,197 215,117" fill="#c9a227"/>
+<polygon points="250,197 280,197 265,117" fill="#4a5580"/>
+<polygon points="300,197 330,197 315,117" fill="#c9a227"/>
+</g>
+<!-- White pieces in home board -->
+<!-- Point 6: 3 pieces -->
+<circle cx="65" cy="183" r="12" fill="#f0f4f8" stroke="#c7ced8" stroke-width="1.5"/><circle cx="65" cy="159" r="12" fill="#f0f4f8" stroke="#c7ced8" stroke-width="1.5"/><circle cx="65" cy="135" r="12" fill="#f0f4f8" stroke="#c7ced8" stroke-width="1.5"/>
+<!-- Point 5: 3 pieces -->
+<circle cx="115" cy="183" r="12" fill="#f0f4f8" stroke="#c7ced8" stroke-width="1.5"/><circle cx="115" cy="159" r="12" fill="#f0f4f8" stroke="#c7ced8" stroke-width="1.5"/><circle cx="115" cy="135" r="12" fill="#f0f4f8" stroke="#c7ced8" stroke-width="1.5"/>
+<!-- Point 4: 2 pieces -->
+<circle cx="165" cy="183" r="12" fill="#f0f4f8" stroke="#c7ced8" stroke-width="1.5"/><circle cx="165" cy="159" r="12" fill="#f0f4f8" stroke="#c7ced8" stroke-width="1.5"/>
+<!-- Point 3: 3 pieces -->
+<circle cx="215" cy="183" r="12" fill="#f0f4f8" stroke="#c7ced8" stroke-width="1.5"/><circle cx="215" cy="159" r="12" fill="#f0f4f8" stroke="#c7ced8" stroke-width="1.5"/><circle cx="215" cy="135" r="12" fill="#f0f4f8" stroke="#c7ced8" stroke-width="1.5"/>
+<!-- Point 2: 2 pieces -->
+<circle cx="265" cy="183" r="12" fill="#f0f4f8" stroke="#c7ced8" stroke-width="1.5"/><circle cx="265" cy="159" r="12" fill="#f0f4f8" stroke="#c7ced8" stroke-width="1.5"/>
+<!-- Point 1: 2 pieces -->
+<circle cx="315" cy="183" r="12" fill="#f0f4f8" stroke="#c7ced8" stroke-width="1.5"/><circle cx="315" cy="159" r="12" fill="#f0f4f8" stroke="#c7ced8" stroke-width="1.5"/>
+<!-- Point labels -->
+<text x="65" y="214" font-family="Segoe UI,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">6</text>
+<text x="115" y="214" font-family="Segoe UI,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">5</text>
+<text x="165" y="214" font-family="Segoe UI,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">4</text>
+<text x="215" y="214" font-family="Segoe UI,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">3</text>
+<text x="265" y="214" font-family="Segoe UI,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">2</text>
+<text x="315" y="214" font-family="Segoe UI,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">1</text>
+<!-- Bearing off: piece leaving the board -->
+<defs><marker id="oArrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0,0 8,3 0,6" fill="#34d399"/></marker></defs>
+<!-- Arrow from point 4: dice shows 4 -->
+<path d="M165,145 Q200,85 380,75" fill="none" stroke="#34d399" stroke-width="2.5" marker-end="url(#oArrow)"/>
+<!-- Collected pieces area -->
+<rect x="390" y="50" width="80" height="155" rx="8" fill="rgba(52,211,153,0.08)" stroke="rgba(52,211,153,0.3)" stroke-width="1.5" stroke-dasharray="6,3"/>
+<text x="430" y="72" font-family="Segoe UI,sans-serif" font-size="10" fill="#34d399" text-anchor="middle" font-weight="700">Toplanan</text>
+<!-- Collected pieces -->
+<circle cx="430" cy="92" r="10" fill="#f0f4f8" stroke="#c7ced8" stroke-width="1" opacity="0.7"/>
+<circle cx="430" cy="112" r="10" fill="#f0f4f8" stroke="#c7ced8" stroke-width="1" opacity="0.5"/>
+<!-- Dice -->
+<rect x="385" y="160" width="30" height="30" rx="5" fill="#f0f4f8" stroke="#c7ced8" stroke-width="1"/>
+<circle cx="394" cy="169" r="2.5" fill="#1e2636"/><circle cx="406" cy="169" r="2.5" fill="#1e2636"/><circle cx="394" cy="181" r="2.5" fill="#1e2636"/><circle cx="406" cy="181" r="2.5" fill="#1e2636"/>
+<text x="400" y="204" font-family="Segoe UI,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">Zar: 4</text>
+<!-- All home label -->
+<rect x="100" y="224" width="200" height="22" rx="4" fill="rgba(52,211,153,0.12)" stroke="rgba(52,211,153,0.25)" stroke-width="1"/>
+<text x="200" y="239" font-family="Segoe UI,sans-serif" font-size="10" fill="#34d399" text-anchor="middle" font-weight="600">15 taş ev bölgesinde → toplama başlar</text>
+</svg>

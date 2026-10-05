@@ -1,15 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sogepps – Mobile Apps &amp; Software</title>
-  <meta name="description" content="Sogepps mobil uygulamalar geliştirir: League & Tournament Maker, Hızlı Çekiliş, HomeParty, Spinify, YerseYap ve Shot Çarkı. Parti oyunları, çekiliş ve özel şans çarkı uygulamalarımızı keşfedin." />
-  <meta name="keywords" content="Shot Çarkı, YerseYap, Spinify, şans çarkı, HomeParty, evde arkadaşlarla oynamalık oyunlar, party game app, Sogepps uygulamaları" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sogepps – Mobil Uygulamalar ve Yazılım</title>
+<meta content="Sogepps; HomeParty, Spinify, Yerse Yap, Shot Çarkı, Tahmin Meleği - İddaa, Metin2 Okey, Sessiz Kelime, SogeGammon, Hızlı Çekiliş ve Tournament Maker geliştirir. Parti oyunları, çekiliş, turnuva, şans çarkı ve kelime oyunlarımızı keşfedin." name="description"/>
+<meta content="sogegammon, online tavla, çipsiz tavla, sessiz kelime, metin2 okey, tahmin melegi, Shot Çarkı, Yerse Yap, YerseYap, Roll or Dare, Spinify, HomeParty, Sogepps oyunları" name="keywords"/>
+<link href="https://sogepps.tr/" rel="canonical"/><link href="https://sogepps.tr/" hreflang="tr" rel="alternate"/><link href="https://sogepps.tr/en/" hreflang="en" rel="alternate"/><link href="https://sogepps.tr/de/" hreflang="de" rel="alternate"/><link href="https://sogepps.tr/fr/" hreflang="fr" rel="alternate"/><link href="https://sogepps.tr/es/" hreflang="es" rel="alternate"/><link href="https://sogepps.tr/it/" hreflang="it" rel="alternate"/><link href="https://sogepps.tr/pt/" hreflang="pt" rel="alternate"/><link href="https://sogepps.tr/nl/" hreflang="nl" rel="alternate"/><link href="https://sogepps.tr/ru/" hreflang="ru" rel="alternate"/><link href="https://sogepps.tr/ja/" hreflang="ja" rel="alternate"/><link href="https://sogepps.tr/ko/" hreflang="ko" rel="alternate"/><link href="https://sogepps.tr/ar/" hreflang="ar" rel="alternate"/><link href="https://sogepps.tr/hi/" hreflang="hi" rel="alternate"/><link href="https://sogepps.tr/id/" hreflang="id" rel="alternate"/><link href="https://sogepps.tr/pl/" hreflang="pl" rel="alternate"/><link href="https://sogepps.tr/" hreflang="x-default" rel="alternate"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<meta content="website" property="og:type"/>
+<meta content="Sogepps" property="og:site_name"/>
+<meta content="Sogepps – Mobil Uygulamalar ve Yazılım" property="og:title"/>
+<meta content="Sogepps; HomeParty, Spinify, Yerse Yap, Shot Çarkı, Tahmin Meleği - İddaa, Metin2 Okey, Sessiz Kelime, SogeGammon, Hızlı Çekiliş ve Tournament Maker geliştirir. Parti oyunları, çekiliş, turnuva, şans çarkı ve kelime oyunlarımızı keşfedin." property="og:description"/>
+<meta content="https://sogepps.tr/" property="og:url"/>
+<meta content="https://sogepps.tr/img/sogegammon-icon.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
     :root {
       --bg: #050608;
       --surface: #0f1218;
@@ -90,210 +100,411 @@
       .app-card { flex-direction: column; gap: 20px; }
       .footer-inner { flex-direction: column; }
     }
+    /* Makale kartlari */
+    .art-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+    .art-card { display: block; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; background: var(--surface); color: inherit; text-decoration: none; transition: border-color .25s, transform .2s; }
+    .art-card:hover { border-color: var(--accent); transform: translateY(-4px); text-decoration: none; }
+    .art-card img { width: 100%; height: auto; aspect-ratio: 1200 / 630; display: block; }
+    .art-body { padding: 14px 16px 18px; }
+    .art-app { display: block; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent-light); margin-bottom: 6px; }
+    .art-body h3 { font-size: 0.97rem; font-weight: 600; line-height: 1.42; }
   </style>
-</head>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"Sogepps","url":"https://sogepps.tr/","email":"sogepps@gmail.com","logo":{"@type":"ImageObject","url":"https://sogepps.tr/img/sogegammon-icon.png"}},{"@type":"WebSite","name":"Sogepps","url":"https://sogepps.tr/","inLanguage":"tr","publisher":{"@type":"Organization","name":"Sogepps"}},{"@type":"ItemList","name":"Sogepps uygulamaları","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"SoftwareApplication","name":"HomeParty","applicationCategory":"GameApplication","operatingSystem":"Android","url":"https://sogepps.tr/homeparty/","image":"https://sogepps.tr/img/homeparty-icon.png","description":"Evde arkadaşlarla oynanan 14 oyun modu, tek uygulamada.","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"inLanguage":"tr"}},{"@type":"ListItem","position":2,"item":{"@type":"SoftwareApplication","name":"Yerse Yap: Parti Oyunu","alternateName":["YerseYap","Roll or Dare: Party Board Game"],"applicationCategory":"GameApplication","operatingSystem":"Android","url":"https://sogepps.tr/yerseyap/","image":"https://sogepps.tr/img/yerseyap-icon.webp","description":"Zar at, görevi yap! 1000+ görev, Macera Adası, canavarlar, mini oyunlar ve Kader Çarkı. 2–10 kişilik parti oyunu, 73 dil.","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"inLanguage":"tr"}},{"@type":"ListItem","position":3,"item":{"@type":"SoftwareApplication","name":"Shot Çarkı","applicationCategory":"GameApplication","operatingSystem":"Android","url":"https://sogepps.tr/shot/","image":"https://sogepps.tr/img/shot-icon.webp","description":"Çarkı çevir, zorluk seviyesine göre görev al, puan kazan ya da shot at.","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"inLanguage":"tr"}},{"@type":"ListItem","position":4,"item":{"@type":"SoftwareApplication","name":"Sessiz Kelime","applicationCategory":"GameApplication","operatingSystem":"Android","url":"https://sogepps.tr/sessizkelime/","image":"https://sogepps.tr/img/sessizkelime-icon.png","description":"İki takım, konuşmadan kelime anlatma yarışı. 20+ kategori.","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"inLanguage":"tr"}},{"@type":"ListItem","position":5,"item":{"@type":"SoftwareApplication","name":"Spinify","applicationCategory":"GameApplication","operatingSystem":"Android","url":"https://sogepps.tr/spinify/","image":"https://sogepps.tr/img/spinify-icon.png","description":"Ağırlıklı olasılık, iç içe çarklar ve 14 hazır şablonla gelişmiş çark.","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"inLanguage":"tr"}},{"@type":"ListItem","position":6,"item":{"@type":"SoftwareApplication","name":"Hızlı Çekiliş","applicationCategory":"GameApplication","operatingSystem":"Android","url":"https://sogepps.tr/quickraffle-portal/","image":"https://sogepps.tr/img/quickraffle-icon.png","description":"İsim, sayı, çark, takım, zar, yazı-tura — tek uygulamada adil çekiliş.","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"inLanguage":"tr"}},{"@type":"ListItem","position":7,"item":{"@type":"SoftwareApplication","name":"Lig & Turnuva Oluştur","applicationCategory":"GameApplication","operatingSystem":"Android","url":"https://sogepps.tr/tournament-portal/","image":"https://sogepps.tr/img/tournament-icon.png","description":"Lig, eleme ve grup turnuvaları; fikstür, puan durumu ve PDF çıktı.","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"inLanguage":"tr"}},{"@type":"ListItem","position":8,"item":{"@type":"SoftwareApplication","name":"Tahmin Meleği - İddaa","applicationCategory":"GameApplication","operatingSystem":"Android","url":"https://sogepps.tr/tahminmelegi/","image":"https://sogepps.tr/img/tahminmelegi-icon.webp","description":"Cadı kazanını ovala, parşömende tek kehanetini oku. Eğlence amaçlıdır.","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"inLanguage":"tr"}},{"@type":"ListItem","position":9,"item":{"@type":"SoftwareApplication","name":"Metin2 Okey","applicationCategory":"GameApplication","operatingSystem":"Android","url":"https://sogepps.tr/metin2okey/","image":"https://sogepps.tr/img/metin2okey-icon.png","description":"Taş takibi, kalan kombinasyonlar ve webde pratik oyun.","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"inLanguage":"tr"}},{"@type":"ListItem","position":10,"item":{"@type":"SoftwareApplication","name":"SogeGammon","applicationCategory":"GameApplication","operatingSystem":"Android","url":"https://sogepps.tr/sogegammon/","image":"https://sogepps.tr/img/sogegammon-icon.png","description":"Çipsiz online tavla: canlı rakipler, ücretsiz turnuvalar, dereceli sıralama.","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"inLanguage":"tr"}}]}]}</script>
+<meta content="tr_TR" property="og:locale"/></head>
 <body>
-
-  <nav>
-    <div class="nav-inner">
-      <a href="/" class="nav-brand">
-        <div class="nav-logo">S</div>
+<nav>
+<div class="nav-inner">
+<a class="nav-brand" href="/">
+<div class="nav-logo">S</div>
         Sogepps
       </a>
-      <ul class="nav-links">
-        <li><a href="#about" data-i18n="nav_about">About</a></li>
-        <li><a href="#apps" data-i18n="nav_apps">Apps</a></li>
-        <li><a href="mailto:sogepps@gmail.com" data-i18n="nav_contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+<ul class="nav-links">
+<li><a data-i18n="nav_about" href="#about">Hakkımızda</a></li>
+<li><a data-i18n="nav_apps" href="#apps">Uygulamalar</a></li>
+<li><a data-i18n="nav_articles" href="/makale/">Makaleler</a></li>
+<li><a data-i18n="nav_contact" href="mailto:sogepps@gmail.com">İletişim</a></li>
+</ul>
+</div>
+</nav>
+<!-- Hero -->
+<section class="hero">
+<div class="hero-label" data-i18n="hero_badge">⚡ Kullanışlı mobil uygulamalar geliştiriyoruz</div>
+<h1 data-i18n-html="hero_title">Hayatınızı<br/><span>kolaylaştıran uygulamalar</span></h1>
+<p data-i18n="hero_desc">Sogepps, gerçek dünya sorunlarını çözmek için tasarlanmış, sezgisel mobil uygulamalar geliştiriyor. Basit, güvenilir ve özenle yapılmış.</p>
+<a class="hero-cta" data-i18n="hero_cta" href="#apps">Uygulamalarımızı Keşfet ↓</a>
+</section>
+<!-- About -->
+<section class="about" id="about">
+<div class="section-label" data-i18n="about_label">◆ Hakkımızda</div>
+<h2 data-i18n="about_title">Biz Kimiz</h2>
+<p data-i18n="about_desc">Sogepps, mobil uygulama geliştirmeye odaklanan bir yazılım stüdyosudur. Harika yazılımların kullanımı kolay, güvenilir ve herkes için erişilebilir olması gerektiğine inanıyoruz.</p>
+<div class="about-grid">
+<div class="about-stat">
+<div class="num">15</div>
+<div class="label" data-i18n="stat_apps">Yayınlanan Uygulama</div>
+</div>
+<div class="about-stat">
+<div class="num">⚡</div>
+<div class="label" data-i18n="stat_fast">Hızlı ve Güvenilir</div>
+</div>
+<div class="about-stat">
+<div class="num">🔒</div>
+<div class="label" data-i18n="stat_privacy">Gizlilik Öncelikli</div>
+</div>
+<div class="about-stat">
+<div class="num">🌐</div>
+<div class="label" data-i18n="stat_languages">16+ Dil</div>
+</div>
+</div>
+</section>
+<!-- Apps -->
+<section class="apps" id="apps">
+<div class="section-label" data-i18n="apps_label">◆ Uygulamalarımız</div>
+<h2 data-i18n="apps_title">Uygulamalar</h2>
+<p data-i18n="apps_desc">Yayınlanan mobil uygulamalarımızı keşfedin.</p>
+<a class="app-card" href="/tournament-portal/">
+<div class="app-icon">
+<img alt="" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" src="img/tournament-icon.png"/>
+<span aria-hidden="true" class="app-icon-fallback">⚗</span>
+</div>
+<div class="app-info">
+<h3 data-i18n="app_name">Lig ve Turnuva Oluşturucu</h3>
+<p data-i18n="app_desc">Saniyeler içinde lig, eleme tabloları ve çift devreli turnuvalar oluşturun. Skorları girin, canlı puan durumunu görüntüleyin, sonuçları PDF olarak dışa aktarın.</p>
+<div class="app-badges">
+<span class="app-badge" data-i18n="badge_sports">⚽ Sporlar</span>
+<span class="app-badge" data-i18n="badge_tournaments">🏆 Turnuvalar</span>
+<span class="app-badge" data-i18n="badge_standings">📈 Puan Durumu</span>
+<span class="app-badge" data-i18n="badge_brackets">⚖ Tablolar</span>
+</div>
+<div class="app-arrow" data-i18n="app_view">Detayları Gör →</div>
+</div>
+</a>
+<a class="app-card" href="/quickraffle-portal/">
+<div class="app-icon">
+<img alt="" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" src="img/quickraffle-icon.png"/>
+<span aria-hidden="true" class="app-icon-fallback">🍀</span>
+</div>
+<div class="app-info">
+<h3 data-i18n="app_name_quickraffle">Hızlı Çekiliş</h3>
+<p data-i18n="app_desc_quickraffle">Çekiliş, kura, hediye, sosyal medya yarışmaları, sınıf etkinlikleri, toplantılar ve partiler için hepsi bir arada uygulama. İsim seçici, sayı çekilişi, şans çarkı, takım oluşturucu, zar, yazı tura ve daha fazlası. Hızlı, adil ve eğlenceli.</p>
+<div class="app-badges">
+<span class="app-badge" data-i18n="badge_raffle">🎰 Çekiliş</span>
+<span class="app-badge" data-i18n="badge_wheel">💰 Çark</span>
+<span class="app-badge" data-i18n="badge_teams">👥 Takımlar</span>
+<span class="app-badge" data-i18n="badge_random">⚏ Rastgele</span>
+</div>
+<div class="app-arrow" data-i18n="app_view">Detayları Gör →</div>
+</div>
+</a>
+<a class="app-card" href="/homeparty/">
+<div class="app-icon">
+<img alt="HomeParty uygulama simgesi" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" src="img/homeparty-icon.png"/>
+<span aria-hidden="true" class="app-icon-fallback">🎉</span>
+</div>
+<div class="app-info">
+<h3>HomeParty</h3>
+<p data-i18n="app_desc_homeparty">HomeParty, evde arkadaşlarla oynamalık oyunlar ve arkadaşlarla oynamalık oyunlar arayanlar için tasarlanmış eğlence uygulamasıdır. Parti geceleri, aile buluşmaları ve arkadaş ortamlarında hızlıca oyun seçip oynamanıza yardımcı olur.</p>
+<div class="app-badges">
+<span class="app-badge" data-i18n="badge_homeparty_party">🎉 Parti Oyunları</span>
+<span class="app-badge" data-i18n="badge_homeparty_friends">👥 Arkadaşlar</span>
+<span class="app-badge" data-i18n="badge_homeparty_home">🏠 Evde Eğlence</span>
+<span class="app-badge" data-i18n="badge_homeparty_group">🎲 Grup Oyunu</span>
+</div>
+<div class="app-arrow" data-i18n="app_view">Detayları Gör →</div>
+</div>
+</a>
+<a class="app-card" href="/spinify/">
+<div class="app-icon" style="background: linear-gradient(135deg, #7c5cff, #ff5ca8);">
+<img alt="Spinify uygulama simgesi" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" src="img/spinify-icon.png"/>
+<span aria-hidden="true" class="app-icon-fallback">🎰</span>
+</div>
+<div class="app-info">
+<h3 data-i18n="app_name_spinify">Spinify</h3>
+<p data-i18n="app_desc_spinify">Gelişmiş çark uygulaması: özel çarklar oluştur, gerçek olasılık ağırlıkları ayarla, 14 hazır şablon, iç içe çarklar, eleme modu ve tam dönüş özelleştirmesi. Yemek seçimi, parti, ev işi, egzersiz ve günlük kararlar.</p>
+<div class="app-badges">
+<span class="app-badge" data-i18n="badge_spinify_wheel">🎡 Çark</span>
+<span class="app-badge" data-i18n="badge_spinify_odds">⚙ Ağırlıklı Olasılık</span>
+<span class="app-badge" data-i18n="badge_spinify_presets">★ 14 Hazır Çark</span>
+<span class="app-badge" data-i18n="badge_spinify_nested">🔀 İç İçe</span>
+</div>
+<div class="app-arrow" data-i18n="app_view">Detayları Gör →</div>
+</div>
+</a>
+<a class="app-card" href="/yerseyap/">
+<div class="app-icon" style="background: linear-gradient(135deg, #8b3dff, #ff4fa3);">
+<img alt="Yerse Yap uygulama simgesi" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" src="img/yerseyap-icon.webp"/>
+<span aria-hidden="true" class="app-icon-fallback">🎲</span>
+</div>
+<div class="app-info">
+<h3 data-i18n="app_name_yerseyap">Yerse Yap: Parti Oyunu</h3>
+<p data-i18n="app_desc_yerseyap">Zar at, görevi yap! 1000+ görev, Macera Adası, canavarlar, mini oyunlar ve Kader Çarkı. Tek telefonla 2–10 kişilik parti oyunu, 73 dil.</p>
+<div class="app-badges">
+<span class="app-badge" data-i18n="badge_yerseyap_dice">🎲 Zar</span>
+<span class="app-badge" data-i18n="badge_yerseyap_board">🏝️ Macera Adası</span>
+<span class="app-badge" data-i18n="badge_yerseyap_tasks">🃏 1000+ Görev</span>
+<span class="app-badge" data-i18n="badge_yerseyap_group">👥 2–10 Oyuncu</span>
+</div>
+<div class="app-arrow" data-i18n="app_view">Detayları Gör →</div>
+</div>
+</a>
+<a class="app-card" href="/shot/">
+<div class="app-icon" style="background: linear-gradient(135deg, #a855f7, #ec4899);">
+<img alt="Shot Çarkı uygulama simgesi" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" src="img/shot-icon.webp"/>
+<span aria-hidden="true" class="app-icon-fallback">🍾</span>
+</div>
+<div class="app-info">
+<h3 data-i18n="app_name_shot">Shot Çarkı</h3>
+<p data-i18n="app_desc_shot">Parti çarkını çevir, zorluğa göre görev al, tamamla puan kazan veya shot at. Ağırlıklı olasılık, canlı skor — 2–12 oyuncu.</p>
+<div class="app-badges">
+<span class="app-badge" data-i18n="badge_shot_wheel">🎡 Çark</span>
+<span class="app-badge" data-i18n="badge_shot_dares">🃏 Görevler</span>
+<span class="app-badge" data-i18n="badge_shot_shots">🥃 Shot</span>
+<span class="app-badge" data-i18n="badge_shot_group">👥 2–12 Oyuncu</span>
+</div>
+<div class="app-arrow" data-i18n="app_view">Detayları Gör →</div>
+</div>
+</a>
+<a class="app-card" href="/tahminmelegi/">
+<div class="app-icon" style="background: linear-gradient(135deg, #7b2ff7, #f0a500);">
+<img alt="Tahmin Meleği - İddaa uygulama simgesi" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" src="img/tahminmelegi-icon.webp"/>
+<span aria-hidden="true" class="app-icon-fallback">🔮</span>
+</div>
+<div class="app-info">
+<h3 data-i18n="app_name_tahminmelegi">Tahmin Meleği - İddaa</h3>
+<p data-i18n="app_desc_tahminmelegi">Aklından bir maç tut, cadının kader kazanını ovala, parşömeninde tek bir kehanet oku. Maç sonucu, alt/üst, karşılıklı gol ve daha fazlası — tamamen eğlence amaçlı.</p>
+<div class="app-badges">
+<span class="app-badge" data-i18n="badge_tahmin_ritual">🔮 Ritüel</span>
+<span class="app-badge" data-i18n="badge_tahmin_markets">⚽ İddaa Pazarları</span>
+<span class="app-badge" data-i18n="badge_tahmin_fun">🎭 Eğlence</span>
+<span class="app-badge" data-i18n="badge_tahmin_noaccount">✨ Hesap Yok</span>
+</div>
+<div class="app-arrow" data-i18n="app_view">Detayları Gör →</div>
+</div>
+</a>
+<a class="app-card" href="/metin2okey/">
+<div class="app-icon" style="background: linear-gradient(135deg, #7c5a1a, #d4a72c);">
+<img alt="Metin2 Okey uygulama simgesi" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" src="img/metin2okey-icon.png"/>
+<span aria-hidden="true" class="app-icon-fallback">🃏</span>
+</div>
+<div class="app-info">
+<h3 data-i18n="app_name_metin2okey">Metin2 Okey</h3>
+<p data-i18n="app_desc_metin2okey">Metin2 Okey yardımcı uygulaması: taş takibi, kalan güçlü kombinasyonlar ve webde pratik oyun. Mobilde indir, webde dene.</p>
+<div class="app-badges">
+<span class="app-badge" data-i18n="badge_m2okey_helper">🃏 Yardımcı</span>
+<span class="app-badge" data-i18n="badge_m2okey_combos">🏆 Kombinasyon</span>
+<span class="app-badge" data-i18n="badge_m2okey_web">🌐 Web'de Oyna</span>
+<span class="app-badge" data-i18n="badge_m2okey_mobile">📱 Mobil</span>
+</div>
+<div class="app-arrow" data-i18n="app_view">Detayları Gör →</div>
+</div>
+</a>
+<a class="app-card" href="/fishingdiary/">
+<div class="app-icon" style="background: linear-gradient(135deg, #0a4f7a, #29b6f6);">
+<img alt="Fishing Diary: Ocean Legends uygulama simgesi" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" src="img/fishingdiary-icon.png"/>
+<span aria-hidden="true" class="app-icon-fallback">🎣</span>
+</div>
+<div class="app-info">
+<h3 data-i18n="app_name_fishingdiary">Fishing Diary: Ocean Legends</h3>
+<p data-i18n="app_desc_fishingdiary">Topundan ağ fırlat, 150+ türü yakala! 40 efsanevi silah, 20 okyanus bölgesi, 200 derinlik, dev boss'lar ve yardımcılar. İnternetsiz oynanır. Ücretsiz Android balık avı oyunu.</p>
+<div class="app-badges">
+<span class="app-badge" data-i18n="badge_fd_species">🎣 150+ tür</span>
+<span class="app-badge" data-i18n="badge_fd_weapons">🔱 40 silah</span>
+<span class="app-badge" data-i18n="badge_fd_langs">🌐 70+ Dil</span>
+</div>
+<div class="app-arrow" data-i18n="app_view">Detayları Gör →</div>
+</div>
+</a>
+<a class="app-card" href="/neonkaleler/">
+<div class="app-icon" style="background: linear-gradient(135deg, #2a0a58, #ff3df0);">
+<img alt="Neon Kaleler uygulama simgesi" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" src="img/neonkaleler-icon.png"/>
+<span aria-hidden="true" class="app-icon-fallback">🏰</span>
+</div>
+<div class="app-info">
+<h3 data-i18n="app_name_neonkaleler">Neon Kaleler</h3>
+<p data-i18n="app_desc_neonkaleler">Asker bas, madenleri çalıştır, düşman kalesini yık! 300 bölümlük neon savaşı.</p>
+<div class="app-badges">
+<span class="app-badge" data-i18n="badge_nk_units">⚔️ 16 asker, 5 büyü ve 7 kale geliştirmesi</span>
+<span class="app-badge" data-i18n="badge_nk_offline">📴 İnternetsiz oynanabilir</span>
+<span class="app-badge" data-i18n="badge_nk_speed">⚡ 2x ve 3x hızlı savaş modu</span>
+</div>
+<div class="app-arrow" data-i18n="app_view">Detayları Gör →</div>
+</div>
+</a>
+<a class="app-card" href="/kalemuhafizlari/">
+<div class="app-icon" style="background: linear-gradient(135deg, #1d4d2b, #3f8f3a);">
+<img alt="Kale Muhafızları uygulama simgesi" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" src="img/kalemuhafizlari-icon.png"/>
+<span aria-hidden="true" class="app-icon-fallback">🏰</span>
+</div>
+<div class="app-info">
+<h3 data-i18n="app_name_kalemuhafizlari">Kale Muhafızları</h3>
+<p data-i18n="app_desc_kalemuhafizlari">Kalenizi kulelerle donatın, düşman dalgalarını durdurun, boss'ları devirin. 250 seviye, 5 kule türü, 4 kahraman, 75 dil. Ücretsiz kule savunma oyunu.</p>
+<div class="app-badges">
+<span class="app-badge" data-i18n="badge_km_levels">⚔️ 250 seviye</span>
+<span class="app-badge" data-i18n="badge_km_towers">🏰 5 kule · 4 kahraman</span>
+<span class="app-badge" data-i18n="badge_ss_langs">🌐 75 Dil</span>
+</div>
+<div class="app-arrow" data-i18n="app_view">Detayları Gör →</div>
+</div>
+</a>
+<a class="app-card" href="/cadiyasor/">
+<div class="app-icon" style="background: linear-gradient(135deg, #241250, #5a2fa0);">
+<img alt="Cadıya Sor uygulama simgesi" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" src="img/cadiyasor-icon.png"/>
+<span aria-hidden="true" class="app-icon-fallback">🔮</span>
+</div>
+<div class="app-info">
+<h3 data-i18n="app_name_cadiyasor">Cadıya Sor</h3>
+<p data-i18n="app_desc_cadiyasor">Sorunu sor, cadının kazanını ovala, kaderini oku. Kristal küre, günün kehaneti ve 75 dil ile büyülü bir cevaplar kitabı.</p>
+<div class="app-badges">
+<span class="app-badge" data-i18n="badge_cs_answers">🔮 200 Cevap</span>
+<span class="app-badge" data-i18n="badge_cs_omen">🌙 Günün Kehaneti</span>
+<span class="app-badge" data-i18n="badge_ss_langs">🌐 75 Dil</span>
+</div>
+<div class="app-arrow" data-i18n="app_view">Detayları Gör →</div>
+</div>
+</a>
+<a class="app-card" href="/sessizsinema/">
+<div class="app-icon" style="background: linear-gradient(135deg, #C8102E, #F5C518);">
+<img alt="Sessiz Sinema uygulama simgesi" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" src="img/sessizsinema-icon.png"/>
+<span aria-hidden="true" class="app-icon-fallback">🎬</span>
+</div>
+<div class="app-info">
+<h3 data-i18n="app_name_sessizsinema">Sessiz Sinema</h3>
+<p data-i18n="app_desc_sessizsinema">Filmi konuşmadan anlat, takımın bilsin. 11 türde 600 film, ülkende gösterildiği adlarıyla, 75 dilde.</p>
+<div class="app-badges">
+<span class="app-badge" data-i18n="badge_ss_films">🎬 600 Film</span>
+<span class="app-badge" data-i18n="badge_ss_langs">🌐 75 Dil</span>
+<span class="app-badge" data-i18n="badge_sk_teams">👥 2 Takım</span>
+<span class="app-badge" data-i18n="badge_sk_party">🎉 Parti</span>
+</div>
+<div class="app-arrow" data-i18n="app_view">Detayları Gör →</div>
+</div>
+</a>
+<a class="app-card" href="/sessizkelime/">
+<div class="app-icon" style="background: linear-gradient(135deg, #8B5CF6, #ec4899);">
+<img alt="Sessiz Kelime uygulama simgesi" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" src="img/sessizkelime-icon.png"/>
+<span aria-hidden="true" class="app-icon-fallback">🗣</span>
+</div>
+<div class="app-info">
+<h3 data-i18n="app_name_sessizkelime">Sessiz Kelime</h3>
+<p data-i18n="app_desc_sessizkelime">İki takım konuşmadan kelime anlatarak yarışır. Sağa doğru, sola yanlış, aşağı pas. 20+ kategori, süre ve pas ayarlarıyla partiye hazır.</p>
+<div class="app-badges">
+<span class="app-badge" data-i18n="badge_sk_teams">👥 2 Takım</span>
+<span class="app-badge" data-i18n="badge_sk_words">💬 Kelime Oyunu</span>
+<span class="app-badge" data-i18n="badge_sk_cats">🏷️ 20+ Kategori</span>
+<span class="app-badge" data-i18n="badge_sk_party">🎉 Parti</span>
+</div>
+<div class="app-arrow" data-i18n="app_view">Detayları Gör →</div>
+</div>
+</a>
+<a class="app-card" href="/sogegammon/">
+<div class="app-icon" style="background: linear-gradient(135deg, #0A1024, #C9A227);">
+<img alt="SogeGammon uygulama simgesi" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" src="img/sogegammon-icon.png"/>
+<span aria-hidden="true" class="app-icon-fallback">🎲</span>
+</div>
+<div class="app-info">
+<h3 data-i18n="app_name_sogegammon">SogeGammon</h3>
+<p data-i18n="app_desc_sogegammon">Çipsiz online tavla. Masaya oturmak için çip gerekmez: gerçek rakiplerle canlı maçlar, her 3 saatte bir ücretsiz turnuva, dereceli sıralama, arkadaş davetleri, tahta ve zar temaları. Web ve Android’de oyna.</p>
+<div class="app-badges">
+<span class="app-badge" data-i18n="badge_sg_online">🎲 Online Tavla</span>
+<span class="app-badge" data-i18n="badge_sg_live">👥 Canlı Rakipler</span>
+<span class="app-badge" data-i18n="badge_sg_tournament">🏆 Turnuvalar</span>
+<span class="app-badge" data-i18n="badge_sg_rank">📈 Dereceli Sıralama</span>
+</div>
+<div class="app-arrow" data-i18n="app_view">Detayları Gör →</div>
+</div>
+</a>
+</section>
+<!-- Makaleler -->
+<section class="apps" id="makaleler">
+<div class="section-label" data-i18n="articles_label">◆ Makaleler</div>
+<h2 data-i18n="articles_title">Rehberler ve Oyun Fikirleri</h2>
+<p data-i18n="articles_desc">Uygulamalarımızın etrafındaki rehberler: parti oyunu fikirleri, çekiliş ve turnuva kurulumu, kurallar ve taktikler.</p>
+<div class="art-grid">
+<a class="art-card" href="/makale/evde-arkadaslarla-oynanacak-oyunlar.html">
+<img alt="Evde Arkadaşlarla Oynanacak 30+ Eğlenceli Oyun" height="630" loading="lazy" src="/makale/img/evde-arkadaslarla-oynanacak-oyunlar.svg" width="1200"/>
+<div class="art-body">
+<span class="art-app">HomeParty</span>
+<h3>Evde Arkadaşlarla Oynanacak 30+ Eğlenceli Oyun</h3>
+</div>
+</a>
+<a class="art-card" href="/makale/instagram-cekilisi-nasil-yapilir.html">
+<img alt="Instagram Çekilişi Nasıl Yapılır? Adil ve Şeffaf Yöntem" height="630" loading="lazy" src="/makale/img/instagram-cekilisi-nasil-yapilir.svg" width="1200"/>
+<div class="art-body">
+<span class="art-app">Hızlı Çekiliş</span>
+<h3>Instagram Çekilişi Nasıl Yapılır? Adil ve Şeffaf Yöntem</h3>
+</div>
+</a>
+<a class="art-card" href="/makale/hali-saha-ligi-nasil-kurulur.html">
+<img alt="Halı Saha Ligi Nasıl Kurulur? Fikstür, Puan Durumu ve Kurallar" height="630" loading="lazy" src="/makale/img/hali-saha-ligi-nasil-kurulur.svg" width="1200"/>
+<div class="art-body">
+<span class="art-app">Lig &amp; Turnuva Oluştur</span>
+<h3>Halı Saha Ligi Nasıl Kurulur? Fikstür, Puan Durumu ve Kurallar</h3>
+</div>
+</a>
+<a class="art-card" href="/makale/tavlada-kazanma-taktikleri.html">
+<img alt="Tavlada Kazanma Taktikleri: Yeni Başlayanlar İçin 7 Kural" height="630" loading="lazy" src="/makale/img/tavlada-kazanma-taktikleri.svg" width="1200"/>
+<div class="art-body">
+<span class="art-app">SogeGammon</span>
+<h3>Tavlada Kazanma Taktikleri: Yeni Başlayanlar İçin 7 Kural</h3>
+</div>
+</a>
+</div>
+<a class="hero-cta" data-i18n="articles_cta" href="/makale/" style="margin-top:28px">Tüm Makaleleri Gör →</a>
+</section>
+<!-- Footer -->
+<footer>
+<div class="footer-inner">
+<div>
+<div class="footer-brand" data-i18n="footer_brand">Sogepps</div>
+<div class="footer-text" data-i18n="footer_desc">Kullanışlı mobil uygulamalar geliştiriyoruz. Basit, güvenilir ve gizlilik odaklı.</div>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer_apps">Uygulamalar</h4>
+<a data-i18n="app_name" href="/tournament-portal/">Lig ve Turnuva Oluşturucu</a>
+<a data-i18n="app_name_quickraffle" href="/quickraffle-portal/">Hızlı Çekiliş</a>
+<a href="/homeparty/">HomeParty</a>
+<a data-i18n="app_name_spinify" href="/spinify/">Spinify</a>
+<a data-i18n="app_name_yerseyap" href="/yerseyap/">Yerse Yap: Parti Oyunu</a>
+<a data-i18n="app_name_shot" href="/shot/">Shot Çarkı</a>
+<a data-i18n="app_name_tahminmelegi" href="/tahminmelegi/">Tahmin Meleği - İddaa</a>
+<a data-i18n="app_name_metin2okey" href="/metin2okey/">Metin2 Okey</a>
+<a data-i18n="app_name_fishingdiary" href="/fishingdiary/">Fishing Diary: Ocean Legends</a>
+<a data-i18n="app_name_neonkaleler" href="/neonkaleler/">Neon Kaleler</a>
+<a data-i18n="app_name_kalemuhafizlari" href="/kalemuhafizlari/">Kale Muhafızları</a>
+<a data-i18n="app_name_cadiyasor" href="/cadiyasor/">Cadıya Sor</a>
+<a data-i18n="app_name_sessizsinema" href="/sessizsinema/">Sessiz Sinema</a>
+<a data-i18n="app_name_sessizkelime" href="/sessizkelime/">Sessiz Kelime</a>
+<a data-i18n="app_name_sogegammon" href="/sogegammon/">SogeGammon</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer_legal">Yasal</h4>
+<a data-i18n="footer_privacy" href="/tournament-portal/privacy-policy.html">Gizlilik Politikası</a>
+<a data-i18n="footer_privacy_quickraffle" href="/quickraffle-portal/privacy-policy.html">Hızlı Çekiliş Gizlilik</a>
+<a data-i18n="footer_privacy_spinify" href="/spinify/privacy-policy.html">Spinify Gizlilik</a>
+<a data-i18n="footer_privacy_yerseyap" href="/yerseyap/privacy-policy.html">Yerse Yap Gizlilik</a>
+<a data-i18n="footer_privacy_shot" href="/shot/privacy-policy.html">Shot Çarkı Gizlilik</a>
+<a data-i18n="footer_privacy_tahminmelegi" href="/tahminmelegi/privacy-policy.html">Tahmin Meleği Gizlilik</a>
+<a data-i18n="footer_privacy_metin2okey" href="/metin2okey/privacy-policy.html">Metin2 Okey Gizlilik</a>
+<a data-i18n="footer_privacy_fishingdiary" href="/fishingdiary/privacy-policy.html">Fishing Diary: Ocean Legends – Gizlilik Politikası</a>
+<a data-i18n="footer_privacy_neonkaleler" href="/neonkaleler/privacy-policy.html">Neon Kaleler – Gizlilik Politikası</a>
+<a data-i18n="footer_privacy_kalemuhafizlari" href="/kalemuhafizlari/privacy-policy.html">Kale Muhafızları – Gizlilik Politikası</a>
+<a data-i18n="footer_privacy_cadiyasor" href="/cadiyasor/privacy-policy.html">Cadıya Sor Gizlilik</a>
+<a data-i18n="footer_privacy_sessizsinema" href="/sessizsinema/privacy-policy.html">Sessiz Sinema Gizlilik</a>
+<a data-i18n="footer_privacy_sessizkelime" href="/sessizkelime/privacy-policy.html">Sessiz Kelime Gizlilik</a>
+<a data-i18n="footer_privacy_sogegammon" href="/sogegammon/privacy-policy.html">SogeGammon Gizlilik</a>
+<a data-i18n="footer_delete" href="/tournament-portal/delete-account.html">Hesap Sil</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer_contact">İletişim</h4>
+<a href="mailto:sogepps@gmail.com">sogepps@gmail.com</a>
+<a data-i18n="nav_articles" href="/makale/">Makaleler</a>
+</div>
+</div>
+<div class="footer-bottom" data-i18n="footer_rights">© 2026 Sogepps. Tüm hakları saklıdır.</div>
+</footer>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-label" data-i18n="hero_badge">&#9889; Building useful mobile apps</div>
-    <h1 data-i18n-html="hero_title">We build apps that<br /><span>simplify your life</span></h1>
-    <p data-i18n="hero_desc">Sogepps creates intuitive mobile applications designed to solve real-world problems. Simple, reliable, and built with care.</p>
-    <a href="#apps" class="hero-cta" data-i18n="hero_cta">Explore Our Apps &#8595;</a>
-  </section>
 
-  <!-- About -->
-  <section class="about" id="about">
-    <div class="section-label" data-i18n="about_label">&#9670; About Us</div>
-    <h2 data-i18n="about_title">Who We Are</h2>
-    <p data-i18n="about_desc">Sogepps is a software studio focused on mobile application development. We believe great software should be simple to use, reliable, and accessible to everyone. Our apps are designed with user experience as the top priority.</p>
-    <div class="about-grid">
-      <div class="about-stat">
-        <div class="num">6+</div>
-        <div class="label" data-i18n="stat_apps">Published Apps</div>
-      </div>
-      <div class="about-stat">
-        <div class="num">&#9889;</div>
-        <div class="label" data-i18n="stat_fast">Fast &amp; Reliable</div>
-      </div>
-      <div class="about-stat">
-        <div class="num">&#128274;</div>
-        <div class="label" data-i18n="stat_privacy">Privacy First</div>
-      </div>
-      <div class="about-stat">
-        <div class="num">&#127760;</div>
-        <div class="label" data-i18n="stat_languages">16+ Languages</div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Apps -->
-  <section class="apps" id="apps">
-    <div class="section-label" data-i18n="apps_label">&#9670; Our Apps</div>
-    <h2 data-i18n="apps_title">Applications</h2>
-    <p data-i18n="apps_desc">Explore our published mobile applications.</p>
-
-    <a href="/tournament-portal/" class="app-card">
-      <div class="app-icon">
-        <img src="img/tournament-icon.png" alt="" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" />
-        <span class="app-icon-fallback" aria-hidden="true">&#9879;</span>
-      </div>
-      <div class="app-info">
-        <h3 data-i18n="app_name">League &amp; Tournament Maker</h3>
-        <p data-i18n="app_desc">Create leagues, knockout brackets, and round-robin tournaments in seconds. Track scores, view live standings, export results as PDF — all from your phone. Available on Android.</p>
-        <div class="app-badges">
-          <span class="app-badge" data-i18n="badge_sports">&#9917; Sports</span>
-          <span class="app-badge" data-i18n="badge_tournaments">&#127942; Tournaments</span>
-          <span class="app-badge" data-i18n="badge_standings">&#128200; Standings</span>
-          <span class="app-badge" data-i18n="badge_brackets">&#9878; Brackets</span>
-        </div>
-        <div class="app-arrow" data-i18n="app_view">View Details &#8594;</div>
-      </div>
-    </a>
-
-    <a href="/quickraffle-portal/" class="app-card">
-      <div class="app-icon">
-        <img src="img/quickraffle-icon.png" alt="" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" />
-        <span class="app-icon-fallback" aria-hidden="true">&#127808;</span>
-      </div>
-      <div class="app-info">
-        <h3 data-i18n="app_name_quickraffle">Hızlı Çekiliş</h3>
-        <p data-i18n="app_desc_quickraffle">All-in-one raffle and random pick app: name picker, number draw, wheel, lottery, team picker, dice, coin flip, card draw, list shuffler, bingo, yes/no, Secret Santa, bracket, Magic 8 Ball, password generator and more. Fast, fair, and fun.</p>
-        <div class="app-badges">
-          <span class="app-badge" data-i18n="badge_raffle">&#127808; Raffles</span>
-          <span class="app-badge" data-i18n="badge_wheel">&#128176; Wheel</span>
-          <span class="app-badge" data-i18n="badge_teams">&#128101; Teams</span>
-          <span class="app-badge" data-i18n="badge_random">&#9855; Random</span>
-        </div>
-        <div class="app-arrow" data-i18n="app_view">View Details &#8594;</div>
-      </div>
-    </a>
-
-    <a href="/homeparty/" class="app-card">
-      <div class="app-icon">
-        <img src="img/homeparty-icon.png" alt="HomeParty uygulama simgesi" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" />
-        <span class="app-icon-fallback" aria-hidden="true">&#127881;</span>
-      </div>
-      <div class="app-info">
-        <h3>HomeParty</h3>
-        <p>HomeParty, evde arkadaşlarla oynamalık oyunlar ve arkadaşlarla oynamalık oyunlar arayanlar için tasarlanmış eğlence uygulamasıdır. Parti geceleri, aile buluşmaları ve arkadaş ortamlarında hızlıca oyun seçip oynamanıza yardımcı olur.</p>
-        <div class="app-badges">
-          <span class="app-badge">&#127881; Party Games</span>
-          <span class="app-badge">&#128101; Friends</span>
-          <span class="app-badge">&#127968; Home Fun</span>
-          <span class="app-badge">&#127922; Group Play</span>
-        </div>
-        <div class="app-arrow" data-i18n="app_view">View Details &#8594;</div>
-      </div>
-    </a>
-
-    <a href="/spinify/" class="app-card">
-      <div class="app-icon" style="background: linear-gradient(135deg, #7c5cff, #ff5ca8);">
-        <img src="img/spinify-icon.png" alt="Spinify uygulama simgesi" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" />
-        <span class="app-icon-fallback" aria-hidden="true">&#127920;</span>
-      </div>
-      <div class="app-info">
-        <h3 data-i18n="app_name_spinify">Spinify</h3>
-        <p data-i18n="app_desc_spinify">Advanced wheel spinner app: create custom wheels, set real probability weights, use 14 ready-made presets, nested wheels, elimination mode, and full spin customization. Food picks, party games, chores, workouts, and everyday decisions.</p>
-        <div class="app-badges">
-          <span class="app-badge" data-i18n="badge_spinify_wheel">&#127920; Wheel</span>
-          <span class="app-badge" data-i18n="badge_spinify_odds">&#9881; Weighted Odds</span>
-          <span class="app-badge" data-i18n="badge_spinify_presets">&#9733; 14 Presets</span>
-          <span class="app-badge" data-i18n="badge_spinify_nested">&#128256; Nested</span>
-        </div>
-        <div class="app-arrow" data-i18n="app_view">View Details &#8594;</div>
-      </div>
-    </a>
-
-    <a href="/yerseyap/" class="app-card">
-      <div class="app-icon" style="background: linear-gradient(135deg, #66bb6a, #ffc107);">
-        <img src="img/yerseyap-icon.webp" alt="YerseYap uygulama simgesi" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" />
-        <span class="app-icon-fallback" aria-hidden="true">&#127922;</span>
-      </div>
-      <div class="app-info">
-        <h3 data-i18n="app_name_yerseyap">YerseYap</h3>
-        <p data-i18n="app_desc_yerseyap">Roll the dice, move on the board, complete fun tasks and collect points. A colorful 3D party board game for 2–10 players. Highest score wins!</p>
-        <div class="app-badges">
-          <span class="app-badge" data-i18n="badge_yerseyap_dice">&#127922; Dice</span>
-          <span class="app-badge" data-i18n="badge_yerseyap_board">&#128640; Board</span>
-          <span class="app-badge" data-i18n="badge_yerseyap_tasks">&#127183; Tasks</span>
-          <span class="app-badge" data-i18n="badge_yerseyap_group">&#128101; 2–10 Players</span>
-        </div>
-        <div class="app-arrow" data-i18n="app_view">View Details &#8594;</div>
-      </div>
-    </a>
-
-    <a href="/shot/" class="app-card">
-      <div class="app-icon" style="background: linear-gradient(135deg, #a855f7, #ec4899);">
-        <img src="img/shot-icon.webp" alt="Shot Çarkı uygulama simgesi" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" />
-        <span class="app-icon-fallback" aria-hidden="true">&#127870;</span>
-      </div>
-      <div class="app-info">
-        <h3 data-i18n="app_name_shot">Shot Çarkı</h3>
-        <p data-i18n="app_desc_shot">Spin the party wheel, get a dare by difficulty, complete it for points or take a shot. Weighted odds, live scoreboard — for 2–12 players.</p>
-        <div class="app-badges">
-          <span class="app-badge" data-i18n="badge_shot_wheel">&#127920; Wheel</span>
-          <span class="app-badge" data-i18n="badge_shot_dares">&#127183; Dares</span>
-          <span class="app-badge" data-i18n="badge_shot_shots">&#127870; Shots</span>
-          <span class="app-badge" data-i18n="badge_shot_group">&#128101; 2–12 Players</span>
-        </div>
-        <div class="app-arrow" data-i18n="app_view">View Details &#8594;</div>
-      </div>
-    </a>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-inner">
-      <div>
-        <div class="footer-brand" data-i18n="footer_brand">Sogepps</div>
-        <div class="footer-text" data-i18n="footer_desc">Building useful mobile applications. Simple, reliable, and privacy-focused.</div>
-      </div>
-      <div class="footer-col">
-        <h4 data-i18n="footer_apps">Apps</h4>
-        <a href="/tournament-portal/" data-i18n="app_name">League &amp; Tournament Maker</a>
-        <a href="/quickraffle-portal/" data-i18n="app_name_quickraffle">Hızlı Çekiliş</a>
-        <a href="/homeparty/">HomeParty</a>
-        <a href="/spinify/" data-i18n="app_name_spinify">Spinify</a>
-        <a href="/yerseyap/" data-i18n="app_name_yerseyap">YerseYap</a>
-        <a href="/shot/" data-i18n="app_name_shot">Shot Çarkı</a>
-      </div>
-      <div class="footer-col">
-        <h4 data-i18n="footer_legal">Legal</h4>
-        <a href="/tournament-portal/privacy-policy.html" data-i18n="footer_privacy">Privacy Policy</a>
-        <a href="/quickraffle-portal/privacy-policy.html" data-i18n="footer_privacy_quickraffle">Hızlı Çekiliş Privacy</a>
-        <a href="/spinify/privacy-policy.html" data-i18n="footer_privacy_spinify">Spinify Privacy</a>
-        <a href="/yerseyap/privacy-policy.html" data-i18n="footer_privacy_yerseyap">YerseYap Privacy</a>
-        <a href="/shot/privacy-policy.html" data-i18n="footer_privacy_shot">Shot Çarkı Privacy</a>
-        <a href="/tournament-portal/delete-account.html" data-i18n="footer_delete">Delete Account</a>
-      </div>
-      <div class="footer-col">
-        <h4 data-i18n="footer_contact">Contact</h4>
-        <a href="mailto:sogepps@gmail.com">sogepps@gmail.com</a>
-      </div>
-    </div>
-    <div class="footer-bottom" data-i18n="footer_rights">
-      &copy; 2026 Sogepps. All rights reserved.
-    </div>
-  </footer>
-
-  <script src="/js/i18n.js"></script>
-  <script src="/js/lang-landing.js"></script>
-  <script>I18N.init('landing', LANDING_TRANSLATIONS);</script>
-
+<script defer="" src="/js/i18n.js?v=ac9834aa"></script>
 </body>
 </html>

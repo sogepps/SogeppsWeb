@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hızlı Çekiliş – Quick Raffle &amp; Random Pick App</title>
+  <meta name="description" content="All-in-one raffle and random pick app: name picker, number draw, wheel, lottery, team picker, dice, coin flip, card draw, list shuffler, bingo and more. Fast, fair, and fun." />
+  <link rel="canonical" href="https://sogepps.tr/quickraffle-portal/" />
+  <meta name="keywords" content="çekiliş uygulaması, isim seçici, kura çekme, rastgele seçim, takım seçici, hızlı çekiliş" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Sogepps" />
+  <meta property="og:title" content="Hızlı Çekiliş – Çekiliş, Kura ve Rastgele Seçim Uygulaması" />
+  <meta property="og:description" content="İsim seçici, sayı çekilişi, çark, torba, takım seçici, zar, yazı-tura ve daha fazlası tek uygulamada. Hızlı, adil ve çevrimdışı çalışan çekiliş uygulaması." />
+  <meta property="og:url" content="https://sogepps.tr/quickraffle-portal/" />
+  <meta property="og:image" content="https://sogepps.tr/img/quickraffle-icon.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Hızlı Çekiliş","applicationCategory":"GameApplication","operatingSystem":"Android","description":"İsim seçici, sayı çekilişi, çark, torba, takım seçici, zar, yazı-tura ve daha fazlası tek uygulamada. Hızlı, adil ve çevrimdışı çalışan çekiliş uygulaması.","url":"https://sogepps.tr/quickraffle-portal/","image":"https://sogepps.tr/img/quickraffle-icon.png","downloadUrl":"https://play.google.com/store/apps/details?id=com.soge.quickraffle","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"publisher":{"@type":"Organization","name":"Sogepps","url":"https://sogepps.tr/"}}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #050608;
+      --surface: #0f1218;
+      --surface-2: #171c26;
+      --border: #1f2937;
+      --text: #f0f4f8;
+      --text-muted: #9ca3af;
+      --accent: #10b981;
+      --accent-light: #34d399;
+      --accent-glow: rgba(16, 185, 129, 0.12);
+      --teal: #14b8a6;
+      --font: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--bg); color: var(--text); overflow-x: hidden; }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(5,6,8,0.82); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); font-weight: 700; font-size: 1.05rem; }
+    .nav-icon { width: 34px; height: 34px; border-radius: 10px; background: linear-gradient(135deg, var(--accent), var(--teal)); display: flex; align-items: center; justify-content: center; font-size: 17px; position: relative; overflow: hidden; flex-shrink: 0; }
+    .nav-icon img { width: 100%; height: 100%; object-fit: cover; border-radius: inherit; display: block; }
+    .nav-icon .nav-icon-fallback { display: none; position: absolute; inset: 0; align-items: center; justify-content: center; font-size: 17px; }
+    .nav-icon img[src=""] + .nav-icon-fallback,
+    .nav-icon .nav-icon-fallback.show { display: flex; }
+    .nav-links { display: flex; gap: 4px; list-style: none; flex-wrap: wrap; align-items: center; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; font-weight: 500; padding: 7px 12px; border-radius: 8px; transition: all 0.2s; white-space: nowrap; }
+    .nav-links a:hover { color: var(--text); background: var(--accent-glow); }
+    .nav-links a.active { color: var(--accent-light); background: var(--accent-glow); }
+    .nav-back { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; font-weight: 500; display: flex; align-items: center; gap: 4px; margin-right: 8px; padding: 7px 10px; border-radius: 8px; transition: all 0.2s; }
+    .nav-back:hover { color: var(--text); background: var(--accent-glow); }
+    .nav-sep { width: 1px; height: 20px; background: var(--border); margin: 0 4px; }
+
+    .hero { padding: 150px 24px 100px; text-align: center; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -150px; left: 50%; transform: translateX(-50%); width: 1000px; height: 700px; background: radial-gradient(ellipse, rgba(16,185,129,0.08) 0%, rgba(20,184,166,0.04) 40%, transparent 70%); pointer-events: none; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; padding: 5px 16px; background: var(--accent-glow); border: 1px solid rgba(16,185,129,0.2); border-radius: 999px; font-size: 0.78rem; font-weight: 600; color: var(--accent-light); margin-bottom: 28px; }
+    .hero h1 { font-size: clamp(2.4rem, 5.5vw, 3.8rem); font-weight: 800; line-height: 1.1; letter-spacing: -0.04em; margin-bottom: 20px; }
+    .hero h1 .grad { background: linear-gradient(135deg, var(--accent-light) 20%, #2dd4bf); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero p { font-size: 1.15rem; color: var(--text-muted); max-width: 580px; margin: 0 auto 40px; line-height: 1.7; }
+    .hero-actions { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 10px; padding: 14px 30px; background: linear-gradient(135deg, var(--accent), var(--teal)); color: #fff; text-decoration: none; font-weight: 600; font-size: 1rem; border-radius: 12px; transition: transform 0.15s, box-shadow 0.2s; box-shadow: 0 4px 24px rgba(16,185,129,0.3); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(16,185,129,0.4); text-decoration: none; }
+    .btn-primary svg { width: 20px; height: 20px; }
+    .btn-ghost { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; color: var(--text); text-decoration: none; font-weight: 600; font-size: 1rem; border-radius: 12px; border: 1px solid var(--border); transition: all 0.2s; }
+    .btn-ghost:hover { border-color: var(--accent); background: var(--accent-glow); text-decoration: none; }
+
+    .features { max-width: 1100px; margin: 0 auto; padding: 80px 24px; }
+    .section-label { display: inline-flex; align-items: center; gap: 6px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-light); margin-bottom: 16px; }
+    .features h2 { font-size: 2rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 12px; }
+    .features > p { color: var(--text-muted); font-size: 1rem; margin-bottom: 44px; max-width: 500px; }
+    .feat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+    .feat-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 28px; transition: border-color 0.2s, transform 0.15s; }
+    .feat-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+    .feat-icon { width: 50px; height: 50px; border-radius: 14px; background: var(--accent-glow); display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 18px; }
+    .feat-card h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 8px; }
+    .feat-card p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.65; }
+
+    .how { max-width: 1100px; margin: 0 auto; padding: 80px 24px; }
+    .how h2 { font-size: 2rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 44px; text-align: center; }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+    .step { text-align: center; padding: 32px 20px; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; }
+    .step-num { width: 48px; height: 48px; border-radius: 14px; background: linear-gradient(135deg, var(--accent), var(--teal)); display: inline-flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: 800; color: #fff; margin-bottom: 16px; }
+    .step h3 { font-size: 1rem; font-weight: 600; margin-bottom: 8px; }
+    .step p { color: var(--text-muted); font-size: 0.875rem; line-height: 1.6; }
+
+    .cta-section { text-align: center; padding: 80px 24px; }
+    .cta-card { max-width: 700px; margin: 0 auto; background: linear-gradient(135deg, rgba(16,185,129,0.1), rgba(20,184,166,0.08)); border: 1px solid rgba(16,185,129,0.2); border-radius: 24px; padding: 48px 32px; }
+    .cta-card h2 { font-size: 1.8rem; font-weight: 700; margin-bottom: 12px; }
+    .cta-card p { color: var(--text-muted); font-size: 1rem; margin-bottom: 28px; }
+
+    footer { border-top: 1px solid var(--border); padding: 40px 24px; margin-top: 20px; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 32px; }
+    .footer-brand-text { font-weight: 700; font-size: 1rem; margin-bottom: 6px; }
+    .footer-sub { color: var(--text-muted); font-size: 0.82rem; }
+    .footer-col h4 { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 10px; }
+    .footer-col a { display: block; color: var(--text-muted); font-size: 0.85rem; padding: 3px 0; text-decoration: none; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--text); }
+    .footer-bottom { max-width: 1100px; margin: 28px auto 0; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted); font-size: 0.78rem; }
+    .footer-bottom a { color: var(--text-muted); text-decoration: none; }
+    .footer-bottom a:hover { color: var(--text); }
+
+    @media (max-width: 640px) {
+      .nav-links a { padding: 6px 8px; font-size: 0.78rem; }
+      .nav-back { padding: 6px 8px; font-size: 0.78rem; }
+      .hero { padding: 120px 20px 70px; }
+      .features, .how { padding: 60px 20px; }
+      .footer-inner { flex-direction: column; }
+    }
+    /* Makale bolumu */
+    .sg-arts { margin: 20px 0; border: 1px solid rgba(255,255,255,0.12); border-radius: 20px; padding: 26px; background: rgba(255,255,255,0.03); }
+    .sg-arts h2 { font-size: 1.4rem; margin-bottom: 6px; }
+    .sg-arts > p { opacity: .78; margin-bottom: 16px; font-size: 0.95rem; }
+    .sg-arts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+    .sg-art { display: block; border: 1px solid rgba(255,255,255,0.13); border-radius: 14px; overflow: hidden; background: rgba(0,0,0,0.28); color: inherit; text-decoration: none; transition: border-color .2s, transform .2s; }
+    .sg-art:hover { text-decoration: none; transform: translateY(-3px); border-color: rgba(255,255,255,0.38); }
+    .sg-art img { width: 100%; height: auto; aspect-ratio: 1200 / 630; display: block; }
+    .sg-art-body { padding: 14px 16px 16px; }
+    .sg-art-body h3 { font-size: 1rem; line-height: 1.4; margin-bottom: 6px; }
+    .sg-art-body p { font-size: 0.86rem; opacity: .72; margin: 0; }
+    .sg-arts-all { display: inline-block; margin-top: 14px; font-weight: 700; font-size: 0.9rem; }
+    .sg-arts { max-width: 1100px; margin: 0 auto 40px; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <div style="display:flex;align-items:center;">
+        <a href="/" class="nav-back" data-i18n="nav_back">&#8592; Sogepps</a>
+        <div class="nav-sep"></div>
+        <a href="/quickraffle-portal/" class="nav-brand">
+          <div class="nav-icon">
+            <img src="img/icon.png" alt="" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');" />
+            <span class="nav-icon-fallback" aria-hidden="true">&#127808;</span>
+          </div>
+          Hızlı Çekiliş
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#features" data-i18n="nav_features">Features</a></li>
+        <li><a href="/quickraffle-portal/privacy-policy.html" data-i18n="nav_privacy">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-badge" data-i18n="hero_badge">&#127808; All-in-One Raffle App</div>
+    <h1 data-i18n-html="hero_title">Raffles, Draws &amp;<br /><span class="grad">Random Picks</span></h1>
+    <p data-i18n="hero_desc">Hızlı Çekiliş is a fast, fair, and fun all-in-one raffle and random pick app. Name picker, number draw, wheel, lottery, team picker, dice, coin flip, card draw, list shuffler, bingo, yes/no, Secret Santa, bracket, Magic 8 Ball, password generator and more.</p>
+    <div class="hero-actions">
+      <a href="https://play.google.com/store/apps/details?id=com.soge.quickraffle" class="btn-primary" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"/></svg>
+        <span data-i18n="btn_google_play">Get it on Google Play</span>
+      </a>
+      <a href="#features" class="btn-ghost" data-i18n="btn_see_features">See Features &#8595;</a>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <div class="section-label" data-i18n="feat_label">&#9670; Features</div>
+    <h2 data-i18n="feat_title">Powerful Tools in One App</h2>
+    <p data-i18n="feat_desc">Ideal for giveaways, social media contests, class activities, meetings, tournaments, parties and games.</p>
+    <div class="feat-grid">
+      <div class="feat-card">
+        <div class="feat-icon">&#128100;</div>
+        <h3 data-i18n="feat1_title">Name Picker</h3>
+        <p data-i18n="feat1_desc">Pick a random winner from your list. Perfect for Instagram giveaways, school activities, and group games.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">&#128176;</div>
+        <h3 data-i18n="feat2_title">Wheel &amp; Number Draw</h3>
+        <p data-i18n="feat2_desc">Spin the wheel or generate random numbers. Fair and unbiased random algorithms for every result.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">&#128101;</div>
+        <h3 data-i18n="feat3_title">Team Picker</h3>
+        <p data-i18n="feat3_desc">Split participants into balanced teams in seconds. Great for sports, games, and group activities.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">&#127922;</div>
+        <h3 data-i18n="feat4_title">Dice, Coin, Cards &amp; More</h3>
+        <p data-i18n="feat4_desc">Dice roll, coin flip, card draw, list shuffler, bingo number picker, yes/no, Secret Santa, tournament bracket, Magic 8 Ball, password generator, random color.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">&#128274;</div>
+        <h3 data-i18n="feat5_title">Privacy First</h3>
+        <p data-i18n="feat5_desc">No personal data required. Names, numbers and lists are used only on your device and are not sent to our servers.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">&#9889;</div>
+        <h3 data-i18n="feat6_title">Fast &amp; Easy</h3>
+        <p data-i18n="feat6_desc">Modern, clean design. Everyone can use it easily. Get instant results for decisions and fun.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="how">
+    <div class="section-label" style="text-align:center;display:block;" data-i18n="how_label">&#9670; How It Works</div>
+    <h2 data-i18n="how_title">Simple Steps</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3 data-i18n="step1_title">Choose Tool</h3>
+        <p data-i18n="step1_desc">Pick name picker, wheel, number draw, team picker, dice, or any other tool you need.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3 data-i18n="step2_title">Add Your Data</h3>
+        <p data-i18n="step2_desc">Enter names, numbers, or options. Everything stays on your device.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3 data-i18n="step3_title">Get Result</h3>
+        <p data-i18n="step3_desc">Fair random result in seconds. Perfect for giveaways, decisions, and games.</p>
+      </div>
+    </div>
+  </section>
+
+    <section class="section sg-arts" id="makaleler">
+      <h2 data-i18n="arts_title">Makaleler</h2>
+      <p data-i18n="arts_desc">Hızlı Çekiliş ile ilgili rehberler ve oyun fikirleri.</p>
+      <div class="sg-arts-grid">
+        <a class="sg-art" href="/makale/instagram-cekilisi-nasil-yapilir.html">
+          <img src="/makale/img/instagram-cekilisi-nasil-yapilir.svg" alt="Instagram Çekilişi Nasıl Yapılır? Adil ve Şeffaf Yöntem" width="1200" height="630" loading="lazy" />
+          <div class="sg-art-body">
+            <h3>Instagram Çekilişi Nasıl Yapılır? Adil ve Şeffaf Yöntem</h3>
+            <p>Instagram çekilişi yaparken katılımcı listesi nasıl toplanır, kazanan nasıl adil seçilir, yedek talihli neden gerekir…</p>
+          </div>
+        </a>
+        <a class="sg-art" href="/makale/rastgele-isim-secici-kullanim-rehberi.html">
+          <img src="/makale/img/rastgele-isim-secici-kullanim-rehberi.svg" alt="Rastgele İsim Seçici: Sınıf, Ofis ve Ev İçin Kullanım Rehberi" width="1200" height="630" loading="lazy" />
+          <div class="sg-art-body">
+            <h3>Rastgele İsim Seçici: Sınıf, Ofis ve Ev İçin Kullanım Rehberi</h3>
+            <p>Rastgele isim seçici nerelerde işe yarar: sınıfta söz sırası, ofiste görev dağıtımı, evde iş paylaşımı ve takım kurma…</p>
+          </div>
+        </a>
+        <a class="sg-art" href="/makale/online-kura-cekme-nasil-yapilir.html">
+          <img src="/makale/img/online-kura-cekme-nasil-yapilir.svg" alt="Online Kura Çekme: Sınıf, İş Yeri ve Turnuva İçin Kura Nasıl Çekilir?" width="1200" height="630" loading="lazy" />
+          <div class="sg-art-body">
+            <h3>Online Kura Çekme: Sınıf, İş Yeri ve Turnuva İçin Kura Nasıl Çekilir?</h3>
+            <p>Online kura çekme rehberi: isim kurası, sayı kurası, takım kurası ve turnuva kurası nasıl çekilir, sonucun adil ve ta…</p>
+          </div>
+        </a>
+      </div>
+      <a class="sg-arts-all" href="/makale/" data-i18n="arts_all">Tüm makaleler &rarr;</a>
+    </section>
+
+  <section class="cta-section">
+    <div class="cta-card">
+      <h2 data-i18n="cta_title">Ready to Use?</h2>
+      <p data-i18n="cta_desc">Download Hızlı Çekiliş and make your raffles, decisions, and games more fun and practical. All results are fair and unbiased.</p>
+      <a href="https://play.google.com/store/apps/details?id=com.soge.quickraffle" class="btn-primary" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor" style="width:20px;height:20px;"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"/></svg>
+        <span data-i18n="cta_btn">Download on Google Play</span>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand-text" data-i18n="footer_brand">Hızlı Çekiliş</div>
+        <div class="footer-sub"><span data-i18n="footer_by">by</span> <a href="/" style="color:var(--accent-light);">Sogepps</a></div>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_app">App</h4>
+        <a href="https://play.google.com/store/apps/details?id=com.soge.quickraffle" target="_blank" rel="noopener noreferrer" data-i18n="footer_google_play">Google Play</a>
+        <a href="#features" data-i18n="footer_features">Features</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_legal">Legal</h4>
+        <a href="/quickraffle-portal/privacy-policy.html" data-i18n="footer_privacy">Privacy Policy</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_contact">Contact</h4>
+        <a href="mailto:sogepps@gmail.com">sogepps@gmail.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer_rights">&copy; 2026</span> <a href="/">Sogepps</a><span data-i18n="footer_rights_tail">. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/lang-portal.js"></script>
+  <script>I18N.init('portal', PORTAL_TRANSLATIONS);</script>
+
+</body>
+</html>

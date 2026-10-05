@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html lang="hi">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Spinify - कस्टम व्हील और डिसीज़न स्पिनर ऐप</title>
+<meta content="Spinify एक एडवांस्ड व्हील स्पिनर ऐप है: कस्टम व्हील बनाएं, प्रोबेबिलिटी वेट सेट करें, 14 प्रीसेट इस्तेमाल करें, नेस्टेड व्हील और पूरी स्पिन कस्टमाइज़ेशन।" name="description"/>
+
+<link href="https://sogepps.tr/spinify/hi/" rel="canonical"/><link href="https://sogepps.tr/spinify/" hreflang="tr" rel="alternate"/><link href="https://sogepps.tr/spinify/en/" hreflang="en" rel="alternate"/><link href="https://sogepps.tr/spinify/de/" hreflang="de" rel="alternate"/><link href="https://sogepps.tr/spinify/fr/" hreflang="fr" rel="alternate"/><link href="https://sogepps.tr/spinify/es/" hreflang="es" rel="alternate"/><link href="https://sogepps.tr/spinify/it/" hreflang="it" rel="alternate"/><link href="https://sogepps.tr/spinify/pt/" hreflang="pt" rel="alternate"/><link href="https://sogepps.tr/spinify/nl/" hreflang="nl" rel="alternate"/><link href="https://sogepps.tr/spinify/ru/" hreflang="ru" rel="alternate"/><link href="https://sogepps.tr/spinify/ja/" hreflang="ja" rel="alternate"/><link href="https://sogepps.tr/spinify/ko/" hreflang="ko" rel="alternate"/><link href="https://sogepps.tr/spinify/ar/" hreflang="ar" rel="alternate"/><link href="https://sogepps.tr/spinify/hi/" hreflang="hi" rel="alternate"/><link href="https://sogepps.tr/spinify/id/" hreflang="id" rel="alternate"/><link href="https://sogepps.tr/spinify/pl/" hreflang="pl" rel="alternate"/><link href="https://sogepps.tr/spinify/" hreflang="x-default" rel="alternate"/>
+<meta content="Spinify - कस्टम व्हील और डिसीज़न स्पिनर ऐप" property="og:title"/>
+<meta content="Spinify एक एडवांस्ड व्हील स्पिनर ऐप है: कस्टम व्हील बनाएं, प्रोबेबिलिटी वेट सेट करें, 14 प्रीसेट इस्तेमाल करें, नेस्टेड व्हील और पूरी स्पिन कस्टमाइज़ेशन।" property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://sogepps.tr/spinify/hi/" property="og:url"/>
+<meta content="https://sogepps.tr/spinify/img/icon.webp" property="og:image"/>
+<style>
+    :root { --bg:#0b0b1a; --surface:#15152b; --surface-2:#1b1b36; --border:#2e2e55; --text:#f4f4ff; --muted:#a0a0c8; --primary:#7c5cff; --secondary:#ff5ca8; --accent:#16d6c9; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: radial-gradient(circle at 8% -8%, rgba(124, 92, 255, 0.32), transparent 38%), radial-gradient(circle at 92% -12%, rgba(255, 92, 168, 0.2), transparent 35%), var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    a { color: #cfc0ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1160px; margin: 0 auto; padding: 0 20px; }
+    .topnav { position: sticky; top: 0; z-index: 99; border-bottom: 1px solid var(--border); background: rgba(11, 11, 26, 0.88); backdrop-filter: blur(10px); }
+    .topnav-inner, .nav-inner { min-height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 0.92rem; flex-wrap: wrap; padding: 8px 0; }
+    .topnav-links, .nav-links { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+    .hero { padding: 82px 0 40px; display: grid; grid-template-columns: 132px 1fr; gap: 22px; align-items: center; }
+    .hero-icon { width: 132px; height: 132px; border-radius: 30px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 20px 58px rgba(124, 92, 255, 0.35); background: linear-gradient(135deg, var(--primary), var(--secondary)); }
+    .hero-icon img { width: 100%; height: 100%; object-fit: cover; }
+    h1 { font-size: clamp(2rem, 5.2vw, 3.3rem); line-height: 1.08; margin-bottom: 12px; letter-spacing: -0.02em; }
+    .lead { color: var(--muted); max-width: 840px; font-size: 1.05rem; }
+    .hero-tags { margin-top: 16px; display: flex; gap: 8px; flex-wrap: wrap; }
+    .hero-tag { border: 1px solid #4a3d8a; background: rgba(124, 92, 255, 0.16); color: #ddd0ff; border-radius: 999px; padding: 6px 12px; font-size: 0.8rem; font-weight: 600; }
+    .section { margin: 20px 0; border: 1px solid var(--border); border-radius: 20px; padding: 28px; background: linear-gradient(160deg, var(--surface), var(--surface-2)); }
+    .section h2 { font-size: 1.5rem; margin-bottom: 12px; }
+    .section > p { color: var(--muted); margin-bottom: 10px; }
+    .screen-cards { margin-top: 16px; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; }
+    .screen-card { border: 1px solid var(--border); border-radius: 14px; overflow: hidden; background: #101024; display: flex; flex-direction: column; }
+    .screen-card img { width: 100%; height: auto; display: block; background: #101024; }
+    .screen-card figcaption { padding: 10px 12px; }
+    .screen-card h3 { font-size: 0.98rem; margin-bottom: 6px; }
+    .screen-card p { color: var(--muted); font-size: 0.87rem; margin: 0; }
+    .wheel-grid { margin-top: 16px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+    .wheel-item { border: 1px solid #3a3a6a; border-radius: 12px; padding: 12px 14px; background: rgba(16, 16, 36, 0.7); }
+    .wheel-item h3 { font-size: 0.95rem; margin-bottom: 4px; }
+    .wheel-item p { color: var(--muted); font-size: 0.84rem; margin: 0; }
+    .feat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 16px; }
+    .feature { border: 1px solid #3a3a6a; border-radius: 14px; padding: 14px; background: rgba(16, 16, 36, 0.6); }
+    .feature h3 { font-size: 1rem; margin-bottom: 6px; }
+    .feature p { font-size: 0.93rem; margin: 0; color: var(--muted); }
+    .cta { margin: 24px 0 68px; text-align: center; border: 1px solid #5a4a9a; border-radius: 20px; padding: 30px 22px; background: linear-gradient(135deg, rgba(124, 92, 255, 0.2), rgba(255, 92, 168, 0.14)); }
+    .cta h2 { margin-bottom: 8px; }
+    .cta p { color: var(--muted); }
+    .cta-links { margin-top: 14px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+    .btn { display: inline-block; padding: 10px 15px; border-radius: 11px; font-weight: 700; border: 1px solid #6a52c8; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #fff; text-decoration: none; }
+    .btn.secondary { background: rgba(21, 21, 43, 0.65); color: #e8e6ff; border-color: #4a4a7a; }
+    @media (max-width: 760px) { .hero { grid-template-columns: 1fr; text-align: center; } .hero-icon { margin: 0 auto; } .topnav-links, .nav-links { justify-content: center; } }
+    /* Google Play indirme butonu */
+    .gp-actions { margin-top: 18px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .gp-btn { display: inline-flex; align-items: center; gap: 10px; padding: 9px 18px; border-radius: 12px; background: #0d1016; border: 1px solid #414755; color: #ffffff; font-weight: 700; font-size: 0.98rem; line-height: 1.15; text-decoration: none; transition: border-color .2s, transform .15s; }
+    .gp-btn:hover { text-decoration: none; border-color: #9aa3b5; transform: translateY(-1px); color: #fff; }
+    .gp-btn svg { width: 24px; height: 24px; flex: 0 0 auto; fill: currentColor; }
+    .gp-btn > span { display: block; text-align: left; }
+    .gp-btn small { display: block; font-size: 0.63rem; font-weight: 600; letter-spacing: .09em; opacity: .7; }
+    .gp-btn-soon { opacity: .5; cursor: default; }
+    .gp-btn-soon:hover { transform: none; border-color: #414755; }
+    /* Makale bolumu */
+    .sg-arts { margin: 20px 0; border: 1px solid rgba(255,255,255,0.12); border-radius: 20px; padding: 26px; background: rgba(255,255,255,0.03); }
+    .sg-arts h2 { font-size: 1.4rem; margin-bottom: 6px; }
+    .sg-arts > p { opacity: .78; margin-bottom: 16px; font-size: 0.95rem; }
+    .sg-arts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+    .sg-art { display: block; border: 1px solid rgba(255,255,255,0.13); border-radius: 14px; overflow: hidden; background: rgba(0,0,0,0.28); color: inherit; text-decoration: none; transition: border-color .2s, transform .2s; }
+    .sg-art:hover { text-decoration: none; transform: translateY(-3px); border-color: rgba(255,255,255,0.38); }
+    .sg-art img { width: 100%; height: auto; aspect-ratio: 1200 / 630; display: block; }
+    .sg-art-body { padding: 14px 16px 16px; }
+    .sg-art-body h3 { font-size: 1rem; line-height: 1.4; margin-bottom: 6px; }
+    .sg-art-body p { font-size: 0.86rem; opacity: .72; margin: 0; }
+    .sg-arts-all { display: inline-block; margin-top: 14px; font-weight: 700; font-size: 0.9rem; }
+  </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Spinify","applicationCategory":"UtilitiesApplication","operatingSystem":"Android","description":"Spinify एक एडवांस्ड व्हील स्पिनर ऐप है: कस्टम व्हील बनाएं, प्रोबेबिलिटी वेट सेट करें, 14 प्रीसेट इस्तेमाल करें, नेस्टेड व्हील और पूरी स्पिन कस्टमाइज़ेशन।","inLanguage":"hi"}</script>
+<meta content="hi_IN" property="og:locale"/></head>
+<body>
+<nav class="topnav">
+<div class="wrap topnav-inner nav-inner">
+<a data-i18n="nav_home" href="/hi/">← Sogepps होम</a>
+<div class="topnav-links nav-links">
+<a data-i18n="nav_screens" href="#ekranlar">स्क्रीनशॉट</a>
+<a data-i18n="nav_wheels" href="#carklar">प्रीसेट व्हील</a>
+<a data-i18n="nav_features" href="#ozellikler">फीचर्स</a>
+<a data-i18n="nav_how" href="#nasil">यह कैसे काम करता है</a>
+<a data-i18n="nav_privacy" href="privacy-policy.html">गोपनीयता नीति</a>
+<a href="mailto:sogepps@gmail.com">sogepps@gmail.com</a>
+</div>
+</div>
+</nav>
+<main class="wrap">
+<section class="hero">
+<div class="hero-icon"><img alt="Spinify uygulama simgesi" decoding="async" height="132" src="/spinify/img/icon.webp" width="132"/></div>
+<div>
+<h1 data-i18n-html="hero_title">Spinify<br/>किस्मत आपके हाथ में है</h1>
+<p class="lead" data-i18n="hero_lead">Spinify खाने की पसंद, पार्टी गेम्स, घर के काम, वर्कआउट, ट्रैवल आइडिया और रोज़मर्रा के फ़ैसलों के लिए एक शक्तिशाली व्हील और डिसीज़न स्पिनर है। अपने खुद के व्हील बनाएं या रेडीमेड प्रीसेट से शुरू करें।</p>
+<div class="hero-tags">
+<span class="hero-tag" data-i18n="tag_1">14 प्रीसेट व्हील</span>
+<span class="hero-tag" data-i18n="tag_2">वेटेड ऑड्स</span>
+<span class="hero-tag" data-i18n="tag_3">नेस्टेड व्हील</span>
+<span class="hero-tag" data-i18n="tag_4">24 भाषाएं</span>
+</div>
+<div class="gp-actions">
+<a class="gp-btn" href="https://play.google.com/store/apps/details?id=com.Soge.Spinify" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"></path></svg>
+<span><small>ANDROID</small><b data-i18n="btn_google_play">Google Play पर पाएं</b></span>
+</a>
+</div>
+</div>
+</section>
+<section class="section" id="ekranlar">
+<h2 data-i18n="screens_title">एक्शन में Spinify</h2>
+<p data-i18n="screens_desc">ऐप की स्क्रीन: लाइब्रेरी, स्पिन एनिमेशन, एडिटर, वेट, प्रीसेट, नेस्टेड व्हील, नतीजे और सेटिंग्स।</p>
+<div class="screen-cards">
+<figure class="screen-card"><img alt="Spinify çark kütüphanesi" decoding="async" height="1280" loading="lazy" src="/spinify/img/1.webp" width="720"/><figcaption><h3 data-i18n="s_1_t">व्हील लाइब्रेरी</h3><p data-i18n="s_1_d">सर्च और कैटेगरी फ़िल्टर के साथ अपने कस्टम व्हील और रेडीमेड प्रीसेट ब्राउज़ करें।</p></figcaption></figure>
+<figure class="screen-card"><img alt="Spinify çevirme animasyonu" decoding="async" height="1280" loading="lazy" src="/spinify/img/2.webp" width="720"/><figcaption><h3 data-i18n="s_2_t">स्मूद स्पिन एनिमेशन</h3><p data-i18n="s_2_d">हैप्टिक्स, कन्फेटी और साफ़ विनिंग स्लाइस के साथ रियलिस्टिक व्हील फिजिक्स।</p></figcaption></figure>
+<figure class="screen-card"><img alt="Spinify çark düzenleyici" decoding="async" height="1280" loading="lazy" src="/spinify/img/3.webp" width="720"/><figcaption><h3 data-i18n="s_3_t">लाइव व्हील एडिटर</h3><p data-i18n="s_3_d">लाइव प्रीव्यू के साथ स्लाइस, इमोजी, रंग और डिस्क्रिप्शन एडिट करें।</p></figcaption></figure>
+<figure class="screen-card"><img alt="Spinify olasılık ağırlıkları" decoding="async" height="1280" loading="lazy" src="/spinify/img/4.webp" width="720"/><figcaption><h3 data-i18n="s_4_t">प्रोबेबिलिटी वेट</h3><p data-i18n="s_4_d">स्लाइस का साइज़ असली लैंडिंग चांस दिखाता है — रेयर नतीजे रेयर ही रहते हैं।</p></figcaption></figure>
+<figure class="screen-card"><img alt="Spinify hazır çarklar" decoding="async" height="1280" loading="lazy" src="/spinify/img/5.webp" width="720"/><figcaption><h3 data-i18n="s_5_t">रेडीमेड व्हील</h3><p data-i18n="s_5_d">खाने, पीने, फ़ैसलों, पार्टी, घर के काम, वर्कआउट और भी बहुत कुछ के लिए 14 प्रीसेट।</p></figcaption></figure>
+<figure class="screen-card"><img alt="Spinify iç içe çarklar" decoding="async" height="1280" loading="lazy" src="/spinify/img/6.webp" width="720"/><figcaption><h3 data-i18n="s_6_t">नेस्टेड व्हील</h3><p data-i18n="s_6_d">किसी स्लाइस को दूसरे व्हील से लिंक करें — शाम के प्लान और कॉम्बो के लिए बढ़िया।</p></figcaption></figure>
+<figure class="screen-card"><img alt="Spinify sonuç ekranı" decoding="async" height="1280" loading="lazy" src="/spinify/img/7.webp" width="720"/><figcaption><h3 data-i18n="s_7_t">सेलिब्रेशन रिज़ल्ट</h3><p data-i18n="s_7_d">व्हील रुकते ही कन्फेटी और एक बोल्ड रिज़ल्ट स्क्रीन।</p></figcaption></figure>
+<figure class="screen-card"><img alt="Spinify dönüş ayarları" decoding="async" height="1280" loading="lazy" src="/spinify/img/8.webp" width="720"/><figcaption><h3 data-i18n="s_8_t">स्पिन कस्टमाइज़ेशन</h3><p data-i18n="s_8_d">ड्यूरेशन, टर्न, ईज़िंग, दिशा, लेबल और एलिमिनेशन मोड ट्यून करें।</p></figcaption></figure>
+</div>
+</section>
+<section class="section" id="carklar">
+<h2 data-i18n="wheels_title">रेडीमेड व्हील</h2>
+<p data-i18n="wheels_desc">14 बिल्ट-इन व्हील के साथ तुरंत शुरू करें — किसी को भी कस्टमाइज़ या डुप्लिकेट करें।</p>
+<div class="wheel-grid">
+<div class="wheel-item"><h3 data-i18n="w_food_t">आज क्या खाएं?</h3><p data-i18n="w_food_d">डिनर की उलझन खत्म करें।</p></div>
+<div class="wheel-item"><h3 data-i18n="w_drink_t">क्या पिएं?</h3><p data-i18n="w_drink_d">कॉफी, चाय, नींबू पानी और भी बहुत कुछ।</p></div>
+<div class="wheel-item"><h3 data-i18n="w_movie_t">मूवी जॉनर</h3><p data-i18n="w_movie_d">एक्शन, कॉमेडी, हॉरर, साइ-फाई और भी बहुत कुछ।</p></div>
+<div class="wheel-item"><h3 data-i18n="w_yesno_t">हां / ना</h3><p data-i18n="w_yesno_d">क्लासिक क्विक डिसीज़न व्हील।</p></div>
+<div class="wheel-item"><h3 data-i18n="w_decision_t">डिसीज़न व्हील</h3><p data-i18n="w_decision_d">बिल्कुल हां, शायद, बाद में, ना, आप पर निर्भर।</p></div>
+<div class="wheel-item"><h3 data-i18n="w_truth_t">ट्रुथ या डेयर?</h3><p data-i18n="w_truth_d">गेम नाइट के लिए एकदम सही।</p></div>
+<div class="wheel-item"><h3 data-i18n="w_chores_t">काम कौन करेगा?</h3><p data-i18n="w_chores_d">बर्तन, झाड़ू, कचरा, कपड़े धोना, या छुट्टी।</p></div>
+<div class="wheel-item"><h3 data-i18n="w_workout_t">वर्कआउट व्हील</h3><p data-i18n="w_workout_d">पुश-अप, स्क्वैट, प्लैंक, बर्पी, दौड़, या आराम।</p></div>
+<div class="wheel-item"><h3 data-i18n="w_pays_t">बिल कौन देगा?</h3><p data-i18n="w_pays_d">आप, मैं, वो, या बांट लें।</p></div>
+<div class="wheel-item"><h3 data-i18n="w_numbers_t">लकी नंबर (1-8)</h3><p data-i18n="w_numbers_d">1 से 8 तक का रैंडम नंबर चुनें।</p></div>
+<div class="wheel-item"><h3 data-i18n="w_party_t">डेयर पेनल्टी व्हील</h3><p data-i18n="w_party_d">गाओ, नाचो, जोक सुनाओ, इंप्रेशन दो, माफ़ी, या सीक्रेट।</p></div>
+<div class="wheel-item"><h3 data-i18n="w_travel_t">कहां घूमने जाएं?</h3><p data-i18n="w_travel_d">बीच, पहाड़, शहर, कैंपिंग, विदेश, या घर पर रहें।</p></div>
+<div class="wheel-item"><h3 data-i18n="w_prize_t">प्राइज़ व्हील</h3><p data-i18n="w_prize_d">वेटेड ऑड्स — बड़ा इनाम कम ही मिलता है।</p></div>
+<div class="wheel-item"><h3 data-i18n="w_evening_t">शाम का प्लान? (नेस्टेड)</h3><p data-i18n="w_evening_d">स्लाइस जीतने पर फूड या मूवी व्हील खोलता है।</p></div>
+</div>
+</section>
+<section class="section" id="ozellikler">
+<h2 data-i18n="feat_title">Spinify क्यों?</h2>
+<p data-i18n="feat_desc">एक बेसिक स्पिनर से कहीं ज़्यादा — ऑड्स, डिज़ाइन और फ्लो पर पूरा कंट्रोल।</p>
+<div class="feat-grid">
+<div class="feature"><h3 data-i18n="f_1_t">असली प्रोबेबिलिटी</h3><p data-i18n="f_1_d">स्लाइस वेट एडजस्ट करें ताकि लैंडिंग चांस आपकी सेटिंग से मेल खाएं।</p></div>
+<div class="feature"><h3 data-i18n="f_2_t">नेस्टेड व्हील</h3><p data-i18n="f_2_d">मल्टी-स्टेप फ़ैसलों के लिए व्हील को एक-दूसरे से जोड़ें।</p></div>
+<div class="feature"><h3 data-i18n="f_3_t">एलिमिनेशन मोड</h3><p data-i18n="f_3_d">हर राउंड में विजेता हटाएं जब तक एक ही स्लाइस न बचे।</p></div>
+<div class="feature"><h3 data-i18n="f_4_t">लोकली सेव करें</h3><p data-i18n="f_4_d">अपने व्हील बनाएं, डुप्लिकेट करें और डिवाइस पर रखें।</p></div>
+<div class="feature"><h3 data-i18n="f_5_t">24 भाषाएं</h3><p data-i18n="f_5_d">इंटरफेस और प्रीसेट आपकी भाषा में ढल जाते हैं।</p></div>
+<div class="feature"><h3 data-i18n="f_6_t">डार्क मॉडर्न UI</h3><p data-i18n="f_6_d">SVG व्हील और स्मूद एनिमेशन के साथ पॉलिश्ड डिज़ाइन।</p></div>
+</div>
+</section>
+<section class="section" id="nasil">
+<h2 data-i18n="how_title">Spinify कैसे काम करता है</h2>
+<p data-i18n="how_desc">आइडिया से नतीजे तक, सेकंडों में।</p>
+<div class="feat-grid">
+<div class="feature"><h3 data-i18n="how_1_t">1) व्हील चुनें या बनाएं</h3><p data-i18n="how_1_d">कोई प्रीसेट चुनें या इमोजी और रंगों के साथ स्लाइस बनाएं।</p></div>
+<div class="feature"><h3 data-i18n="how_2_t">2) वेट और ऑप्शन सेट करें</h3><p data-i18n="how_2_d">ऑड्स, स्पिन स्पीड, हैप्टिक्स और नेस्टेड लिंक को फाइन-ट्यून करें।</p></div>
+<div class="feature"><h3 data-i18n="how_3_t">3) SPIN टैप करें</h3><p data-i18n="how_3_d">व्हील को रियलिस्टिक स्लोडाउन के साथ घूमते देखें।</p></div>
+<div class="feature"><h3 data-i18n="how_4_t">4) अपना नतीजा पाएं</h3><p data-i18n="how_4_d">कन्फेटी के साथ विजेता देखें — दोबारा स्पिन करें या चाइल्ड व्हील खोलें।</p></div>
+</div>
+</section>
+<section class="section sg-arts" id="makaleler">
+<h2 data-i18n="arts_title">लेख</h2>
+<p data-i18n="arts_desc">Spinify से जुड़े गाइड और गेम आइडिया।</p>
+<div class="sg-arts-grid">
+<a class="sg-art" href="/makale/hi/karar-veremiyorum-ne-yapmaliyim.html">
+<img alt="निर्णय नहीं ले सकते: भाग्य चक्र से दैनिक निर्णयों को हल करें" height="630" loading="lazy" src="/makale/img/hi/karar-veremiyorum-ne-yapmaliyim.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>निर्णय नहीं ले सकते: भाग्य चक्र से दैनिक निर्णयों को हल करें</h3>
+<p>क्या खाएं, कौन करे, कहां जाएं? छोटे निर्णयों में फंसने का कारण और भाग्य चक्र को निर्णय उपकरण के रूप में सही तरीके से…</p>
+</div>
+</a>
+<a class="sg-art" href="/makale/hi/agirlikli-sans-carki-nedir.html">
+<img alt="भारित भाग्य चक्र क्या है? स्वयं संभावना समायोजित करें" height="630" loading="lazy" src="/makale/img/hi/agirlikli-sans-carki-nedir.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>भारित भाग्य चक्र क्या है? स्वयं संभावना समायोजित करें</h3>
+<p>भारित पहिया कैसे काम करता है, स्लाइस की चौड़ाई संभावना को कैसे निर्धारित करती है, किन परिस्थितियों में समान स्लाइस…</p>
+</div>
+</a>
+<a class="sg-art" href="/makale/hi/rastgele-secim-carki-nasil-yapilir.html">
+<img alt="यादृच्छिक चयन चक्र कैसे बनाएं? अपना चक्र बनाएं" height="630" loading="lazy" src="/makale/img/hi/rastgele-secim-carki-nasil-yapilir.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>यादृच्छिक चयन चक्र कैसे बनाएं? अपना चक्र बनाएं</h3>
+<p>यादृच्छिक चयन पहिया कैसे तैयार करते हैं: विकल्प दर्ज करना, स्लाइस वजन, नेस्टेड पहिए और उन्मूलन मोड। कक्षा, कार्यालय…</p>
+</div>
+</a>
+</div>
+<a class="sg-arts-all" data-i18n="arts_all" href="/makale/hi/">सभी लेख देखें →</a>
+</section>
+<section class="cta">
+<h2 data-i18n="cta_title">व्हील को फ़ैसला लेने दें</h2>
+<p data-i18n="cta_desc">Spinify, Sogepps परिवार का चौथा ऐप है — आपके फ़ोन पर तेज़, फेयर और मज़ेदार फ़ैसले।</p>
+<div class="cta-links">
+<a class="gp-btn" href="https://play.google.com/store/apps/details?id=com.Soge.Spinify" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"></path></svg>
+<span><small>ANDROID</small><b data-i18n="btn_google_play">Google Play पर पाएं</b></span>
+</a>
+<a class="btn" data-i18n="btn_home" href="/hi/">Sogepps होम पर वापस जाएं</a>
+<a class="btn secondary" data-i18n="footer_privacy" href="privacy-policy.html">गोपनीयता नीति</a>
+<a class="btn secondary" data-i18n="btn_contact" href="mailto:sogepps@gmail.com">संपर्क करें</a>
+</div>
+</section>
+</main>
+
+
+
+<script defer="" src="/js/i18n.js?v=ac9834aa"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" role="img" aria-label="Tavla tahtası bölgeleri">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1a1f2e"/><stop offset="100%" stop-color="#0f1218"/></linearGradient>
+</defs>
+<rect width="760" height="420" rx="16" fill="url(#bg)"/>
+<!-- Board frame -->
+<rect x="30" y="30" width="700" height="360" rx="8" fill="#1e2636" stroke="#3a4a6a" stroke-width="1.5"/>
+<!-- Bar -->
+<rect x="365" y="30" width="30" height="360" fill="#2a3448"/>
+<!-- Points - top row (13-24) -->
+<g opacity="0.6">
+<!-- Left top (13-18): Rakibin dış bölgesi -->
+<polygon points="50,38 80,38 65,148" fill="#c9a227" opacity="0.5"/>
+<polygon points="100,38 130,38 115,148" fill="#6366f1" opacity="0.4"/>
+<polygon points="150,38 180,38 165,148" fill="#c9a227" opacity="0.5"/>
+<polygon points="200,38 230,38 215,148" fill="#6366f1" opacity="0.4"/>
+<polygon points="250,38 280,38 265,148" fill="#c9a227" opacity="0.5"/>
+<polygon points="300,38 330,38 315,148" fill="#6366f1" opacity="0.4"/>
+<!-- Right top (19-24): Rakibin ev bölgesi -->
+<polygon points="410,38 440,38 425,148" fill="#c9a227" opacity="0.5"/>
+<polygon points="460,38 490,38 475,148" fill="#6366f1" opacity="0.4"/>
+<polygon points="510,38 540,38 525,148" fill="#c9a227" opacity="0.5"/>
+<polygon points="560,38 590,38 575,148" fill="#6366f1" opacity="0.4"/>
+<polygon points="610,38 640,38 625,148" fill="#c9a227" opacity="0.5"/>
+<polygon points="660,38 690,38 675,148" fill="#6366f1" opacity="0.4"/>
+</g>
+<!-- Points - bottom row (1-12) -->
+<g opacity="0.6">
+<!-- Right bottom (1-6): Ev bölgesi -->
+<polygon points="410,382 440,382 425,272" fill="#6366f1" opacity="0.4"/>
+<polygon points="460,382 490,382 475,272" fill="#c9a227" opacity="0.5"/>
+<polygon points="510,382 540,382 525,272" fill="#6366f1" opacity="0.4"/>
+<polygon points="560,382 590,382 575,272" fill="#c9a227" opacity="0.5"/>
+<polygon points="610,382 640,382 625,272" fill="#6366f1" opacity="0.4"/>
+<polygon points="660,382 690,382 675,272" fill="#c9a227" opacity="0.5"/>
+<!-- Left bottom (7-12): Dış bölge -->
+<polygon points="50,382 80,382 65,272" fill="#6366f1" opacity="0.4"/>
+<polygon points="100,382 130,382 115,272" fill="#c9a227" opacity="0.5"/>
+<polygon points="150,382 180,382 165,272" fill="#6366f1" opacity="0.4"/>
+<polygon points="200,382 230,382 215,272" fill="#c9a227" opacity="0.5"/>
+<polygon points="250,382 280,382 265,272" fill="#6366f1" opacity="0.4"/>
+<polygon points="300,382 330,382 315,272" fill="#c9a227" opacity="0.5"/>
+</g>
+<!-- Zone labels -->
+<!-- Top-left: Rakibin dış bölgesi (13-18) -->
+<rect x="90" y="156" width="180" height="24" rx="4" fill="rgba(99,102,241,0.15)" stroke="rgba(99,102,241,0.3)" stroke-width="1"/>
+<text x="180" y="173" font-family="Segoe UI,sans-serif" font-size="11" fill="#818cf8" text-anchor="middle" font-weight="600">Rakibin Dış Bölgesi (13-18)</text>
+<!-- Top-right: Rakibin ev bölgesi (19-24) -->
+<rect x="440" y="156" width="200" height="24" rx="4" fill="rgba(201,162,39,0.15)" stroke="rgba(201,162,39,0.3)" stroke-width="1"/>
+<text x="540" y="173" font-family="Segoe UI,sans-serif" font-size="11" fill="#e8c75a" text-anchor="middle" font-weight="600">Rakibin Ev Bölgesi (19-24)</text>
+<!-- Bottom-right: Ev bölgesi (1-6) -->
+<rect x="468" y="240" width="160" height="24" rx="4" fill="rgba(52,211,153,0.15)" stroke="rgba(52,211,153,0.3)" stroke-width="1"/>
+<text x="548" y="257" font-family="Segoe UI,sans-serif" font-size="11" fill="#34d399" text-anchor="middle" font-weight="600">Ev Bölgesi (1-6)</text>
+<!-- Bottom-left: Dış bölge (7-12) -->
+<rect x="110" y="240" width="150" height="24" rx="4" fill="rgba(99,102,241,0.15)" stroke="rgba(99,102,241,0.3)" stroke-width="1"/>
+<text x="185" y="257" font-family="Segoe UI,sans-serif" font-size="11" fill="#818cf8" text-anchor="middle" font-weight="600">Dış Bölge (7-12)</text>
+<!-- Bar label -->
+<text x="380" y="215" font-family="Segoe UI,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle" font-weight="600" transform="rotate(-90,380,215)">BAR</text>
+<!-- Point numbers -->
+<text x="65" y="404" font-family="Segoe UI,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">12</text>
+<text x="115" y="404" font-family="Segoe UI,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">11</text>
+<text x="165" y="404" font-family="Segoe UI,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">10</text>
+<text x="215" y="404" font-family="Segoe UI,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">9</text>
+<text x="265" y="404" font-family="Segoe UI,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">8</text>
+<text x="315" y="404" font-family="Segoe UI,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">7</text>
+<text x="425" y="404" font-family="Segoe UI,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">6</text>
+<text x="475" y="404" font-family="Segoe UI,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">5</text>
+<text x="525" y="404" font-family="Segoe UI,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">4</text>
+<text x="575" y="404" font-family="Segoe UI,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">3</text>
+<text x="625" y="404" font-family="Segoe UI,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">2</text>
+<text x="675" y="404" font-family="Segoe UI,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">1</text>
+<text x="65" y="28" font-family="Segoe UI,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">13</text>
+<text x="115" y="28" font-family="Segoe UI,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">14</text>
+<text x="165" y="28" font-family="Segoe UI,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">15</text>
+<text x="215" y="28" font-family="Segoe UI,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">16</text>
+<text x="265" y="28" font-family="Segoe UI,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">17</text>
+<text x="315" y="28" font-family="Segoe UI,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">18</text>
+<text x="425" y="28" font-family="Segoe UI,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">19</text>
+<text x="475" y="28" font-family="Segoe UI,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">20</text>
+<text x="525" y="28" font-family="Segoe UI,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">21</text>
+<text x="575" y="28" font-family="Segoe UI,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">22</text>
+<text x="625" y="28" font-family="Segoe UI,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">23</text>
+<text x="675" y="28" font-family="Segoe UI,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">24</text>
+</svg>

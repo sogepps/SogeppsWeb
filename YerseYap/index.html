@@ -1,143 +1,385 @@
 <!DOCTYPE html>
+
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>YerseYap - Zarlı Tahta Parti Oyunu</title>
-  <meta name="description" content="YerseYap ile 2-10 kişilik tahta parti oyunu oyna. Zar at, ilerle, görevleri tamamla ve puan topla. En çok puanı toplayan kazanır!" />
-  <meta name="keywords" content="YerseYap, tahta oyunu, parti oyunu, zar oyunu, cesaret görevleri, grup oyunu, Sogepps" />
-  <link rel="canonical" href="https://sogepps.tr/yerseyap/" />
-  <meta property="og:title" content="YerseYap - Zarlı Tahta Parti Oyunu" />
-  <meta property="og:description" content="Zar at, ilerle, görev yap, puan topla. 2-10 kişilik eğlenceli 3D tahta oyunu." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://sogepps.tr/yerseyap/" />
-  <meta property="og:image" content="https://sogepps.tr/yerseyap/img/icon.webp" />
-  <style>
-    :root { --bg:#070913; --surface:#11172a; --surface-2:#18213a; --border:#2a3559; --text:#edf2ff; --muted:#b3bfdc; --primary:#66bb6a; --secondary:#ffc107; }
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Yerse Yap: Parti Oyunu – Zar At, Görevi Yap! 1000+ Görevli Parti Oyunu (2–10 Kişi)</title>
+<meta content="Yerse Yap; tek telefonla 2–10 kişi oynanan zarlı görev parti oyunu. Zarı at, görevi yap, Macera Adası’nı keşfet, canavarlardan kaç, mini oyunları kazan, Kader Çarkı’nı çevir. 1000+ Türkçe görev, 3 kategori, 73 dil." name="description"/>
+<meta content="Yerse Yap, YerseYap, Roll or Dare, parti oyunu, görev oyunu, zar oyunu, tahta oyunu, doğruluk mu cesaret mi, cesaret görevleri, grup oyunu, ev partisi oyunu, Sogepps" name="keywords"/>
+<link href="https://sogepps.tr/yerseyap/" rel="canonical"/><link href="https://sogepps.tr/yerseyap/" hreflang="tr" rel="alternate"/><link href="https://sogepps.tr/yerseyap/en/" hreflang="en" rel="alternate"/><link href="https://sogepps.tr/yerseyap/de/" hreflang="de" rel="alternate"/><link href="https://sogepps.tr/yerseyap/fr/" hreflang="fr" rel="alternate"/><link href="https://sogepps.tr/yerseyap/es/" hreflang="es" rel="alternate"/><link href="https://sogepps.tr/yerseyap/it/" hreflang="it" rel="alternate"/><link href="https://sogepps.tr/yerseyap/pt/" hreflang="pt" rel="alternate"/><link href="https://sogepps.tr/yerseyap/nl/" hreflang="nl" rel="alternate"/><link href="https://sogepps.tr/yerseyap/ru/" hreflang="ru" rel="alternate"/><link href="https://sogepps.tr/yerseyap/ja/" hreflang="ja" rel="alternate"/><link href="https://sogepps.tr/yerseyap/ko/" hreflang="ko" rel="alternate"/><link href="https://sogepps.tr/yerseyap/ar/" hreflang="ar" rel="alternate"/><link href="https://sogepps.tr/yerseyap/hi/" hreflang="hi" rel="alternate"/><link href="https://sogepps.tr/yerseyap/id/" hreflang="id" rel="alternate"/><link href="https://sogepps.tr/yerseyap/pl/" hreflang="pl" rel="alternate"/><link href="https://sogepps.tr/yerseyap/" hreflang="x-default" rel="alternate"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<meta content="#7c1fd6" name="theme-color"/>
+<meta content="website" property="og:type"/>
+<meta content="Sogepps" property="og:site_name"/>
+<meta content="tr_TR" property="og:locale"/>
+<meta content="Yerse Yap: Parti Oyunu – Zar At, Görevi Yap! 1000+ Görevli Parti Oyunu (2–10 Kişi)" property="og:title"/>
+<meta content="Yerse Yap; tek telefonla 2–10 kişi oynanan zarlı görev parti oyunu. Zarı at, görevi yap, Macera Adası’nı keşfet, canavarlardan kaç, mini oyunları kazan, Kader Çarkı’nı çevir. 1000+ Türkçe görev, 3 kategori, 73 dil." property="og:description"/>
+<meta content="https://sogepps.tr/yerseyap/" property="og:url"/>
+<meta content="https://sogepps.tr/yerseyap/img/og-image.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Yerse Yap: Parti Oyunu – Zar At, Görevi Yap! 1000+ Görevli Parti Oyunu (2–10 Kişi)" name="twitter:title"/>
+<meta content="Yerse Yap; tek telefonla 2–10 kişi oynanan zarlı görev parti oyunu. Zarı at, görevi yap, Macera Adası’nı keşfet, canavarlardan kaç, mini oyunları kazan, Kader Çarkı’nı çevir. 1000+ Türkçe görev, 3 kategori, 73 dil." name="twitter:description"/>
+<meta content="https://sogepps.tr/yerseyap/img/og-image.jpg" name="twitter:image"/>
+<link href="img/icon.webp" rel="icon" type="image/webp"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root {
+      --bg: #0d0716;
+      --surface: #17102a;
+      --surface-2: #1f1638;
+      --border: #33264f;
+      --text: #f6f1ff;
+      --muted: #bfb3d9;
+      --pink: #ff4fa3;
+      --purple: #8b3dff;
+      --yellow: #ffd83d;
+      --teal: #35d0c1;
+      --orange: #ff8a3d;
+      --font: 'Inter', 'Segoe UI', system-ui, sans-serif;
+      --display: 'Baloo 2', 'Inter', 'Segoe UI', sans-serif;
+    }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: radial-gradient(circle at 10% -10%, rgba(102, 187, 106, 0.28), transparent 35%), radial-gradient(circle at 90% -20%, rgba(255, 193, 7, 0.14), transparent 35%), var(--bg);
+      font-family: var(--font);
+      background:
+        radial-gradient(circle at 8% -10%, rgba(139, 61, 255, 0.35), transparent 38%),
+        radial-gradient(circle at 92% -15%, rgba(255, 79, 163, 0.28), transparent 38%),
+        radial-gradient(circle at 50% 120%, rgba(255, 138, 61, 0.14), transparent 45%),
+        var(--bg);
       color: var(--text);
       line-height: 1.65;
+      overflow-x: hidden;
     }
-    a { color: #a5d6a7; text-decoration: none; }
+    a { color: #ffb3d6; text-decoration: none; }
     a:hover { text-decoration: underline; }
+    h1, h2, h3, .stat-v { font-family: var(--display); letter-spacing: -0.01em; }
     .wrap { max-width: 1160px; margin: 0 auto; padding: 0 20px; }
-    .topnav { position: sticky; top: 0; z-index: 99; border-bottom: 1px solid var(--border); background: rgba(7, 9, 19, 0.86); backdrop-filter: blur(10px); }
+
+    /* Nav */
+    .topnav { position: sticky; top: 0; z-index: 99; border-bottom: 1px solid var(--border); background: rgba(13, 7, 22, 0.86); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
     .topnav-inner, .nav-inner { min-height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 0.92rem; flex-wrap: wrap; padding: 8px 0; }
-    .topnav-links, .nav-links { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
-    .hero { padding: 82px 0 40px; display: grid; grid-template-columns: 132px 1fr; gap: 22px; align-items: center; }
-    .hero-icon { width: 132px; height: 132px; border-radius: 30px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 20px 58px rgba(102, 187, 106, 0.35); background: linear-gradient(135deg, var(--primary), var(--secondary)); }
-    .hero-icon img { width: 100%; height: 100%; object-fit: cover; }
-    h1 { font-size: clamp(2rem, 5.2vw, 3.3rem); line-height: 1.08; margin-bottom: 12px; letter-spacing: -0.02em; }
-    .lead { color: var(--muted); max-width: 840px; font-size: 1.05rem; }
-    .hero-tags { margin-top: 16px; display: flex; gap: 8px; flex-wrap: wrap; }
-    .hero-tag { border: 1px solid #3d6b45; background: rgba(102, 187, 106, 0.16); color: #b9f6ca; border-radius: 999px; padding: 6px 12px; font-size: 0.8rem; font-weight: 600; }
-    .section { margin: 20px 0; border: 1px solid var(--border); border-radius: 20px; padding: 28px; background: linear-gradient(160deg, var(--surface), var(--surface-2)); }
-    .section h2 { font-size: 1.5rem; margin-bottom: 12px; }
-    .section > p { color: var(--muted); margin-bottom: 10px; }
-    .screen-cards { margin-top: 24px; display: flex; flex-direction: column; align-items: center; gap: 32px; }
-    .screen-card { width: 100%; max-width: 560px; border: 1px solid var(--border); border-radius: 18px; overflow: hidden; background: #0d1324; display: flex; flex-direction: column; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35); }
-    .screen-card img { width: 100%; height: auto; display: block; background: #0d1324; }
-    .screen-card figcaption { padding: 16px 20px; }
-    .screen-card h3 { font-size: 1.15rem; margin-bottom: 8px; }
-    .screen-card p { color: var(--muted); font-size: 0.95rem; margin: 0; line-height: 1.6; }
-    .feat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 16px; }
-    .feature { border: 1px solid #32406c; border-radius: 14px; padding: 14px; background: rgba(16, 23, 42, 0.6); }
-    .feature h3 { font-size: 1rem; margin-bottom: 6px; }
-    .feature p { font-size: 0.93rem; margin: 0; color: var(--muted); }
-    .cta { margin: 24px 0 68px; text-align: center; border: 1px solid #4b6b4f; border-radius: 20px; padding: 30px 22px; background: linear-gradient(135deg, rgba(102, 187, 106, 0.2), rgba(255, 193, 7, 0.1)); }
-    .cta h2 { margin-bottom: 8px; }
-    .cta p { color: var(--muted); }
-    .cta-links { margin-top: 14px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
-    .btn { display: inline-block; padding: 10px 15px; border-radius: 11px; font-weight: 700; border: 1px solid #4a8f52; background: linear-gradient(135deg, var(--primary), #43a047); color: #fff; text-decoration: none; }
-    .btn.secondary { background: rgba(17, 23, 42, 0.65); color: #d7e2ff; border-color: #3a4a7b; }
-    @media (max-width: 760px) { .hero { grid-template-columns: 1fr; text-align: center; } .hero-icon { margin: 0 auto; } .topnav-links, .nav-links { justify-content: center; } }
+    .topnav-links, .nav-links { display: flex; gap: 4px 14px; align-items: center; flex-wrap: wrap; }
+    .topnav-links a { color: var(--muted); padding: 6px 4px; }
+    .topnav-links a:hover { color: var(--text); text-decoration: none; }
+
+    /* Hero */
+    .hero { padding: 64px 0 28px; display: grid; grid-template-columns: 1.05fr 1fr; gap: 36px; align-items: center; }
+    .hero-kicker { display: inline-flex; align-items: center; gap: 6px; border: 1px solid rgba(255, 216, 61, 0.35); background: rgba(255, 216, 61, 0.1); color: var(--yellow); border-radius: 999px; padding: 5px 14px; font-size: 0.78rem; font-weight: 600; margin-bottom: 18px; }
+    .hero-head { display: flex; align-items: center; gap: 16px; margin-bottom: 14px; }
+    .hero-icon { width: 84px; height: 84px; border-radius: 22px; overflow: hidden; flex: 0 0 auto; border: 1px solid rgba(255,255,255,0.14); box-shadow: 0 16px 44px rgba(139, 61, 255, 0.45); }
+    .hero-icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1.02; font-weight: 800; }
+    h1 span { display: block; font-size: 0.6em; background: linear-gradient(90deg, var(--yellow), var(--pink)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-top: 4px; }
+    .lead { color: var(--muted); font-size: 1.05rem; max-width: 620px; }
+    .hero-tags { margin-top: 18px; display: flex; gap: 8px; flex-wrap: wrap; }
+    .hero-tag { border: 1px solid rgba(255, 79, 163, 0.4); background: rgba(255, 79, 163, 0.12); color: #ffc2de; border-radius: 999px; padding: 6px 12px; font-size: 0.8rem; font-weight: 600; }
+    .hero-visual { position: relative; }
+    .hero-visual img { width: 100%; height: auto; display: block; border-radius: 22px; border: 1px solid rgba(255,255,255,0.14); box-shadow: 0 30px 80px rgba(139, 61, 255, 0.35); }
+    .hero-visual::after { content: ''; position: absolute; inset: 12% -6% -10% -6%; background: radial-gradient(ellipse, rgba(255, 79, 163, 0.35), transparent 65%); z-index: -1; filter: blur(30px); }
+    .hero-note { margin-top: 10px; font-size: 0.82rem; color: var(--muted); }
+
+    /* Google Play button */
+    .gp-actions { margin-top: 22px; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+    .gp-btn { display: inline-flex; align-items: center; gap: 10px; padding: 10px 20px; border-radius: 14px; background: #0d1016; border: 1px solid #414755; color: #ffffff; font-weight: 700; font-size: 0.98rem; line-height: 1.15; text-decoration: none; transition: border-color .2s, transform .15s, box-shadow .2s; }
+    .gp-btn:hover { text-decoration: none; border-color: #c0c7d8; transform: translateY(-1px); color: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+    .gp-btn svg { width: 26px; height: 26px; flex: 0 0 auto; fill: currentColor; }
+    .gp-btn > span { display: block; text-align: left; }
+    .gp-btn small { display: block; font-size: 0.63rem; font-weight: 600; letter-spacing: .09em; opacity: .7; }
+
+    /* Stats */
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 20px 0 8px; }
+    .stat { border: 1px solid var(--border); border-radius: 18px; padding: 16px 14px; background: linear-gradient(160deg, var(--surface), var(--surface-2)); text-align: center; }
+    .stat-v { font-size: 2rem; font-weight: 800; line-height: 1; background: linear-gradient(90deg, var(--yellow), var(--orange)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .stat-l { color: var(--muted); font-size: 0.85rem; margin-top: 6px; }
+
+    /* Sections */
+    .section { margin: 20px 0; border: 1px solid var(--border); border-radius: 22px; padding: 30px; background: linear-gradient(160deg, var(--surface), var(--surface-2)); }
+    .section h2 { font-size: 1.7rem; margin-bottom: 8px; font-weight: 800; }
+    .section > p { color: var(--muted); margin-bottom: 12px; }
+    .section h2 em { font-style: normal; background: linear-gradient(90deg, var(--pink), var(--yellow)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+
+    /* Screens */
+    .screen-grid { margin-top: 22px; display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 22px; }
+    .screen-card { border: 1px solid var(--border); border-radius: 18px; overflow: hidden; background: #120b22; box-shadow: 0 14px 40px rgba(0, 0, 0, 0.4); display: flex; flex-direction: column; transition: transform .2s, border-color .2s; }
+    .screen-card:hover { transform: translateY(-3px); border-color: rgba(255, 79, 163, 0.5); }
+    .screen-card img { width: 100%; height: auto; aspect-ratio: 16 / 9; display: block; background: #120b22; }
+    .screen-card figcaption { padding: 14px 18px 18px; }
+    .screen-card h3 { font-size: 1.1rem; margin-bottom: 6px; }
+    .screen-card p { color: var(--muted); font-size: 0.93rem; line-height: 1.6; }
+
+    /* Steps */
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin-top: 18px; counter-reset: step; }
+    .step { border: 1px solid #3d2f5f; border-radius: 16px; padding: 18px 16px 16px; background: rgba(13, 7, 22, 0.5); position: relative; }
+    .step::before { counter-increment: step; content: counter(step); display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: linear-gradient(135deg, var(--pink), var(--purple)); color: #fff; font-family: var(--display); font-weight: 800; font-size: 1.05rem; margin-bottom: 10px; box-shadow: 0 6px 18px rgba(255, 79, 163, 0.35); }
+    .step h3 { font-size: 1.05rem; margin-bottom: 6px; }
+    .step p { color: var(--muted); font-size: 0.93rem; }
+
+    /* Boards & modes */
+    .boards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 18px; }
+    .board { border: 1px solid #3d2f5f; border-radius: 16px; padding: 18px; background: rgba(13, 7, 22, 0.5); }
+    .board h3 { font-size: 1.1rem; margin-bottom: 6px; }
+    .board p { color: var(--muted); font-size: 0.93rem; }
+    .board.adv { border-color: rgba(255, 216, 61, 0.45); background: linear-gradient(160deg, rgba(255, 216, 61, 0.08), rgba(13, 7, 22, 0.5)); }
+    .cats { margin-top: 22px; }
+    .cats h3 { font-size: 1.05rem; margin-bottom: 10px; color: var(--muted); font-weight: 600; font-family: var(--font); }
+    .cat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+    .cat { border-radius: 14px; padding: 14px 16px; border: 1px solid transparent; }
+    .cat b { display: block; font-family: var(--display); font-size: 1.05rem; margin-bottom: 2px; }
+    .cat span { color: var(--muted); font-size: 0.88rem; }
+    .cat.fam { background: rgba(53, 208, 193, 0.12); border-color: rgba(53, 208, 193, 0.4); }
+    .cat.fam b { color: #8ff0e5; }
+    .cat.party { background: rgba(255, 79, 163, 0.12); border-color: rgba(255, 79, 163, 0.4); }
+    .cat.party b { color: #ffb3d6; }
+    .cat.bold { background: rgba(255, 138, 61, 0.12); border-color: rgba(255, 138, 61, 0.45); }
+    .cat.bold b { color: #ffc599; }
+
+    /* Features */
+    .feat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 18px; }
+    .feature { border: 1px solid #3d2f5f; border-radius: 14px; padding: 16px; background: rgba(13, 7, 22, 0.5); }
+    .feature h3 { font-size: 1.02rem; margin-bottom: 6px; }
+    .feature p { font-size: 0.92rem; color: var(--muted); }
+
+    /* Monsters */
+    .monsters { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 18px; }
+    .monster { border: 1px solid #3d2f5f; border-radius: 14px; padding: 14px; background: rgba(13, 7, 22, 0.5); text-align: center; }
+    .monster h3 { font-size: 1rem; margin-bottom: 4px; }
+    .monster p { color: var(--muted); font-size: 0.88rem; }
+
+    /* FAQ */
+    .faq { margin-top: 12px; display: grid; gap: 10px; }
+    .faq details { border: 1px solid #3d2f5f; border-radius: 14px; background: rgba(13, 7, 22, 0.5); padding: 0 18px; }
+    .faq summary { cursor: pointer; padding: 14px 0; font-weight: 600; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: '+'; font-family: var(--display); font-size: 1.3rem; color: var(--pink); flex: 0 0 auto; }
+    .faq details[open] summary::after { content: '−'; }
+    .faq details p { color: var(--muted); font-size: 0.94rem; padding: 0 0 16px; }
+
+    /* Articles */
+    .sg-arts { margin: 20px 0; border: 1px solid rgba(255,255,255,0.12); border-radius: 22px; padding: 26px; background: rgba(255,255,255,0.03); }
+    .sg-arts h2 { font-size: 1.5rem; margin-bottom: 6px; }
+    .sg-arts > p { opacity: .78; margin-bottom: 16px; font-size: 0.95rem; }
+    .sg-arts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+    .sg-art { display: block; border: 1px solid rgba(255,255,255,0.13); border-radius: 14px; overflow: hidden; background: rgba(0,0,0,0.28); color: inherit; text-decoration: none; transition: border-color .2s, transform .2s; }
+    .sg-art:hover { text-decoration: none; transform: translateY(-3px); border-color: rgba(255,255,255,0.38); }
+    .sg-art img { width: 100%; height: auto; aspect-ratio: 1200 / 630; display: block; }
+    .sg-art-body { padding: 14px 16px 16px; }
+    .sg-art-body h3 { font-size: 1rem; line-height: 1.4; margin-bottom: 6px; font-family: var(--font); font-weight: 600; }
+    .sg-art-body p { font-size: 0.86rem; opacity: .72; margin: 0; }
+    .sg-arts-all { display: inline-block; margin-top: 14px; font-weight: 700; font-size: 0.9rem; }
+
+    /* CTA */
+    .cta { margin: 24px 0 68px; text-align: center; border: 1px solid rgba(255, 79, 163, 0.45); border-radius: 22px; padding: 36px 22px; background: linear-gradient(135deg, rgba(139, 61, 255, 0.28), rgba(255, 79, 163, 0.18) 55%, rgba(255, 216, 61, 0.14)); }
+    .cta h2 { margin-bottom: 8px; font-size: 1.8rem; font-weight: 800; }
+    .cta p { color: var(--muted); max-width: 640px; margin: 0 auto; }
+    .cta-links { margin-top: 18px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+    .btn { display: inline-block; padding: 11px 16px; border-radius: 12px; font-weight: 700; border: 1px solid rgba(255, 79, 163, 0.6); background: linear-gradient(135deg, var(--pink), var(--purple)); color: #fff; text-decoration: none; }
+    .btn:hover { text-decoration: none; filter: brightness(1.08); }
+    .btn.secondary { background: rgba(23, 16, 42, 0.7); color: #e9defc; border-color: #4a3a73; }
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; padding-top: 40px; }
+      .hero-visual { order: -1; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 760px) {
+      .section { padding: 22px 18px; }
+      .topnav-links, .nav-links { justify-content: center; }
+      .topnav-inner { justify-content: center; }
+      .screen-grid { grid-template-columns: 1fr; }
+      .hero-head { flex-direction: column; align-items: flex-start; }
+    }
+    [dir="rtl"] .gp-btn > span { text-align: right; }
   </style>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"YerseYap","applicationCategory":"GameApplication","operatingSystem":"Android","description":"2-10 kişilik zarlı tahta parti oyunu. Zar at, ilerle, görevleri tamamla ve puan topla."}
-  </script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","@id":"https://sogepps.tr/yerseyap/#app","name":"Yerse Yap: Parti Oyunu","alternateName":["YerseYap","Yerse Yap","Roll or Dare: Party Board Game"],"applicationCategory":"GameApplication","applicationSubCategory":"Party game","operatingSystem":"Android","url":"https://sogepps.tr/yerseyap/","installUrl":"https://play.google.com/store/apps/details?id=com.Soge.YerseYap","image":"https://sogepps.tr/yerseyap/img/og-image.jpg","screenshot":["https://sogepps.tr/yerseyap/img/tr/ekran-1.webp","https://sogepps.tr/yerseyap/img/tr/ekran-2.webp","https://sogepps.tr/yerseyap/img/tr/ekran-3.webp","https://sogepps.tr/yerseyap/img/tr/ekran-4.webp","https://sogepps.tr/yerseyap/img/tr/ekran-5.webp","https://sogepps.tr/yerseyap/img/tr/ekran-6.webp","https://sogepps.tr/yerseyap/img/tr/ekran-7.webp","https://sogepps.tr/yerseyap/img/tr/ekran-8.webp"],"description":"Tek telefonla 2–10 kişi oynanan zarlı görev parti oyunu. Zarı at, görevi yap, Macera Adası’nı keşfet, canavarlardan kaç, mini oyunları kazan, Kader Çarkı’nı çevir. 1000+ Türkçe görev, 3 kategori, 73 dil.","featureList":"1000+ görev, 3 kategori (Aile, Parti, Cesur 18+), Macera Adası ve Şehir tahtası, canavarlar, 4 mini oyun, Kader Çarkı, düello, herkes görevleri, takım modu, joker ve altın görev, kendi görevlerin, 12 karakter, 73 dil","author":{"@type":"Organization","name":"Sogepps","url":"https://sogepps.tr/"},"offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"inLanguage":"tr"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Yerse Yap kaç kişiyle oynanır?","acceptedAnswer":{"@type":"Answer","text":"Tek telefon ya da tablette 2–10 kişi. Oyuncular sırayla oynar; ek cihaz gerekmez."}},{"@type":"Question","name":"İnternet bağlantısı gerekiyor mu?","acceptedAnswer":{"@type":"Answer","text":"Oyun tek telefonda yerel olarak oynanır; ancak ücretsiz olduğu ve maç sonunda reklam gösterdiği için çalışması için aktif bir internet bağlantısı gerekir."}},{"@type":"Question","name":"Çocuklar ve aileler için uygun mu?","acceptedAnswer":{"@type":"Answer","text":"Evet, Aile kategorisiyle. Parti ve Cesur (18+) kategorileri yetişkinlere yönelik görevler içerir; kategorileri her maçtan önce maç ayarlarından sen seçersin."}},{"@type":"Question","name":"Kendi görevlerimi ekleyebilir miyim?","acceptedAnswer":{"@type":"Answer","text":"Evet. Ana menüden Kendi Görevlerin’i aç, görevlerini yaz; bir sonraki maçta desteye katılır."}},{"@type":"Question","name":"Hangi dillerde oynanabilir?","acceptedAnswer":{"@type":"Answer","text":"Türkçe, İngilizce, Almanca, Fransızca, İspanyolca, Portekizce, Arapça, Hintçe, Japonca ve Korece dahil 73 oyun dili. Oyun telefonun dilinde açılır, ana menüden değiştirebilirsin."}},{"@type":"Question","name":"Doğruluk mu cesaret mi oyunundan farkı ne?","acceptedAnswer":{"@type":"Answer","text":"Görevleri alıp etrafına bir tahta oyunu kuruyor: zar, puan, Macera Adası, canavarlar, mini oyunlar, Kader Çarkı, düello ve takım modu. Her maçın kürsüde bir kazananı var."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Sogepps","item":"https://sogepps.tr/"},{"@type":"ListItem","position":2,"name":"Yerse Yap","item":"https://sogepps.tr/yerseyap/"}]}]}</script>
 </head>
 <body>
-  <nav class="topnav">
-    <div class="wrap topnav-inner nav-inner">
-      <a href="/" data-i18n="nav_home">&larr; Sogepps ana sayfa</a>
-      <div class="topnav-links nav-links">
-        <a href="#ekranlar" data-i18n="nav_screens">Görseller</a>
-        <a href="#nasil" data-i18n="nav_how">Nasıl Oynanır</a>
-        <a href="#ozellikler" data-i18n="feat_title">Özellikler</a>
-        <a href="privacy-policy.html" data-i18n="nav_privacy">Gizlilik Politikası</a>
-        <a href="mailto:sogepps@gmail.com">sogepps@gmail.com</a>
-      </div>
-    </div>
-  </nav>
+<nav class="topnav">
+<div class="wrap topnav-inner nav-inner">
+<a data-i18n="nav_home" href="/">← Sogepps ana sayfa</a>
+<div class="topnav-links nav-links">
+<a data-i18n="nav_screens" href="#ekranlar">Görseller</a>
+<a data-i18n="nav_how" href="#nasil">Nasıl Oynanır</a>
+<a data-i18n="nav_modes" href="#modlar">Tahtalar ve Modlar</a>
+<a data-i18n="nav_features" href="#ozellikler">Özellikler</a>
+<a data-i18n="nav_faq" href="#sss">SSS</a>
+<a data-i18n="nav_privacy" href="privacy-policy.html">Gizlilik Politikası</a>
+</div>
+</div>
+</nav>
+<main class="wrap">
+<section class="hero">
+<div>
+<span class="hero-kicker" data-i18n="hero_kicker">🎲 Sogepps parti oyunu · Android</span>
+<div class="hero-head">
+<div class="hero-icon"><img alt="Yerse Yap uygulama simgesi" decoding="async" height="84" src="img/icon.webp" width="84"/></div>
+<h1 data-i18n-html="hero_title">Yerse Yap: Parti Oyunu<br/><span>Zar At, Görevi Yap!</span></h1>
+</div>
+<p class="lead" data-i18n="hero_lead">Yerse Yap baştan yazıldı ve yepyeni haliyle geri döndü. Zarı at, pulunu ilerlet, geldiğin karenin görevini yap ve puanları topla. Yaparsan puan senin, yapamazsan arkadaşların seni uzun süre unutmaz! Tek telefon yeter: 2–10 kişi sırayla oynar.</p>
+<div class="hero-tags">
+<span class="hero-tag" data-i18n="tag_1">2–10 oyuncu</span>
+<span class="hero-tag" data-i18n="tag_2">Tek telefon</span>
+<span class="hero-tag" data-i18n="tag_3">1000+ görev</span>
+<span class="hero-tag" data-i18n="tag_4">73 dil</span>
+<span class="hero-tag" data-i18n="tag_5">Macera Adası</span>
+</div>
+<div class="gp-actions">
+<a class="gp-btn" href="https://play.google.com/store/apps/details?id=com.Soge.YerseYap" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"></path></svg>
+<span><small>ANDROID</small><b data-i18n="btn_google_play">Google Play’den indir</b></span>
+</a>
+</div>
+<p class="hero-note" data-i18n="hero_note">Google Play’de ücretsiz. Eski adıyla YerseYap.</p>
+</div>
+<div class="hero-visual">
+<img alt="Yerse Yap: Macera Adası, zar ve sevimli karakterler" data-shot="feature.webp" decoding="async" fetchpriority="high" height="500" src="img/tr/feature.webp" width="1024"/>
+</div>
+</section>
+<div aria-label="Öne çıkanlar" class="stats">
+<div class="stat"><div class="stat-v" data-i18n="stat_1_v">2–10</div><div class="stat-l" data-i18n="stat_1_l">oyuncu, tek telefon</div></div>
+<div class="stat"><div class="stat-v" data-i18n="stat_2_v">1000+</div><div class="stat-l" data-i18n="stat_2_l">Türkçe görev, 3 kategori</div></div>
+<div class="stat"><div class="stat-v" data-i18n="stat_3_v">12</div><div class="stat-l" data-i18n="stat_3_l">sevimli karakter</div></div>
+<div class="stat"><div class="stat-v" data-i18n="stat_4_v">73</div><div class="stat-l" data-i18n="stat_4_l">oyun dili</div></div>
+</div>
+<section class="section" id="ekranlar">
+<h2 data-i18n="screens_title">Yerse Yap Oyun İçi Görseller</h2>
+<p data-i18n="screens_desc">Zar, görevler, Macera Adası, canavarlar, mini oyunlar, Kader Çarkı, düello ve kürsü.</p>
+<div class="screen-grid">
+<figure class="screen-card"><img alt="Yerse Yap zar atma ekranı: Macera Adası’nda zıplayan zar ve 2 adım" data-shot="ekran-1.webp" decoding="async" height="720" loading="lazy" src="img/tr/ekran-1.webp" width="1280"/><figcaption><h3 data-i18n="s_1_t">Zar At, Görevi Yap</h3><p data-i18n="s_1_d">Sıra sende: zarı at, pulun renkli karelerde ilerlesin. Zıplayan çizgi film zarı senin renginde gelir.</p></figcaption></figure>
+<figure class="screen-card"><img alt="Yerse Yap görev kartı: 20 puanlık görev, süre başlat ve joker butonları" data-shot="ekran-2.webp" decoding="async" height="720" loading="lazy" src="img/tr/ekran-2.webp" width="1280"/><figcaption><h3 data-i18n="s_2_t">1000+ Çılgın Görev</h3><p data-i18n="s_2_d">Geldiğin karenin puanına göre görev çıkar. Yaptım ya da Yapamadım; jokerle görevi değiştir, süreli görevlerde geri sayımı başlat.</p></figcaption></figure>
+<figure class="screen-card"><img alt="Yerse Yap Macera Adası kuşbakışı görünüm: kıvrımlı 52 kareli tahta" data-shot="ekran-3.webp" decoding="async" height="720" loading="lazy" src="img/tr/ekran-3.webp" width="1280"/><figcaption><h3 data-i18n="s_3_t">Macera Adası’nı Keşfet</h3><p data-i18n="s_3_d">52 kareli kıvrımlı tahta: portallar, çukurlar, çamur tuzakları, altın kareler ve canavar inleri. Görünüm butonuyla adayı kuşbakışı izle.</p></figcaption></figure>
+<figure class="screen-card"><img alt="Yerse Yap canavar olayı: Ejderha lidere alev püskürttü" data-shot="ekran-4.webp" decoding="async" height="720" loading="lazy" src="img/tr/ekran-4.webp" width="1280"/><figcaption><h3 data-i18n="s_4_t">Canavarlara Dikkat!</h3><p data-i18n="s_4_d">Ejderha lideri yakar, Ork haraç alır, Hayalet seni geri kaçırır. Canavar inine düşen sürprize hazır olsun.</p></figcaption></figure>
+<figure class="screen-card"><img alt="Yerse Yap mini oyun: Hızlı Tıkla" data-shot="ekran-5.webp" decoding="async" height="720" loading="lazy" src="img/tr/ekran-5.webp" width="1280"/><figcaption><h3 data-i18n="s_5_t">Mini Oyunlarla Puan Kap</h3><p data-i18n="s_5_d">Hızlı Tıkla, Tam Zamanında, Renk Hafızası ve Zar Tahmini: refleksin ve hafızanla ekstra puan topla.</p></figcaption></figure>
+<figure class="screen-card"><img alt="Yerse Yap Kader Çarkı: +40, joker, lider −15 gibi dilimler" data-shot="ekran-6.webp" decoding="async" height="720" loading="lazy" src="img/tr/ekran-6.webp" width="1280"/><figcaption><h3 data-i18n="s_6_t">Kader Çarkı’nı Çevir</h3><p data-i18n="s_6_d">+40’tan Lider −15’e, Tekrar At’tan Joker’e: çarkı çevir, kaderine razı ol.</p></figcaption></figure>
+<figure class="screen-card"><img alt="Yerse Yap düello ekranı: iki oyuncu aynı görevi yapar, kazananı diğerleri seçer" data-shot="ekran-7.webp" decoding="async" height="720" loading="lazy" src="img/tr/ekran-7.webp" width="1280"/><figcaption><h3 data-i18n="s_7_t">Düello: Kim Daha İyi?</h3><p data-i18n="s_7_d">Rakibine meydan oku, ikiniz de aynı görevi yapın; kazananı masadaki diğer oyuncular seçsin. Kazanan +30, berabere ikisine +15.</p></figcaption></figure>
+<figure class="screen-card"><img alt="Yerse Yap oyun sonu kürsüsü: kazanan, puanlar, rövanş ve ana menü" data-shot="ekran-8.webp" decoding="async" height="720" loading="lazy" src="img/tr/ekran-8.webp" width="1280"/><figcaption><h3 data-i18n="s_8_t">Kürsü ve Rövanş</h3><p data-i18n="s_8_d">Oyun bitince kürsü, konfeti ve eğlenceli ödüller. Rövanş bir dokunuş uzakta. 2–10 kişi, tek telefon.</p></figcaption></figure>
+</div>
+</section>
+<section class="section" id="nasil">
+<h2 data-i18n="how_title">Yerse Yap Nasıl Oynanır?</h2>
+<p data-i18n="how_desc">Bir dakikada kur, telefonu masada elden ele dolaştır.</p>
+<div class="steps">
+<div class="step"><h3 data-i18n="how_1_t">Maçı ayarla</h3><p data-i18n="how_1_d">Mod (klasik ya da takım), tahta (Şehir veya Macera Adası), görev kategorileri ve tur sayısını seç. Canavarlar gibi ekstra kuralları aç-kapat.</p></div>
+<div class="step"><h3 data-i18n="how_2_t">Oyuncuları kur</h3><p data-i18n="how_2_d">2–10 oyuncu ekle, isimleri yaz, 12 karakterden pulunu seç. Takım modunda Kırmızı ve Mavi’ye ayrılın.</p></div>
+<div class="step"><h3 data-i18n="how_3_t">Zar at, görevi yap</h3><p data-i18n="how_3_d">Sırası gelen zar atar, geldiği karenin görevini yapar. Yaptım → puan senin. Yapamadım → arkadaşların unutmaz.</p></div>
+<div class="step"><h3 data-i18n="how_4_t">Kürsüye çık</h3><p data-i18n="how_4_d">Turlar bitince en yüksek puan kazanır. Kürsü, ödüller, oyuncu istatistikleri ve rövanş.</p></div>
+</div>
+</section>
+<section class="section" id="modlar">
+<h2 data-i18n="modes_title">Tahtalar, Modlar ve Kategoriler</h2>
+<p data-i18n="modes_desc">Her maç masanın keyfine göre kurulur.</p>
+<div class="boards">
+<div class="board"><h3 data-i18n="board_1_t">🏙️ Şehir Tahtası</h3><p data-i18n="board_1_d">Klasik, sade tahta. Hızlı öğrenilir, hızlı oynanır: ilk oyun ya da kısa bir oturum için ideal.</p></div>
+<div class="board adv"><h3 data-i18n="board_2_t">🏝️ Macera Adası ★</h3><p data-i18n="board_2_d">52 kareli kıvrımlı ada ve özel kareler: Mini Oyun, Kader Çarkı, Düello, Herkes, Portal, Çukur, Çamur, Canavar İni, Altın (2×) ve Çiçek Tuzağı. Bitiş kemerinde tur bonusu.</p></div>
+<div class="board"><h3 data-i18n="team_t">🔴 Takım Modu 🔵</h3><p data-i18n="team_d">Kırmızı takım Mavi takıma karşı. Puanlar ortak toplanır; her görev bütün takım için sayılır.</p></div>
+</div>
+<div class="cats">
+<h3 data-i18n="cat_title">Görev kategorileri</h3>
+<div class="cat-grid">
+<div class="cat fam"><b data-i18n="cat_1_t">Aile</b><span data-i18n="cat_1_d">Çocuklar dahil herkese uygun.</span></div>
+<div class="cat party"><b data-i18n="cat_2_t">Parti</b><span data-i18n="cat_2_d">Arkadaş ortamı için komik, yaratıcı ve utandırıcı görevler.</span></div>
+<div class="cat bold"><b data-i18n="cat_3_t">Cesur 18+</b><span data-i18n="cat_3_d">Sadece yetişkinler için. Maç ayarlarından ortamına göre seç.</span></div>
+</div>
+</div>
+</section>
+<section class="section" id="ozellikler">
+<h2 data-i18n="feat_title">Yeni Yerse Yap’ta Neler Var?</h2>
+<p data-i18n="feat_desc">Oyun sıfırdan yazıldı. İşte yeni sürümle gelenler.</p>
+<div class="feat-grid">
+<div class="feature"><h3 data-i18n="f_1_t">🎡 Kader Çarkı</h3><p data-i18n="f_1_d">+40, +25, +10, −10, Lider −15, Herkes +5, Tekrar At ya da Joker. Çevir ve kaderine razı ol.</p></div>
+<div class="feature"><h3 data-i18n="f_2_t">⚔️ Düello</h3><p data-i18n="f_2_d">Rakibini aynı göreve davet et. Kazananı diğer oyuncular oylar: kazanana +30, berabere ikisine +15.</p></div>
+<div class="feature"><h3 data-i18n="f_3_t">👥 Herkes Görevleri</h3><p data-i18n="f_3_d">Bütün masa aynı anda aynı görevi yapar. En iyisini arkadaşların seçer.</p></div>
+<div class="feature"><h3 data-i18n="f_4_t">🎮 4 Mini Oyun</h3><p data-i18n="f_4_d">Hızlı Tıkla, Tam Zamanında, Renk Hafızası ve Zar Tahmini ile ekstra puan.</p></div>
+<div class="feature"><h3 data-i18n="f_5_t">🃏 Joker ve Altın Görev</h3><p data-i18n="f_5_d">Jokerle görevi değiştir, altın karede 2 kat puan kazan, üst üste yaptığın görevlerle seri bonusu kap.</p></div>
+<div class="feature"><h3 data-i18n="f_6_t">✍️ Kendi Görevlerin</h3><p data-i18n="f_6_d">Kendi görevlerini yaz, desteye ekle. Aranızdaki şakalar da oyuna girsin.</p></div>
+<div class="feature"><h3 data-i18n="f_7_t">⏱️ Süreli Görevler</h3><p data-i18n="f_7_d">Süre isteyen görevlerde geri sayım otomatik olarak kartın üstünde başlar.</p></div>
+<div class="feature"><h3 data-i18n="f_8_t">🏆 Kürsü, Ödüller ve Rövanş</h3><p data-i18n="f_8_d">Konfetili zafer kürsüsü, maç sonu eğlenceli ödüller ve tek dokunuşla rövanş.</p></div>
+<div class="feature"><h3 data-i18n="f_9_t">📊 Profiller, İstatistikler ve Günün Görevi</h3><p data-i18n="f_9_d">Maçlar boyunca biriken oyuncu istatistikleri ve her gün yeni bir Günün Görevi.</p></div>
+<div class="feature"><h3 data-i18n="f_10_t">🌍 73 Dil</h3><p data-i18n="f_10_d">Telefonun diline göre otomatik açılır. Ana menüden DİL • LANGUAGE ile istediğin zaman değiştir.</p></div>
+<div class="feature"><h3 data-i18n="f_11_t">🐾 12 Karakter</h3><p data-i18n="f_11_d">Kedi, penguen, koyun, ördek, köpek, tavuk, Pembiş, büyücü, ninja, yeti, uzaylı ve kaktüs.</p></div>
+<div class="feature"><h3 data-i18n="f_12_t">📱 Tek Telefon, Hesap Yok</h3><p data-i18n="f_12_d">Kayıt yok, ek cihaz yok. Telefonu elden ele dolaştır ve oyna.</p></div>
+</div>
+</section>
+<section class="section" id="canavarlar">
+<h2 data-i18n="mon_title">Canavarlarla Tanış</h2>
+<p data-i18n="mon_desc">Canavar inine düşersen ya da görev karesinde şansın yaver gitmezse biri karşına çıkar. Canavarlar maç ayarlarından kapatılabilir.</p>
+<div class="monsters">
+<div class="monster"><h3 data-i18n="m_1_t">🍄 Mantar Kral</h3><p data-i18n="m_1_d">Hediye verir.</p></div>
+<div class="monster"><h3 data-i18n="m_2_t">🐸 Kurbağa</h3><p data-i18n="m_2_d">Yerini başka bir oyuncuyla değiştirir.</p></div>
+<div class="monster"><h3 data-i18n="m_3_t">👹 Ork</h3><p data-i18n="m_3_d">Puanlarından haraç alır.</p></div>
+<div class="monster"><h3 data-i18n="m_4_t">🐉 Ejderha</h3><p data-i18n="m_4_d">Lidere alev püskürtür.</p></div>
+<div class="monster"><h3 data-i18n="m_5_t">👻 Hayalet</h3><p data-i18n="m_5_d">Seni tahtada geri kaçırır.</p></div>
+</div>
+</section>
+<section class="section" id="sss">
+<h2 data-i18n="faq_title">Sık Sorulan Sorular</h2>
+<p data-i18n="faq_desc">İndirmeden önce kısa cevaplar.</p>
+<div class="faq">
+<details open=""><summary data-i18n="q_1">Yerse Yap kaç kişiyle oynanır?</summary><p data-i18n="a_1">Tek telefon ya da tablette 2–10 kişi. Oyuncular sırayla oynar; ek cihaz gerekmez.</p></details>
+<details><summary data-i18n="q_2">İnternet bağlantısı gerekiyor mu?</summary><p data-i18n="a_2">Oyun tek telefonda yerel olarak oynanır; ancak ücretsiz olduğu ve maç sonunda reklam gösterdiği için çalışması için aktif bir internet bağlantısı gerekir.</p></details>
+<details><summary data-i18n="q_3">Çocuklar ve aileler için uygun mu?</summary><p data-i18n="a_3">Evet, Aile kategorisiyle. Parti ve Cesur (18+) kategorileri yetişkinlere yönelik görevler içerir; kategorileri her maçtan önce maç ayarlarından sen seçersin.</p></details>
+<details><summary data-i18n="q_4">Kendi görevlerimi ekleyebilir miyim?</summary><p data-i18n="a_4">Evet. Ana menüden Kendi Görevlerin’i aç, görevlerini yaz; bir sonraki maçta desteye katılır.</p></details>
+<details><summary data-i18n="q_5">Hangi dillerde oynanabilir?</summary><p data-i18n="a_5">Türkçe, İngilizce, Almanca, Fransızca, İspanyolca, Portekizce, Arapça, Hintçe, Japonca ve Korece dahil 73 oyun dili. Oyun telefonun dilinde açılır, ana menüden değiştirebilirsin.</p></details>
+<details><summary data-i18n="q_6">Doğruluk mu cesaret mi oyunundan farkı ne?</summary><p data-i18n="a_6">Görevleri alıp etrafına bir tahta oyunu kuruyor: zar, puan, Macera Adası, canavarlar, mini oyunlar, Kader Çarkı, düello ve takım modu. Her maçın kürsüde bir kazananı var.</p></details>
+</div>
+</section>
+<section class="section sg-arts" id="makaleler">
+<h2 data-i18n="arts_title">Makaleler</h2>
+<p data-i18n="arts_desc">Yerse Yap ile ilgili rehberler ve oyun fikirleri.</p>
+<div class="sg-arts-grid">
+<a class="sg-art" href="/makale/zarli-tahta-oyunu-nasil-oynanir.html">
+<img alt="Zarlı Tahta Oyunu Nasıl Oynanır? Yerse Yap Kuralları" height="630" loading="lazy" src="/makale/img/zarli-tahta-oyunu-nasil-oynanir.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>Zarlı Tahta Oyunu Nasıl Oynanır? Yerse Yap Kuralları</h3>
+<p>Zar at, ilerle, göreve gel, puan topla. Zarlı tahta parti oyunu Yerse Yap nasıl oynanır, kare renkleri ne anlama gelir…</p>
+</div>
+</a>
+<a class="sg-art" href="/makale/gorevli-parti-oyunlari-fikirleri.html">
+<img alt="Görevli Parti Oyunları: Buluşmayı Şenlendiren 20 Görev Fikri" height="630" loading="lazy" src="/makale/img/gorevli-parti-oyunlari-fikirleri.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>Görevli Parti Oyunları: Buluşmayı Şenlendiren 20 Görev Fikri</h3>
+<p>Ev partisi ve arkadaş buluşmaları için görev fikirleri: ısınma görevleri, performans görevleri ve grup görevleri. Kim…</p>
+</div>
+</a>
+<a class="sg-art" href="/makale/evde-sikildiginizda-oynanacak-oyun.html">
+<img alt="Evde Sıkıldığınızda Arkadaşlarla Oynayacağınız Oyun" height="630" loading="lazy" src="/makale/img/evde-sikildiginizda-oynanacak-oyun.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>Evde Sıkıldığınızda Arkadaşlarla Oynayacağınız Oyun</h3>
+<p>Evde sıkıldınız ve "ne yapsak" sorusunda takıldıysanız: kurulum istemeyen, 5 dakikada başlayan, 2–10 kişiyle oynanan …</p>
+</div>
+</a>
+<a class="sg-art" href="/makale/gencler-icin-grup-oyunlari.html">
+<img alt="Gençler İçin Grup Oyunları: Lise ve Üniversite Gruplarında Oynanacaklar" height="630" loading="lazy" src="/makale/img/gencler-icin-grup-oyunlari.svg" width="1200"/>
+<div class="sg-art-body">
+<h3>Gençler İçin Grup Oyunları: Lise ve Üniversite Gruplarında Oynanacaklar</h3>
+<p>Lise ve üniversite arkadaş gruplarında oynanacak grup oyunları: yurt odasında, sınıf etkinliğinde ve ev buluşmalarınd…</p>
+</div>
+</a>
+</div>
+<a class="sg-arts-all" data-i18n="arts_all" href="/makale/">Tüm makaleler →</a>
+</section>
+<section class="cta">
+<h2 data-i18n="cta_title">Arkadaşlarını Topla ve Söyle: Yerse Yap!</h2>
+<p data-i18n="cta_desc">Doğum günü, ev partisi, yılbaşı, kamp, yurt odası ya da aile buluşması: nerede olursan ol, Yerse Yap ortamı şenlendirir.</p>
+<div class="cta-links">
+<a class="gp-btn" href="https://play.google.com/store/apps/details?id=com.Soge.YerseYap" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.538-.893l.071-.027zM14.852 13.06l2.34 2.34-10.06 5.715L14.853 13.06zm3.606-2.078l2.18 1.238a1 1 0 0 1 0 1.738l-2.18 1.238-2.582-2.587 2.582-2.627zM7.132 2.885l10.06 5.716-2.34 2.34L7.131 2.885z"></path></svg>
+<span><small>ANDROID</small><b data-i18n="btn_google_play">Google Play’den indir</b></span>
+</a>
+<a class="btn" data-i18n="btn_home" href="/">Sogepps ana sayfaya dön</a>
+<a class="btn secondary" data-i18n="footer_privacy" href="privacy-policy.html">Gizlilik Politikası</a>
+<a class="btn secondary" data-i18n="btn_contact" href="mailto:sogepps@gmail.com">İletişim</a>
+</div>
+</section>
+</main>
 
-  <main class="wrap">
-    <section class="hero">
-      <div class="hero-icon"><img src="img/icon.webp" alt="YerseYap uygulama simgesi" width="132" height="132" decoding="async" /></div>
-      <div>
-        <h1 data-i18n-html="hero_title">YerseYap<br />Zar At, İlerle, Görev Yap, Puan Topla</h1>
-        <p class="lead" data-i18n="hero_lead">YerseYap; arkadaş ve aile buluşmaları için renkli 3D tahta parti oyunudur. 2–10 oyuncu seçin, zar atın, renkli karelere gelin, eğlenceli görevleri tamamlayın ve puan toplayın.</p>
-        <div class="hero-tags">
-          <span class="hero-tag" data-i18n="tag_1">2–10 oyuncu</span>
-          <span class="hero-tag" data-i18n="tag_2">Zar ve tahta</span>
-          <span class="hero-tag" data-i18n="tag_3">Görev kartları</span>
-          <span class="hero-tag" data-i18n="tag_4">Canlı skor tablosu</span>
-        </div>
-      </div>
-    </section>
 
-    <section class="section" id="ekranlar">
-      <h2 data-i18n="screens_title">YerseYap Oyun İçi Görseller</h2>
-      <p data-i18n="screens_desc">Menü, oyun akışı, görevler ve skor tablosundan ekran görüntüleri.</p>
-      <div class="screen-cards">
-        <figure class="screen-card"><img src="img/main-menu.jpg" alt="YerseYap ana menü ekranı" width="720" height="1280" loading="lazy" decoding="async" /><figcaption><h3 data-i18n="s_1_t">Ana Menü</h3><p data-i18n="s_1_d">Oyuna başla, kuralları oku veya çık.</p></figcaption></figure>
-        <figure class="screen-card"><img src="img/player-count.jpg" alt="YerseYap oyuncu sayısı seçimi" width="720" height="1280" loading="lazy" decoding="async" /><figcaption><h3 data-i18n="s_2_t">Oyuncu Sayısı</h3><p data-i18n="s_2_d">Oyun kaç kişi ile oynanacak? (2–10 arası seçim)</p></figcaption></figure>
-        <figure class="screen-card"><img src="img/game-start.jpg" alt="YerseYap oyun başlangıç ekranı" width="720" height="1280" loading="lazy" decoding="async" /><figcaption><h3 data-i18n="s_3_t">Oyun Başlıyor</h3><p data-i18n="s_3_d">Numaralı renkli kareler ve sevimli karakterlerle 3D tahta.</p></figcaption></figure>
-        <figure class="screen-card"><img src="img/dice-roll.jpg" alt="YerseYap zar atma ekranı" width="720" height="1280" loading="lazy" decoding="async" /><figcaption><h3 data-i18n="s_4_t">Zar At</h3><p data-i18n="s_4_d">Sıra sendeyken Zar At butonuna bas ve ilerle.</p></figcaption></figure>
-        <figure class="screen-card"><img src="img/task-20.jpg" alt="YerseYap 20 puanlık görev ekranı" width="720" height="1280" loading="lazy" decoding="async" /><figcaption><h3 data-i18n="s_5_t">Görev Ekranı</h3><p data-i18n="s_5_d">Geldiğin karedeki görevi oku. Yaptıysan Yaptım, yapamadıysan Yapamadım'a bas.</p></figcaption></figure>
-        <figure class="screen-card"><img src="img/scoreboard.jpg" alt="YerseYap skor tablosu" width="720" height="1280" loading="lazy" decoding="async" /><figcaption><h3 data-i18n="s_6_t">Skor Tablosu</h3><p data-i18n="s_6_d">Tüm oyuncuların puanlarını anlık takip et.</p></figcaption></figure>
-        <figure class="screen-card"><img src="img/task-30.jpg" alt="YerseYap 30 puanlık görev ekranı" width="720" height="1280" loading="lazy" decoding="async" /><figcaption><h3 data-i18n="s_7_t">Yüksek Puanlı Görevler</h3><p data-i18n="s_7_d">Daha zor kareler daha fazla puan verir — kazanmak için risk al!</p></figcaption></figure>
-      </div>
-    </section>
 
-    <section class="section" id="nasil">
-      <h2 data-i18n="how_title">YerseYap Nasıl Oynanır?</h2>
-      <p data-i18n="how_desc">Grup oyun geceleri için basit kurallar.</p>
-      <div class="feat-grid">
-        <div class="feature"><h3 data-i18n="how_1_t">1) Oyuncu sayısını seç</h3><p data-i18n="how_1_d">2 ile 10 arkadaşını topla ve yeni oyun başlat.</p></div>
-        <div class="feature"><h3 data-i18n="how_2_t">2) Zar at ve ilerle</h3><p data-i18n="how_2_d">Sırası gelen kişi zar atar ve attığı zar kadar ilerler.</p></div>
-        <div class="feature"><h3 data-i18n="how_3_t">3) Görevi tamamla</h3><p data-i18n="how_3_d">Geldiği noktadaki puana göre bir görev verilir. Gerçekleştirirsen Yaptım'a bas ve puan kazan.</p></div>
-        <div class="feature"><h3 data-i18n="how_4_t">4) En çok puanı topla</h3><p data-i18n="how_4_d">Oyun bitene kadar devam et. En çok puanı toplayan oyunu kazanır!</p></div>
-      </div>
-    </section>
-
-    <section class="section" id="ozellikler">
-      <h2 data-i18n="feat_title">Neden YerseYap?</h2>
-      <p data-i18n="feat_desc">Partiler, pijama partileri ve aile oyun geceleri için ideal.</p>
-      <div class="feat-grid">
-        <div class="feature"><h3 data-i18n="f_1_t">Sevimli 3D Dünya</h3><p data-i18n="f_1_d">Renkli sokaklar, sevimli hayvan karakterleri ve canlı tahta.</p></div>
-        <div class="feature"><h3 data-i18n="f_2_t">Grup Eğlencesi</h3><p data-i18n="f_2_d">Tek telefon veya tablet etrafında 2–10 kişi için tasarlandı.</p></div>
-        <div class="feature"><h3 data-i18n="f_3_t">Puana Dayalı Görevler</h3><p data-i18n="f_3_d">10, 20, 30 veya 40 puanlı kareler — yüksek risk, yüksek ödül.</p></div>
-        <div class="feature"><h3 data-i18n="f_4_t">Hesap Gerekmez</h3><p data-i18n="f_4_d">Kayıt olmadan doğrudan oyuna başla.</p></div>
-      </div>
-    </section>
-
-    <section class="cta">
-      <h2 data-i18n="cta_title">YerseYap ile Eğlenceyi Başlat</h2>
-      <p data-i18n="cta_desc">YerseYap, Sogepps uygulama ailesinin yeni parti oyunudur.</p>
-      <div class="cta-links">
-        <a class="btn" href="/" data-i18n="btn_home">Sogepps ana sayfaya dön</a>
-        <a class="btn secondary" href="privacy-policy.html" data-i18n="footer_privacy">Gizlilik Politikası</a>
-        <a class="btn secondary" href="mailto:sogepps@gmail.com" data-i18n="btn_contact">İletişim</a>
-      </div>
-    </section>
-  </main>
-
-  <script src="js/i18n.js"></script>
-  <script src="js/lang-yerseyap.js"></script>
-  <script>I18N.init('yerseyap', YERSEYAP_TRANSLATIONS);</script>
+<script defer="" src="/js/i18n.js?v=ac9834aa"></script>
 </body>
 </html>

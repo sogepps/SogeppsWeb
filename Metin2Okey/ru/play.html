@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://sogepps.tr/metin2okey/ru/play.html" rel="canonical"/><link href="https://sogepps.tr/metin2okey/play.html" hreflang="tr" rel="alternate"/><link href="https://sogepps.tr/metin2okey/en/play.html" hreflang="en" rel="alternate"/><link href="https://sogepps.tr/metin2okey/de/play.html" hreflang="de" rel="alternate"/><link href="https://sogepps.tr/metin2okey/fr/play.html" hreflang="fr" rel="alternate"/><link href="https://sogepps.tr/metin2okey/es/play.html" hreflang="es" rel="alternate"/><link href="https://sogepps.tr/metin2okey/it/play.html" hreflang="it" rel="alternate"/><link href="https://sogepps.tr/metin2okey/pt/play.html" hreflang="pt" rel="alternate"/><link href="https://sogepps.tr/metin2okey/nl/play.html" hreflang="nl" rel="alternate"/><link href="https://sogepps.tr/metin2okey/ru/play.html" hreflang="ru" rel="alternate"/><link href="https://sogepps.tr/metin2okey/ja/play.html" hreflang="ja" rel="alternate"/><link href="https://sogepps.tr/metin2okey/ko/play.html" hreflang="ko" rel="alternate"/><link href="https://sogepps.tr/metin2okey/ar/play.html" hreflang="ar" rel="alternate"/><link href="https://sogepps.tr/metin2okey/hi/play.html" hreflang="hi" rel="alternate"/><link href="https://sogepps.tr/metin2okey/id/play.html" hreflang="id" rel="alternate"/><link href="https://sogepps.tr/metin2okey/pl/play.html" hreflang="pl" rel="alternate"/><link href="https://sogepps.tr/metin2okey/play.html" hreflang="x-default" rel="alternate"/>
+<meta content="index, follow" name="robots"/>
+<meta content="website" property="og:type"/>
+<meta content="Sogepps" property="og:site_name"/>
+<meta content="ru_RU" property="og:locale"/>
+<meta content="Metin2 Okey — тестовая игра в браузере | Sogepps" property="og:title"/>
+<meta content="Тестовая веб-игра Metin2 Okey: тренируйтесь с вспомогательным полем закрытия плиток и списком лучших оставшихся комбинаций." property="og:description"/>
+<meta content="https://sogepps.tr/metin2okey/ru/play.html" property="og:url"/>
+<title>Metin2 Okey — тестовая игра в браузере | Sogepps</title>
+<meta content="Тестовая веб-игра Metin2 Okey: тренируйтесь с вспомогательным полем закрытия плиток и списком лучших оставшихся комбинаций." name="description"/>
+<meta content="index,follow" name="robots"/>
+<style>
+    :root { --bg:#0b0f1a; --surface:#141c2f; --surface2:#1b2743; --border:#2b3b5f; --text:#edf2ff; --muted:#a8b9db; --gold:#f5d77d; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:Segoe UI, Arial, sans-serif; color:var(--text); background:radial-gradient(circle at top,#1d2d52 0,#0b0f1a 52%); }
+    a { color:var(--gold); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .wrap { max-width:1220px; margin:0 auto; padding:0 18px; }
+    .topnav { position:sticky; top:0; z-index:20; border-bottom:1px solid var(--border); background:rgba(11,15,26,.9); backdrop-filter:blur(10px); }
+    .topnav-inner { min-height:64px; display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap; padding:8px 0; }
+    .links { display:flex; gap:12px; flex-wrap:wrap; }
+    .hero { padding:20px 0 8px; }
+    h1 { font-size:clamp(1.5rem, 4vw, 2.2rem); margin-bottom:8px; }
+    .lead { color:var(--muted); }
+    .row { display:grid; grid-template-columns:1.5fr .9fr; gap:14px; margin:14px 0; }
+    .panel { border:1px solid var(--border); border-radius:16px; background:linear-gradient(170deg,var(--surface),var(--surface2)); padding:14px; }
+    .panel h2 { font-size:1.12rem; margin-bottom:6px; }
+    .panel .sub { color:var(--muted); font-size:.92rem; margin-bottom:10px; }
+    .helper-row { margin-bottom:10px; }
+    .helper-label { font-weight:800; color:var(--gold); margin-bottom:6px; }
+    .tiles { display:grid; grid-template-columns:repeat(8,minmax(48px,1fr)); gap:8px; }
+    .tile { border:1px solid rgba(255,255,255,.14); border-radius:12px; padding:8px 6px; min-height:58px; cursor:pointer; color:#fff; font-weight:800; transition:transform .18s ease, opacity .15s ease; }
+    .tile .n { display:block; font-size:20px; line-height:1; }
+    .tile .c { display:block; font-size:11px; margin-top:2px; }
+    .tile.red { background:linear-gradient(160deg,#8a2b2b,#531818); }
+    .tile.yellow { background:linear-gradient(160deg,#b08a20,#6e5613); }
+    .tile.blue { background:linear-gradient(160deg,#2b5ea8,#1a3660); }
+    .tile.flipped { background:#ffffff; color:#1f2937; border-color:#ffffff; transform:rotateY(180deg); opacity:.96; }
+    .controls { display:flex; gap:10px; flex-wrap:wrap; margin-top:10px; }
+    .btn { border:1px solid #355082; background:#1a2745; color:#e9f0ff; border-radius:10px; padding:9px 12px; font-weight:700; cursor:pointer; }
+    .btn.primary { background:linear-gradient(135deg,#d4a72c,#8f6c12); border-color:#b48e2e; color:#1a1305; }
+    .stats { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:10px; }
+    .stat { background:#1f2c4d; border:1px solid #324776; border-radius:10px; padding:8px 10px; min-width:140px; }
+    .stat b { display:block; color:#f5e0a8; font-size:12px; margin-bottom:2px; }
+    .slots { display:grid; gap:8px; }
+    .slots.top { grid-template-columns:repeat(5,minmax(50px,1fr)); }
+    .slots.bottom { grid-template-columns:repeat(3,minmax(50px,1fr)); }
+    .slot { border:1px solid rgba(255,255,255,.13); border-radius:12px; min-height:62px; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,.14); }
+    .slot.empty { color:var(--muted); font-weight:700; }
+    .msg { color:#f7df9c; min-height:20px; margin-top:10px; font-size:.92rem; }
+    .history { margin-top:10px; color:var(--muted); font-size:.9rem; padding-left:18px; }
+    .combo-list { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px; }
+    .combo-item { border:1px solid rgba(255,255,255,.12); border-radius:12px; padding:10px; background:rgba(0,0,0,.12); }
+    .combo-item .head { display:flex; justify-content:space-between; gap:8px; align-items:flex-start; }
+    .combo-item .title { font-weight:800; color:#e8eefc; font-size:.92rem; }
+    .combo-item .detail { color:var(--muted); font-size:.82rem; margin-top:2px; }
+    .combo-item .pts { color:var(--gold); font-weight:900; }
+    .empty-note { color:var(--muted); font-size:.9rem; }
+    .play-panel { position:relative; }
+    .hint-banner { display:flex; align-items:center; justify-content:center; gap:6px; background:rgba(60,45,18,.5); border:1px solid rgba(201,162,39,.45); border-radius:10px; padding:6px 8px; margin-bottom:10px; }
+    .hint-icon { color:#ffd54f; font-weight:900; font-size:12px; }
+    .hint-banner span:last-child { color:#f4e6c3; font-size:11px; font-weight:700; }
+    .stats-bar { display:flex; border:1px solid rgba(201,162,39,.55); border-radius:12px; overflow:hidden; background:linear-gradient(135deg,#2f2214,#1a1208,#120c06); margin-bottom:10px; }
+    .stat-chip { flex:1; text-align:center; padding:8px 4px; }
+    .stat-chip + .stat-chip { border-left:1px solid rgba(201,162,39,.35); }
+    .stat-chip .lbl { display:block; color:#9a8668; font-size:9px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; margin-bottom:2px; }
+    .stat-chip .val { color:#f4e6c3; font-size:15px; font-weight:900; }
+    .stat-chip .val.chest { font-size:11px; }
+    .stat-chip .val.chest-gold { color:#ffd54f; }
+    .stat-chip .val.chest-silver { color:#c0c7d1; }
+    .stat-chip .val.chest-bronze { color:#cd7f32; }
+    .top-section { display:flex; align-items:flex-start; justify-content:center; gap:6px; margin-bottom:8px; }
+    .top-row { display:flex; flex-wrap:wrap; gap:3px; align-items:center; justify-content:center; flex:1; min-height:72px; }
+    .side-btn { min-width:44px; min-height:52px; padding:8px; border-radius:8px; border:1px solid rgba(201,162,39,.45); background:rgba(42,32,18,.85); color:#c9a227; font-size:11px; font-weight:800; cursor:pointer; }
+    .side-btn:disabled { opacity:.35; cursor:not-allowed; }
+    .slots-wrap { position:relative; min-height:76px; display:flex; justify-content:center; align-items:center; margin-bottom:10px; }
+    .slots-row { display:flex; gap:8px; justify-content:center; }
+    .slot-box { width:56px; min-height:68px; border-radius:10px; border:1.5px solid rgba(201,162,39,.55); display:flex; align-items:center; justify-content:center; padding:3px; }
+    .slot-empty { color:#9a8668; font-weight:900; font-size:16px; }
+    .play-card { width:52px; border:1px solid rgba(201,162,39,.55); border-radius:7px; padding:0; cursor:pointer; color:#fff; font-weight:900; aspect-ratio:.68; display:flex; align-items:center; justify-content:center; position:relative; }
+    .play-card.top-card { aspect-ratio:.68; }
+    .play-card.slot-card { width:100%; aspect-ratio:.72; border-radius:8px; }
+    .play-card.red { background:linear-gradient(135deg,#e53935,#8e1b18); }
+    .play-card.yellow { background:linear-gradient(135deg,#f5c542,#b8860b); }
+    .play-card.blue { background:linear-gradient(135deg,#2b8ad4,#0e4a86); }
+    .play-card .num { font-size:16px; line-height:1; }
+    .play-card.slot-card .num { font-size:18px; }
+    .play-card.slot-card .shade { position:absolute; bottom:4px; font-size:8px; color:#efe2c4; font-weight:900; }
+    .play-card:active { transform:scale(.98); }
+    .play-actions { display:flex; gap:10px; flex-wrap:wrap; }
+    .play-actions .btn { flex:1; min-width:120px; }
+    .play-end { border:1px solid rgba(201,162,39,.35); border-radius:12px; padding:12px; background:rgba(0,0,0,.18); margin-top:4px; }
+    .play-end .result { color:#efe2c4; font-weight:900; margin-bottom:4px; }
+    .play-end .chest-name { color:#ffd54f; font-weight:900; font-size:16px; margin-bottom:10px; }
+    .burst-layer { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; pointer-events:none; z-index:5; }
+    .burst-core { padding:8px 16px; border-radius:14px; background:rgba(42,26,5,.92); border:2px solid #ffd54f; text-align:center; animation:burstPop .9s ease forwards; }
+    .burst-core .pts { color:#ffd54f; font-size:28px; font-weight:900; line-height:1; }
+    .burst-core .lbl { color:#efe2c4; font-size:11px; font-weight:800; letter-spacing:.5px; }
+    @keyframes burstPop { 0%{opacity:0;transform:scale(.3)} 20%{opacity:1;transform:scale(1.15)} 70%{opacity:1;transform:scale(1)} 100%{opacity:0;transform:scale(1)} }
+    .combo-badge { display:inline-block; min-width:56px; text-align:center; background:#4a3a12; color:#ffd54f; font-size:10px; font-weight:800; letter-spacing:.6px; border-radius:6px; padding:4px 8px; margin-right:8px; }
+    .combo-badge.triple { background:#2a1a32; }
+    .combo-item.play-combo { display:flex; align-items:center; gap:8px; }
+    .combo-item.play-combo .meta { flex:1; }
+    @media (max-width:1024px){ .row{grid-template-columns:1fr;} }
+    @media (max-width:620px){ .tiles{grid-template-columns:repeat(4,1fr);} }
+  </style>
+</head>
+<body>
+<nav class="topnav">
+<div class="wrap topnav-inner">
+<a data-i18n="nav_home" href="/metin2okey/ru/">← Metin2 Okey — главная</a>
+<div class="links">
+<a data-i18n="nav_privacy" href="privacy-policy.html">Политика конфиденциальности</a>
+<a href="https://play.google.com/store/apps/details?id=com.Soge.Metin2Okey" rel="noopener noreferrer" target="_blank">Google Play</a>
+</div>
+</div>
+</nav>
+<main class="wrap">
+<section class="hero">
+<h1 data-i18n="hero_title">Metin2 Okey — играть в браузере</h1>
+<p class="lead" data-i18n="hero_lead">Отслеживайте плитки на вспомогательной панели, а затем тренируйте логику подсчёта очков, играя в игру ниже.</p>
+</section>
+<section class="row">
+<div class="panel">
+<h2 data-i18n="helper_title">Вспомогательная игра</h2>
+<p class="sub" data-i18n="helper_sub">Нажмите на плитку, чтобы перевернуть её лицом вниз и сделать белой. Закрытые плитки исключаются из подсчёта.</p>
+<div class="helper-row">
+<div class="helper-label" data-i18n="label_red">Красный 1-8</div>
+<div class="tiles" id="helper-red"></div>
+</div>
+<div class="helper-row">
+<div class="helper-label" data-i18n="label_yellow">Жёлтый 1-8</div>
+<div class="tiles" id="helper-yellow"></div>
+</div>
+<div class="helper-row">
+<div class="helper-label" data-i18n="label_blue">Синий 1-8</div>
+<div class="tiles" id="helper-blue"></div>
+</div>
+<div class="controls">
+<button class="btn primary" data-i18n="btn_helper_reset" id="helperResetBtn" type="button">Сбросить помощник</button>
+</div>
+</div>
+<div class="panel">
+<h2 data-i18n="combos_title">Лучшие оставшиеся комбинации</h2>
+<p class="sub" data-i18n="combos_sub">Рейтинг на основе плиток, всё ещё открытых во вспомогательной игре.</p>
+<ul class="combo-list" id="helperCombos"></ul>
+</div>
+</section>
+<section class="row">
+<div class="panel play-panel">
+<h2 data-i18n="play_title">Игра</h2>
+<div class="hint-banner">
+<span class="hint-icon">!</span>
+<span data-i18n="hint_delete_note">Щёлкните правой кнопкой мыши по верхней карте, чтобы сбросить её.</span>
+</div>
+<div class="stats-bar">
+<div class="stat-chip"><span class="lbl" data-i18n="label_score">Счёт</span><span class="val" id="playScore">0</span></div>
+<div class="stat-chip"><span class="lbl" data-i18n="label_chest">Сундук</span><span class="val chest" id="playChest">Bronz Sandık</span></div>
+<div class="stat-chip"><span class="lbl" data-i18n="label_remaining">Осталось</span><span class="val" id="playRemaining">0</span></div>
+</div>
+<div class="top-section">
+<div class="top-row" id="playTop"></div>
+<button class="side-btn" data-i18n="btn_draw" id="drawBtn" type="button">Тянуть</button>
+</div>
+<div class="slots-wrap">
+<div class="slots-row" id="playSlots"></div>
+<div class="burst-layer" hidden="" id="burstLayer">
+<div class="burst-core">
+<div class="pts" id="burstPts">+0</div>
+<div class="lbl" data-i18n="burst_label">Комбинация!</div>
+</div>
+</div>
+</div>
+<div id="playRunning">
+<div class="play-actions">
+<button class="btn" data-i18n="btn_end" id="endBtn" type="button">Завершить игру</button>
+<button class="btn" data-i18n="btn_reset_play" id="resetPlayBtn" type="button">Сброс</button>
+</div>
+</div>
+<div class="play-end" hidden="" id="playEnded">
+<div class="result" data-i18n-html="play_end_result">Итоговый счёт: <span id="playFinalScore">0</span></div>
+<div class="chest-name" id="playFinalChest">Bronz Okey Sandığı</div>
+<div class="play-actions">
+<button class="btn primary" data-i18n="btn_new_game" id="newPlayBtn" type="button">Новая игра</button>
+</div>
+</div>
+</div>
+<div class="panel">
+<h2 data-i18n="combos2_title">Оставшиеся сильные комбинации</h2>
+<p class="sub" data-i18n="combos2_sub">Ходы, которые всё ещё есть в колоде и ведут к золотому сундуку. Список сокращается по мере сброса карт.</p>
+<ul class="combo-list" id="playCombos"></ul>
+</div>
+</section>
+</main>
+<script src="/metin2okey/js/play.js"></script>
+<script defer="" src="/js/i18n.js?v=ac9834aa"></script>
+</body>
+</html>
