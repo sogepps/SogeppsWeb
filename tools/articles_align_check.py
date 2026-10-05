@@ -80,10 +80,38 @@ def suspects(slug, lang, tr, d):
     return out
 
 
+def cross(lang, slugs, trs):
+    """Same translation used under unrelated Turkish texts in different articles = text landed under the wrong id."""
+    seen, where = {}, {}
+    for slug in slugs:
+        p = os.path.join(ART, f"{slug}.{lang}.json")
+        if not os.path.exists(p):
+            continue
+        for k, t in jl(p).items():
+            v = trs[slug][k]
+            if len(t) > 25 and t != v:
+                seen.setdefault(t, set()).add(v)
+                where.setdefault(t, []).append((slug, k, v))
+    out = {}
+    for t, srcs in seen.items():
+        lens = [len(x) for x in srcs]
+        if len(srcs) > 1 and max(lens) >= 1.6 * min(lens) and not all(x in BRAND_ALIASES or x in BRAND for x in srcs):
+            for slug, k, v in where[t]:
+                out.setdefault(slug, {})[k] = "cross-article"
+    return out
+
+
+# Turkish app names that legitimately appear in several variants ("Yerse Yap", "Yerse Yap: Parti Oyunu"...)
+BRAND_ALIASES = {"Yerse Yap", "Yerse Yap: Parti Oyunu", "Shot Çarkı", "Tahmin Meleği - İddaa", "SogeGammon uygulama simgesi"}
+
+
 def main():
     ids = "--ids" in sys.argv
     total = 0
     union = {}
+    slugs = [os.path.basename(f)[:-8] for f in sorted(glob.glob(os.path.join(ART, "*.tr.json")))]
+    trs = {sl: jl(os.path.join(ART, f"{sl}.tr.json")) for sl in slugs}
+    crossed = {lang: cross(lang, slugs, trs) for lang in LANGS}
     for f in sorted(glob.glob(os.path.join(ART, "*.tr.json"))):
         slug = os.path.basename(f)[:-8]
         tr = jl(f)
@@ -92,7 +120,10 @@ def main():
             p = os.path.join(ART, f"{slug}.{lang}.json")
             if not os.path.exists(p):
                 continue
-            for k, why in suspects(slug, lang, tr, jl(p)).items():
+            found = suspects(slug, lang, tr, jl(p))
+            for k, why in crossed.get(lang, {}).get(slug, {}).items():
+                found.setdefault(k, why)
+            for k, why in found.items():
                 n.setdefault(lang, []).append(k)
                 union.setdefault(slug, {}).setdefault(k, set()).add(lang)
         if n:
